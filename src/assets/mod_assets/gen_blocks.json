@@ -1,0 +1,613 @@
+{
+    "namespace": "chisel_gen_blocks",
+
+    
+
+    "block_variations": {
+        "stone": [
+            "array",
+            "braid",
+            "bricks-chaotic",
+            "bricks-cracked",
+            "bricks-encased",
+            "bricks-encased-ctm",
+            "bricks-small",
+            "bricks-soft",
+            "bricks-solid",
+            "bricks-triple",
+            "chaotic-medium",
+            "chaotic-small",
+            "circular",
+            "circular-ctm",
+            "cracked",
+            "cuts",
+            "dent",
+            "dent-ctm",
+            "french-1",
+            "french-2",
+            "jellybean",
+            "layers",
+            "mosaic",
+            "mosaic-ctm",
+            "ornate",
+            "panel",
+            "pillar-side",
+            "pillar-top",
+            "prism",
+            "raw",
+            "road",
+            "slanted",
+            "tiles-large",
+            "tiles-large-ctm",
+            "tiles-medium",
+            "tiles-small",
+            "twisted-side",
+            "twisted-top",
+            "weaver",
+            "weaver-ctm",
+            "zag"
+        ],
+        "metals": [
+            "badgreggy",
+            "badgreggy-ctm",
+            "bolted",
+            "caution",
+            "caution-ctm",
+            "crate",
+            "crate-ctm",
+            "machine",
+            "scaffold",
+            "scaffold-ctm",
+            "thermal-bottom",
+            "thermal-side",
+            "thermal-top"
+        ],
+        "bookshelf":[
+            "abandoned",
+            "brim",
+            "cans",
+            "historician",
+            "hoarder",
+            "necromancer",
+            "necromancer-novice",
+            "papers",
+            "planks_acacia",
+            "planks_big_oak",
+            "planks_birch",
+            "planks_jungle",
+            "planks_oak",
+            "planks_spruce",
+            "rainbow",
+            "redtomes"
+        ],
+        "futura": [
+            "circuit_plate",
+            "controller_particle",
+            "controller_unity",
+            "controller_unity_particle",
+            "lines_invalid",
+            "lines_plating",
+            "orange_frame",
+            "orange_frame_particle",
+            "rainbow_lines",
+            "rainbow_wave",
+            "rainbow_wave_base",
+            "rainbow_wave_particle",
+            "screen_cyan",
+            "screen_cyan_ctm",
+            "screen_discoherent",
+            "screen_metallic",
+            "screen_metallic_ctm",
+            "uber_rainbow",
+            "unity_lines",
+            "unity_lines_plating"
+        ],
+        "hexPlating": [
+            "hexbase",
+            "hexnew"
+        ],
+        "glass": [
+            "terrain-glass-thingrid",
+            "terrain-glass-thickgrid",
+            "terrain-glassstreak-top",
+            "terrain-glassstreak",
+            "terrain-glassstone-ctm",
+            "terrain-glassstone",
+            "terrain-glass-steelframe-ctm",
+            "terrain-glass-steelframe",
+            "terrain-glassshale-ctm",
+            "terrain-glassshale",
+            "terrain-glass-screen",
+            "terrain-glass-ornatesteel-old",
+            "terrain-glass-ornatesteel-ctm",
+            "terrain-glass-ornatesteel",
+            "terrain-glassnoborder-ctm",
+            "terrain-glassnoborder",
+            "terrain-glasslight-ctm",
+            "terrain-glasslight",
+            "terrain-glassdungeon",
+            "terrain-glass-chinese",
+            "terrain-glassbubble-ctm",
+            "terrain-glassbubble",
+            "japanese-top",
+            "japanese2-top",
+            "japanese2",
+            "japanese",
+            "edge_steel",
+            "edge",
+            "chrono-ctm",
+            "chrono",
+            "chinese-top",
+            "chinese2-top",
+            "chinese2",
+            "a1-glasswindow-ironfencemodern"
+        ],
+        "glass_stained": [
+            "brick",
+            "brick_ct",
+            "framed",
+            "framed_ct",
+            "framed_fancy_ct",
+            "panel",
+            "panel_ct",
+            "rough",
+            "rough_ct",
+            "streaks"
+        ],
+        "glass_pane_dyed":[
+            "colorname-bubble-side",
+            "colorname-bubble-top",
+            "colorname-panel-fancy-side",
+            "colorname-panel-fancy-top",
+            "colorname-panel-side",
+            "colorname-panel-top",
+            "colorname-quad-fancy-side",
+            "colorname-quad-fancy-top",
+            "colorname-quad-side",
+            "colorname-quad-top",
+            "colorname-transparent-side",
+            "colorname-transparent-top"
+        ],
+        "glass_dyed": [
+            "colorname-bubble",
+            "colorname-forestry",
+            "colorname-panel",
+            "colorname-panel-fancy",
+            "colorname-transparent"
+        ],
+        "terrain_blocks": [
+            "terrain-materialname-brick-bottom",
+            "terrain-materialname-brick-side",
+            "terrain-materialname-brick-top",
+            "terrain-materialname-cart-bottom",
+            "terrain-materialname-cart-side",
+            "terrain-materialname-cart-top",
+            "terrain-materialname-coin-heads-bottom",
+            "terrain-materialname-coin-heads-side",
+            "terrain-materialname-coin-heads-top",
+            "terrain-materialname-coin-tails-bottom",
+            "terrain-materialname-coin-tails-side",
+            "terrain-materialname-coin-tails-top",
+            "terrain-materialname-crate-dark-bottom",
+            "terrain-materialname-crate-dark-side",
+            "terrain-materialname-crate-dark-top",
+            "terrain-materialname-crate-light-bottom",
+            "terrain-materialname-crate-light-side",
+            "terrain-materialname-crate-light-top",
+            "terrain-materialname-largeingot-bottom",
+            "terrain-materialname-largeingot-side",
+            "terrain-materialname-largeingot-top",
+            "terrain-materialname-plates-bottom",
+            "terrain-materialname-plates-side",
+            "terrain-materialname-plates-top",
+            "terrain-materialname-rivets-bottom",
+            "terrain-materialname-rivets-side",
+            "terrain-materialname-rivets-top",
+            "terrain-materialname-simple-bottom",
+            "terrain-materialname-simple-side",
+            "terrain-materialname-simple-top",
+            "terrain-materialname-smallingot-bottom",
+            "terrain-materialname-smallingot-side",
+            "terrain-materialname-smallingot-top",
+            "terrain-materialname-spaceblack-bottom",
+            "terrain-materialname-spaceblack-side",
+            "terrain-materialname-spaceblack-top",
+            "terrain-materialname-space-bottom",
+            "terrain-materialname-space-side",
+            "terrain-materialname-space-top",
+            "terrain-materialname-star-bottom",
+            "terrain-materialname-star-side",
+            "terrain-materialname-star-top"
+        ],
+        "colors": [
+            "black",
+            "blue",
+            "brown",
+            "cyan",
+            "gray",
+            "green",
+            "light_blue",
+            "lime",
+            "magenta",
+            "orange",
+            "pink",
+            "purple",
+            "red",
+            "silver",
+            "white",
+            "yellow"
+        ],
+        "concrete": [
+            "block",
+            "block_ctm",
+            "blocks",
+            "default",
+            "doubleslab-side",
+            "weathered",
+            "weathered-block",
+            "weathered-block-half-side",
+            "weathered-blocks",
+            "weathered-doubleslab-side",
+            "weathered-half-side"
+        ],
+        "emerald": [
+            "cell",
+            "cellbismuth",
+            "chunk",
+            "emeraldcircle",
+            "emeraldprismatic",
+            "four",
+            "fourornate",
+            "goldborder",
+            "masonryemerald",
+            "ornate",
+            "panel",
+            "panelclassic",
+            "smooth",
+            "zelda",
+        ],
+        "glowstone": [
+            "array",
+            "braid",
+            "bricks-cracked",
+            "bricks-encased",
+            "bricks-encased-ctm",
+            "bricks-small",
+            "bricks-soft",
+            "bricks-solid",
+            "bricks-triple",
+            "chaotic-medium",
+            "chaotic-small",
+            "circular",
+            "cracked",
+            "dent",
+            "dent-ctm",
+            "french-1",
+            "french-2",
+            "jellybean",
+            "layers",
+            "mosaic",
+            "mosaic-ctm",
+            "ornate",
+            "panel",
+            "pillar-side",
+            "pillar-top",
+            "prism",
+            "road",
+            "slanted",
+            "tiles-large",
+            "tiles-large-ctm",
+            "tiles-medium",
+            "tiles-small",
+            "twisted-side",
+            "twisted-top"
+        ],
+        "dirt": [
+            "bricks",
+            "bricks+dirt2-ctmv",
+            "bricks+dirt2-top",
+            "bricks2",
+            "bricks3",
+            "chunky",
+            "cobble",
+            "happy",
+            "hor-ctmh",
+            "horizontal",
+            "hor-top",
+            "layers",
+            "netherbricks",
+            "plate",
+            "reinforcedcobbledirt",
+            "reinforcedcobbledirt-ctm",
+            "reinforceddirt",
+            "reinforceddirt-ctm",
+            "vert-ctmv",
+            "vertical-ctmv",
+            "vertical-top",
+            "vert-top"
+        ],
+        "icepillar": [
+            "carved-side",
+            "carved-top",
+            "convexplain-ctmv",
+            "convexplain-top",
+            "greekgreek-ctmv",
+            "greekgreek-top",
+            "greekplain-ctmv",
+            "greekplain-top",
+            "ornamental-side",
+            "ornamental-top",
+            "plaingreek-ctmv",
+            "plaingreek-top",
+            "plainplain-ctmv",
+            "plainplain-top"
+        ],
+        "ironpane": [
+            "barbedwire",
+            "barbedwire-side",
+            "barbedwire-top",
+            "bars",
+            "bars-side",
+            "bars-top",
+            "borderless",
+            "borderless-side",
+            "borderless-top",
+            "borderless-topper",
+            "borderless-topper-side",
+            "borderless-topper-top",
+            "cage",
+            "cage-top",
+            "classic",
+            "classicnew",
+            "fence",
+            "modern",
+            "modern-top",
+            "ornatesteel",
+            "ornatesteel-top",
+            "spikes",
+            "spikes-side",
+            "spikes-top",
+            "thickgrid",
+            "thingrid",
+            "thingrid-top"
+        ]
+    },
+
+    "blocks": {
+        "ancient_stone": { 
+            "variation": "stone"
+        },
+        "andesite": {
+            "variation": "stone"
+        },
+        "antiblock": { 
+            "variation": "colors",
+            "generator": "antiblockGen"
+        },
+        "arcane_stone": {
+            "variation": "stone"
+        },
+        "basalt": { 
+            "variation": "stone"
+        },
+        "blood_magic": {
+            "register": false,
+            "require_mod": "blood_magic"
+        },
+        "bookshelf": { 
+            "variation": "bookshelf",
+            "generator": "bookshelfGen"
+        },
+        "bricks": { 
+            "variation": "stone"
+        },
+        "certus": {
+            "variation": "stone"
+        },
+        "cloud": { 
+            "variation": "custom",
+            "variations": [
+                "cloud", "grid", "large", "small", "vertical"
+            ],
+            "genprops": {
+                "transparent": 0.5
+            },
+            "special_type": {
+                "lightopacity": 15
+            }
+        },
+        "coal": { 
+            "subdirs": {
+                "charcoal": {
+                    "variation":"stone"
+                },
+                "coal": {
+                    "variation":"stone"
+                },
+                "coalcoke": {
+                    "variation":"stone",
+                    "register": false,
+                    "require_mod": "immersive_engineering"
+                }
+            }
+        },
+        "cobblestone": { 
+            "variation":"stone"
+        },
+        "cobblestonemossy": {
+            "variation":"stone",
+            "parents": "cobblestone"
+        },
+        "concrete": { 
+            "variation":"concrete"
+        },
+        "concrete_black": { 
+            "variation": "stone"
+        },
+        "concrete_blue": { 
+            "variation": "stone"
+        },
+        "concrete_brown": { 
+            "variation": "stone"
+        },
+        "concrete_cyan": { 
+            "variation": "stone"
+        },
+        "concrete_gray": { 
+            "variation": "stone"
+        },
+        "concrete_green": { 
+            "variation": "stone"
+        },
+        "concrete_lightblue": { 
+            "variation": "stone"
+        },
+        "concrete_lightgray": { 
+            "variation": "stone"
+        },
+        "concrete_lime": { 
+            "variation": "stone"
+        },
+        "concrete_magenta": { 
+            "variation": "stone"
+        },
+        "concrete_orange": { 
+            "variation": "stone"
+        },
+        "concrete_pink": { 
+            "variation": "stone"
+        },
+        "concrete_powder": { 
+            "variation": "stone"
+        },
+        "concrete_purple": { 
+            "variation": "stone"
+        },
+        "concrete_red": { 
+            "variation": "stone"
+        },
+        "concrete_white": { 
+            "variation": "stone"
+        },
+        "concrete_yellow": { 
+            "variation": "stone"
+        },
+        "diamond": { 
+            "variation": "terrain_blocks",
+            "generator": "jewelryGen"
+        },
+        "diorite": { 
+            "variation": "stone"
+        },
+        "dirt": { },
+        "emerald": { 
+            "variation": "emerald"
+        },
+        "endstone": {
+            "variation": "stone"
+         },
+        "factory": { 
+            "variation": "stone"
+        },
+        "fluid": { 
+            "variation": "stone"
+        },
+        "futura": { 
+            "variation": "futura",
+            "generator": "meblockGen"
+        },
+        "glass": { 
+            "variation": "glass"
+        },
+        "glass_stained": { 
+            "variation": "glass_stained"
+        },
+        "glassdyed": {
+            "variation": "glass_dyed"
+        },
+        "glasspanedyed": { 
+            "variation": "glass_pane_dyed"
+        },
+        "glowstone": { 
+            "variation": "glowstone"
+        },
+        "gold": { 
+            "variation": "terrain_blocks",
+            "generator": "jewelryGen"
+        },
+        "granite": { 
+            "variation": "stone"
+        },
+        "hardenedclay": { 
+            "variation": "stone"
+        },
+        "hexPlating": {
+            "variation": "hexPlating",
+            "generator": "hexGen"
+        },
+        "ice": { 
+            "variation": "stone",
+            "group": "ice"
+        },
+        "icepillar": { 
+            "variation": "icepillar",
+            "group": "ice"
+        },
+        "iron": { 
+            "variation": "terrain_blocks",
+            "generator": "jewelryGen"
+        },
+        "ironpane": { 
+            "variation": "ironpane",
+            "generator": "ironpaneGen"
+        },
+        "laboratory": { },
+        "lapis": { },
+        "limestone": { },
+        "magma": { 
+            "variation": "stone"
+        },
+        "marble": { },
+        "marblepillar": { },
+        "marblepillarold": { },
+        "marblepillarslab": { },
+        "marblepillarslabold": { },
+        "marbleslab": { },
+        "metals": { },
+        "mipmaps": { },
+        "netherbrick": { },
+        "netherrack": { },
+        "obsidian": { },
+        "paper": { },
+        "planks-acacia": { },
+        "planks-birch": { },
+        "planks-dark-oak": { },
+        "planks-jungle": { },
+        "planks-oak": { },
+        "planks-spruce": { },
+        "prismarineanim": { 
+            "variation": "stone"
+        },
+        "purpur": { 
+            "variation": "stone"
+        },
+        "quartz": { 
+            "variation": "stone"
+        },
+        "redstone": { },
+        "redstoneLamp": { },
+        "redstoneold": { },
+        "sandstonered": { },
+        "sandstonered-scribbles": { },
+        "sandstone-scribbles": { },
+        "sandstoneyellow": { },
+        "stone": { },
+        "technical": { },
+        "temple": { },
+        "templemossy": { },
+        "tyrian": { },
+        "valentines": { },
+        "voidstone": { },
+        "wool": { }
+    }
+}
