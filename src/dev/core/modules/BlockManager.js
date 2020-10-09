@@ -15,7 +15,6 @@ BlockManager.registerBlock = function (blockname) {
         let p1 = shp.start, p2 = shp.end
         Block.setShape(id, p1[0], p1[1], p1[2], p2[0], p2[1], p2[2], 0)
     }
-
 }
 
 BlockManager.checkDefineData = function (defData) {

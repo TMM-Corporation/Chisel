@@ -1,1 +1,4 @@
+core/RM.js
+core/modules/BlockManager.js
+core/modules/ChiselTextureGen.js
 logic/register.js

@@ -1,8 +1,13 @@
 {
     "namespace": "chisel_gen_blocks",
 
-    
-
+    "mods": {
+        "chisel": {
+            "loaded": true,
+            "block_prefix": "chisel_",
+            "block_suffix": ""
+        }
+    },
     "block_variations": {
         "stone": [
             "array",
@@ -264,7 +269,7 @@
             "panel",
             "panelclassic",
             "smooth",
-            "zelda",
+            "zelda"
         ],
         "glowstone": [
             "array",
@@ -410,7 +415,7 @@
                 "cloud", "grid", "large", "small", "vertical"
             ],
             "genprops": {
-                "transparent": 0.5
+                "transparency": 0.5
             },
             "special_type": {
                 "lightopacity": 15
