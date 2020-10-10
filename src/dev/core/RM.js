@@ -55,12 +55,58 @@ ResourceManager.CopyToDest = function (src, dst) {
 		let srcChannel = new java.io.FileInputStream(src).getChannel()
 		let dstChannel = new java.io.FileOutputStream(dst).getChannel()
 		dstChannel.transferFrom(srcChannel, 0, srcChannel.size())
+		return true
 	} catch (e) {
-		Logger.Log(e, 'ModifiedRP preloader')
+		throw e
+	} finally {
 		return false
 	}
-	return true
 }
+
+ResourceManager.ReadBitmap = function (path, filename) {
+	let FIS, BMP
+	if (typeof path !== 'string')
+		throw 'Cannot read bitmap from path = ' + path + ' has invalid type ' + typeof path
+
+	if (typeof filename !== 'string')
+		throw 'Cannot read bitmap, filename = ' + filename + ' has invalid type ' + typeof filename
+
+	try {
+		FIS = new java.io.FileInputStream(ResourceManager.Select(path, filename))
+		BMP = new android.graphics.BitmapFactory.decodeStream(FIS)
+		return BMP
+	} catch (e) {
+		throw e
+	} finally {
+		return null
+	}
+}
+
+ResourceManager.CropBitmap = function (source, x, y, width, height) {
+	return new android.graphics.Bitmap.createBitmap(source, x, y, width, height)
+}
+
+ResourceManager.WriteBitmap = function (bitmap, path, filename) {
+	let dir = new java.io.File(path)
+	if (!dir.exists())
+		dir.mkdirs()
+	
+	try {
+		let file = new java.io.File(dir, filename + '.png')
+		let FOS = new java.io.FileOutputStream(file)
+
+		bitmap.compress(new android.graphics.Bitmap.CompressFormat.PNG, 100, FOS)
+
+		FOS.flush()
+		FOS.close()
+		return true
+	} catch (e) {
+		throw e
+	} finally {
+		return false
+	}
+}
+
 
 ResourceManager.getFilesList = function (path) {
 	let c = [], files = ResourceManager.Select(path).listFiles()
@@ -104,7 +150,7 @@ ScriptingManager.readAllResources = function () {
 	for (let i in json.files) {
 		ScriptingManager.readResource(ResourceManager.resources.dir.assets + json.files[i])
 	}
-		ResourceManager.Rewrite(ResourceManager.Select(ResourceManager.resources.files.cache), JSON.stringify(ScriptingManager.readPropertyRecusive(ScriptingManager.namespaces)))
+	ResourceManager.Rewrite(ResourceManager.Select(ResourceManager.resources.files.cache), JSON.stringify(ScriptingManager.readPropertyRecusive(ScriptingManager.namespaces)))
 }
 
 ScriptingManager.readReference = function (_String) {
