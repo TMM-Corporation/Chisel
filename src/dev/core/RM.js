@@ -64,21 +64,22 @@ ResourceManager.CopyToDest = function (src, dst) {
 }
 
 ResourceManager.ReadBitmap = function (path, filename) {
-	let FIS, BMP
-	if (typeof path !== 'string')
-		throw 'Cannot read bitmap from path = ' + path + ' has invalid type ' + typeof path
+	let FIS, BMPF, BMP
 
-	if (typeof filename !== 'string')
-		throw 'Cannot read bitmap, filename = ' + filename + ' has invalid type ' + typeof filename
+	if (typeof path != 'string')
+		Logger.Log('Cannot read bitmap from path = ' + path + ' has invalid type ' + typeof path, 'RM-ReadBitmap')
+
+	if (typeof filename != 'string')
+		Logger.Log('Cannot read bitmap, filename = ' + filename + ' has invalid type ' + typeof filename, 'RM-ReadBitmap')
 
 	try {
 		FIS = new java.io.FileInputStream(ResourceManager.Select(path, filename))
-		BMP = new android.graphics.BitmapFactory.decodeStream(FIS)
+		BMPF = new android.graphics.BitmapFactory.decodeStream(FIS)
+		BMP = new android.graphics.Bitmap.createBitmap(BMPF)
+
 		return BMP
 	} catch (e) {
-		throw e
-	} finally {
-		return null
+		Logger.LogError(e)
 	}
 }
 
