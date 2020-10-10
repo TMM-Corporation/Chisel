@@ -109,10 +109,14 @@ ResourceManager.WriteBitmap = function (bitmap, path, filename) {
 
 
 ResourceManager.getFilesList = function (path) {
-	let c = [], files = ResourceManager.Select(path).listFiles()
+	let c = {
+		files: [],
+		dirs: []
+	}, files = ResourceManager.Select(path).listFiles()
 	for (let i in files) {
 		var f = files[i]
-		if (f.isDirectory()) c.push(f.getName())
+		if (f.isDirectory()) c.dirs.push(f.getName())
+		if (f.isFile()) c.files.push(f.getName())
 	}
 	return c
 }
