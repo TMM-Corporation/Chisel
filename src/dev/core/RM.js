@@ -58,8 +58,6 @@ ResourceManager.CopyToDest = function (src, dst) {
 		return true
 	} catch (e) {
 		throw e
-	} finally {
-		return false
 	}
 }
 
@@ -91,24 +89,25 @@ ResourceManager.WriteBitmap = function (bitmap, path, filename) {
 	let dir = new java.io.File(path)
 	if (!dir.exists())
 		dir.mkdirs()
-	
+
 	try {
-		let file = new java.io.File(dir, filename + '.png')
-		let FOS = new java.io.FileOutputStream(file)
+		let f = new java.io.File(dir, filename)
+		f.createNewFile()
 
-		bitmap.compress(new android.graphics.Bitmap.CompressFormat.PNG, 100, FOS)
-
-		FOS.flush()
-		FOS.close()
+		//Convert bitmap to byte array
+		let bos = new java.io.ByteArrayOutputStream()
+		bitmap.compress(android.graphics.Bitmap.CompressFormat.PNG, 0 /*ignored for PNG*/, bos)
+		
+		//write the bytes in file
+		let fos = new java.io.FileOutputStream(f)
+		fos.write(bos.toByteArray())
+		fos.flush()
+		fos.close()
 		return true
 	} catch (e) {
-		throw e
-	} finally {
-		return false
+		Logger.Log(e, 'WRITESDFGHYUYTRDSX VBNHGFDX')
 	}
 }
-
-
 ResourceManager.getFilesList = function (path) {
 	let c = {
 		files: [],
