@@ -115,8 +115,8 @@ ResourceManager.getFilesList = function (path) {
 	}, files = ResourceManager.Select(path).listFiles()
 	for (let i in files) {
 		var f = files[i]
-		if (f.isDirectory()) c.dirs.push(f.getName())
-		if (f.isFile()) c.files.push(f.getName())
+		if (f.isDirectory()) c.dirs.push(f.getName() + '')
+		if (f.isFile()) c.files.push(f.getName() + '')
 	}
 	return c
 }
