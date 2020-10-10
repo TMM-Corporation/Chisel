@@ -4,10 +4,12 @@ var Chisel = {
     mods: {},
     generators: {},
 }
-
+// Logger.Log = function (message, prefix) {
+//     Logger.Log(message, "Chisel" + (prefix ? '$' + prefix : ''))
+// }
 Chisel.data = ResourceManager.ReadJSON(ResourceManager.Select(Chisel.assets, 'gen_blocks.json'))
 Chisel.gen_assets = Chisel.assets + 'gen_assets/'
-Chisel.terrain_atlas = Chisel.assets + 'terrain_atlas/'
+Chisel.terrain_atlas = Chisel.assets + 'terrain-atlas/'
 
 Chisel.readBlocks = function (data) {
     if (data) //reading object
@@ -36,9 +38,21 @@ Chisel.addGenerator = function (generator, name) {
 Chisel.addGenerator(
     function (block, name) {
         let src = Chisel.gen_assets + name
-        let path = ResourceManager.getFilesList(src)
-        for (let filename in path) {
-            alert(filename)
+        let files = ResourceManager.getFilesList(src).files
+        for (let index in files) {
+            let file = files[index].replace(/-/g,'_')
+            try {
+                if (file.endsWith('.png') || file.endsWith('.jpg') || file.endsWith('.jpeg')) {
+                    let bmp = ResourceManager.ReadBitmap(src, file)
+                    let path = Chisel.terrain_atlas
+                    let filename = 'chisel_' + name + '_' + file
+                    ResourceManager.WriteBitmap(bmp, path, filename)
+                    // Logger.Log((src + ' = ' + typeof src) + ' : ' + (file + ' = ' + typeof file) + ' : ' + (bmp + ' = ' + typeof bmp), "Chisel Writing Textures")
+                }
+                // Logger.Log(file+'_'+(typeof file)+':'+Object.keys(file), "Chisel Textures")
+            } catch (e) {
+                Logger.LogError(e)
+            }
         }
     }, "default"
 )
@@ -47,28 +61,26 @@ let BitmapWorker = {}
 let BlockWorker = {}
 let CTMWorker = {}//TODO: rework ctmlib for chisel
 
-BlockWorker.genBlock = function (block, name) {
+BlockWorker.genBlock = function (block, name, ModPrefix) {
+    if (typeof ModPrefix !== 'string')
+        ModPrefix = 'Chisel'
+    
     if (!block)
-        throw 'Cannot create undefined block with ' + (name ? name : undefined)
-
-    if (Object.keys(block).length) {
-        block.register = false
-        throw 'Cannot create block ' + name + ', no properties found'
-    }
+        Logger.Log('Cannot create undefined block with ' + (name ? name : undefined), ModPrefix)
 
     if (typeof block.subdirs === 'object' && !Array.isArray(block.subdirs))
         for (let key in block.subdirs)
-            Chisel.blockWorker(block.subdirs[key], key)
+            BlockWorker.genBlock(block.subdirs[key], key)
 
     if (typeof block.generator !== 'string' && block.generator)
-        throw 'Cannot get custom generator for block ' + name + ', generator has invalid type=' + block.generator
+        Logger.Log('Cannot get custom generator for block ' + name + ', generator has invalid type =' + typeof block.generator, ModPrefix)
 
     if (!block.generator)
         block.generator = "default"
 
     if (typeof block.require_mod === 'string')
         if (!Chisel.mods[block.require_mod])
-            throw 'Cannot add block with name ' + name + ', mod ' + block.require_mod + ' is not found'
+            Logger.Log('Cannot add block with name ' + name + ', mod ' + block.require_mod + ' is not found', ModPrefix)
 
     if (typeof block.register === 'undefined')
         block.register = true
@@ -79,16 +91,16 @@ BlockWorker.genBlock = function (block, name) {
         block.variation = "stone"
 
     if (block.variation === 'custom' && !block.variations)
-        throw 'Custom variation is set, but variations not found'
+        Logger.Log('Custom variation is set, but variations not found', ModPrefix)
 
     if (block.variation === 'custom' && !Array.isArray(block.variations))
-        throw 'Custom variation is set, but variations format is not object'
+        Logger.Log('Custom variation is set, but variations format is not object', ModPrefix)
 
     if (!Chisel.generators[block.generator])
-        throw 'Cannot generate block with ' + block.generator + ', generator not registered'
+        Logger.Log('Cannot generate block with ' + block.generator + ', generator not registered', ModPrefix)
     else if (typeof Chisel.generators[block.generator] === 'function')
         Chisel.generators[block.generator](block, name)
-    else throw 'Cannot execute generator ' + block.generator + ' for block ' + name + ', generator is ' + typeof Chisel.generators[block.generator]
+    else Logger.Log('Cannot execute generator ' + block.generator + ' for block ' + name + ', generator is ' + typeof Chisel.generators[block.generator], ModPrefix)
 }
 BitmapWorker.genTexture = function (filePath, filename, destpath) {
     //TODO: create generating texture
@@ -97,7 +109,7 @@ BitmapWorker.genTexture = function (filePath, filename, destpath) {
 BitmapWorker.genCTMTexture = function (param) {
     //TODO: create generating texture
 }
-
+Chisel.readBlocks(Chisel.data)
 /**
  * Block props:
  * genprops {
