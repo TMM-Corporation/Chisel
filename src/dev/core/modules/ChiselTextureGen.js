@@ -5,6 +5,11 @@ var Chisel = {
     generators: {},
     blockIDs: []
 }
+let setLoadingTip = ModAPI.requireGlobal("MCSystem.setLoadingTip")
+function Tip(str) {
+    if (typeof str === 'string')
+        setLoadingTip(str)
+}
 // Logger.Log = function (message, prefix) {
 //     Logger.Log(message, "Chisel" + (prefix ? '$' + prefix : ''))
 // }
@@ -37,30 +42,29 @@ Chisel.addGenerator = function (generator, name) {
 }
 
 Chisel.addGenerator(
-    function (block, name, prefix) {
-        let src = Chisel.gen_assets + name
-        if (typeof prefix !== 'string')
-            prefix = 'chisel_'
-        let files = ResourceManager.getFilesList(src).files
-        for (let index in files) {
-            let file = files[index]//.replace(/-/g, '_')
-            try {
-                if (file.endsWith('.png')) {
-                    let bmp = ResourceManager.ReadBitmap(src, file)
-                    let path = Chisel.terrain_atlas
-                    let filename = (prefix + '_' + name + '_' + file.replace('.png', '_0.png'))
-                    let nameID = filename.replace('_0.png', '')
-                    Chisel.blockIDs.push(nameID)
-                    IDRegistry.genBlockID(nameID)
-                    Block.createBlock(nameID, [{ name: "Test", texture: [[nameID, 0]], inCreative: true }])
-                    ResourceManager.WriteBitmap(bmp, path, filename)
-                    // Logger.Log((src + ' = ' + typeof src) + ' : ' + (file + ' = ' + typeof file) + ' : ' + (bmp + ' = ' + typeof bmp), "Chisel Writing Textures")
-                }
-                // Logger.Log(file+'_'+(typeof file)+':'+Object.keys(file), "Chisel Textures")
-            } catch (e) {
-                Logger.LogError(e)
+    function (block, name) {
+        let ids = [], src, files, filename, nameID, path
+
+        path = Chisel.terrain_atlas + name + '/'
+        src = Chisel.gen_assets + name
+        files = ResourceManager.getFilesList(src).files
+
+        files.forEach(function (file) {
+            if (file.endsWith('.png')) {
+                filename = ('chisel_' + name + '_' + file.replace('.png', '_0.png').replace(/-/g, '_'))
+                if (new java.io.File(path, filename).exists() === false)
+                    BitmapWorker.genTexture(src, file, path, filename)
+                nameID = filename.replace('_0.png', '')
+
+                IDRegistry.genBlockID(nameID)
+                Block.createBlock(nameID, [{ name: "Test", texture: [[nameID, 0]], inCreative: true }])
+                ids.push(nameID)
+                // Logger.Log((src + ' = ' + typeof src) + ' : ' + (file + ' = ' + typeof file) + ' : ' + (bmp + ' = ' + typeof bmp), "Chisel Writing Textures")
             }
-        }
+            // Logger.Log(file+'_'+(typeof file)+':'+Object.keys(file), "Chisel Textures")
+        })
+        // Tip('[Chisel] Generating block ' + name)
+        return ids
     }, "default"
 )
 
@@ -104,12 +108,19 @@ BlockWorker.genBlockParams = function (block, name, ModPrefix) {
 
     if (!Chisel.generators[block.generator])
         Logger.Log('Cannot generate block with ' + block.generator + ', generator not registered', ModPrefix)
-    else if (typeof Chisel.generators[block.generator] === 'function')
-        Chisel.generators[block.generator](block, name, ModPrefix)
+    else if (typeof Chisel.generators[block.generator] === 'function') {
+        let ids = Chisel.generators[block.generator](block, name, ModPrefix)
+
+        if (typeof ids === 'object') {
+            Item.addCreativeGroup(name, "Chisel " + name, ids.map(function (item) { return BlockID[item] }))
+            Chisel.blockIDs[name] = ids
+        }
+    }
     else Logger.Log('Cannot execute generator ' + block.generator + ' for block ' + name + ', generator is ' + typeof Chisel.generators[block.generator], ModPrefix)
 }
-BitmapWorker.genTexture = function (filePath, filename, destpath) {
-
+BitmapWorker.genTexture = function (src, file, path, filename) {
+    let bmp = ResourceManager.ReadBitmap(src, file)
+    ResourceManager.WriteBitmap(bmp, path, filename)
 }
 BitmapWorker.genCTMTexture = function (param) {
     //TODO: create generating texture
