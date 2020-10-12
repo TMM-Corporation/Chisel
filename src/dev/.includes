@@ -1,4 +1,6 @@
 header.js
 
-core/RM.js
-core/modules/ChiselTextureGen.js
+core/RM.ts
+core/Chisel.ts
+
+main.ts
