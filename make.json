@@ -1,0 +1,75 @@
+{
+	"global": {
+		"info": {
+			"name": "Chisel",
+			"author": "TooManyMods",
+			"version": "Horizon Beta 1.11.4",
+			"description": "More decorative blocks for minecraft!",
+			"icon": "Chisel/mod_icon.png"
+		},
+		"api": "CoreEngine"
+	},
+	"make": {
+		"debugAbi": "armeabi-v7a",
+		"abis": [
+			"armeabi-v7a",
+			"x86"
+		],
+		"linkNative": [
+			"minecraftpe",
+			"innercore",
+			"nativejs"
+		],
+		"excludeFromRelease": [],
+		"pushTo": "storage/emulated/0/games/horizon/packs/main-dev/innercore/mods/Chisel",
+		"ndkPath": null
+	},
+	"resources": [
+		{
+			"path": "Chisel/src/assets/mod_assets",
+			"type": "resource_directory"
+		},
+		{
+			"path": "Chisel/src/assets/mod_assets/gui",
+			"type": "gui"
+		},
+		{
+			"path": "Chisel/src/assets/minecraft/resource/*",
+			"type": "minecraft_resource_pack"
+		},
+		{
+			"path": "Chisel/src/assets/minecraft/behavior/*",
+			"type": "minecraft_behavior_pack"
+		}
+	],
+	"sources": [
+		{
+			"source": "Chisel/src/dev",
+			"target": "main.js",
+			"type": "main",
+			"language": "typescript"
+		},
+		{
+			"source": "Chisel/src/launcher.js",
+			"type": "launcher",
+			"language": "javascript"
+		},
+		{
+			"source": "Chisel/src/lib/*",
+			"type": "library",
+			"language": "javascript"
+		},
+		{
+			"source": "Chisel/src/preloader/*",
+			"type": "preloader",
+			"language": "javascript"
+		}
+	],
+	"compile": [],
+	"additional": [
+		{
+			"source": "Chisel/src/assets/root/*",
+			"targetDir": "."
+		}
+	]
+}
