@@ -12,7 +12,7 @@ interface BlockProperties {
     generator?: string | "default"
     parents?: string | null
     register?: boolean | true
-    require_mod?: string | "chisel"
+    require_mod?: string | "Chisel"
     special_type?: {
         base?: number | 0
         destroytime?: number | 1
@@ -58,8 +58,8 @@ class Chisel {
     readBlocks() {
         let blocks = this.data.gen_blocks.blocks
         for (let blockname in blocks) {
-            let block:BlockProperties = blocks[blockname]
-            Logger.Log(JSON.stringify(block), `Chisel ${blockname}`)
+            let block: BlockProperties = blocks[blockname]
+            Logger.Log(`Name ${blockname}, data: ${JSON.stringify(block)}`, `Chisel-Block`)
             this.genBlockParams(block, blockname)
         }
     }
@@ -71,15 +71,15 @@ class Chisel {
             throw `Cannot add generator with name type ${typeof name}`
         if (name in generators)
             throw `Cannot add generator with name ${name}, generator is exists`
-        
-        Logger.Log(`Added new block generator "${name}"`,'Chisel')
+
+        Logger.Log(`Added new block generator "${name}"`, 'Chisel-Generators')
         generators[name] = customGenerator
     }
     genBlockParams(block: BlockProperties, name: string, ModPrefix?: string) {
         let data = this.data
         if (typeof ModPrefix !== 'string')
-            ModPrefix = 'chisel'
-        Logger.Log(`Adding new block ${name}`,'Chisel')
+            ModPrefix = 'Chisel'
+        Logger.Log(`Adding new block ${name}`, 'Chisel-BlockParams')
         if (!block)
             throw `Cannot create block ${(name ? name : undefined)}, ${block}`
 
@@ -88,7 +88,7 @@ class Chisel {
                 this.genBlockParams(block.subdirs[key], key)
 
         if (typeof block.generator !== 'string' && block.generator)
-            Logger.Log(`Cannot get custom generator for block ${name} generator has invalid type = ${+ typeof block.generator}`, ModPrefix)
+            Logger.Log(`Cannot get custom generator for block ${name} generator has invalid type = ${+ typeof block.generator}`, `${ModPrefix}-Custom-Generator`)
 
         if (!block.generator)
             block.generator = "default"
@@ -112,7 +112,7 @@ class Chisel {
             throw 'Custom variation is set, but variations format is not object'
 
         if (!data.generators[block.generator])
-            Logger.Log(`Cannot generate block with ${block.generator}, generator not registered`, ModPrefix)
+            Logger.Log(`Cannot generate block with ${block.generator}, generator not registered`, `${ModPrefix}-Data-Generators`)
         else if (typeof data.generators[block.generator] === 'function') {
             let ids = data.generators[block.generator](block, name, ModPrefix)
 
@@ -121,7 +121,7 @@ class Chisel {
                 data.blockIDs[name] = ids
             }
         }
-        else Logger.Log(`Cannot execute generator ${block.generator} for block ${name}, generator is ${typeof this.data.generators[block.generator]}`, ModPrefix)
+        else Logger.Log(`Cannot execute generator ${block.generator} for block ${name}, generator is ${typeof this.data.generators[block.generator]}`, `${ModPrefix}-Execute-Generator`)
     }
     logData() {
         Logger.Log(JSON.stringify(this.data.gen_blocks), 'Chisel-Data')
@@ -151,7 +151,7 @@ class BitmapWorker {
  * generator = "default"
  * parents = null
  * register = true
- * require_mod = "chisel"
+ * require_mod = "Chisel"
  * special_type = {
  *   base = 0
  *   destroytime = 1
