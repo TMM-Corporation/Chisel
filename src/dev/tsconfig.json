@@ -15,7 +15,7 @@
 		"webpack"
 	],
 	"include": [
-		"header.js",
+		"header.ts",
 		"core/RM.ts",
 		"core/Chisel.ts",
 		"main.ts"
@@ -23,6 +23,7 @@
 	"files": [
 		"D:\\ToxesFoxes\\Documents\\GitHub\\Projects\\toolchain\\declarations\\android-declarations.d.ts",
 		"D:\\ToxesFoxes\\Documents\\GitHub\\Projects\\toolchain\\declarations\\android.d.ts",
+		"D:\\ToxesFoxes\\Documents\\GitHub\\Projects\\toolchain\\declarations\\connected-texture.d.ts",
 		"D:\\ToxesFoxes\\Documents\\GitHub\\Projects\\toolchain\\declarations\\core-engine.d.ts"
 	]
 }
