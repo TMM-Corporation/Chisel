@@ -102,7 +102,6 @@ var ResourceManager = {
 		let dir = new java.io.File(path)
 		if (!dir.exists())
 			dir.mkdirs()
-		Uint16Array
 		try {
 			let f = new java.io.File(dir, filename)
 			f.createNewFile()
