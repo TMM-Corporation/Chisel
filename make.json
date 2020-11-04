@@ -21,7 +21,7 @@
 			"nativejs"
 		],
 		"excludeFromRelease": [],
-		"pushTo": "storage/emulated/0/games/horizon/packs/main-dev/innercore/mods/Chisel",
+		"pushTo": "storage/emulated/0/games/horizon/packs/Inner_Core_Test/innercore/mods/Chisel",
 		"ndkPath": null
 	},
 	"resources": [
