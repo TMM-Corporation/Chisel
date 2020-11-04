@@ -121,7 +121,7 @@ class Chisel {
                 data.blockIDs[name] = ids
             }
         }
-        else Logger.Log(`Cannot execute generator ${block.generator} for block ${name}, generator is ${typeof ChiselData.generators[block.generator]}`, ModPrefix)
+        else Logger.Log(`Cannot execute generator ${block.generator} for block ${name}, generator is ${typeof this.data.generators[block.generator]}`, ModPrefix)
     }
     logData() {
         Logger.Log(JSON.stringify(this.data.gen_blocks), 'Chisel-Data')
