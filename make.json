@@ -30,6 +30,10 @@
 			"type": "resource_directory"
 		},
 		{
+			"path": "Chisel/src/assets/java_assets",
+			"type": "resource_directory"
+		},
+		{
 			"path": "Chisel/src/assets/mod_assets/gui",
 			"type": "gui"
 		},
