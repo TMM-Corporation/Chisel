@@ -133,6 +133,26 @@ var ResourceManager = {
 		}
 		return c
 	},
+	getFilesListRecursive(path: string, parentName: string): IFileList {
+		let c: IFileList = {
+			files: [],
+			dirs: []
+		}
+		// Logger.Log(`${path} : ${parentName}`,'input')
+		let list = ResourceManager.Select(path).listFiles()
+		for (let i in list) {
+			let f = list[i]
+			let name = `${parentName}/${f.getName()}`
+			if (f.isDirectory())
+				c.files.push.apply(c.files, ResourceManager.getFilesListRecursive(path+'/'+f.getName(), name).files)
+
+			if (f.isFile())
+				c.files.push(name)
+		}
+		// Logger.Log(`${JSON.stringify(c)}`,'output')
+		c.files.sort()
+		return c
+	},
 	getBuildConfig(): IBuildConfig {
 		let file = ResourceManager.Select(`${__dir__}build.config`)
 		return ResourceManager.ReadJSON(file)
