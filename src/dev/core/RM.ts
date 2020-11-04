@@ -166,9 +166,6 @@ var ResourceManager = {
 	},
 	WriteJSON(_File: java.io.File, json: {}): void {
 		ResourceManager.Rewrite(_File, JSON.stringify(json))
-	},
-	updateResources() {
-
 	}
 }
 
