@@ -126,7 +126,8 @@ var ResourceManager = {
 		let c: IFileList = {
 			files: [],
 			dirs: []
-		}, files = ResourceManager.Select(path).listFiles()
+		}
+		let files = ResourceManager.Select(path).listFiles()
 		for (let i in files) {
 			var f = files[i]
 			if (f.isDirectory()) c.dirs.push(f.getName() + '')
