@@ -122,7 +122,7 @@ var ResourceManager = {
 		}
 	},
 	getFilesList(path: string): IFileList {
-		let c = {
+		let c: IFileList = {
 			files: [],
 			dirs: []
 		}, files = ResourceManager.Select(path).listFiles()
