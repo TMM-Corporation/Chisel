@@ -133,13 +133,59 @@ class Chisel {
     }
 }
 
+interface IBitmapSources {
+    srcPath: string
+    srcName: string
+    destPath: string
+    destName: string
+}
+interface IBitmapSizes {
+    width: number | 32
+    height: number | 32
+    textureSize: number | 16
+    textureSlicesH: number | 2
+    textureSlicesV: number | 2
+    name?: string | 'default'
+    rows: number | 2
+    cols: number | 2
+}
 class BitmapWorker {
-    genTexture(src: string, file: string, path: string, filename: string) {
-        let bmp = RM.ReadBitmap(src, file)
-        RM.WriteBitmap(bmp, path, filename)
+    public CTMSizes: IBitmapSizes[] = []
+    addCTMSizes(dim: IBitmapSizes) {
+        this.CTMSizes.push(dim)
     }
-    genCTMTexture() {
-        //TODO: create generating texture
+    genTexture(source: IBitmapSources): boolean {
+        let bmp = RM.ReadBitmap(source.srcPath, source.srcName)
+        let isCTM = this.genCTMTexture(source)
+        if (isCTM == false)
+            RM.WriteBitmap(bmp, source.destPath, source.destName)
+        return isCTM
+    }
+    genCTMTexture(source: IBitmapSources): boolean {
+        let ctmType = source.destName.match(/(ctm[a-z]|ctm)/)
+        if (!ctmType)
+            return false
+        switch (ctmType[0]) {
+            case 'ctm': case 'ctmv': case 'ctmh': this.generateDefaultCTM(source, ctmType[0]); break
+            default: Logger.Log(`Cannot generate ctm texture named ${ctmType[0]}`, 'Chisel-BitmapWorker'); break
+        }
+        return true
+    }
+    generateDefaultCTM(source: IBitmapSources, ctmType: string): void {
+        let bitmap = RM.ReadBitmap(source.srcPath, source.srcName)
+        let w = bitmap.getWidth()
+        let h = bitmap.getHeight()
+        // alert(`${ctmType}:${source.destName}`)
+        this.CTMSizes.forEach(e => {
+            if (e.height == h && e.width == w && e.textureSize == ((w / e.textureSlicesH) + (h / e.textureSlicesV)) / 2) {
+                let i = 1
+                for (let hS = 0; hS < e.textureSlicesH; hS++)
+                    for (let vS = 0; vS < e.textureSlicesV; vS++) {
+                        RM.WriteBitmap(RM.CropBitmap(bitmap, hS * e.textureSize, vS * e.textureSize, e.textureSize, e.textureSize), source.destPath, source.destName.replace(ctmType, '').replace('_0', '' + (i++)))
+                        Logger.Log(`${bitmap}, ${hS * e.textureSize}, ${vS * e.textureSize}, ${e.textureSize}, ${e.textureSize}, ${source.destPath}, ${source.destName.replace(ctmType, '').replace('_0', '' + (i - 1))}, ${i - 1}`, 'Chisel-CTM-Gen')
+                    }
+            }
+        })
     }
 }
 

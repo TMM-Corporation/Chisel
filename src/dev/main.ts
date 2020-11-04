@@ -1,4 +1,4 @@
-var assets = __dir__ + RM.getBuildConfig().resources[0].path+'/'
+var assets = __dir__ + RM.getBuildConfig().resources[0].path + '/'
 
 var ChiselData: IChiselData = {
     gen_blocks: RM.ReadJSON(RM.Select(assets, 'gen_blocks.json')),
@@ -9,6 +9,9 @@ var ChiselData: IChiselData = {
     terrain_atlas: assets + 'terrain-atlas/',
     bmpWorker: new BitmapWorker()
 }
+ChiselData.bmpWorker.addCTMSizes({
+    width: 32, height: 32, textureSize: 16, textureSlicesH: 2, textureSlicesV: 2, cols: 2, rows: 2
+})
 
 var ChiselMod = new Chisel(ChiselData)
 
@@ -22,13 +25,24 @@ ChiselMod.addGenerator(
 
         files.forEach(function (file) {
             if (file.endsWith('.png')) {
-                filename = ('chisel_' + name + '_' + file.replace('.png', '_0.png').replace(/-/g, '_'))
+                let filebase = file.replace('.png', '_0.png').replace(/\+|-/g, '_')
+                filename = ('chisel_' + name + '_' + filebase)
+                let isCTM = false
                 if (new java.io.File(path, filename).exists() === false)
-                    ChiselData.bmpWorker.genTexture(src, file, path, filename)
+                    isCTM = ChiselData.bmpWorker.genTexture({srcPath: src, srcName: file, destPath: path, destName: filename})
+
                 nameID = filename.replace('_0.png', '')
 
                 IDRegistry.genBlockID(nameID)
-                Block.createBlock(nameID, [{name: "Test", texture: [[nameID, 0]], inCreative: true}])
+                Block.createBlock(nameID, [{name: (`${name} ${filebase}`).replace('_0.png','').replace('_', ' '), texture: [[nameID, 0]], inCreative: true}])
+                if (isCTM) {
+                    let ctmName = (filename.replace('_0.png', '').replace(/_(ctm|ctmv|ctmh)/,''))
+                    Logger.Log(ctmName,'Chisel-CTM-Name')
+                    if (filename.match('glass'))
+                        ConnectedTexture.setModelForGlass(BlockID[nameID], 0, ctmName, name)
+                    else
+                        ConnectedTexture.setModel(BlockID[nameID], 0, ctmName, name)
+                }
                 ids.push(nameID)
                 // Logger.Log((src + ' = ' + typeof src) + ' : ' + (file + ' = ' + typeof file) + ' : ' + (bmp + ' = ' + typeof bmp), "Chisel Writing Textures")
             }
