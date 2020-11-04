@@ -10,8 +10,10 @@ var sdcard = android.os.Environment.getExternalStorageDirectory()
 var resources = {
 	dir: {
 		assets: 'resources/mod_assets/',
+		java_assets: 'resources/mod_assets/java_assets/',
 		items_opaque: 'resources/mod_assets/items-opaque/',
-		resource_packs: 'resources/mod_assets/resource_packs/',
+		resource_packs: 'minecraft_packs/resource/',
+		behavior_packs: 'minecraft_packs/behavior/',
 		structures: 'resources/mod_assets/structures/',
 		terrain_atlas: 'resources/mod_assets/terrain-atlas/',
 		ui: 'resources/mod_assets/ui/',
