@@ -1,0 +1,36 @@
+{
+	"compilerOptions": {
+		"target": "ES5",
+		"lib": [
+			"ESNext"
+		],
+		"outFile": "D:\\ToxesFoxes\\Documents\\GitHub\\Projects\\toolchain\\build\\project\\sources\\main.js",
+		"experimentalDecorators": true,
+		"downlevelIteration": true,
+		"allowJs": true
+	},
+	"exclude": [
+		"**/node_modules/*",
+		"dom",
+		"webpack"
+	],
+	"include": [
+		"modules/RM.ts",
+		"header.ts",
+		"modules/task.ts",
+		"modules/gui-provider.ts",
+		"modules/rotation_matrix.ts",
+		"modules/carvable.ts",
+		"modules/chisel-item.ts",
+		"connectable.ts",
+		"main.ts",
+		"shared-api.ts"
+	],
+	"files": [
+		"D:\\ToxesFoxes\\Documents\\GitHub\\Projects\\toolchain\\declarations\\android-declarations.d.ts",
+		"D:\\ToxesFoxes\\Documents\\GitHub\\Projects\\toolchain\\declarations\\android.d.ts",
+		"D:\\ToxesFoxes\\Documents\\GitHub\\Projects\\toolchain\\declarations\\connected-texture.d.ts",
+		"D:\\ToxesFoxes\\Documents\\GitHub\\Projects\\toolchain\\declarations\\core-engine.d.ts",
+		"D:\\ToxesFoxes\\Documents\\GitHub\\Projects\\toolchain\\declarations\\pre-loader.d.ts"
+	]
+}

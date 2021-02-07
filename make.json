@@ -11,30 +11,19 @@
 	},
 	"make": {
 		"debugAbi": "armeabi-v7a",
-		"abis": [
-			"armeabi-v7a",
-			"x86"
-		],
-		"linkNative": [
-			"minecraftpe",
-			"innercore",
-			"nativejs"
-		],
+		"abis": ["armeabi-v7a", "x86"],
+		"linkNative": ["minecraftpe", "innercore", "nativejs"],
 		"excludeFromRelease": [],
 		"pushTo": "storage/emulated/0/games/horizon/packs/Inner_Core_Test/innercore/mods/Chisel",
 		"ndkPath": null
 	},
 	"resources": [
 		{
-			"path": "Chisel/src/assets/mod_assets",
+			"path": "Chisel/src/assets/ic_mod",
 			"type": "resource_directory"
 		},
 		{
-			"path": "Chisel/src/assets/java_assets",
-			"type": "resource_directory"
-		},
-		{
-			"path": "Chisel/src/assets/mod_assets/gui",
+			"path": "Chisel/src/assets/ic_mod/ui",
 			"type": "gui"
 		},
 		{
@@ -48,24 +37,25 @@
 	],
 	"sources": [
 		{
-			"source": "Chisel/src/dev",
+			"source": "Chisel/src/build/mod",
 			"target": "main.js",
 			"type": "main",
 			"language": "typescript"
 		},
 		{
-			"source": "Chisel/src/launcher.js",
-			"type": "launcher",
-			"language": "javascript"
-		},
-		{
-			"source": "Chisel/src/lib/*",
+			"source": "Chisel/src/build/lib/*",
 			"type": "library",
 			"language": "javascript"
 		},
 		{
-			"source": "Chisel/src/preloader/*",
+			"source": "Chisel/src/build/preloader",
+			"target": "preloader.js",
 			"type": "preloader",
+			"language": "typescript"
+		},
+		{
+			"source": "Chisel/src/launcher.js",
+			"type": "launcher",
 			"language": "javascript"
 		}
 	],
@@ -74,6 +64,14 @@
 		{
 			"source": "Chisel/src/assets/root/*",
 			"targetDir": "."
+		},
+		{
+			"source": "Chisel/src/assets/chisel/*",
+			"targetDir": "resources/chisel"
+		},
+		{
+			"source": "Chisel/src/assets/chisel_guide/*",
+			"targetDir": "resources/chisel_guide"
 		}
 	]
 }
