@@ -1,0 +1,64 @@
+{
+    "name": "glowstone/extra",
+    "register": true,
+    "localization": [
+        "tile_chisel_glowstone_extra_name"
+    ],
+    "variations": [
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glowstone_extra_bismuth_desc"
+            ],
+            "texture": {
+                "name": "chisel_glowstone_extra_bismuth",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glowstone_extra_neon_panel_desc"
+            ],
+            "texture": {
+                "name": "chisel_glowstone_extra_neon_panel",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glowstone_extra_neon_desc"
+            ],
+            "texture": {
+                "name": "chisel_glowstone_extra_neon",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glowstone_extra_tiles_large_bismuth_desc"
+            ],
+            "texture": {
+                "name": "chisel_glowstone_extra_tiles_large_bismuth",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glowstone_extra_tiles_medium_bismuth_desc"
+            ],
+            "texture": {
+                "name": "chisel_glowstone_extra_tiles_medium_bismuth",
+                "extension": "png",
+                "type": "normal"
+            }
+        }
+    ]
+}

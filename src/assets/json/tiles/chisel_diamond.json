@@ -1,0 +1,207 @@
+{
+    "name": "diamond",
+    "register": true,
+    "localization": [
+        "tile_chisel_diamond_name"
+    ],
+    "variations": [
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_diamond_terrain_diamond_bismuth_desc"
+            ],
+            "texture": {
+                "name": "chisel_diamond_terrain_diamond_bismuth",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_diamond_terrain_diamond_cells_desc"
+            ],
+            "texture": {
+                "name": "chisel_diamond_terrain_diamond_cells",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_diamond_terrain_diamond_crushed_desc"
+            ],
+            "texture": {
+                "name": "chisel_diamond_terrain_diamond_crushed",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_diamond_terrain_diamond_embossed_bottom_desc"
+            ],
+            "texture": {
+                "name": "chisel_diamond_terrain_diamond_embossed_bottom",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_diamond_terrain_diamond_embossed_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_diamond_terrain_diamond_embossed_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_diamond_terrain_diamond_embossed_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_diamond_terrain_diamond_embossed_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_diamond_terrain_diamond_four_desc"
+            ],
+            "texture": {
+                "name": "chisel_diamond_terrain_diamond_four",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_diamond_terrain_diamond_fourornate_desc"
+            ],
+            "texture": {
+                "name": "chisel_diamond_terrain_diamond_fourornate",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_diamond_terrain_diamond_gem_bottom_desc"
+            ],
+            "texture": {
+                "name": "chisel_diamond_terrain_diamond_gem_bottom",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_diamond_terrain_diamond_gem_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_diamond_terrain_diamond_gem_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_diamond_terrain_diamond_gem_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_diamond_terrain_diamond_gem_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_diamond_terrain_diamond_ornatelayer_desc"
+            ],
+            "texture": {
+                "name": "chisel_diamond_terrain_diamond_ornatelayer",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_diamond_terrain_diamond_simple_bottom_desc"
+            ],
+            "texture": {
+                "name": "chisel_diamond_terrain_diamond_simple_bottom",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_diamond_terrain_diamond_simple_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_diamond_terrain_diamond_simple_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_diamond_terrain_diamond_simple_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_diamond_terrain_diamond_simple_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_diamond_terrain_diamond_space_desc"
+            ],
+            "texture": {
+                "name": "chisel_diamond_terrain_diamond_space",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_diamond_terrain_diamond_spaceblack_desc"
+            ],
+            "texture": {
+                "name": "chisel_diamond_terrain_diamond_spaceblack",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_diamond_terrain_diamond_zelda_desc"
+            ],
+            "texture": {
+                "name": "chisel_diamond_terrain_diamond_zelda",
+                "extension": "png",
+                "type": "normal"
+            }
+        }
+    ]
+}

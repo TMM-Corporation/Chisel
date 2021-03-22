@@ -1,0 +1,174 @@
+{
+    "name": "voidstone/runes",
+    "register": true,
+    "localization": [
+        "tile_chisel_voidstone_runes_name"
+    ],
+    "variations": [
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_voidstone_runes_black_desc"
+            ],
+            "texture": {
+                "name": "chisel_voidstone_runes_black",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_voidstone_runes_blue_desc"
+            ],
+            "texture": {
+                "name": "chisel_voidstone_runes_blue",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_voidstone_runes_brown_desc"
+            ],
+            "texture": {
+                "name": "chisel_voidstone_runes_brown",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_voidstone_runes_cyan_desc"
+            ],
+            "texture": {
+                "name": "chisel_voidstone_runes_cyan",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_voidstone_runes_gray_desc"
+            ],
+            "texture": {
+                "name": "chisel_voidstone_runes_gray",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_voidstone_runes_green_desc"
+            ],
+            "texture": {
+                "name": "chisel_voidstone_runes_green",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_voidstone_runes_lightblue_desc"
+            ],
+            "texture": {
+                "name": "chisel_voidstone_runes_lightblue",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_voidstone_runes_lightgray_desc"
+            ],
+            "texture": {
+                "name": "chisel_voidstone_runes_lightgray",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_voidstone_runes_lime_desc"
+            ],
+            "texture": {
+                "name": "chisel_voidstone_runes_lime",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_voidstone_runes_magenta_desc"
+            ],
+            "texture": {
+                "name": "chisel_voidstone_runes_magenta",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_voidstone_runes_orange_desc"
+            ],
+            "texture": {
+                "name": "chisel_voidstone_runes_orange",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_voidstone_runes_pink_desc"
+            ],
+            "texture": {
+                "name": "chisel_voidstone_runes_pink",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_voidstone_runes_purple_desc"
+            ],
+            "texture": {
+                "name": "chisel_voidstone_runes_purple",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_voidstone_runes_red_desc"
+            ],
+            "texture": {
+                "name": "chisel_voidstone_runes_red",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_voidstone_runes_yellow_desc"
+            ],
+            "texture": {
+                "name": "chisel_voidstone_runes_yellow",
+                "extension": "png",
+                "type": "normal"
+            }
+        }
+    ]
+}

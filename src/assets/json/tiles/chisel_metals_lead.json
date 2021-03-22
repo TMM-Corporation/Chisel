@@ -1,0 +1,128 @@
+{
+    "name": "metals/lead",
+    "register": true,
+    "localization": [
+        "tile_chisel_metals_lead_name"
+    ],
+    "variations": [
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_metals_lead_badgreggy_desc"
+            ],
+            "texture": {
+                "name": "chisel_metals_lead_badgreggy",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_metals_lead_badgreggy_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_metals_lead_bolted_desc"
+            ],
+            "texture": {
+                "name": "chisel_metals_lead_bolted",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_metals_lead_caution_desc"
+            ],
+            "texture": {
+                "name": "chisel_metals_lead_caution",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_metals_lead_caution_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_metals_lead_crate_desc"
+            ],
+            "texture": {
+                "name": "chisel_metals_lead_crate",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_metals_lead_crate_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_metals_lead_machine_desc"
+            ],
+            "texture": {
+                "name": "chisel_metals_lead_machine",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_metals_lead_scaffold_desc"
+            ],
+            "texture": {
+                "name": "chisel_metals_lead_scaffold",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_metals_lead_scaffold_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_metals_lead_thermal_bottom_desc"
+            ],
+            "texture": {
+                "name": "chisel_metals_lead_thermal_bottom",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_metals_lead_thermal_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_metals_lead_thermal_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_metals_lead_thermal_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_metals_lead_thermal_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        }
+    ]
+}

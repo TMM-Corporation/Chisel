@@ -1,0 +1,424 @@
+{
+    "name": "quartz",
+    "register": true,
+    "localization": [
+        "tile_chisel_quartz_name"
+    ],
+    "variations": [
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_quartz_array_desc"
+            ],
+            "texture": {
+                "name": "chisel_quartz_array",
+                "extension": "png",
+                "type": "ctmh"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_quartz_braid_desc"
+            ],
+            "texture": {
+                "name": "chisel_quartz_braid",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_quartz_bricks_chaotic_desc"
+            ],
+            "texture": {
+                "name": "chisel_quartz_bricks_chaotic",
+                "extension": "png",
+                "type": "bricks-chaotic"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_quartz_bricks_cracked_desc"
+            ],
+            "texture": {
+                "name": "chisel_quartz_bricks_cracked",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_quartz_bricks_encased_desc"
+            ],
+            "texture": {
+                "name": "chisel_quartz_bricks_encased",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_quartz_bricks_encased_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_quartz_bricks_small_desc"
+            ],
+            "texture": {
+                "name": "chisel_quartz_bricks_small",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_quartz_bricks_soft_desc"
+            ],
+            "texture": {
+                "name": "chisel_quartz_bricks_soft",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_quartz_bricks_solid_desc"
+            ],
+            "texture": {
+                "name": "chisel_quartz_bricks_solid",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_quartz_bricks_triple_desc"
+            ],
+            "texture": {
+                "name": "chisel_quartz_bricks_triple",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_quartz_chaotic_medium_desc"
+            ],
+            "texture": {
+                "name": "chisel_quartz_chaotic_medium",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_quartz_chaotic_small_desc"
+            ],
+            "texture": {
+                "name": "chisel_quartz_chaotic_small",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_quartz_circular_desc"
+            ],
+            "texture": {
+                "name": "chisel_quartz_circular",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_quartz_circular_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_quartz_cracked_desc"
+            ],
+            "texture": {
+                "name": "chisel_quartz_cracked",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_quartz_cuts_desc"
+            ],
+            "texture": {
+                "name": "chisel_quartz_cuts",
+                "extension": "png",
+                "type": "cuts"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_quartz_dent_desc"
+            ],
+            "texture": {
+                "name": "chisel_quartz_dent",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_quartz_dent_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_quartz_french_1_desc"
+            ],
+            "texture": {
+                "name": "chisel_quartz_french_1",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_quartz_french_2_desc"
+            ],
+            "texture": {
+                "name": "chisel_quartz_french_2",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_quartz_jellybean_desc"
+            ],
+            "texture": {
+                "name": "chisel_quartz_jellybean",
+                "extension": "png",
+                "type": "ctm"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_quartz_layers_desc"
+            ],
+            "texture": {
+                "name": "chisel_quartz_layers",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_quartz_mosaic_desc"
+            ],
+            "texture": {
+                "name": "chisel_quartz_mosaic",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_quartz_mosaic_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_quartz_ornate_desc"
+            ],
+            "texture": {
+                "name": "chisel_quartz_ornate",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_quartz_panel_desc"
+            ],
+            "texture": {
+                "name": "chisel_quartz_panel",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_quartz_pillar_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_quartz_pillar_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_quartz_pillar_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_quartz_pillar_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_quartz_prism_desc"
+            ],
+            "texture": {
+                "name": "chisel_quartz_prism",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_quartz_raw_desc"
+            ],
+            "texture": {
+                "name": "chisel_quartz_raw",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_quartz_road_desc"
+            ],
+            "texture": {
+                "name": "chisel_quartz_road",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_quartz_slanted_desc"
+            ],
+            "texture": {
+                "name": "chisel_quartz_slanted",
+                "extension": "png",
+                "type": "ctm"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_quartz_tiles_large_desc"
+            ],
+            "texture": {
+                "name": "chisel_quartz_tiles_large",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_quartz_tiles_large_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_quartz_tiles_medium_desc"
+            ],
+            "texture": {
+                "name": "chisel_quartz_tiles_medium",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_quartz_tiles_small_desc"
+            ],
+            "texture": {
+                "name": "chisel_quartz_tiles_small",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_quartz_twisted_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_quartz_twisted_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_quartz_twisted_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_quartz_twisted_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_quartz_weaver_desc"
+            ],
+            "texture": {
+                "name": "chisel_quartz_weaver",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_quartz_weaver_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_quartz_zag_desc"
+            ],
+            "texture": {
+                "name": "chisel_quartz_zag",
+                "extension": "png",
+                "type": "ctm"
+            }
+        }
+    ]
+}

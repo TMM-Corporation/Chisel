@@ -1,0 +1,20 @@
+{
+    "name": "limestone/extra",
+    "register": true,
+    "localization": [
+        "tile_chisel_limestone_extra_name"
+    ],
+    "variations": [
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_limestone_extra_raw_desc"
+            ],
+            "texture": {
+                "name": "chisel_limestone_extra_raw",
+                "extension": "png",
+                "type": "normal"
+            }
+        }
+    ]
+}

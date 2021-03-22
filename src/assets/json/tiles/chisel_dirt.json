@@ -1,0 +1,195 @@
+{
+    "name": "dirt",
+    "register": true,
+    "localization": [
+        "tile_chisel_dirt_name"
+    ],
+    "variations": [
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_dirt_bricks_dirt2_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_dirt_bricks_dirt2_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_dirt_bricks_desc"
+            ],
+            "texture": {
+                "name": "chisel_dirt_bricks",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_dirt_bricks2_desc"
+            ],
+            "texture": {
+                "name": "chisel_dirt_bricks2",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_dirt_bricks3_desc"
+            ],
+            "texture": {
+                "name": "chisel_dirt_bricks3",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_dirt_chunky_desc"
+            ],
+            "texture": {
+                "name": "chisel_dirt_chunky",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_dirt_cobble_desc"
+            ],
+            "texture": {
+                "name": "chisel_dirt_cobble",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_dirt_happy_desc"
+            ],
+            "texture": {
+                "name": "chisel_dirt_happy",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_dirt_hor_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_dirt_hor_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_dirt_horizontal_desc"
+            ],
+            "texture": {
+                "name": "chisel_dirt_horizontal",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_dirt_layers_desc"
+            ],
+            "texture": {
+                "name": "chisel_dirt_layers",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_dirt_netherbricks_desc"
+            ],
+            "texture": {
+                "name": "chisel_dirt_netherbricks",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_dirt_plate_desc"
+            ],
+            "texture": {
+                "name": "chisel_dirt_plate",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_dirt_reinforcedcobbledirt_desc"
+            ],
+            "texture": {
+                "name": "chisel_dirt_reinforcedcobbledirt",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_dirt_reinforcedcobbledirt_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_dirt_reinforceddirt_desc"
+            ],
+            "texture": {
+                "name": "chisel_dirt_reinforceddirt",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_dirt_reinforceddirt_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_dirt_vert_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_dirt_vert_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_dirt_vertical_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_dirt_vertical_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        }
+    ]
+}

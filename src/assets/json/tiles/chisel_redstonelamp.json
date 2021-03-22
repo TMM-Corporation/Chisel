@@ -1,0 +1,53 @@
+{
+    "name": "redstoneLamp",
+    "register": true,
+    "localization": [
+        "tile_chisel_redstonelamp_name"
+    ],
+    "variations": [
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_redstonelamp_redstone_lamp_off_desc"
+            ],
+            "texture": {
+                "name": "chisel_redstonelamp_redstone_lamp_off",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_redstonelamp_redstone_lamp_on_desc"
+            ],
+            "texture": {
+                "name": "chisel_redstonelamp_redstone_lamp_on",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_redstonelamp_square_off_desc"
+            ],
+            "texture": {
+                "name": "chisel_redstonelamp_square_off",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_redstonelamp_square_on_desc"
+            ],
+            "texture": {
+                "name": "chisel_redstonelamp_square_on",
+                "extension": "png",
+                "type": "normal"
+            }
+        }
+    ]
+}

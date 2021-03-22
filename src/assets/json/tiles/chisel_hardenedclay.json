@@ -1,0 +1,424 @@
+{
+    "name": "hardenedclay",
+    "register": true,
+    "localization": [
+        "tile_chisel_hardenedclay_name"
+    ],
+    "variations": [
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hardenedclay_array_desc"
+            ],
+            "texture": {
+                "name": "chisel_hardenedclay_array",
+                "extension": "png",
+                "type": "ctmh"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hardenedclay_braid_desc"
+            ],
+            "texture": {
+                "name": "chisel_hardenedclay_braid",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hardenedclay_bricks_chaotic_desc"
+            ],
+            "texture": {
+                "name": "chisel_hardenedclay_bricks_chaotic",
+                "extension": "png",
+                "type": "bricks-chaotic"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hardenedclay_bricks_cracked_desc"
+            ],
+            "texture": {
+                "name": "chisel_hardenedclay_bricks_cracked",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hardenedclay_bricks_encased_desc"
+            ],
+            "texture": {
+                "name": "chisel_hardenedclay_bricks_encased",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_hardenedclay_bricks_encased_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hardenedclay_bricks_small_desc"
+            ],
+            "texture": {
+                "name": "chisel_hardenedclay_bricks_small",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hardenedclay_bricks_soft_desc"
+            ],
+            "texture": {
+                "name": "chisel_hardenedclay_bricks_soft",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hardenedclay_bricks_solid_desc"
+            ],
+            "texture": {
+                "name": "chisel_hardenedclay_bricks_solid",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hardenedclay_bricks_triple_desc"
+            ],
+            "texture": {
+                "name": "chisel_hardenedclay_bricks_triple",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hardenedclay_chaotic_medium_desc"
+            ],
+            "texture": {
+                "name": "chisel_hardenedclay_chaotic_medium",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hardenedclay_chaotic_small_desc"
+            ],
+            "texture": {
+                "name": "chisel_hardenedclay_chaotic_small",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hardenedclay_circular_desc"
+            ],
+            "texture": {
+                "name": "chisel_hardenedclay_circular",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_hardenedclay_circular_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hardenedclay_cracked_desc"
+            ],
+            "texture": {
+                "name": "chisel_hardenedclay_cracked",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hardenedclay_cuts_desc"
+            ],
+            "texture": {
+                "name": "chisel_hardenedclay_cuts",
+                "extension": "png",
+                "type": "cuts"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hardenedclay_dent_desc"
+            ],
+            "texture": {
+                "name": "chisel_hardenedclay_dent",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_hardenedclay_dent_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hardenedclay_french_1_desc"
+            ],
+            "texture": {
+                "name": "chisel_hardenedclay_french_1",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hardenedclay_french_2_desc"
+            ],
+            "texture": {
+                "name": "chisel_hardenedclay_french_2",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hardenedclay_jellybean_desc"
+            ],
+            "texture": {
+                "name": "chisel_hardenedclay_jellybean",
+                "extension": "png",
+                "type": "ctm"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hardenedclay_layers_desc"
+            ],
+            "texture": {
+                "name": "chisel_hardenedclay_layers",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hardenedclay_mosaic_desc"
+            ],
+            "texture": {
+                "name": "chisel_hardenedclay_mosaic",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_hardenedclay_mosaic_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hardenedclay_ornate_desc"
+            ],
+            "texture": {
+                "name": "chisel_hardenedclay_ornate",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hardenedclay_panel_desc"
+            ],
+            "texture": {
+                "name": "chisel_hardenedclay_panel",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hardenedclay_pillar_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_hardenedclay_pillar_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hardenedclay_pillar_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_hardenedclay_pillar_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hardenedclay_prism_desc"
+            ],
+            "texture": {
+                "name": "chisel_hardenedclay_prism",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hardenedclay_raw_desc"
+            ],
+            "texture": {
+                "name": "chisel_hardenedclay_raw",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hardenedclay_road_desc"
+            ],
+            "texture": {
+                "name": "chisel_hardenedclay_road",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hardenedclay_slanted_desc"
+            ],
+            "texture": {
+                "name": "chisel_hardenedclay_slanted",
+                "extension": "png",
+                "type": "ctm"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hardenedclay_tiles_large_desc"
+            ],
+            "texture": {
+                "name": "chisel_hardenedclay_tiles_large",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_hardenedclay_tiles_large_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hardenedclay_tiles_medium_desc"
+            ],
+            "texture": {
+                "name": "chisel_hardenedclay_tiles_medium",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hardenedclay_tiles_small_desc"
+            ],
+            "texture": {
+                "name": "chisel_hardenedclay_tiles_small",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hardenedclay_twisted_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_hardenedclay_twisted_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hardenedclay_twisted_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_hardenedclay_twisted_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hardenedclay_weaver_desc"
+            ],
+            "texture": {
+                "name": "chisel_hardenedclay_weaver",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_hardenedclay_weaver_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hardenedclay_zag_desc"
+            ],
+            "texture": {
+                "name": "chisel_hardenedclay_zag",
+                "extension": "png",
+                "type": "ctm"
+            }
+        }
+    ]
+}

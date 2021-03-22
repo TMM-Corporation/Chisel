@@ -1,0 +1,240 @@
+{
+    "name": "obsidian",
+    "register": true,
+    "localization": [
+        "tile_chisel_obsidian_name"
+    ],
+    "variations": [
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_obsidian_blocks_desc"
+            ],
+            "texture": {
+                "name": "chisel_obsidian_blocks",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_obsidian_chiseled_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_obsidian_chiseled_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_obsidian_chiseled_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_obsidian_chiseled_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_obsidian_chunks_desc"
+            ],
+            "texture": {
+                "name": "chisel_obsidian_chunks",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_obsidian_crate_bottom_desc"
+            ],
+            "texture": {
+                "name": "chisel_obsidian_crate_bottom",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_obsidian_crate_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_obsidian_crate_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_obsidian_crate_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_obsidian_crate_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_obsidian_crystal_desc"
+            ],
+            "texture": {
+                "name": "chisel_obsidian_crystal",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_obsidian_greek_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_obsidian_greek_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_obsidian_greek_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_obsidian_greek_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_obsidian_growth_desc"
+            ],
+            "texture": {
+                "name": "chisel_obsidian_growth",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_obsidian_map_a_desc"
+            ],
+            "texture": {
+                "name": "chisel_obsidian_map_a",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_obsidian_map_b_desc"
+            ],
+            "texture": {
+                "name": "chisel_obsidian_map_b",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_obsidian_panel_light_desc"
+            ],
+            "texture": {
+                "name": "chisel_obsidian_panel_light",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_obsidian_panel_shiny_desc"
+            ],
+            "texture": {
+                "name": "chisel_obsidian_panel_shiny",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_obsidian_panel_desc"
+            ],
+            "texture": {
+                "name": "chisel_obsidian_panel",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_obsidian_pillar_quartz_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_obsidian_pillar_quartz_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_obsidian_pillar_quartz_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_obsidian_pillar_quartz_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_obsidian_pillar_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_obsidian_pillar_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_obsidian_pillar_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_obsidian_pillar_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_obsidian_tiles_desc"
+            ],
+            "texture": {
+                "name": "chisel_obsidian_tiles",
+                "extension": "png",
+                "type": "normal"
+            }
+        }
+    ]
+}

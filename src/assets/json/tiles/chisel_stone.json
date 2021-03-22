@@ -1,0 +1,424 @@
+{
+    "name": "stone",
+    "register": true,
+    "localization": [
+        "tile_chisel_stone_name"
+    ],
+    "variations": [
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_stone_array_desc"
+            ],
+            "texture": {
+                "name": "chisel_stone_array",
+                "extension": "png",
+                "type": "ctmh"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_stone_braid_desc"
+            ],
+            "texture": {
+                "name": "chisel_stone_braid",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_stone_bricks_chaotic_desc"
+            ],
+            "texture": {
+                "name": "chisel_stone_bricks_chaotic",
+                "extension": "png",
+                "type": "bricks-chaotic"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_stone_bricks_cracked_desc"
+            ],
+            "texture": {
+                "name": "chisel_stone_bricks_cracked",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_stone_bricks_encased_desc"
+            ],
+            "texture": {
+                "name": "chisel_stone_bricks_encased",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_stone_bricks_encased_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_stone_bricks_small_desc"
+            ],
+            "texture": {
+                "name": "chisel_stone_bricks_small",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_stone_bricks_soft_desc"
+            ],
+            "texture": {
+                "name": "chisel_stone_bricks_soft",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_stone_bricks_solid_desc"
+            ],
+            "texture": {
+                "name": "chisel_stone_bricks_solid",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_stone_bricks_triple_desc"
+            ],
+            "texture": {
+                "name": "chisel_stone_bricks_triple",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_stone_chaotic_medium_desc"
+            ],
+            "texture": {
+                "name": "chisel_stone_chaotic_medium",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_stone_chaotic_small_desc"
+            ],
+            "texture": {
+                "name": "chisel_stone_chaotic_small",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_stone_circular_desc"
+            ],
+            "texture": {
+                "name": "chisel_stone_circular",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_stone_circular_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_stone_cracked_desc"
+            ],
+            "texture": {
+                "name": "chisel_stone_cracked",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_stone_cuts_desc"
+            ],
+            "texture": {
+                "name": "chisel_stone_cuts",
+                "extension": "png",
+                "type": "cuts"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_stone_dent_desc"
+            ],
+            "texture": {
+                "name": "chisel_stone_dent",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_stone_dent_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_stone_french_1_desc"
+            ],
+            "texture": {
+                "name": "chisel_stone_french_1",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_stone_french_2_desc"
+            ],
+            "texture": {
+                "name": "chisel_stone_french_2",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_stone_jellybean_desc"
+            ],
+            "texture": {
+                "name": "chisel_stone_jellybean",
+                "extension": "png",
+                "type": "ctm"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_stone_layers_desc"
+            ],
+            "texture": {
+                "name": "chisel_stone_layers",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_stone_mosaic_desc"
+            ],
+            "texture": {
+                "name": "chisel_stone_mosaic",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_stone_mosaic_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_stone_ornate_desc"
+            ],
+            "texture": {
+                "name": "chisel_stone_ornate",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_stone_panel_desc"
+            ],
+            "texture": {
+                "name": "chisel_stone_panel",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_stone_pillar_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_stone_pillar_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_stone_pillar_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_stone_pillar_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_stone_prism_desc"
+            ],
+            "texture": {
+                "name": "chisel_stone_prism",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_stone_raw_desc"
+            ],
+            "texture": {
+                "name": "chisel_stone_raw",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_stone_road_desc"
+            ],
+            "texture": {
+                "name": "chisel_stone_road",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_stone_slanted_desc"
+            ],
+            "texture": {
+                "name": "chisel_stone_slanted",
+                "extension": "png",
+                "type": "ctm"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_stone_tiles_large_desc"
+            ],
+            "texture": {
+                "name": "chisel_stone_tiles_large",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_stone_tiles_large_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_stone_tiles_medium_desc"
+            ],
+            "texture": {
+                "name": "chisel_stone_tiles_medium",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_stone_tiles_small_desc"
+            ],
+            "texture": {
+                "name": "chisel_stone_tiles_small",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_stone_twisted_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_stone_twisted_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_stone_twisted_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_stone_twisted_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_stone_weaver_desc"
+            ],
+            "texture": {
+                "name": "chisel_stone_weaver",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_stone_weaver_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_stone_zag_desc"
+            ],
+            "texture": {
+                "name": "chisel_stone_zag",
+                "extension": "png",
+                "type": "ctm"
+            }
+        }
+    ]
+}

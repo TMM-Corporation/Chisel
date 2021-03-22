@@ -1,0 +1,51 @@
+{
+	"tile": {
+		"chisel": {
+			"ancient_stone": {
+				"name": { "default": "ancient_stone.name" },
+				"variations": [
+					{ "texture": { "name": "array", "ctm": "ctmh" }, "localization": { "default": "ancient_stone.array.desc.1" } },
+					{ "texture": { "name": "braid" }, "localization": { "default": "ancient_stone.braid.desc.1" } },
+					{ "texture": { "name": "bricks-chaotic", "ctm": "bricks-chaotic" }, "localization": { "default": "ancient_stone.bricks-chaotic.desc.1" } },
+					{ "texture": { "name": "bricks-cracked", "ctm": {"type":"ctm", "name":"bricks-encased-ctm"}}, "localization": { "default": "ancient_stone.bricks-cracked.desc.1" } },
+					{ "texture": { "name": "bricks-encased" }, "localization": { "default": "ancient_stone.bricks-encased.desc.1" } },
+					{ "texture": { "name": "bricks-small" }, "localization": { "default": "ancient_stone.bricks-small.desc.1" } },
+					{ "texture": { "name": "bricks-soft" }, "localization": { "default": "ancient_stone.bricks-soft.desc.1" } },
+					{ "texture": { "name": "bricks-solid" }, "localization": { "default": "ancient_stone.bricks-solid.desc.1" } },
+					{ "texture": { "name": "bricks-triple" }, "localization": { "default": "ancient_stone.bricks-triple.desc.1" } },
+					{ "texture": { "name": "chaotic-medium" }, "localization": { "default": "ancient_stone.chaotic-medium.desc.1" } },
+					{ "texture": { "name": "chaotic-small" }, "localization": { "default": "ancient_stone.chaotic-small.desc.1" } },
+					{ "texture": { "name": "circular-ctm", "ctm": "ctm" }, "localization": { "default": "ancient_stone.circular-ctm.desc.1" } },
+					{ "texture": { "name": "circular" }, "localization": { "default": "ancient_stone.circular.desc.1" } },
+					{ "texture": { "name": "cracked" }, "localization": { "default": "ancient_stone.cracked.desc.1" } },
+					{ "texture": { "name": "cuts", "ctm": "cuts" }, "localization": { "default": "ancient_stone.cuts.desc.1" } },
+					{ "texture": { "name": "dent-ctm", "ctm": "ctm" }, "localization": { "default": "ancient_stone.dent-ctm.desc.1" } },
+					{ "texture": { "name": "dent" }, "localization": { "default": "ancient_stone.dent.desc.1" } },
+					{ "texture": { "name": "french-1" }, "localization": { "default": "ancient_stone.french-1.desc.1" } },
+					{ "texture": { "name": "french-2" }, "localization": { "default": "ancient_stone.french-2.desc.1" } },
+					{ "texture": { "name": "jellybean", "ctm": "ctm" }, "localization": { "default": "ancient_stone.jellybean.desc.1" } },
+					{ "texture": { "name": "layers" }, "localization": { "default": "ancient_stone.layers.desc.1" } },
+					{ "texture": { "name": "mosaic-ctm", "ctm": "ctm" }, "localization": { "default": "ancient_stone.mosaic-ctm.desc.1" } },
+					{ "texture": { "name": "mosaic" }, "localization": { "default": "ancient_stone.mosaic.desc.1" } },
+					{ "texture": { "name": "ornate" }, "localization": { "default": "ancient_stone.ornate.desc.1" } },
+					{ "texture": { "name": "panel" }, "localization": { "default": "ancient_stone.panel.desc.1" } },
+					{ "texture": { "name": "pillar-side" }, "localization": { "default": "ancient_stone.pillar-side.desc.1" } },
+					{ "texture": { "name": "pillar-top" }, "localization": { "default": "ancient_stone.pillar-top.desc.1" } },
+					{ "texture": { "name": "prism" }, "localization": { "default": "ancient_stone.prism.desc.1" } },
+					{ "texture": { "name": "raw" }, "localization": { "default": "ancient_stone.raw.desc.1" } },
+					{ "texture": { "name": "road" }, "localization": { "default": "ancient_stone.road.desc.1" } },
+					{ "texture": { "name": "slanted", "ctm": "ctm" }, "localization": { "default": "ancient_stone.slanted.desc.1" } },
+					{ "texture": { "name": "tiles-large-ctm", "ctm": "ctm" }, "localization": { "default": "ancient_stone.tiles-large-ctm.desc.1" } },
+					{ "texture": { "name": "tiles-large" }, "localization": { "default": "ancient_stone.tiles-large.desc.1" } },
+					{ "texture": { "name": "tiles-medium" }, "localization": { "default": "ancient_stone.tiles-medium.desc.1" } },
+					{ "texture": { "name": "tiles-small" }, "localization": { "default": "ancient_stone.tiles-small.desc.1" } },
+					{ "texture": { "name": "twisted-side" }, "localization": { "default": "ancient_stone.twisted-side.desc.1" } },
+					{ "texture": { "name": "twisted-top" }, "localization": { "default": "ancient_stone.twisted-top.desc.1" } },
+					{ "texture": { "name": "weaver-ctm", "ctm": "ctm" }, "localization": { "default": "ancient_stone.weaver-ctm.desc.1" } },
+					{ "texture": { "name": "weaver" }, "localization": { "default": "ancient_stone.weaver.desc.1" } },
+					{ "texture": { "name": "zag", "ctm": "ctm" }, "localization": { "default": "ancient_stone.zag.desc.1" } }
+				]
+			}
+		}
+	}
+}

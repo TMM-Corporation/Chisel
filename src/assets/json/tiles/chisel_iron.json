@@ -1,0 +1,438 @@
+{
+    "name": "iron",
+    "register": true,
+    "localization": [
+        "tile_chisel_iron_name"
+    ],
+    "variations": [
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_brick_bottom_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_brick_bottom",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_brick_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_brick_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_brick_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_brick_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_coin_heads_bottom_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_coin_heads_bottom",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_coin_heads_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_coin_heads_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_coin_heads_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_coin_heads_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_coin_tails_bottom_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_coin_tails_bottom",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_coin_tails_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_coin_tails_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_coin_tails_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_coin_tails_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_crate_dark_bottom_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_crate_dark_bottom",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_crate_dark_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_crate_dark_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_crate_dark_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_crate_dark_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_crate_light_bottom_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_crate_light_bottom",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_crate_light_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_crate_light_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_crate_light_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_crate_light_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_gears_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_gears_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_gears_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_gears_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_largeingot_bottom_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_largeingot_bottom",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_largeingot_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_largeingot_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_largeingot_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_largeingot_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_moon_bottom_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_moon_bottom",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_moon_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_moon_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_moon_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_moon_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_plates_bottom_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_plates_bottom",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_plates_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_plates_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_plates_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_plates_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_rivets_bottom_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_rivets_bottom",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_rivets_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_rivets_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_rivets_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_rivets_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_simple_bottom_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_simple_bottom",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_simple_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_simple_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_simple_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_simple_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_smallingot_bottom_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_smallingot_bottom",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_smallingot_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_smallingot_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_smallingot_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_smallingot_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_space_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_space",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_spaceblack_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_spaceblack",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_vents_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_vents_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_iron_terrain_iron_vents_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_iron_terrain_iron_vents_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        }
+    ]
+}

@@ -1,0 +1,201 @@
+{
+    "name": "tyrian",
+    "register": true,
+    "localization": [
+        "tile_chisel_tyrian_name"
+    ],
+    "variations": [
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_tyrian_black_desc"
+            ],
+            "texture": {
+                "name": "chisel_tyrian_black",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_tyrian_black2_desc"
+            ],
+            "texture": {
+                "name": "chisel_tyrian_black2",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_tyrian_blueplating_desc"
+            ],
+            "texture": {
+                "name": "chisel_tyrian_blueplating",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_tyrian_chaotic_desc"
+            ],
+            "texture": {
+                "name": "chisel_tyrian_chaotic",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_tyrian_dent_desc"
+            ],
+            "texture": {
+                "name": "chisel_tyrian_dent",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_tyrian_diagonal_desc"
+            ],
+            "texture": {
+                "name": "chisel_tyrian_diagonal",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_tyrian_elaborate_desc"
+            ],
+            "texture": {
+                "name": "chisel_tyrian_elaborate",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_tyrian_opening_desc"
+            ],
+            "texture": {
+                "name": "chisel_tyrian_opening",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_tyrian_plate_raw_desc"
+            ],
+            "texture": {
+                "name": "chisel_tyrian_plate_raw",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_tyrian_plate_desc"
+            ],
+            "texture": {
+                "name": "chisel_tyrian_plate",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_tyrian_plate_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_tyrian_platetiles_desc"
+            ],
+            "texture": {
+                "name": "chisel_tyrian_platetiles",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_tyrian_platform_desc"
+            ],
+            "texture": {
+                "name": "chisel_tyrian_platform",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_tyrian_routes_desc"
+            ],
+            "texture": {
+                "name": "chisel_tyrian_routes",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_tyrian_rust_desc"
+            ],
+            "texture": {
+                "name": "chisel_tyrian_rust",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_tyrian_shining_desc"
+            ],
+            "texture": {
+                "name": "chisel_tyrian_shining",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_tyrian_softplate_desc"
+            ],
+            "texture": {
+                "name": "chisel_tyrian_softplate",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_tyrian_tyrian_desc"
+            ],
+            "texture": {
+                "name": "chisel_tyrian_tyrian",
+                "extension": "png",
+                "type": "normal"
+            }
+        }
+    ]
+}

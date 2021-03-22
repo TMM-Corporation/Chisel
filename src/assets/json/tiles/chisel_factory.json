@@ -1,0 +1,336 @@
+{
+    "name": "factory",
+    "register": true,
+    "localization": [
+        "tile_chisel_factory_name"
+    ],
+    "variations": [
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_factory_circuit_desc"
+            ],
+            "texture": {
+                "name": "chisel_factory_circuit",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_factory_circuit_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_factory_column_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_factory_column_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_factory_dots_desc"
+            ],
+            "texture": {
+                "name": "chisel_factory_dots",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_factory_dots_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_factory_frameblue_desc"
+            ],
+            "texture": {
+                "name": "chisel_factory_frameblue",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_factory_frameblue_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_factory_goldplate_desc"
+            ],
+            "texture": {
+                "name": "chisel_factory_goldplate",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_factory_goldplate_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_factory_goldplating_desc"
+            ],
+            "texture": {
+                "name": "chisel_factory_goldplating",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_factory_goldplating_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_factory_grinder_desc"
+            ],
+            "texture": {
+                "name": "chisel_factory_grinder",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_factory_grinder_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_factory_hazard_desc"
+            ],
+            "texture": {
+                "name": "chisel_factory_hazard",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_factory_hazard_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_factory_hazardorange_desc"
+            ],
+            "texture": {
+                "name": "chisel_factory_hazardorange",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_factory_hazardorange_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_factory_iceiceice_desc"
+            ],
+            "texture": {
+                "name": "chisel_factory_iceiceice",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_factory_iceiceice_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_factory_metalbox_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_factory_metalbox_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_factory_metalbox_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_factory_metalbox_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_factory_platex_desc"
+            ],
+            "texture": {
+                "name": "chisel_factory_platex",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_factory_platex_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_factory_plating_desc"
+            ],
+            "texture": {
+                "name": "chisel_factory_plating",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_factory_rust_desc"
+            ],
+            "texture": {
+                "name": "chisel_factory_rust",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_factory_rust_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_factory_rust2_desc"
+            ],
+            "texture": {
+                "name": "chisel_factory_rust2",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_factory_rust2_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_factory_rustplates_desc"
+            ],
+            "texture": {
+                "name": "chisel_factory_rustplates",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_factory_rustplates_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_factory_tilemosaic_desc"
+            ],
+            "texture": {
+                "name": "chisel_factory_tilemosaic",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_factory_tilemosaic_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_factory_vent_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_factory_vent_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_factory_wireframe_desc"
+            ],
+            "texture": {
+                "name": "chisel_factory_wireframe",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_factory_wireframe_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_factory_wireframeblue_desc"
+            ],
+            "texture": {
+                "name": "chisel_factory_wireframeblue",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_factory_wireframeblue_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_factory_wireframewhite_desc"
+            ],
+            "texture": {
+                "name": "chisel_factory_wireframewhite",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_factory_wireframewhite_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        }
+    ]
+}

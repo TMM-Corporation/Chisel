@@ -1,0 +1,548 @@
+{
+    "name": "gold",
+    "register": true,
+    "localization": [
+        "tile_chisel_gold_name"
+    ],
+    "variations": [
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_goldeye_0_0_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_goldeye_0_0",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_goldeye_0_1_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_goldeye_0_1",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_goldeye_1_0_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_goldeye_1_0",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_goldeye_1_1_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_goldeye_1_1",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_goldeye_2_0_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_goldeye_2_0",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_goldeye_2_1_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_goldeye_2_1",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_goldeye_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_goldeye",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_brick_bottom_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_brick_bottom",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_brick_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_brick_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_brick_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_brick_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_cart_bottom_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_cart_bottom",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_cart_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_cart_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_cart_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_cart_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_coin_heads_bottom_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_coin_heads_bottom",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_coin_heads_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_coin_heads_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_coin_heads_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_coin_heads_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_coin_tails_bottom_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_coin_tails_bottom",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_coin_tails_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_coin_tails_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_coin_tails_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_coin_tails_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_crate_dark_bottom_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_crate_dark_bottom",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_crate_dark_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_crate_dark_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_crate_dark_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_crate_dark_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_crate_light_bottom_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_crate_light_bottom",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_crate_light_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_crate_light_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_crate_light_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_crate_light_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_largeingot_bottom_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_largeingot_bottom",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_largeingot_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_largeingot_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_largeingot_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_largeingot_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_plates_bottom_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_plates_bottom",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_plates_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_plates_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_plates_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_plates_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_rivets_bottom_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_rivets_bottom",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_rivets_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_rivets_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_rivets_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_rivets_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_simple_bottom_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_simple_bottom",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_simple_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_simple_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_simple_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_simple_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_smallingot_bottom_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_smallingot_bottom",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_smallingot_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_smallingot_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_smallingot_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_smallingot_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_space_bottom_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_space_bottom",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_space_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_space_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_space_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_space_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_spaceblack_bottom_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_spaceblack_bottom",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_spaceblack_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_spaceblack_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_spaceblack_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_spaceblack_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_star_bottom_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_star_bottom",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_star_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_star_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_gold_terrain_gold_star_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_gold_terrain_gold_star_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        }
+    ]
+}

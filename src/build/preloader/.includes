@@ -1,4 +1,4 @@
-RM.ts
-genRes.ts
-preloader.ts
-resGen.ts
+./ResManager.ts
+./PreloaderData.ts
+./TextureGeneration.ts
+./preloader.ts

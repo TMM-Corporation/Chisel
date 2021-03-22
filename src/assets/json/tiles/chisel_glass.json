@@ -1,0 +1,335 @@
+{
+    "name": "glass",
+    "register": true,
+    "localization": [
+        "tile_chisel_glass_name"
+    ],
+    "variations": [
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glass_a1_glasswindow_ironfencemodern_desc"
+            ],
+            "texture": {
+                "name": "chisel_glass_a1_glasswindow_ironfencemodern",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glass_chinese_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glass_chinese_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glass_chinese2_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glass_chinese2_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glass_chinese2_desc"
+            ],
+            "texture": {
+                "name": "chisel_glass_chinese2",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glass_chrono_desc"
+            ],
+            "texture": {
+                "name": "chisel_glass_chrono",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_glass_chrono_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glass_edge_desc"
+            ],
+            "texture": {
+                "name": "chisel_glass_edge",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glass_edge_steel_desc"
+            ],
+            "texture": {
+                "name": "chisel_glass_edge_steel",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glass_japanese_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glass_japanese_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glass_japanese_desc"
+            ],
+            "texture": {
+                "name": "chisel_glass_japanese",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glass_japanese2_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glass_japanese2_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glass_japanese2_desc"
+            ],
+            "texture": {
+                "name": "chisel_glass_japanese2",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glass_terrain_glass_chinese_desc"
+            ],
+            "texture": {
+                "name": "chisel_glass_terrain_glass_chinese",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glass_terrain_glass_ornatesteel_old_desc"
+            ],
+            "texture": {
+                "name": "chisel_glass_terrain_glass_ornatesteel_old",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glass_terrain_glass_ornatesteel_desc"
+            ],
+            "texture": {
+                "name": "chisel_glass_terrain_glass_ornatesteel",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_glass_terrain_glass_ornatesteel_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glass_terrain_glass_screen_desc"
+            ],
+            "texture": {
+                "name": "chisel_glass_terrain_glass_screen",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glass_terrain_glass_steelframe_desc"
+            ],
+            "texture": {
+                "name": "chisel_glass_terrain_glass_steelframe",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_glass_terrain_glass_steelframe_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glass_terrain_glass_thickgrid_desc"
+            ],
+            "texture": {
+                "name": "chisel_glass_terrain_glass_thickgrid",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glass_terrain_glass_thingrid_desc"
+            ],
+            "texture": {
+                "name": "chisel_glass_terrain_glass_thingrid",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glass_terrain_glassbubble_desc"
+            ],
+            "texture": {
+                "name": "chisel_glass_terrain_glassbubble",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_glass_terrain_glassbubble_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glass_terrain_glassdungeon_desc"
+            ],
+            "texture": {
+                "name": "chisel_glass_terrain_glassdungeon",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glass_terrain_glasslight_desc"
+            ],
+            "texture": {
+                "name": "chisel_glass_terrain_glasslight",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_glass_terrain_glasslight_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glass_terrain_glassnoborder_desc"
+            ],
+            "texture": {
+                "name": "chisel_glass_terrain_glassnoborder",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_glass_terrain_glassnoborder_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glass_terrain_glassshale_desc"
+            ],
+            "texture": {
+                "name": "chisel_glass_terrain_glassshale",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_glass_terrain_glassshale_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glass_terrain_glassstone_desc"
+            ],
+            "texture": {
+                "name": "chisel_glass_terrain_glassstone",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_glass_terrain_glassstone_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glass_terrain_glassstreak_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glass_terrain_glassstreak_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glass_terrain_glassstreak_desc"
+            ],
+            "texture": {
+                "name": "chisel_glass_terrain_glassstreak",
+                "extension": "png",
+                "type": "normal"
+            }
+        }
+    ]
+}

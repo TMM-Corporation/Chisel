@@ -1,0 +1,102 @@
+{
+    "name": "blood_magic",
+    "register": true,
+    "localization": [
+        "tile_chisel_blood_magic_name"
+    ],
+    "variations": [
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_blood_magic_blankrune_desc"
+            ],
+            "texture": {
+                "name": "chisel_blood_magic_blankrune",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_blood_magic_bloodrunearranged_desc"
+            ],
+            "texture": {
+                "name": "chisel_blood_magic_bloodrunearranged",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_blood_magic_bloodrunearranged_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_blood_magic_bloodrunebricks_desc"
+            ],
+            "texture": {
+                "name": "chisel_blood_magic_bloodrunebricks",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_blood_magic_bloodrunebrickstop_desc"
+            ],
+            "texture": {
+                "name": "chisel_blood_magic_bloodrunebrickstop",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_blood_magic_bloodrunecarved_desc"
+            ],
+            "texture": {
+                "name": "chisel_blood_magic_bloodrunecarved",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_blood_magic_bloodrunecarvedradial_desc"
+            ],
+            "texture": {
+                "name": "chisel_blood_magic_bloodrunecarvedradial",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_blood_magic_bloodruneclassicpanel_desc"
+            ],
+            "texture": {
+                "name": "chisel_blood_magic_bloodruneclassicpanel",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_blood_magic_bloodrunetiles_desc"
+            ],
+            "texture": {
+                "name": "chisel_blood_magic_bloodrunetiles",
+                "extension": "png",
+                "type": "normal"
+            }
+        }
+    ]
+}

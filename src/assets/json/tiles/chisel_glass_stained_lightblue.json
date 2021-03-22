@@ -1,0 +1,84 @@
+{
+    "name": "glass_stained/lightblue",
+    "register": true,
+    "localization": [
+        "tile_chisel_glass_stained_lightblue_name"
+    ],
+    "variations": [
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glass_stained_lightblue_brick_desc"
+            ],
+            "texture": {
+                "name": "chisel_glass_stained_lightblue_brick",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_glass_stained_lightblue_brick_ct",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glass_stained_lightblue_framed_desc"
+            ],
+            "texture": {
+                "name": "chisel_glass_stained_lightblue_framed",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_glass_stained_lightblue_framed_ct",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glass_stained_lightblue_panel_desc"
+            ],
+            "texture": {
+                "name": "chisel_glass_stained_lightblue_panel",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_glass_stained_lightblue_panel_ct",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glass_stained_lightblue_rough_desc"
+            ],
+            "texture": {
+                "name": "chisel_glass_stained_lightblue_rough",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_glass_stained_lightblue_rough_ct",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glass_stained_lightblue_streaks_desc"
+            ],
+            "texture": {
+                "name": "chisel_glass_stained_lightblue_streaks",
+                "extension": "png",
+                "type": "normal"
+            }
+        }
+    ]
+}

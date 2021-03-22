@@ -1,0 +1,64 @@
+{
+    "name": "cloud",
+    "register": true,
+    "localization": [
+        "tile_chisel_cloud_name"
+    ],
+    "variations": [
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_cloud_cloud_desc"
+            ],
+            "texture": {
+                "name": "chisel_cloud_cloud",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_cloud_grid_desc"
+            ],
+            "texture": {
+                "name": "chisel_cloud_grid",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_cloud_large_desc"
+            ],
+            "texture": {
+                "name": "chisel_cloud_large",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_cloud_small_desc"
+            ],
+            "texture": {
+                "name": "chisel_cloud_small",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_cloud_vertical_desc"
+            ],
+            "texture": {
+                "name": "chisel_cloud_vertical",
+                "extension": "png",
+                "type": "normal"
+            }
+        }
+    ]
+}

@@ -1,0 +1,128 @@
+{
+    "name": "metals/copper",
+    "register": true,
+    "localization": [
+        "tile_chisel_metals_copper_name"
+    ],
+    "variations": [
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_metals_copper_badgreggy_desc"
+            ],
+            "texture": {
+                "name": "chisel_metals_copper_badgreggy",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_metals_copper_badgreggy_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_metals_copper_bolted_desc"
+            ],
+            "texture": {
+                "name": "chisel_metals_copper_bolted",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_metals_copper_caution_desc"
+            ],
+            "texture": {
+                "name": "chisel_metals_copper_caution",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_metals_copper_caution_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_metals_copper_crate_desc"
+            ],
+            "texture": {
+                "name": "chisel_metals_copper_crate",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_metals_copper_crate_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_metals_copper_machine_desc"
+            ],
+            "texture": {
+                "name": "chisel_metals_copper_machine",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_metals_copper_scaffold_desc"
+            ],
+            "texture": {
+                "name": "chisel_metals_copper_scaffold",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_metals_copper_scaffold_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_metals_copper_thermal_bottom_desc"
+            ],
+            "texture": {
+                "name": "chisel_metals_copper_thermal_bottom",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_metals_copper_thermal_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_metals_copper_thermal_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_metals_copper_thermal_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_metals_copper_thermal_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        }
+    ]
+}

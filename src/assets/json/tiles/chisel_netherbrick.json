@@ -1,0 +1,185 @@
+{
+    "name": "netherbrick",
+    "register": true,
+    "localization": [
+        "tile_chisel_netherbrick_name"
+    ],
+    "variations": [
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_netherbrick_a1_netherbrick_brinstar_desc"
+            ],
+            "texture": {
+                "name": "chisel_netherbrick_a1_netherbrick_brinstar",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_netherbrick_a1_netherbrick_classicspatter_desc"
+            ],
+            "texture": {
+                "name": "chisel_netherbrick_a1_netherbrick_classicspatter",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_netherbrick_a1_netherbrick_guts_desc"
+            ],
+            "texture": {
+                "name": "chisel_netherbrick_a1_netherbrick_guts",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_netherbrick_a1_netherbrick_gutsdark_desc"
+            ],
+            "texture": {
+                "name": "chisel_netherbrick_a1_netherbrick_gutsdark",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_netherbrick_a1_netherbrick_gutssmall_desc"
+            ],
+            "texture": {
+                "name": "chisel_netherbrick_a1_netherbrick_gutssmall",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_netherbrick_a1_netherbrick_lavabrinstar_desc"
+            ],
+            "texture": {
+                "name": "chisel_netherbrick_a1_netherbrick_lavabrinstar",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_netherbrick_a1_netherbrick_lavabrown_desc"
+            ],
+            "texture": {
+                "name": "chisel_netherbrick_a1_netherbrick_lavabrown",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_netherbrick_a1_netherbrick_lavaobsidian_desc"
+            ],
+            "texture": {
+                "name": "chisel_netherbrick_a1_netherbrick_lavaobsidian",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_netherbrick_a1_netherbrick_lavastonedark_desc"
+            ],
+            "texture": {
+                "name": "chisel_netherbrick_a1_netherbrick_lavastonedark",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_netherbrick_a1_netherbrick_meat_desc"
+            ],
+            "texture": {
+                "name": "chisel_netherbrick_a1_netherbrick_meat",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_netherbrick_a1_netherbrick_meatred_desc"
+            ],
+            "texture": {
+                "name": "chisel_netherbrick_a1_netherbrick_meatred",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_netherbrick_a1_netherbrick_meatredsmall_desc"
+            ],
+            "texture": {
+                "name": "chisel_netherbrick_a1_netherbrick_meatredsmall",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_netherbrick_a1_netherbrick_meatsmall_desc"
+            ],
+            "texture": {
+                "name": "chisel_netherbrick_a1_netherbrick_meatsmall",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_netherbrick_a1_netherbrick_red_desc"
+            ],
+            "texture": {
+                "name": "chisel_netherbrick_a1_netherbrick_red",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_netherbrick_a1_netherbrick_redsmall_desc"
+            ],
+            "texture": {
+                "name": "chisel_netherbrick_a1_netherbrick_redsmall",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_netherbrick_netherfancybricks_desc"
+            ],
+            "texture": {
+                "name": "chisel_netherbrick_netherfancybricks",
+                "extension": "png",
+                "type": "normal"
+            }
+        }
+    ]
+}

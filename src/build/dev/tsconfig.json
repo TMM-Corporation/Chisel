@@ -4,7 +4,7 @@
 		"lib": [
 			"ESNext"
 		],
-		"outFile": "D:\\ToxesFoxes\\Desktop\\\u0425\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0435\\Projects\\Github\\A ToolChain Mods\\toolchain\\build\\project\\sources\\JMAL.js",
+		"outFile": "D:\\ToxesFoxes\\Desktop\\\u0425\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0435\\Projects\\Github\\A ToolChain Mods\\toolchain\\build\\project\\sources\\main.js",
 		"experimentalDecorators": true,
 		"downlevelIteration": true,
 		"allowJs": true
@@ -15,10 +15,7 @@
 		"webpack"
 	],
 	"include": [
-		"ResManager.ts",
-		"PreloaderData.ts",
-		"TextureGeneration.ts",
-		"preloader.ts"
+		"test.ts"
 	],
 	"files": [
 		"D:\\ToxesFoxes\\Desktop\\\u0425\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0435\\Projects\\Github\\A ToolChain Mods\\toolchain\\declarations\\android-declarations.d.ts",

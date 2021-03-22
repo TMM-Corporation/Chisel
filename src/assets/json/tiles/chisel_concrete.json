@@ -1,0 +1,119 @@
+{
+    "name": "concrete",
+    "register": true,
+    "localization": [
+        "tile_chisel_concrete_name"
+    ],
+    "variations": [
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_block_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_block",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_blocks_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_blocks",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_default_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_default",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_doubleslab_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_doubleslab_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_weathered_block_half_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_weathered_block_half_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_weathered_block_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_weathered_block",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_weathered_blocks_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_weathered_blocks",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_weathered_doubleslab_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_weathered_doubleslab_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_weathered_half_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_weathered_half_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_weathered_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_weathered",
+                "extension": "png",
+                "type": "normal"
+            }
+        }
+    ]
+}

@@ -1,0 +1,306 @@
+{
+    "name": "ironpane",
+    "register": true,
+    "localization": [
+        "tile_chisel_ironpane_name"
+    ],
+    "variations": [
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_ironpane_barbedwire_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_ironpane_barbedwire_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_ironpane_barbedwire_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_ironpane_barbedwire_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_ironpane_barbedwire_desc"
+            ],
+            "texture": {
+                "name": "chisel_ironpane_barbedwire",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_ironpane_bars_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_ironpane_bars_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_ironpane_bars_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_ironpane_bars_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_ironpane_bars_desc"
+            ],
+            "texture": {
+                "name": "chisel_ironpane_bars",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_ironpane_borderless_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_ironpane_borderless_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_ironpane_borderless_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_ironpane_borderless_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_ironpane_borderless_topper_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_ironpane_borderless_topper_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_ironpane_borderless_topper_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_ironpane_borderless_topper_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_ironpane_borderless_topper_desc"
+            ],
+            "texture": {
+                "name": "chisel_ironpane_borderless_topper",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_ironpane_borderless_desc"
+            ],
+            "texture": {
+                "name": "chisel_ironpane_borderless",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_ironpane_cage_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_ironpane_cage_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_ironpane_cage_desc"
+            ],
+            "texture": {
+                "name": "chisel_ironpane_cage",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_ironpane_classic_desc"
+            ],
+            "texture": {
+                "name": "chisel_ironpane_classic",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_ironpane_classicnew_desc"
+            ],
+            "texture": {
+                "name": "chisel_ironpane_classicnew",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_ironpane_fence_desc"
+            ],
+            "texture": {
+                "name": "chisel_ironpane_fence",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_ironpane_modern_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_ironpane_modern_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_ironpane_modern_desc"
+            ],
+            "texture": {
+                "name": "chisel_ironpane_modern",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_ironpane_ornatesteel_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_ironpane_ornatesteel_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_ironpane_ornatesteel_desc"
+            ],
+            "texture": {
+                "name": "chisel_ironpane_ornatesteel",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_ironpane_spikes_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_ironpane_spikes_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_ironpane_spikes_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_ironpane_spikes_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_ironpane_spikes_desc"
+            ],
+            "texture": {
+                "name": "chisel_ironpane_spikes",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_ironpane_thickgrid_desc"
+            ],
+            "texture": {
+                "name": "chisel_ironpane_thickgrid",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_ironpane_thingrid_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_ironpane_thingrid_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_ironpane_thingrid_desc"
+            ],
+            "texture": {
+                "name": "chisel_ironpane_thingrid",
+                "extension": "png",
+                "type": "normal"
+            }
+        }
+    ]
+}

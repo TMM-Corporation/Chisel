@@ -1,0 +1,185 @@
+{
+    "name": "concrete_powder",
+    "register": true,
+    "localization": [
+        "tile_chisel_concrete_powder_name"
+    ],
+    "variations": [
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_powder_black_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_powder_black",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_powder_blue_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_powder_blue",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_powder_brown_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_powder_brown",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_powder_cyan_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_powder_cyan",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_powder_gray_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_powder_gray",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_powder_green_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_powder_green",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_powder_lightblue_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_powder_lightblue",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_powder_lightgray_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_powder_lightgray",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_powder_lime_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_powder_lime",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_powder_magenta_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_powder_magenta",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_powder_orange_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_powder_orange",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_powder_pink_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_powder_pink",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_powder_purple_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_powder_purple",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_powder_red_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_powder_red",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_powder_white_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_powder_white",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_powder_yellow_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_powder_yellow",
+                "extension": "png",
+                "type": "normal"
+            }
+        }
+    ]
+}

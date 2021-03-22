@@ -1,0 +1,377 @@
+{
+    "name": "technical",
+    "register": true,
+    "localization": [
+        "tile_chisel_technical_name"
+    ],
+    "variations": [
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_technical_cables_desc"
+            ],
+            "texture": {
+                "name": "chisel_technical_cables",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_technical_cables_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_technical_cautiontape_desc"
+            ],
+            "texture": {
+                "name": "chisel_technical_cautiontape",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_technical_cautiontape_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_technical_fanfast_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_technical_fanfast_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_technical_fanfast_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_technical_fanfast_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_technical_fanfasttransparent_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_technical_fanfasttransparent_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_technical_fanfasttransparent_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_technical_fanfasttransparent_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_technical_fanstill_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_technical_fanstill_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_technical_fanstill_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_technical_fanstill_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_technical_fanstilltransparent_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_technical_fanstilltransparent_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_technical_fanstilltransparent_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_technical_fanstilltransparent_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_technical_grate_desc"
+            ],
+            "texture": {
+                "name": "chisel_technical_grate",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_technical_grate_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_technical_graterusty_desc"
+            ],
+            "texture": {
+                "name": "chisel_technical_graterusty",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_technical_graterusty_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_technical_industrialrelic_desc"
+            ],
+            "texture": {
+                "name": "chisel_technical_industrialrelic",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_technical_insulationv2_desc"
+            ],
+            "texture": {
+                "name": "chisel_technical_insulationv2",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_technical_insulationv2_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_technical_malfunctionfan_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_technical_malfunctionfan_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_technical_malfunctionfan_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_technical_malfunctionfan_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_technical_massivefan_desc"
+            ],
+            "texture": {
+                "name": "chisel_technical_massivefan",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_technical_massivehexplating_desc"
+            ],
+            "texture": {
+                "name": "chisel_technical_massivehexplating",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_technical_old_desc"
+            ],
+            "texture": {
+                "name": "chisel_technical_old",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_technical_pipeslarge_desc"
+            ],
+            "texture": {
+                "name": "chisel_technical_pipeslarge",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_technical_pipeslarge_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_technical_pipessmall_desc"
+            ],
+            "texture": {
+                "name": "chisel_technical_pipessmall",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_technical_pipessmall_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_technical_rustyboltedplates_desc"
+            ],
+            "texture": {
+                "name": "chisel_technical_rustyboltedplates",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_technical_scaffold_desc"
+            ],
+            "texture": {
+                "name": "chisel_technical_scaffold",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_technical_scaffold_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_technical_scaffoldtransparent_desc"
+            ],
+            "texture": {
+                "name": "chisel_technical_scaffoldtransparent",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_technical_scaffoldtransparent_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_technical_spinningstuffanim_desc"
+            ],
+            "texture": {
+                "name": "chisel_technical_spinningstuffanim",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_technical_spinningstuffanim_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_technical_vent_desc"
+            ],
+            "texture": {
+                "name": "chisel_technical_vent",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_technical_vent_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_technical_ventglowing_desc"
+            ],
+            "texture": {
+                "name": "chisel_technical_ventglowing",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_technical_ventglowing_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_technical_wires_desc"
+            ],
+            "texture": {
+                "name": "chisel_technical_wires",
+                "extension": "png",
+                "type": "normal"
+            }
+        }
+    ]
+}

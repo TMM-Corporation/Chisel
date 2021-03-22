@@ -1,0 +1,42 @@
+{
+    "name": "autochisel",
+    "register": true,
+    "localization": [
+        "tile_chisel_autochisel_name"
+    ],
+    "variations": [
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_autochisel_autochisel_frame_desc"
+            ],
+            "texture": {
+                "name": "chisel_autochisel_autochisel_frame",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_autochisel_autochisel_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_autochisel_autochisel_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_autochisel_autochisel_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_autochisel_autochisel_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        }
+    ]
+}

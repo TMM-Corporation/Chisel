@@ -1,0 +1,361 @@
+{
+    "name": "temple",
+    "register": true,
+    "localization": [
+        "tile_chisel_temple_name"
+    ],
+    "variations": [
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_temple_bricks_disarray_desc"
+            ],
+            "texture": {
+                "name": "chisel_temple_bricks_disarray",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_temple_bricks_large_desc"
+            ],
+            "texture": {
+                "name": "chisel_temple_bricks_large",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_temple_bricks_weared_desc"
+            ],
+            "texture": {
+                "name": "chisel_temple_bricks_weared",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_temple_bricks_desc"
+            ],
+            "texture": {
+                "name": "chisel_temple_bricks",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_temple_cobble_0_desc"
+            ],
+            "texture": {
+                "name": "chisel_temple_cobble_0",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_temple_cobble_1_desc"
+            ],
+            "texture": {
+                "name": "chisel_temple_cobble_1",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_temple_cobble_2_desc"
+            ],
+            "texture": {
+                "name": "chisel_temple_cobble_2",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_temple_cobble_3_desc"
+            ],
+            "texture": {
+                "name": "chisel_temple_cobble_3",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_temple_column_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_temple_column_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_temple_column_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_temple_column_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_temple_ornate_desc"
+            ],
+            "texture": {
+                "name": "chisel_temple_ornate",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_temple_plate_cracked_0_desc"
+            ],
+            "texture": {
+                "name": "chisel_temple_plate_cracked_0",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_temple_plate_cracked_1_desc"
+            ],
+            "texture": {
+                "name": "chisel_temple_plate_cracked_1",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_temple_plate_cracked_2_desc"
+            ],
+            "texture": {
+                "name": "chisel_temple_plate_cracked_2",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_temple_plate_cracked_3_desc"
+            ],
+            "texture": {
+                "name": "chisel_temple_plate_cracked_3",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_temple_plate_cracked_4_desc"
+            ],
+            "texture": {
+                "name": "chisel_temple_plate_cracked_4",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_temple_plate_cracked_5_desc"
+            ],
+            "texture": {
+                "name": "chisel_temple_plate_cracked_5",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_temple_plate_cracked_6_desc"
+            ],
+            "texture": {
+                "name": "chisel_temple_plate_cracked_6",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_temple_plate_cracked_7_desc"
+            ],
+            "texture": {
+                "name": "chisel_temple_plate_cracked_7",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_temple_plate_cracked_8_desc"
+            ],
+            "texture": {
+                "name": "chisel_temple_plate_cracked_8",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_temple_plate_desc"
+            ],
+            "texture": {
+                "name": "chisel_temple_plate",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_temple_smalltiles_light_desc"
+            ],
+            "texture": {
+                "name": "chisel_temple_smalltiles_light",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_temple_smalltiles_desc"
+            ],
+            "texture": {
+                "name": "chisel_temple_smalltiles",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_temple_stand_creeper_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_temple_stand_creeper_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_temple_stand_creeper_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_temple_stand_creeper_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_temple_stand_mosaic_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_temple_stand_mosaic_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_temple_stand_mosaic_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_temple_stand_mosaic_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_temple_stand_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_temple_stand_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_temple_stand_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_temple_stand_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_temple_temple_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_temple_temple_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_temple_tiles_light_desc"
+            ],
+            "texture": {
+                "name": "chisel_temple_tiles_light",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_temple_tiles_desc"
+            ],
+            "texture": {
+                "name": "chisel_temple_tiles",
+                "extension": "png",
+                "type": "normal"
+            }
+        }
+    ]
+}

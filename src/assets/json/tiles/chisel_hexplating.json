@@ -1,0 +1,31 @@
+{
+    "name": "hexPlating",
+    "register": true,
+    "localization": [
+        "tile_chisel_hexplating_name"
+    ],
+    "variations": [
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hexplating_hexbase_desc"
+            ],
+            "texture": {
+                "name": "chisel_hexplating_hexbase",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_hexplating_hexnew_desc"
+            ],
+            "texture": {
+                "name": "chisel_hexplating_hexnew",
+                "extension": "png",
+                "type": "normal"
+            }
+        }
+    ]
+}

@@ -1,0 +1,2121 @@
+{
+    "name": "glasspanedyed",
+    "register": true,
+    "localization": [
+        "tile_chisel_glasspanedyed_name"
+    ],
+    "variations": [
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_black_bubble_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_black_bubble_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_black_bubble_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_black_bubble_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_black_panel_fancy_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_black_panel_fancy_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_black_panel_fancy_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_black_panel_fancy_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_black_panel_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_black_panel_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_black_panel_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_black_panel_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_black_quad_fancy_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_black_quad_fancy_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_black_quad_fancy_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_black_quad_fancy_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_black_quad_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_black_quad_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_black_quad_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_black_quad_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_black_transparent_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_black_transparent_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_black_transparent_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_black_transparent_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_blue_bubble_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_blue_bubble_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_blue_bubble_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_blue_bubble_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_blue_panel_fancy_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_blue_panel_fancy_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_blue_panel_fancy_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_blue_panel_fancy_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_blue_panel_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_blue_panel_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_blue_panel_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_blue_panel_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_blue_quad_fancy_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_blue_quad_fancy_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_blue_quad_fancy_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_blue_quad_fancy_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_blue_quad_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_blue_quad_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_blue_quad_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_blue_quad_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_blue_transparent_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_blue_transparent_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_blue_transparent_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_blue_transparent_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_brown_bubble_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_brown_bubble_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_brown_bubble_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_brown_bubble_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_brown_panel_fancy_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_brown_panel_fancy_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_brown_panel_fancy_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_brown_panel_fancy_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_brown_panel_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_brown_panel_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_brown_panel_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_brown_panel_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_brown_quad_fancy_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_brown_quad_fancy_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_brown_quad_fancy_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_brown_quad_fancy_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_brown_quad_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_brown_quad_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_brown_quad_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_brown_quad_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_brown_transparent_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_brown_transparent_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_brown_transparent_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_brown_transparent_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_cyan_bubble_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_cyan_bubble_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_cyan_bubble_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_cyan_bubble_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_cyan_panel_fancy_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_cyan_panel_fancy_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_cyan_panel_fancy_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_cyan_panel_fancy_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_cyan_panel_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_cyan_panel_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_cyan_panel_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_cyan_panel_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_cyan_quad_fancy_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_cyan_quad_fancy_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_cyan_quad_fancy_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_cyan_quad_fancy_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_cyan_quad_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_cyan_quad_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_cyan_quad_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_cyan_quad_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_cyan_transparent_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_cyan_transparent_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_cyan_transparent_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_cyan_transparent_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_gray_bubble_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_gray_bubble_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_gray_bubble_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_gray_bubble_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_gray_panel_fancy_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_gray_panel_fancy_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_gray_panel_fancy_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_gray_panel_fancy_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_gray_panel_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_gray_panel_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_gray_panel_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_gray_panel_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_gray_quad_fancy_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_gray_quad_fancy_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_gray_quad_fancy_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_gray_quad_fancy_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_gray_quad_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_gray_quad_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_gray_quad_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_gray_quad_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_gray_transparent_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_gray_transparent_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_gray_transparent_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_gray_transparent_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_green_bubble_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_green_bubble_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_green_bubble_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_green_bubble_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_green_panel_fancy_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_green_panel_fancy_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_green_panel_fancy_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_green_panel_fancy_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_green_panel_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_green_panel_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_green_panel_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_green_panel_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_green_quad_fancy_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_green_quad_fancy_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_green_quad_fancy_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_green_quad_fancy_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_green_quad_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_green_quad_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_green_quad_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_green_quad_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_green_transparent_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_green_transparent_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_green_transparent_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_green_transparent_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lightblue_bubble_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lightblue_bubble_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lightblue_bubble_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lightblue_bubble_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lightblue_panel_fancy_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lightblue_panel_fancy_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lightblue_panel_fancy_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lightblue_panel_fancy_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lightblue_panel_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lightblue_panel_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lightblue_panel_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lightblue_panel_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lightblue_quad_fancy_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lightblue_quad_fancy_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lightblue_quad_fancy_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lightblue_quad_fancy_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lightblue_quad_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lightblue_quad_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lightblue_quad_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lightblue_quad_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lightblue_transparent_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lightblue_transparent_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lightblue_transparent_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lightblue_transparent_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lightgray_bubble_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lightgray_bubble_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lightgray_bubble_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lightgray_bubble_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lightgray_panel_fancy_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lightgray_panel_fancy_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lightgray_panel_fancy_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lightgray_panel_fancy_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lightgray_panel_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lightgray_panel_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lightgray_panel_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lightgray_panel_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lightgray_quad_fancy_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lightgray_quad_fancy_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lightgray_quad_fancy_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lightgray_quad_fancy_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lightgray_quad_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lightgray_quad_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lightgray_quad_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lightgray_quad_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lightgray_transparent_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lightgray_transparent_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lightgray_transparent_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lightgray_transparent_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lime_bubble_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lime_bubble_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lime_bubble_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lime_bubble_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lime_panel_fancy_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lime_panel_fancy_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lime_panel_fancy_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lime_panel_fancy_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lime_panel_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lime_panel_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lime_panel_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lime_panel_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lime_quad_fancy_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lime_quad_fancy_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lime_quad_fancy_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lime_quad_fancy_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lime_quad_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lime_quad_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lime_quad_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lime_quad_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lime_transparent_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lime_transparent_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_lime_transparent_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_lime_transparent_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_magenta_bubble_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_magenta_bubble_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_magenta_bubble_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_magenta_bubble_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_magenta_panel_fancy_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_magenta_panel_fancy_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_magenta_panel_fancy_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_magenta_panel_fancy_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_magenta_panel_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_magenta_panel_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_magenta_panel_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_magenta_panel_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_magenta_quad_fancy_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_magenta_quad_fancy_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_magenta_quad_fancy_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_magenta_quad_fancy_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_magenta_quad_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_magenta_quad_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_magenta_quad_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_magenta_quad_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_magenta_transparent_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_magenta_transparent_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_magenta_transparent_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_magenta_transparent_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_orange_bubble_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_orange_bubble_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_orange_bubble_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_orange_bubble_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_orange_panel_fancy_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_orange_panel_fancy_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_orange_panel_fancy_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_orange_panel_fancy_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_orange_panel_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_orange_panel_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_orange_panel_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_orange_panel_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_orange_quad_fancy_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_orange_quad_fancy_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_orange_quad_fancy_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_orange_quad_fancy_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_orange_quad_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_orange_quad_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_orange_quad_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_orange_quad_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_orange_transparent_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_orange_transparent_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_orange_transparent_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_orange_transparent_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_pink_bubble_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_pink_bubble_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_pink_bubble_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_pink_bubble_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_pink_panel_fancy_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_pink_panel_fancy_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_pink_panel_fancy_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_pink_panel_fancy_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_pink_panel_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_pink_panel_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_pink_panel_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_pink_panel_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_pink_quad_fancy_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_pink_quad_fancy_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_pink_quad_fancy_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_pink_quad_fancy_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_pink_quad_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_pink_quad_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_pink_quad_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_pink_quad_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_pink_transparent_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_pink_transparent_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_pink_transparent_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_pink_transparent_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_purple_bubble_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_purple_bubble_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_purple_bubble_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_purple_bubble_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_purple_panel_fancy_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_purple_panel_fancy_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_purple_panel_fancy_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_purple_panel_fancy_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_purple_panel_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_purple_panel_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_purple_panel_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_purple_panel_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_purple_quad_fancy_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_purple_quad_fancy_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_purple_quad_fancy_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_purple_quad_fancy_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_purple_quad_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_purple_quad_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_purple_quad_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_purple_quad_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_purple_transparent_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_purple_transparent_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_purple_transparent_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_purple_transparent_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_red_bubble_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_red_bubble_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_red_bubble_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_red_bubble_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_red_panel_fancy_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_red_panel_fancy_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_red_panel_fancy_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_red_panel_fancy_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_red_panel_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_red_panel_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_red_panel_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_red_panel_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_red_quad_fancy_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_red_quad_fancy_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_red_quad_fancy_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_red_quad_fancy_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_red_quad_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_red_quad_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_red_quad_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_red_quad_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_red_transparent_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_red_transparent_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_red_transparent_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_red_transparent_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_white_bubble_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_white_bubble_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_white_bubble_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_white_bubble_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_white_panel_fancy_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_white_panel_fancy_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_white_panel_fancy_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_white_panel_fancy_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_white_panel_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_white_panel_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_white_panel_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_white_panel_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_white_quad_fancy_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_white_quad_fancy_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_white_quad_fancy_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_white_quad_fancy_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_white_quad_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_white_quad_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_white_quad_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_white_quad_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_white_transparent_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_white_transparent_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_white_transparent_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_white_transparent_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_yellow_bubble_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_yellow_bubble_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_yellow_bubble_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_yellow_bubble_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_yellow_panel_fancy_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_yellow_panel_fancy_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_yellow_panel_fancy_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_yellow_panel_fancy_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_yellow_panel_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_yellow_panel_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_yellow_panel_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_yellow_panel_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_yellow_quad_fancy_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_yellow_quad_fancy_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_yellow_quad_fancy_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_yellow_quad_fancy_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_yellow_quad_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_yellow_quad_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_yellow_quad_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_yellow_quad_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_yellow_transparent_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_yellow_transparent_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_glasspanedyed_yellow_transparent_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_glasspanedyed_yellow_transparent_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        }
+    ]
+}

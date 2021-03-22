@@ -1,0 +1,359 @@
+{
+    "name": "redstone",
+    "register": true,
+    "localization": [
+        "tile_chisel_redstone_name"
+    ],
+    "variations": [
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_redstone_array_desc"
+            ],
+            "texture": {
+                "name": "chisel_redstone_array",
+                "extension": "png",
+                "type": "ctmh"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_redstone_braid_desc"
+            ],
+            "texture": {
+                "name": "chisel_redstone_braid",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_redstone_bricks_cracked_desc"
+            ],
+            "texture": {
+                "name": "chisel_redstone_bricks_cracked",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_redstone_bricks_encased_desc"
+            ],
+            "texture": {
+                "name": "chisel_redstone_bricks_encased",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_redstone_bricks_encased_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_redstone_bricks_small_desc"
+            ],
+            "texture": {
+                "name": "chisel_redstone_bricks_small",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_redstone_bricks_soft_desc"
+            ],
+            "texture": {
+                "name": "chisel_redstone_bricks_soft",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_redstone_bricks_solid_desc"
+            ],
+            "texture": {
+                "name": "chisel_redstone_bricks_solid",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_redstone_bricks_triple_desc"
+            ],
+            "texture": {
+                "name": "chisel_redstone_bricks_triple",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_redstone_chaotic_medium_desc"
+            ],
+            "texture": {
+                "name": "chisel_redstone_chaotic_medium",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_redstone_chaotic_small_desc"
+            ],
+            "texture": {
+                "name": "chisel_redstone_chaotic_small",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_redstone_circular_desc"
+            ],
+            "texture": {
+                "name": "chisel_redstone_circular",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_redstone_cracked_desc"
+            ],
+            "texture": {
+                "name": "chisel_redstone_cracked",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_redstone_dent_desc"
+            ],
+            "texture": {
+                "name": "chisel_redstone_dent",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_redstone_dent_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_redstone_french_1_desc"
+            ],
+            "texture": {
+                "name": "chisel_redstone_french_1",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_redstone_french_2_desc"
+            ],
+            "texture": {
+                "name": "chisel_redstone_french_2",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_redstone_jellybean_desc"
+            ],
+            "texture": {
+                "name": "chisel_redstone_jellybean",
+                "extension": "png",
+                "type": "ctm"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_redstone_layers_desc"
+            ],
+            "texture": {
+                "name": "chisel_redstone_layers",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_redstone_mosaic_desc"
+            ],
+            "texture": {
+                "name": "chisel_redstone_mosaic",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_redstone_mosaic_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_redstone_ornate_desc"
+            ],
+            "texture": {
+                "name": "chisel_redstone_ornate",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_redstone_panel_desc"
+            ],
+            "texture": {
+                "name": "chisel_redstone_panel",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_redstone_pillar_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_redstone_pillar_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_redstone_pillar_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_redstone_pillar_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_redstone_prism_desc"
+            ],
+            "texture": {
+                "name": "chisel_redstone_prism",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_redstone_road_desc"
+            ],
+            "texture": {
+                "name": "chisel_redstone_road",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_redstone_slanted_desc"
+            ],
+            "texture": {
+                "name": "chisel_redstone_slanted",
+                "extension": "png",
+                "type": "ctm"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_redstone_tiles_large_desc"
+            ],
+            "texture": {
+                "name": "chisel_redstone_tiles_large",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_redstone_tiles_large_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_redstone_tiles_medium_desc"
+            ],
+            "texture": {
+                "name": "chisel_redstone_tiles_medium",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_redstone_tiles_small_desc"
+            ],
+            "texture": {
+                "name": "chisel_redstone_tiles_small",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_redstone_twisted_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_redstone_twisted_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_redstone_twisted_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_redstone_twisted_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        }
+    ]
+}

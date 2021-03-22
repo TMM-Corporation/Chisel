@@ -1,0 +1,64 @@
+{
+    "name": "animations",
+    "register": true,
+    "localization": [
+        "tile_chisel_animations_name"
+    ],
+    "variations": [
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_animations_archetype2_desc"
+            ],
+            "texture": {
+                "name": "chisel_animations_archetype2",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_animations_hades_desc"
+            ],
+            "texture": {
+                "name": "chisel_animations_hades",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_animations_hadesx32_desc"
+            ],
+            "texture": {
+                "name": "chisel_animations_hadesx32",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_animations_shroud_desc"
+            ],
+            "texture": {
+                "name": "chisel_animations_shroud",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_animations_strobe_desc"
+            ],
+            "texture": {
+                "name": "chisel_animations_strobe",
+                "extension": "png",
+                "type": "normal"
+            }
+        }
+    ]
+}

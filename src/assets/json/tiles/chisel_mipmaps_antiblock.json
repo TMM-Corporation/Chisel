@@ -1,0 +1,64 @@
+{
+    "name": "mipmaps/antiblock",
+    "register": true,
+    "localization": [
+        "tile_chisel_mipmaps_antiblock_name"
+    ],
+    "variations": [
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_mipmaps_antiblock_antiblock.0_desc"
+            ],
+            "texture": {
+                "name": "chisel_mipmaps_antiblock_antiblock.0",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_mipmaps_antiblock_antiblock.1_desc"
+            ],
+            "texture": {
+                "name": "chisel_mipmaps_antiblock_antiblock.1",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_mipmaps_antiblock_antiblock.2_desc"
+            ],
+            "texture": {
+                "name": "chisel_mipmaps_antiblock_antiblock.2",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_mipmaps_antiblock_antiblock.3_desc"
+            ],
+            "texture": {
+                "name": "chisel_mipmaps_antiblock_antiblock.3",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_mipmaps_antiblock_antiblock.4_desc"
+            ],
+            "texture": {
+                "name": "chisel_mipmaps_antiblock_antiblock.4",
+                "extension": "png",
+                "type": "normal"
+            }
+        }
+    ]
+}

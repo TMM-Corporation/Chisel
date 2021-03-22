@@ -1,0 +1,207 @@
+{
+    "name": "futura",
+    "register": true,
+    "localization": [
+        "tile_chisel_futura_name"
+    ],
+    "variations": [
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_futura_circuit_plate_desc"
+            ],
+            "texture": {
+                "name": "chisel_futura_circuit_plate",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_futura_controller_particle_desc"
+            ],
+            "texture": {
+                "name": "chisel_futura_controller_particle",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_futura_controller_unity_desc"
+            ],
+            "texture": {
+                "name": "chisel_futura_controller_unity",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_futura_controller_unity_particle_desc"
+            ],
+            "texture": {
+                "name": "chisel_futura_controller_unity_particle",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_futura_lines_invalid_desc"
+            ],
+            "texture": {
+                "name": "chisel_futura_lines_invalid",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_futura_lines_plating_desc"
+            ],
+            "texture": {
+                "name": "chisel_futura_lines_plating",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_futura_orange_frame_desc"
+            ],
+            "texture": {
+                "name": "chisel_futura_orange_frame",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_futura_orange_frame_particle_desc"
+            ],
+            "texture": {
+                "name": "chisel_futura_orange_frame_particle",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_futura_rainbow_lines_desc"
+            ],
+            "texture": {
+                "name": "chisel_futura_rainbow_lines",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_futura_rainbow_wave_desc"
+            ],
+            "texture": {
+                "name": "chisel_futura_rainbow_wave",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_futura_rainbow_wave_base_desc"
+            ],
+            "texture": {
+                "name": "chisel_futura_rainbow_wave_base",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_futura_rainbow_wave_particle_desc"
+            ],
+            "texture": {
+                "name": "chisel_futura_rainbow_wave_particle",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_futura_screen_cyan_desc"
+            ],
+            "texture": {
+                "name": "chisel_futura_screen_cyan",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_futura_screen_discoherent_desc"
+            ],
+            "texture": {
+                "name": "chisel_futura_screen_discoherent",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_futura_screen_metallic_desc"
+            ],
+            "texture": {
+                "name": "chisel_futura_screen_metallic",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_futura_uber_rainbow_desc"
+            ],
+            "texture": {
+                "name": "chisel_futura_uber_rainbow",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_futura_unity_lines_desc"
+            ],
+            "texture": {
+                "name": "chisel_futura_unity_lines",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_futura_unity_lines_plating_desc"
+            ],
+            "texture": {
+                "name": "chisel_futura_unity_lines_plating",
+                "extension": "png",
+                "type": "normal"
+            }
+        }
+    ]
+}

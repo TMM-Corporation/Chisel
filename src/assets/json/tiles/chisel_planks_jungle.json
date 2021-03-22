@@ -1,0 +1,185 @@
+{
+    "name": "planks-jungle",
+    "register": true,
+    "localization": [
+        "tile_chisel_planks_jungle_name"
+    ],
+    "variations": [
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_planks_jungle_blinds_desc"
+            ],
+            "texture": {
+                "name": "chisel_planks_jungle_blinds",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_planks_jungle_chaotic_hor_desc"
+            ],
+            "texture": {
+                "name": "chisel_planks_jungle_chaotic_hor",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_planks_jungle_chaotic_desc"
+            ],
+            "texture": {
+                "name": "chisel_planks_jungle_chaotic",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_planks_jungle_clean_desc"
+            ],
+            "texture": {
+                "name": "chisel_planks_jungle_clean",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_planks_jungle_crate_fancy_desc"
+            ],
+            "texture": {
+                "name": "chisel_planks_jungle_crate_fancy",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_planks_jungle_crate_desc"
+            ],
+            "texture": {
+                "name": "chisel_planks_jungle_crate",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_planks_jungle_crateex_desc"
+            ],
+            "texture": {
+                "name": "chisel_planks_jungle_crateex",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_planks_jungle_double_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_planks_jungle_double_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_planks_jungle_double_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_planks_jungle_double_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_planks_jungle_fancy_desc"
+            ],
+            "texture": {
+                "name": "chisel_planks_jungle_fancy",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_planks_jungle_large_desc"
+            ],
+            "texture": {
+                "name": "chisel_planks_jungle_large",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_planks_jungle_panel_nails_desc"
+            ],
+            "texture": {
+                "name": "chisel_planks_jungle_panel_nails",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_planks_jungle_parquet_desc"
+            ],
+            "texture": {
+                "name": "chisel_planks_jungle_parquet",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_planks_jungle_short_desc"
+            ],
+            "texture": {
+                "name": "chisel_planks_jungle_short",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_planks_jungle_vertical_uneven_desc"
+            ],
+            "texture": {
+                "name": "chisel_planks_jungle_vertical_uneven",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_planks_jungle_vertical_desc"
+            ],
+            "texture": {
+                "name": "chisel_planks_jungle_vertical",
+                "extension": "png",
+                "type": "normal"
+            }
+        }
+    ]
+}

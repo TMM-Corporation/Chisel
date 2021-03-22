@@ -1,0 +1,424 @@
+{
+    "name": "concrete_red",
+    "register": true,
+    "localization": [
+        "tile_chisel_concrete_red_name"
+    ],
+    "variations": [
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_red_array_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_red_array",
+                "extension": "png",
+                "type": "ctmh"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_red_braid_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_red_braid",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_red_bricks_chaotic_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_red_bricks_chaotic",
+                "extension": "png",
+                "type": "bricks-chaotic"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_red_bricks_cracked_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_red_bricks_cracked",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_red_bricks_encased_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_red_bricks_encased",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_concrete_red_bricks_encased_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_red_bricks_small_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_red_bricks_small",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_red_bricks_soft_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_red_bricks_soft",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_red_bricks_solid_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_red_bricks_solid",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_red_bricks_triple_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_red_bricks_triple",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_red_chaotic_medium_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_red_chaotic_medium",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_red_chaotic_small_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_red_chaotic_small",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_red_circular_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_red_circular",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_concrete_red_circular_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_red_cracked_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_red_cracked",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_red_cuts_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_red_cuts",
+                "extension": "png",
+                "type": "cuts"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_red_dent_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_red_dent",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_concrete_red_dent_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_red_french_1_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_red_french_1",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_red_french_2_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_red_french_2",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_red_jellybean_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_red_jellybean",
+                "extension": "png",
+                "type": "ctm"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_red_layers_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_red_layers",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_red_mosaic_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_red_mosaic",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_concrete_red_mosaic_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_red_ornate_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_red_ornate",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_red_panel_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_red_panel",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_red_pillar_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_red_pillar_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_red_pillar_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_red_pillar_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_red_prism_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_red_prism",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_red_raw_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_red_raw",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_red_road_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_red_road",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_red_slanted_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_red_slanted",
+                "extension": "png",
+                "type": "ctm"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_red_tiles_large_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_red_tiles_large",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_concrete_red_tiles_large_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_red_tiles_medium_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_red_tiles_medium",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_red_tiles_small_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_red_tiles_small",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_red_twisted_side_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_red_twisted_side",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_red_twisted_top_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_red_twisted_top",
+                "extension": "png",
+                "type": "normal"
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_red_weaver_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_red_weaver",
+                "extension": "png",
+                "type": "normal",
+                "ctm": {
+                    "name": "chisel_chisel_concrete_red_weaver_ctm",
+                    "extension": "png",
+                    "type": "ctm"
+                }
+            }
+        },
+        {
+            "register": true,
+            "localization": [
+                "tile_chisel_concrete_red_zag_desc"
+            ],
+            "texture": {
+                "name": "chisel_concrete_red_zag",
+                "extension": "png",
+                "type": "ctm"
+            }
+        }
+    ]
+}
