@@ -291,9 +291,9 @@ class CTMBLock {
 		let mesh = new RenderMesh()
 		mesh.setBlockTexture(texture_uv.texture, 0)
 		coords3[axis] = 0
-		this.addSurface(coords3, CTMAxis[axis], texture_uv.uv)
+		this.addSurfacePart(mesh, coords3, CTMAxis[axis], texture_uv.uv)
 		coords3[axis] = 1
-		this.addSurface(coords3, CTMAxis[axis], texture_uv.uv)
+		this.addSurfacePart(mesh, coords3, CTMAxis[axis], texture_uv.uv)
 		return new BlockRenderer.Model(mesh)
 	}
 	renderConditions(H, V, D) {
@@ -308,7 +308,7 @@ class CTMBLock {
 		]
 	}
 	addSurface(c: Vector, axis: ICTMAxisList, uv: IVertexUV, vertexScale?: number) {
-		this.addSurfacePart(c, axis, uv)
+		// this.addSurfacePart(c, axis, uv)
 	}
 	getAxisScale(axis: ICTMAxisList, value: number, scale: number) {
 		let normal = {
@@ -323,15 +323,15 @@ class CTMBLock {
 		}
 		return [normal, any]
 	}
-	addSurfacePart(c: Vector, axis: ICTMAxisList, uv: IVertexUV, vertexScale?: number) {
-		let mesh = this.currentMesh, u = uv.u, v = uv.v, scale = uv.scale || 0.5
+	addSurfacePart(mesh: RenderMesh,c: Vector, axis: ICTMAxisList, uv: IVertexUV, vertexScale?: number) {
+		let surfacePart = mesh || this.currentMesh, u = uv.u, v = uv.v, scale = uv.scale || 0.5
 		let axisScale0 = this.getAxisScale(axis, 0, scale)
 		let axisScale1 = this.getAxisScale(axis, 1, scale)
-		mesh.addVertex(c.x + axisScale0[0].x, c.y + axisScale0[0].y, c.z + axisScale0[0].z, u + scale, v)
-		mesh.addVertex(c.x + axisScale1[0].x, c.y + axisScale1[0].y, c.z + axisScale1[0].z, u, v + scale)
-		mesh.addVertex(c.x + axisScale0[0].x, c.y + axisScale0[0].y, c.z + axisScale0[0].z, u + scale, v)
-		mesh.addVertex(c.x + axisScale1[0].x, c.y + axisScale1[0].y, c.z + axisScale1[0].z, u, v + scale)
-		mesh.addVertex(c.x + axisScale1[1].x, c.y + axisScale1[1].y, c.z + axisScale1[1].z, u + scale, v + scale)
+		surfacePart.addVertex(c.x + axisScale0[0].x, c.y + axisScale0[0].y, c.z + axisScale0[0].z, u + scale, v)
+		surfacePart.addVertex(c.x + axisScale1[0].x, c.y + axisScale1[0].y, c.z + axisScale1[0].z, u, v + scale)
+		surfacePart.addVertex(c.x + axisScale0[0].x, c.y + axisScale0[0].y, c.z + axisScale0[0].z, u + scale, v)
+		surfacePart.addVertex(c.x + axisScale1[0].x, c.y + axisScale1[0].y, c.z + axisScale1[0].z, u, v + scale)
+		surfacePart.addVertex(c.x + axisScale1[1].x, c.y + axisScale1[1].y, c.z + axisScale1[1].z, u + scale, v + scale)
 	}
 }
 
