@@ -257,7 +257,7 @@ class CTMBLock {
 		}
 		this.model = render
 	}
-	getTextureAndUV(texture_index: number, i: number, axis) {
+	getTextureAndUV(texture_index: number, i: number, axis: string) {
 		let texture = this.textures
 		let u = i & 1 ? 0.5 : 0
 		let v = i >> 1 ? 0.5 : 0
@@ -275,18 +275,23 @@ class CTMBLock {
 		}
 		if (texture_index > 0) {
 			out.texture = texture[1]
-			// u = i & 1 ? 0.25 : 0
-			// v = i >> 1 ? 0.25 : 0
+			let o = i - 1
+			u = o & 1 ? 0.25 : 0
+			v = o >> 1 ? 0.25 : 0
+			if (o == 3) u = v = 0
+			out.uv.v = v
+			out.uv.u = u
+			out.uv.scale = 0.25
 			switch (texture_index) {
 				case 1:
-					out.uv.v = 0.5
+					out.uv.v += 0.5
 					break
 				case 2:
-					out.uv.u = 0.5
+					out.uv.u += 0.5
 					break
 				case 3:
-					out.uv.u = 0.5
-					out.uv.v = 0.5
+					out.uv.u += 0.5
+					out.uv.v += 0.5
 					break
 				case 4:
 					out.uv.u = 0
@@ -296,7 +301,7 @@ class CTMBLock {
 		}
 		return out
 	}
-	createSurfaces(j, i, axis) {
+	createSurfaces(j: number, i: number, axis: string) {
 		let texture_uv = this.getTextureAndUV(j, i, axis)
 		let mesh = new RenderMesh()
 		let coords3 = texture_uv.coords3
@@ -335,15 +340,15 @@ class CTMBLock {
 		return [normal, any]
 	}
 	addSurfacePart(mesh: RenderMesh, c: Vector, axis: ICTMAxisList, uv: IVertexUV, vertexScale?: number) {
-		let surfacePart = mesh || this.currentMesh, u = uv.u, v = uv.v, scale = vertexScale || 0.5
+		let surfacePart = mesh || this.currentMesh, u = uv.u, v = uv.v, scale = vertexScale || 0.5, uv_scale = uv.scale || 0.25
 		let axisScale0 = this.getAxisScale(axis, 0, scale)
 		let axisScale1 = this.getAxisScale(axis, 1, scale)
 		surfacePart.addVertex(c.x, c.y, c.z, u, v)
-		surfacePart.addVertex(c.x + axisScale0[0].x, c.y + axisScale0[0].y, c.z + axisScale0[0].z, u + scale, v)
-		surfacePart.addVertex(c.x + axisScale1[0].x, c.y + axisScale1[0].y, c.z + axisScale1[0].z, u, v + scale)
-		surfacePart.addVertex(c.x + axisScale0[0].x, c.y + axisScale0[0].y, c.z + axisScale0[0].z, u + scale, v)
-		surfacePart.addVertex(c.x + axisScale1[0].x, c.y + axisScale1[0].y, c.z + axisScale1[0].z, u, v + scale)
-		surfacePart.addVertex(c.x + axisScale1[1].x, c.y + axisScale1[1].y, c.z + axisScale1[1].z, u + scale, v + scale)
+		surfacePart.addVertex(c.x + axisScale0[0].x, c.y + axisScale0[0].y, c.z + axisScale0[0].z, u + uv_scale, v)
+		surfacePart.addVertex(c.x + axisScale1[0].x, c.y + axisScale1[0].y, c.z + axisScale1[0].z, u, v + uv_scale)
+		surfacePart.addVertex(c.x + axisScale0[0].x, c.y + axisScale0[0].y, c.z + axisScale0[0].z, u + uv_scale, v)
+		surfacePart.addVertex(c.x + axisScale1[0].x, c.y + axisScale1[0].y, c.z + axisScale1[0].z, u, v + uv_scale)
+		surfacePart.addVertex(c.x + axisScale1[1].x, c.y + axisScale1[1].y, c.z + axisScale1[1].z, u + uv_scale, v + uv_scale)
 	}
 }
 

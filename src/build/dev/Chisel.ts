@@ -17,7 +17,7 @@ Carvable.addTile({
 				"extension": "png",
 				"type": "normal",
 				"ctm": {
-					"name": "chisel_dbg_ctm",
+					"name": "chisel_test_ctm",
 					"extension": "png",
 					"type": "ctm"
 				}
