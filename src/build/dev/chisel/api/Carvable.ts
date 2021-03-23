@@ -2,6 +2,7 @@
 interface ICTMProps {
 	// ctm sliceable texture name
 	name: string
+	extension?: string
 	// ctm type name
 	type?: string | default_ctm_names
 	// texture width
@@ -52,7 +53,7 @@ interface ITileVariation {
 	// fullblock texture
 	texture: ITexture
 	// tooltip additional name for variation
-	localization?: ILocalization
+	localization?: ILocalization | string[]
 	// register variation
 	register?: boolean
 }
@@ -232,16 +233,13 @@ class CTMBLock {
 		let i = 0, j = 0, u = 0, v = 0
 
 		for (let axis in CTMAxis) {
+			// creating surfrace parts
 			for (i = 0; i < 4; i++) {
 				coords1 = {}
 				coords2 = {}
 				coords3 = {}
 				coords1[CTMAxis[axis][0]] = i & 1 ? 1 : -1
 				coords2[CTMAxis[axis][1]] = i >> 1 ? 1 : -1
-				u = i & 1 ? 0.5 : 0
-				v = i >> 1 ? 0.5 : 0
-				coords3[CTMAxis[axis][0]] = u
-				coords3[CTMAxis[axis][1]] = v
 				let renderConditions = this.renderConditions(
 					BLOCK(coords1, group),
 					BLOCK(coords2, group),
@@ -251,44 +249,57 @@ class CTMBLock {
 						z: coords1.z || coords2.z
 					}, group)
 				)
+				// adding 5 surfaces with textures texture_j.png in original
 				for (j = 0; j < 5; j++) {
-					this.addCondition(render, this.createSurfaces(j, coords3, axis), renderConditions[j])
+					this.addCondition(render, this.createSurfaces(j, i, axis), renderConditions[j])
 				}
 			}
 		}
 		this.model = render
 	}
-	getTextureAndUV(key: number) {
+	getTextureAndUV(texture_index: number, i: number, axis) {
 		let texture = this.textures
+		let u = i & 1 ? 0.5 : 0
+		let v = i >> 1 ? 0.5 : 0
+		let coords3 = { x: 0, y: 0, z: 0 }
+		coords3[CTMAxis[axis][0]] = u
+		coords3[CTMAxis[axis][1]] = v
 		let out = {
 			texture: texture[0],
 			uv: {
-				u: 0,
-				v: 0,
+				u: u,
+				v: v,
 				scale: 0.5
-			}
+			},
+			coords3: coords3
 		}
-		if (key > 0) {
+		if (texture_index > 0) {
 			out.texture = texture[1]
-			out.uv.scale = 0.5
-			switch (key) {
+			// u = i & 1 ? 0.25 : 0
+			// v = i >> 1 ? 0.25 : 0
+			switch (texture_index) {
+				case 1:
+					out.uv.v = 0.5
+					break
 				case 2:
 					out.uv.u = 0.5
 					break
 				case 3:
+					out.uv.u = 0.5
 					out.uv.v = 0.5
 					break
 				case 4:
-					out.uv.u = 0.5
-					out.uv.v = 0.5
+					out.uv.u = 0
+					out.uv.v = 0
 					break
 			}
 		}
 		return out
 	}
-	createSurfaces(j, coords3, axis) {
-		let texture_uv = this.getTextureAndUV(j)
+	createSurfaces(j, i, axis) {
+		let texture_uv = this.getTextureAndUV(j, i, axis)
 		let mesh = new RenderMesh()
+		let coords3 = texture_uv.coords3
 		mesh.setBlockTexture(texture_uv.texture, 0)
 		coords3[axis] = 0
 		this.addSurfacePart(mesh, coords3, CTMAxis[axis], texture_uv.uv)
@@ -324,7 +335,7 @@ class CTMBLock {
 		return [normal, any]
 	}
 	addSurfacePart(mesh: RenderMesh, c: Vector, axis: ICTMAxisList, uv: IVertexUV, vertexScale?: number) {
-		let surfacePart = mesh || this.currentMesh, u = uv.u, v = uv.v, scale = uv.scale || 0.5
+		let surfacePart = mesh || this.currentMesh, u = uv.u, v = uv.v, scale = vertexScale || 0.5
 		let axisScale0 = this.getAxisScale(axis, 0, scale)
 		let axisScale1 = this.getAxisScale(axis, 1, scale)
 		surfacePart.addVertex(c.x, c.y, c.z, u, v)

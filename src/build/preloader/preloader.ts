@@ -27,7 +27,7 @@ var resources = {
 
 let preloader = new Preloader('chisel', resources)
 let RM = preloader.RM
-let textures = RM.ReadJSON(RM.Select(__dir__ + resources.files.textures))
-let ctmtypes = RM.ReadJSON(RM.Select(__dir__ + resources.files.ctmtypes))
-preloader.TextureGenerator.copyTexturesFrom(textures)
+// let textures = RM.ReadJSON(RM.Select(__dir__ + resources.files.textures))
+// let ctmtypes = RM.ReadJSON(RM.Select(__dir__ + resources.files.ctmtypes))
+// preloader.TextureGenerator.copyTexturesFrom(textures)
 // preloader.TextureGenerator.exportToJsonTiles({json: textures, ctmtypes:ctmtypes})

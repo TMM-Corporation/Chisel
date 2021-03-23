@@ -4,7 +4,28 @@
 
 // 	}
 // }
-Carvable.addTile(OpenTile('chisel_andesite'))
+Carvable.addTile({
+	"name": "dbg_mode",
+	"register": true,
+	"localization": ["tile_chisel_dbg_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_dbg_desc"],
+			"texture": {
+				"name": "chisel_dbg",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_dbg_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		}
+	]
+})
+// Carvable.addTile(OpenTile('chisel_andesite'))
 // Carvable.addTile(OpenTile('chisel_ancient_stone'))
 // Carvable.addTile(OpenTile('chisel_andesite'))
 // Carvable.addTile(OpenTile('chisel_animations'))
