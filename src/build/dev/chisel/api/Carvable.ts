@@ -270,7 +270,7 @@ class CTMBLock {
 		}
 		if (key > 0) {
 			out.texture = texture[1]
-			out.uv.scale = 0.25
+			out.uv.scale = 0.5
 			switch (key) {
 				case 2:
 					out.uv.u = 0.5
@@ -323,10 +323,11 @@ class CTMBLock {
 		}
 		return [normal, any]
 	}
-	addSurfacePart(mesh: RenderMesh,c: Vector, axis: ICTMAxisList, uv: IVertexUV, vertexScale?: number) {
+	addSurfacePart(mesh: RenderMesh, c: Vector, axis: ICTMAxisList, uv: IVertexUV, vertexScale?: number) {
 		let surfacePart = mesh || this.currentMesh, u = uv.u, v = uv.v, scale = uv.scale || 0.5
 		let axisScale0 = this.getAxisScale(axis, 0, scale)
 		let axisScale1 = this.getAxisScale(axis, 1, scale)
+		surfacePart.addVertex(c.x, c.y, c.z, u, v)
 		surfacePart.addVertex(c.x + axisScale0[0].x, c.y + axisScale0[0].y, c.z + axisScale0[0].z, u + scale, v)
 		surfacePart.addVertex(c.x + axisScale1[0].x, c.y + axisScale1[0].y, c.z + axisScale1[0].z, u, v + scale)
 		surfacePart.addVertex(c.x + axisScale0[0].x, c.y + axisScale0[0].y, c.z + axisScale0[0].z, u + scale, v)
