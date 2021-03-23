@@ -1,84 +1,72 @@
 {
-    "name": "blood_magic/diagonal",
-    "register": true,
-    "localization": [
-        "tile_chisel_blood_magic_diagonal_name"
-    ],
-    "variations": [
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_blood_magic_diagonal_runediagonalbricks_0_desc"
-            ],
-            "texture": {
-                "name": "chisel_blood_magic_diagonal_runediagonalbricks_0",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_blood_magic_diagonal_runediagonalbricks_0_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_blood_magic_diagonal_runediagonalbricks_1_desc"
-            ],
-            "texture": {
-                "name": "chisel_blood_magic_diagonal_runediagonalbricks_1",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_blood_magic_diagonal_runediagonalbricks_1_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_blood_magic_diagonal_runediagonalbricks_2_desc"
-            ],
-            "texture": {
-                "name": "chisel_blood_magic_diagonal_runediagonalbricks_2",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_blood_magic_diagonal_runediagonalbricks_2_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_blood_magic_diagonal_runediagonalbricks_3_desc"
-            ],
-            "texture": {
-                "name": "chisel_blood_magic_diagonal_runediagonalbricks_3",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_blood_magic_diagonal_runediagonalbricks_3_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_blood_magic_diagonal_runediagonalbricks_desc"
-            ],
-            "texture": {
-                "name": "chisel_blood_magic_diagonal_runediagonalbricks",
-                "extension": "png",
-                "type": "normal"
-            }
-        }
-    ]
+	"name": "blood_magic/diagonal",
+	"register": true,
+	"localization": ["tile_chisel_blood_magic_diagonal_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_blood_magic_diagonal_runediagonalbricks_0_desc"],
+			"texture": {
+				"name": "chisel_blood_magic_diagonal_runediagonalbricks_0",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_blood_magic_diagonal_runediagonalbricks_0_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_blood_magic_diagonal_runediagonalbricks_1_desc"],
+			"texture": {
+				"name": "chisel_blood_magic_diagonal_runediagonalbricks_1",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_blood_magic_diagonal_runediagonalbricks_1_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_blood_magic_diagonal_runediagonalbricks_2_desc"],
+			"texture": {
+				"name": "chisel_blood_magic_diagonal_runediagonalbricks_2",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_blood_magic_diagonal_runediagonalbricks_2_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_blood_magic_diagonal_runediagonalbricks_3_desc"],
+			"texture": {
+				"name": "chisel_blood_magic_diagonal_runediagonalbricks_3",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_blood_magic_diagonal_runediagonalbricks_3_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_blood_magic_diagonal_runediagonalbricks_desc"],
+			"texture": {
+				"name": "chisel_blood_magic_diagonal_runediagonalbricks",
+				"extension": "png",
+				"type": "normal"
+			}
+		}
+	]
 }

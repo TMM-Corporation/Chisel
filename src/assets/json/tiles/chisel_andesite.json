@@ -1,424 +1,352 @@
 {
-    "name": "andesite",
-    "register": true,
-    "localization": [
-        "tile_chisel_andesite_name"
-    ],
-    "variations": [
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_andesite_array_desc"
-            ],
-            "texture": {
-                "name": "chisel_andesite_array",
-                "extension": "png",
-                "type": "ctmh"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_andesite_braid_desc"
-            ],
-            "texture": {
-                "name": "chisel_andesite_braid",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_andesite_bricks_chaotic_desc"
-            ],
-            "texture": {
-                "name": "chisel_andesite_bricks_chaotic",
-                "extension": "png",
-                "type": "bricks-chaotic"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_andesite_bricks_cracked_desc"
-            ],
-            "texture": {
-                "name": "chisel_andesite_bricks_cracked",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_andesite_bricks_encased_desc"
-            ],
-            "texture": {
-                "name": "chisel_andesite_bricks_encased",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_andesite_bricks_encased_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_andesite_bricks_small_desc"
-            ],
-            "texture": {
-                "name": "chisel_andesite_bricks_small",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_andesite_bricks_soft_desc"
-            ],
-            "texture": {
-                "name": "chisel_andesite_bricks_soft",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_andesite_bricks_solid_desc"
-            ],
-            "texture": {
-                "name": "chisel_andesite_bricks_solid",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_andesite_bricks_triple_desc"
-            ],
-            "texture": {
-                "name": "chisel_andesite_bricks_triple",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_andesite_chaotic_medium_desc"
-            ],
-            "texture": {
-                "name": "chisel_andesite_chaotic_medium",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_andesite_chaotic_small_desc"
-            ],
-            "texture": {
-                "name": "chisel_andesite_chaotic_small",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_andesite_circular_desc"
-            ],
-            "texture": {
-                "name": "chisel_andesite_circular",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_andesite_circular_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_andesite_cracked_desc"
-            ],
-            "texture": {
-                "name": "chisel_andesite_cracked",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_andesite_cuts_desc"
-            ],
-            "texture": {
-                "name": "chisel_andesite_cuts",
-                "extension": "png",
-                "type": "cuts"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_andesite_dent_desc"
-            ],
-            "texture": {
-                "name": "chisel_andesite_dent",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_andesite_dent_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_andesite_french_1_desc"
-            ],
-            "texture": {
-                "name": "chisel_andesite_french_1",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_andesite_french_2_desc"
-            ],
-            "texture": {
-                "name": "chisel_andesite_french_2",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_andesite_jellybean_desc"
-            ],
-            "texture": {
-                "name": "chisel_andesite_jellybean",
-                "extension": "png",
-                "type": "ctm"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_andesite_layers_desc"
-            ],
-            "texture": {
-                "name": "chisel_andesite_layers",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_andesite_mosaic_desc"
-            ],
-            "texture": {
-                "name": "chisel_andesite_mosaic",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_andesite_mosaic_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_andesite_ornate_desc"
-            ],
-            "texture": {
-                "name": "chisel_andesite_ornate",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_andesite_panel_desc"
-            ],
-            "texture": {
-                "name": "chisel_andesite_panel",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_andesite_pillar_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_andesite_pillar_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_andesite_pillar_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_andesite_pillar_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_andesite_prism_desc"
-            ],
-            "texture": {
-                "name": "chisel_andesite_prism",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_andesite_raw_desc"
-            ],
-            "texture": {
-                "name": "chisel_andesite_raw",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_andesite_road_desc"
-            ],
-            "texture": {
-                "name": "chisel_andesite_road",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_andesite_slanted_desc"
-            ],
-            "texture": {
-                "name": "chisel_andesite_slanted",
-                "extension": "png",
-                "type": "ctm"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_andesite_tiles_large_desc"
-            ],
-            "texture": {
-                "name": "chisel_andesite_tiles_large",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_andesite_tiles_large_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_andesite_tiles_medium_desc"
-            ],
-            "texture": {
-                "name": "chisel_andesite_tiles_medium",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_andesite_tiles_small_desc"
-            ],
-            "texture": {
-                "name": "chisel_andesite_tiles_small",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_andesite_twisted_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_andesite_twisted_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_andesite_twisted_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_andesite_twisted_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_andesite_weaver_desc"
-            ],
-            "texture": {
-                "name": "chisel_andesite_weaver",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_andesite_weaver_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_andesite_zag_desc"
-            ],
-            "texture": {
-                "name": "chisel_andesite_zag",
-                "extension": "png",
-                "type": "ctm"
-            }
-        }
-    ]
+	"name": "andesite",
+	"register": true,
+	"localization": ["tile_chisel_andesite_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_andesite_array_desc"],
+			"texture": {
+				"name": "chisel_andesite_array",
+				"extension": "png",
+				"type": "ctmh"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_andesite_braid_desc"],
+			"texture": {
+				"name": "chisel_andesite_braid",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_andesite_bricks_chaotic_desc"],
+			"texture": {
+				"name": "chisel_andesite_bricks_chaotic",
+				"extension": "png",
+				"type": "bricks-chaotic"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_andesite_bricks_cracked_desc"],
+			"texture": {
+				"name": "chisel_andesite_bricks_cracked",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_andesite_bricks_encased_desc"],
+			"texture": {
+				"name": "chisel_andesite_bricks_encased",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_andesite_bricks_encased_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_andesite_bricks_small_desc"],
+			"texture": {
+				"name": "chisel_andesite_bricks_small",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_andesite_bricks_soft_desc"],
+			"texture": {
+				"name": "chisel_andesite_bricks_soft",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_andesite_bricks_solid_desc"],
+			"texture": {
+				"name": "chisel_andesite_bricks_solid",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_andesite_bricks_triple_desc"],
+			"texture": {
+				"name": "chisel_andesite_bricks_triple",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_andesite_chaotic_medium_desc"],
+			"texture": {
+				"name": "chisel_andesite_chaotic_medium",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_andesite_chaotic_small_desc"],
+			"texture": {
+				"name": "chisel_andesite_chaotic_small",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_andesite_circular_desc"],
+			"texture": {
+				"name": "chisel_andesite_circular",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_andesite_circular_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_andesite_cracked_desc"],
+			"texture": {
+				"name": "chisel_andesite_cracked",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_andesite_cuts_desc"],
+			"texture": {
+				"name": "chisel_andesite_cuts",
+				"extension": "png",
+				"type": "cuts"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_andesite_dent_desc"],
+			"texture": {
+				"name": "chisel_andesite_dent",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_andesite_dent_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_andesite_french_1_desc"],
+			"texture": {
+				"name": "chisel_andesite_french_1",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_andesite_french_2_desc"],
+			"texture": {
+				"name": "chisel_andesite_french_2",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_andesite_jellybean_desc"],
+			"texture": {
+				"name": "chisel_andesite_jellybean",
+				"extension": "png",
+				"type": "ctm"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_andesite_layers_desc"],
+			"texture": {
+				"name": "chisel_andesite_layers",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_andesite_mosaic_desc"],
+			"texture": {
+				"name": "chisel_andesite_mosaic",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_andesite_mosaic_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_andesite_ornate_desc"],
+			"texture": {
+				"name": "chisel_andesite_ornate",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_andesite_panel_desc"],
+			"texture": {
+				"name": "chisel_andesite_panel",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_andesite_pillar_side_desc"],
+			"texture": {
+				"name": "chisel_andesite_pillar_side",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_andesite_pillar_top_desc"],
+			"texture": {
+				"name": "chisel_andesite_pillar_top",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_andesite_prism_desc"],
+			"texture": {
+				"name": "chisel_andesite_prism",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_andesite_raw_desc"],
+			"texture": {
+				"name": "chisel_andesite_raw",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_andesite_road_desc"],
+			"texture": {
+				"name": "chisel_andesite_road",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_andesite_slanted_desc"],
+			"texture": {
+				"name": "chisel_andesite_slanted",
+				"extension": "png",
+				"type": "ctm"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_andesite_tiles_large_desc"],
+			"texture": {
+				"name": "chisel_andesite_tiles_large",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_andesite_tiles_large_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_andesite_tiles_medium_desc"],
+			"texture": {
+				"name": "chisel_andesite_tiles_medium",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_andesite_tiles_small_desc"],
+			"texture": {
+				"name": "chisel_andesite_tiles_small",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_andesite_twisted_side_desc"],
+			"texture": {
+				"name": "chisel_andesite_twisted_side",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_andesite_twisted_top_desc"],
+			"texture": {
+				"name": "chisel_andesite_twisted_top",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_andesite_weaver_desc"],
+			"texture": {
+				"name": "chisel_andesite_weaver",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_andesite_weaver_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_andesite_zag_desc"],
+			"texture": {
+				"name": "chisel_andesite_zag",
+				"extension": "png",
+				"type": "ctm"
+			}
+		}
+	]
 }

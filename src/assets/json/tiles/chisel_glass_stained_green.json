@@ -1,84 +1,72 @@
 {
-    "name": "glass_stained/green",
-    "register": true,
-    "localization": [
-        "tile_chisel_glass_stained_green_name"
-    ],
-    "variations": [
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glass_stained_green_brick_desc"
-            ],
-            "texture": {
-                "name": "chisel_glass_stained_green_brick",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_glass_stained_green_brick_ct",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glass_stained_green_framed_desc"
-            ],
-            "texture": {
-                "name": "chisel_glass_stained_green_framed",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_glass_stained_green_framed_ct",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glass_stained_green_panel_desc"
-            ],
-            "texture": {
-                "name": "chisel_glass_stained_green_panel",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_glass_stained_green_panel_ct",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glass_stained_green_rough_desc"
-            ],
-            "texture": {
-                "name": "chisel_glass_stained_green_rough",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_glass_stained_green_rough_ct",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glass_stained_green_streaks_desc"
-            ],
-            "texture": {
-                "name": "chisel_glass_stained_green_streaks",
-                "extension": "png",
-                "type": "normal"
-            }
-        }
-    ]
+	"name": "glass_stained/green",
+	"register": true,
+	"localization": ["tile_chisel_glass_stained_green_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_glass_stained_green_brick_desc"],
+			"texture": {
+				"name": "chisel_glass_stained_green_brick",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_glass_stained_green_brick_ct",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glass_stained_green_framed_desc"],
+			"texture": {
+				"name": "chisel_glass_stained_green_framed",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_glass_stained_green_framed_ct",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glass_stained_green_panel_desc"],
+			"texture": {
+				"name": "chisel_glass_stained_green_panel",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_glass_stained_green_panel_ct",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glass_stained_green_rough_desc"],
+			"texture": {
+				"name": "chisel_glass_stained_green_rough",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_glass_stained_green_rough_ct",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glass_stained_green_streaks_desc"],
+			"texture": {
+				"name": "chisel_glass_stained_green_streaks",
+				"extension": "png",
+				"type": "normal"
+			}
+		}
+	]
 }

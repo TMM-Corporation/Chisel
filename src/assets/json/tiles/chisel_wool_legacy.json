@@ -1,265 +1,231 @@
 {
-    "name": "wool/legacy",
-    "register": true,
-    "localization": [
-        "tile_chisel_wool_legacy_name"
-    ],
-    "variations": [
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_wool_legacy_black_desc"
-            ],
-            "texture": {
-                "name": "chisel_wool_legacy_black",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_wool_legacy_black_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_wool_legacy_blue_desc"
-            ],
-            "texture": {
-                "name": "chisel_wool_legacy_blue",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_wool_legacy_blue_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_wool_legacy_brown_desc"
-            ],
-            "texture": {
-                "name": "chisel_wool_legacy_brown",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_wool_legacy_brown_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_wool_legacy_cyan_desc"
-            ],
-            "texture": {
-                "name": "chisel_wool_legacy_cyan",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_wool_legacy_cyan_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_wool_legacy_gray_desc"
-            ],
-            "texture": {
-                "name": "chisel_wool_legacy_gray",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_wool_legacy_gray_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_wool_legacy_green_desc"
-            ],
-            "texture": {
-                "name": "chisel_wool_legacy_green",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_wool_legacy_green_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_wool_legacy_lightblue_desc"
-            ],
-            "texture": {
-                "name": "chisel_wool_legacy_lightblue",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_wool_legacy_lightblue_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_wool_legacy_lightgray_desc"
-            ],
-            "texture": {
-                "name": "chisel_wool_legacy_lightgray",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_wool_legacy_lightgray_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_wool_legacy_lime_desc"
-            ],
-            "texture": {
-                "name": "chisel_wool_legacy_lime",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_wool_legacy_lime_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_wool_legacy_magenta_desc"
-            ],
-            "texture": {
-                "name": "chisel_wool_legacy_magenta",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_wool_legacy_magenta_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_wool_legacy_orange_desc"
-            ],
-            "texture": {
-                "name": "chisel_wool_legacy_orange",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_wool_legacy_orange_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_wool_legacy_pink_desc"
-            ],
-            "texture": {
-                "name": "chisel_wool_legacy_pink",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_wool_legacy_pink_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_wool_legacy_purple_desc"
-            ],
-            "texture": {
-                "name": "chisel_wool_legacy_purple",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_wool_legacy_purple_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_wool_legacy_red_desc"
-            ],
-            "texture": {
-                "name": "chisel_wool_legacy_red",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_wool_legacy_red_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_wool_legacy_white_desc"
-            ],
-            "texture": {
-                "name": "chisel_wool_legacy_white",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_wool_legacy_white_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_wool_legacy_yellow_desc"
-            ],
-            "texture": {
-                "name": "chisel_wool_legacy_yellow",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_wool_legacy_yellow_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        }
-    ]
+	"name": "wool/legacy",
+	"register": true,
+	"localization": ["tile_chisel_wool_legacy_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_wool_legacy_black_desc"],
+			"texture": {
+				"name": "chisel_wool_legacy_black",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_wool_legacy_black_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_wool_legacy_blue_desc"],
+			"texture": {
+				"name": "chisel_wool_legacy_blue",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_wool_legacy_blue_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_wool_legacy_brown_desc"],
+			"texture": {
+				"name": "chisel_wool_legacy_brown",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_wool_legacy_brown_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_wool_legacy_cyan_desc"],
+			"texture": {
+				"name": "chisel_wool_legacy_cyan",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_wool_legacy_cyan_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_wool_legacy_gray_desc"],
+			"texture": {
+				"name": "chisel_wool_legacy_gray",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_wool_legacy_gray_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_wool_legacy_green_desc"],
+			"texture": {
+				"name": "chisel_wool_legacy_green",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_wool_legacy_green_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_wool_legacy_lightblue_desc"],
+			"texture": {
+				"name": "chisel_wool_legacy_lightblue",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_wool_legacy_lightblue_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_wool_legacy_lightgray_desc"],
+			"texture": {
+				"name": "chisel_wool_legacy_lightgray",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_wool_legacy_lightgray_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_wool_legacy_lime_desc"],
+			"texture": {
+				"name": "chisel_wool_legacy_lime",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_wool_legacy_lime_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_wool_legacy_magenta_desc"],
+			"texture": {
+				"name": "chisel_wool_legacy_magenta",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_wool_legacy_magenta_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_wool_legacy_orange_desc"],
+			"texture": {
+				"name": "chisel_wool_legacy_orange",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_wool_legacy_orange_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_wool_legacy_pink_desc"],
+			"texture": {
+				"name": "chisel_wool_legacy_pink",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_wool_legacy_pink_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_wool_legacy_purple_desc"],
+			"texture": {
+				"name": "chisel_wool_legacy_purple",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_wool_legacy_purple_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_wool_legacy_red_desc"],
+			"texture": {
+				"name": "chisel_wool_legacy_red",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_wool_legacy_red_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_wool_legacy_white_desc"],
+			"texture": {
+				"name": "chisel_wool_legacy_white",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_wool_legacy_white_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_wool_legacy_yellow_desc"],
+			"texture": {
+				"name": "chisel_wool_legacy_yellow",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_wool_legacy_yellow_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		}
+	]
 }

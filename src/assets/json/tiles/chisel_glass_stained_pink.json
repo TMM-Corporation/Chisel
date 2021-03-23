@@ -1,84 +1,72 @@
 {
-    "name": "glass_stained/pink",
-    "register": true,
-    "localization": [
-        "tile_chisel_glass_stained_pink_name"
-    ],
-    "variations": [
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glass_stained_pink_brick_desc"
-            ],
-            "texture": {
-                "name": "chisel_glass_stained_pink_brick",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_glass_stained_pink_brick_ct",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glass_stained_pink_framed_desc"
-            ],
-            "texture": {
-                "name": "chisel_glass_stained_pink_framed",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_glass_stained_pink_framed_ct",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glass_stained_pink_panel_desc"
-            ],
-            "texture": {
-                "name": "chisel_glass_stained_pink_panel",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_glass_stained_pink_panel_ct",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glass_stained_pink_rough_desc"
-            ],
-            "texture": {
-                "name": "chisel_glass_stained_pink_rough",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_glass_stained_pink_rough_ct",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glass_stained_pink_streaks_desc"
-            ],
-            "texture": {
-                "name": "chisel_glass_stained_pink_streaks",
-                "extension": "png",
-                "type": "normal"
-            }
-        }
-    ]
+	"name": "glass_stained/pink",
+	"register": true,
+	"localization": ["tile_chisel_glass_stained_pink_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_glass_stained_pink_brick_desc"],
+			"texture": {
+				"name": "chisel_glass_stained_pink_brick",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_glass_stained_pink_brick_ct",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glass_stained_pink_framed_desc"],
+			"texture": {
+				"name": "chisel_glass_stained_pink_framed",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_glass_stained_pink_framed_ct",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glass_stained_pink_panel_desc"],
+			"texture": {
+				"name": "chisel_glass_stained_pink_panel",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_glass_stained_pink_panel_ct",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glass_stained_pink_rough_desc"],
+			"texture": {
+				"name": "chisel_glass_stained_pink_rough",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_glass_stained_pink_rough_ct",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glass_stained_pink_streaks_desc"],
+			"texture": {
+				"name": "chisel_glass_stained_pink_streaks",
+				"extension": "png",
+				"type": "normal"
+			}
+		}
+	]
 }

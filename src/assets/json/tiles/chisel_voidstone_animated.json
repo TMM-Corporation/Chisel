@@ -1,129 +1,107 @@
 {
-    "name": "voidstone/animated",
-    "register": true,
-    "localization": [
-        "tile_chisel_voidstone_animated_name"
-    ],
-    "variations": [
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_voidstone_animated_background_desc"
-            ],
-            "texture": {
-                "name": "chisel_voidstone_animated_background",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_voidstone_animated_bevel_desc"
-            ],
-            "texture": {
-                "name": "chisel_voidstone_animated_bevel",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_voidstone_animated_bevel_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_voidstone_animated_eye_desc"
-            ],
-            "texture": {
-                "name": "chisel_voidstone_animated_eye",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_voidstone_animated_metalborder_desc"
-            ],
-            "texture": {
-                "name": "chisel_voidstone_animated_metalborder",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_voidstone_animated_metalborder_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_voidstone_animated_pillar_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_voidstone_animated_pillar_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_voidstone_animated_quarters_desc"
-            ],
-            "texture": {
-                "name": "chisel_voidstone_animated_quarters",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_voidstone_animated_raw_desc"
-            ],
-            "texture": {
-                "name": "chisel_voidstone_animated_raw",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_voidstone_animated_rune_desc"
-            ],
-            "texture": {
-                "name": "chisel_voidstone_animated_rune",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_voidstone_animated_skulls_desc"
-            ],
-            "texture": {
-                "name": "chisel_voidstone_animated_skulls",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_voidstone_animated_smooth_desc"
-            ],
-            "texture": {
-                "name": "chisel_voidstone_animated_smooth",
-                "extension": "png",
-                "type": "normal"
-            }
-        }
-    ]
+	"name": "voidstone/animated",
+	"register": true,
+	"localization": ["tile_chisel_voidstone_animated_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_voidstone_animated_background_desc"],
+			"texture": {
+				"name": "chisel_voidstone_animated_background",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_voidstone_animated_bevel_desc"],
+			"texture": {
+				"name": "chisel_voidstone_animated_bevel",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_voidstone_animated_bevel_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_voidstone_animated_eye_desc"],
+			"texture": {
+				"name": "chisel_voidstone_animated_eye",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_voidstone_animated_metalborder_desc"],
+			"texture": {
+				"name": "chisel_voidstone_animated_metalborder",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_voidstone_animated_metalborder_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_voidstone_animated_pillar_top_desc"],
+			"texture": {
+				"name": "chisel_voidstone_animated_pillar_top",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_voidstone_animated_quarters_desc"],
+			"texture": {
+				"name": "chisel_voidstone_animated_quarters",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_voidstone_animated_raw_desc"],
+			"texture": {
+				"name": "chisel_voidstone_animated_raw",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_voidstone_animated_rune_desc"],
+			"texture": {
+				"name": "chisel_voidstone_animated_rune",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_voidstone_animated_skulls_desc"],
+			"texture": {
+				"name": "chisel_voidstone_animated_skulls",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_voidstone_animated_smooth_desc"],
+			"texture": {
+				"name": "chisel_voidstone_animated_smooth",
+				"extension": "png",
+				"type": "normal"
+			}
+		}
+	]
 }

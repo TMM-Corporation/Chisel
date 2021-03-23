@@ -1,25 +1,21 @@
 {
-    "name": "technical/scaffold",
-    "register": true,
-    "localization": [
-        "tile_chisel_technical_scaffold_name"
-    ],
-    "variations": [
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_technical_scaffold_scaffold_desc"
-            ],
-            "texture": {
-                "name": "chisel_technical_scaffold_scaffold",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_technical_scaffold_scaffold_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        }
-    ]
+	"name": "technical/scaffold",
+	"register": true,
+	"localization": ["tile_chisel_technical_scaffold_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_technical_scaffold_scaffold_desc"],
+			"texture": {
+				"name": "chisel_technical_scaffold_scaffold",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_technical_scaffold_scaffold_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		}
+	]
 }

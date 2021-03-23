@@ -1,265 +1,231 @@
 {
-    "name": "wool/llama",
-    "register": true,
-    "localization": [
-        "tile_chisel_wool_llama_name"
-    ],
-    "variations": [
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_wool_llama_black_desc"
-            ],
-            "texture": {
-                "name": "chisel_wool_llama_black",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_wool_llama_black_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_wool_llama_blue_desc"
-            ],
-            "texture": {
-                "name": "chisel_wool_llama_blue",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_wool_llama_blue_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_wool_llama_brown_desc"
-            ],
-            "texture": {
-                "name": "chisel_wool_llama_brown",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_wool_llama_brown_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_wool_llama_cyan_desc"
-            ],
-            "texture": {
-                "name": "chisel_wool_llama_cyan",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_wool_llama_cyan_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_wool_llama_gray_desc"
-            ],
-            "texture": {
-                "name": "chisel_wool_llama_gray",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_wool_llama_gray_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_wool_llama_green_desc"
-            ],
-            "texture": {
-                "name": "chisel_wool_llama_green",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_wool_llama_green_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_wool_llama_lightblue_desc"
-            ],
-            "texture": {
-                "name": "chisel_wool_llama_lightblue",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_wool_llama_lightblue_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_wool_llama_lightgray_desc"
-            ],
-            "texture": {
-                "name": "chisel_wool_llama_lightgray",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_wool_llama_lightgray_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_wool_llama_lime_desc"
-            ],
-            "texture": {
-                "name": "chisel_wool_llama_lime",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_wool_llama_lime_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_wool_llama_magenta_desc"
-            ],
-            "texture": {
-                "name": "chisel_wool_llama_magenta",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_wool_llama_magenta_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_wool_llama_orange_desc"
-            ],
-            "texture": {
-                "name": "chisel_wool_llama_orange",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_wool_llama_orange_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_wool_llama_pink_desc"
-            ],
-            "texture": {
-                "name": "chisel_wool_llama_pink",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_wool_llama_pink_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_wool_llama_purple_desc"
-            ],
-            "texture": {
-                "name": "chisel_wool_llama_purple",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_wool_llama_purple_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_wool_llama_red_desc"
-            ],
-            "texture": {
-                "name": "chisel_wool_llama_red",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_wool_llama_red_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_wool_llama_white_desc"
-            ],
-            "texture": {
-                "name": "chisel_wool_llama_white",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_wool_llama_white_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_wool_llama_yellow_desc"
-            ],
-            "texture": {
-                "name": "chisel_wool_llama_yellow",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_wool_llama_yellow_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        }
-    ]
+	"name": "wool/llama",
+	"register": true,
+	"localization": ["tile_chisel_wool_llama_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_wool_llama_black_desc"],
+			"texture": {
+				"name": "chisel_wool_llama_black",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_wool_llama_black_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_wool_llama_blue_desc"],
+			"texture": {
+				"name": "chisel_wool_llama_blue",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_wool_llama_blue_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_wool_llama_brown_desc"],
+			"texture": {
+				"name": "chisel_wool_llama_brown",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_wool_llama_brown_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_wool_llama_cyan_desc"],
+			"texture": {
+				"name": "chisel_wool_llama_cyan",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_wool_llama_cyan_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_wool_llama_gray_desc"],
+			"texture": {
+				"name": "chisel_wool_llama_gray",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_wool_llama_gray_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_wool_llama_green_desc"],
+			"texture": {
+				"name": "chisel_wool_llama_green",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_wool_llama_green_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_wool_llama_lightblue_desc"],
+			"texture": {
+				"name": "chisel_wool_llama_lightblue",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_wool_llama_lightblue_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_wool_llama_lightgray_desc"],
+			"texture": {
+				"name": "chisel_wool_llama_lightgray",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_wool_llama_lightgray_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_wool_llama_lime_desc"],
+			"texture": {
+				"name": "chisel_wool_llama_lime",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_wool_llama_lime_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_wool_llama_magenta_desc"],
+			"texture": {
+				"name": "chisel_wool_llama_magenta",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_wool_llama_magenta_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_wool_llama_orange_desc"],
+			"texture": {
+				"name": "chisel_wool_llama_orange",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_wool_llama_orange_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_wool_llama_pink_desc"],
+			"texture": {
+				"name": "chisel_wool_llama_pink",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_wool_llama_pink_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_wool_llama_purple_desc"],
+			"texture": {
+				"name": "chisel_wool_llama_purple",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_wool_llama_purple_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_wool_llama_red_desc"],
+			"texture": {
+				"name": "chisel_wool_llama_red",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_wool_llama_red_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_wool_llama_white_desc"],
+			"texture": {
+				"name": "chisel_wool_llama_white",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_wool_llama_white_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_wool_llama_yellow_desc"],
+			"texture": {
+				"name": "chisel_wool_llama_yellow",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_wool_llama_yellow_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		}
+	]
 }

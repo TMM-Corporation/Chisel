@@ -1,25 +1,21 @@
 {
-    "name": "technical/new/test",
-    "register": true,
-    "localization": [
-        "tile_chisel_technical_new_test_name"
-    ],
-    "variations": [
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_technical_new_test_engineersblockprototype_v4_desc"
-            ],
-            "texture": {
-                "name": "chisel_technical_new_test_engineersblockprototype_v4",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_technical_new_test_engineersblockprototype_v4_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        }
-    ]
+	"name": "technical/new/test",
+	"register": true,
+	"localization": ["tile_chisel_technical_new_test_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_technical_new_test_engineersblockprototype_v4_desc"],
+			"texture": {
+				"name": "chisel_technical_new_test_engineersblockprototype_v4",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_technical_new_test_engineersblockprototype_v4_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		}
+	]
 }

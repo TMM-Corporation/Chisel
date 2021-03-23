@@ -1,128 +1,108 @@
 {
-    "name": "metals/invar",
-    "register": true,
-    "localization": [
-        "tile_chisel_metals_invar_name"
-    ],
-    "variations": [
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_invar_badgreggy_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_invar_badgreggy",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_metals_invar_badgreggy_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_invar_bolted_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_invar_bolted",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_invar_caution_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_invar_caution",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_metals_invar_caution_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_invar_crate_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_invar_crate",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_metals_invar_crate_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_invar_machine_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_invar_machine",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_invar_scaffold_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_invar_scaffold",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_metals_invar_scaffold_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_invar_thermal_bottom_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_invar_thermal_bottom",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_invar_thermal_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_invar_thermal_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_invar_thermal_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_invar_thermal_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        }
-    ]
+	"name": "metals/invar",
+	"register": true,
+	"localization": ["tile_chisel_metals_invar_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_invar_badgreggy_desc"],
+			"texture": {
+				"name": "chisel_metals_invar_badgreggy",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_metals_invar_badgreggy_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_invar_bolted_desc"],
+			"texture": {
+				"name": "chisel_metals_invar_bolted",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_invar_caution_desc"],
+			"texture": {
+				"name": "chisel_metals_invar_caution",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_metals_invar_caution_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_invar_crate_desc"],
+			"texture": {
+				"name": "chisel_metals_invar_crate",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_metals_invar_crate_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_invar_machine_desc"],
+			"texture": {
+				"name": "chisel_metals_invar_machine",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_invar_scaffold_desc"],
+			"texture": {
+				"name": "chisel_metals_invar_scaffold",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_metals_invar_scaffold_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_invar_thermal_bottom_desc"],
+			"texture": {
+				"name": "chisel_metals_invar_thermal_bottom",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_invar_thermal_side_desc"],
+			"texture": {
+				"name": "chisel_metals_invar_thermal_side",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_invar_thermal_top_desc"],
+			"texture": {
+				"name": "chisel_metals_invar_thermal_top",
+				"extension": "png",
+				"type": "normal"
+			}
+		}
+	]
 }

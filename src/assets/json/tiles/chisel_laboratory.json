@@ -1,227 +1,189 @@
 {
-    "name": "laboratory",
-    "register": true,
-    "localization": [
-        "tile_chisel_laboratory_name"
-    ],
-    "variations": [
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_laboratory_checkertile_desc"
-            ],
-            "texture": {
-                "name": "chisel_laboratory_checkertile",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_laboratory_clearscreen_desc"
-            ],
-            "texture": {
-                "name": "chisel_laboratory_clearscreen",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_laboratory_clearscreen_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_laboratory_directionleft_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_laboratory_directionleft_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_laboratory_directionright_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_laboratory_directionright_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_laboratory_dottedpanel_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_laboratory_dottedpanel_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_laboratory_floortile_desc"
-            ],
-            "texture": {
-                "name": "chisel_laboratory_floortile",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_laboratory_fuzzscreen_desc"
-            ],
-            "texture": {
-                "name": "chisel_laboratory_fuzzscreen",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_laboratory_fuzzscreen_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_laboratory_infocon_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_laboratory_infocon_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_laboratory_largesteel_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_laboratory_largesteel_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_laboratory_largesteel_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_laboratory_largesteel_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_laboratory_largetile_desc"
-            ],
-            "texture": {
-                "name": "chisel_laboratory_largetile",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_laboratory_largewall_desc"
-            ],
-            "texture": {
-                "name": "chisel_laboratory_largewall",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_laboratory_largewall_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_laboratory_roundel_desc"
-            ],
-            "texture": {
-                "name": "chisel_laboratory_roundel",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_laboratory_roundel_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_laboratory_smallsteel_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_laboratory_smallsteel_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_laboratory_smallsteel_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_laboratory_smallsteel_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_laboratory_smalltile_desc"
-            ],
-            "texture": {
-                "name": "chisel_laboratory_smalltile",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_laboratory_wallpanel_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_laboratory_wallpanel_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_laboratory_wallvents_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_laboratory_wallvents_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        }
-    ]
+	"name": "laboratory",
+	"register": true,
+	"localization": ["tile_chisel_laboratory_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_laboratory_checkertile_desc"],
+			"texture": {
+				"name": "chisel_laboratory_checkertile",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_laboratory_clearscreen_desc"],
+			"texture": {
+				"name": "chisel_laboratory_clearscreen",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_laboratory_clearscreen_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_laboratory_directionleft_top_desc"],
+			"texture": {
+				"name": "chisel_laboratory_directionleft_top",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_laboratory_directionright_top_desc"],
+			"texture": {
+				"name": "chisel_laboratory_directionright_top",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_laboratory_dottedpanel_top_desc"],
+			"texture": {
+				"name": "chisel_laboratory_dottedpanel_top",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_laboratory_floortile_desc"],
+			"texture": {
+				"name": "chisel_laboratory_floortile",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_laboratory_fuzzscreen_desc"],
+			"texture": {
+				"name": "chisel_laboratory_fuzzscreen",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_laboratory_fuzzscreen_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_laboratory_infocon_top_desc"],
+			"texture": {
+				"name": "chisel_laboratory_infocon_top",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_laboratory_largesteel_side_desc"],
+			"texture": {
+				"name": "chisel_laboratory_largesteel_side",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_laboratory_largesteel_top_desc"],
+			"texture": {
+				"name": "chisel_laboratory_largesteel_top",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_laboratory_largetile_desc"],
+			"texture": {
+				"name": "chisel_laboratory_largetile",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_laboratory_largewall_desc"],
+			"texture": {
+				"name": "chisel_laboratory_largewall",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_laboratory_largewall_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_laboratory_roundel_desc"],
+			"texture": {
+				"name": "chisel_laboratory_roundel",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_laboratory_roundel_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_laboratory_smallsteel_side_desc"],
+			"texture": {
+				"name": "chisel_laboratory_smallsteel_side",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_laboratory_smallsteel_top_desc"],
+			"texture": {
+				"name": "chisel_laboratory_smallsteel_top",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_laboratory_smalltile_desc"],
+			"texture": {
+				"name": "chisel_laboratory_smalltile",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_laboratory_wallpanel_top_desc"],
+			"texture": {
+				"name": "chisel_laboratory_wallpanel_top",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_laboratory_wallvents_top_desc"],
+			"texture": {
+				"name": "chisel_laboratory_wallvents_top",
+				"extension": "png",
+				"type": "normal"
+			}
+		}
+	]
 }

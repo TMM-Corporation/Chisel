@@ -1,424 +1,352 @@
 {
-    "name": "fluid",
-    "register": true,
-    "localization": [
-        "tile_chisel_fluid_name"
-    ],
-    "variations": [
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_fluid_array_desc"
-            ],
-            "texture": {
-                "name": "chisel_fluid_array",
-                "extension": "png",
-                "type": "ctmh"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_fluid_braid_desc"
-            ],
-            "texture": {
-                "name": "chisel_fluid_braid",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_fluid_bricks_chaotic_desc"
-            ],
-            "texture": {
-                "name": "chisel_fluid_bricks_chaotic",
-                "extension": "png",
-                "type": "bricks-chaotic"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_fluid_bricks_cracked_desc"
-            ],
-            "texture": {
-                "name": "chisel_fluid_bricks_cracked",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_fluid_bricks_encased_desc"
-            ],
-            "texture": {
-                "name": "chisel_fluid_bricks_encased",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_fluid_bricks_encased_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_fluid_bricks_small_desc"
-            ],
-            "texture": {
-                "name": "chisel_fluid_bricks_small",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_fluid_bricks_soft_desc"
-            ],
-            "texture": {
-                "name": "chisel_fluid_bricks_soft",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_fluid_bricks_solid_desc"
-            ],
-            "texture": {
-                "name": "chisel_fluid_bricks_solid",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_fluid_bricks_triple_desc"
-            ],
-            "texture": {
-                "name": "chisel_fluid_bricks_triple",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_fluid_chaotic_medium_desc"
-            ],
-            "texture": {
-                "name": "chisel_fluid_chaotic_medium",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_fluid_chaotic_small_desc"
-            ],
-            "texture": {
-                "name": "chisel_fluid_chaotic_small",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_fluid_circular_desc"
-            ],
-            "texture": {
-                "name": "chisel_fluid_circular",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_fluid_circular_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_fluid_cracked_desc"
-            ],
-            "texture": {
-                "name": "chisel_fluid_cracked",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_fluid_cuts_desc"
-            ],
-            "texture": {
-                "name": "chisel_fluid_cuts",
-                "extension": "png",
-                "type": "cuts"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_fluid_dent_desc"
-            ],
-            "texture": {
-                "name": "chisel_fluid_dent",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_fluid_dent_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_fluid_french_1_desc"
-            ],
-            "texture": {
-                "name": "chisel_fluid_french_1",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_fluid_french_2_desc"
-            ],
-            "texture": {
-                "name": "chisel_fluid_french_2",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_fluid_jellybean_desc"
-            ],
-            "texture": {
-                "name": "chisel_fluid_jellybean",
-                "extension": "png",
-                "type": "ctm"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_fluid_layers_desc"
-            ],
-            "texture": {
-                "name": "chisel_fluid_layers",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_fluid_mosaic_desc"
-            ],
-            "texture": {
-                "name": "chisel_fluid_mosaic",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_fluid_mosaic_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_fluid_ornate_desc"
-            ],
-            "texture": {
-                "name": "chisel_fluid_ornate",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_fluid_panel_desc"
-            ],
-            "texture": {
-                "name": "chisel_fluid_panel",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_fluid_pillar_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_fluid_pillar_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_fluid_pillar_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_fluid_pillar_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_fluid_prism_desc"
-            ],
-            "texture": {
-                "name": "chisel_fluid_prism",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_fluid_raw_desc"
-            ],
-            "texture": {
-                "name": "chisel_fluid_raw",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_fluid_road_desc"
-            ],
-            "texture": {
-                "name": "chisel_fluid_road",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_fluid_slanted_desc"
-            ],
-            "texture": {
-                "name": "chisel_fluid_slanted",
-                "extension": "png",
-                "type": "ctm"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_fluid_tiles_large_desc"
-            ],
-            "texture": {
-                "name": "chisel_fluid_tiles_large",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_fluid_tiles_large_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_fluid_tiles_medium_desc"
-            ],
-            "texture": {
-                "name": "chisel_fluid_tiles_medium",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_fluid_tiles_small_desc"
-            ],
-            "texture": {
-                "name": "chisel_fluid_tiles_small",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_fluid_twisted_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_fluid_twisted_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_fluid_twisted_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_fluid_twisted_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_fluid_weaver_desc"
-            ],
-            "texture": {
-                "name": "chisel_fluid_weaver",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_fluid_weaver_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_fluid_zag_desc"
-            ],
-            "texture": {
-                "name": "chisel_fluid_zag",
-                "extension": "png",
-                "type": "ctm"
-            }
-        }
-    ]
+	"name": "fluid",
+	"register": true,
+	"localization": ["tile_chisel_fluid_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_fluid_array_desc"],
+			"texture": {
+				"name": "chisel_fluid_array",
+				"extension": "png",
+				"type": "ctmh"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_fluid_braid_desc"],
+			"texture": {
+				"name": "chisel_fluid_braid",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_fluid_bricks_chaotic_desc"],
+			"texture": {
+				"name": "chisel_fluid_bricks_chaotic",
+				"extension": "png",
+				"type": "bricks-chaotic"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_fluid_bricks_cracked_desc"],
+			"texture": {
+				"name": "chisel_fluid_bricks_cracked",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_fluid_bricks_encased_desc"],
+			"texture": {
+				"name": "chisel_fluid_bricks_encased",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_fluid_bricks_encased_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_fluid_bricks_small_desc"],
+			"texture": {
+				"name": "chisel_fluid_bricks_small",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_fluid_bricks_soft_desc"],
+			"texture": {
+				"name": "chisel_fluid_bricks_soft",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_fluid_bricks_solid_desc"],
+			"texture": {
+				"name": "chisel_fluid_bricks_solid",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_fluid_bricks_triple_desc"],
+			"texture": {
+				"name": "chisel_fluid_bricks_triple",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_fluid_chaotic_medium_desc"],
+			"texture": {
+				"name": "chisel_fluid_chaotic_medium",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_fluid_chaotic_small_desc"],
+			"texture": {
+				"name": "chisel_fluid_chaotic_small",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_fluid_circular_desc"],
+			"texture": {
+				"name": "chisel_fluid_circular",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_fluid_circular_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_fluid_cracked_desc"],
+			"texture": {
+				"name": "chisel_fluid_cracked",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_fluid_cuts_desc"],
+			"texture": {
+				"name": "chisel_fluid_cuts",
+				"extension": "png",
+				"type": "cuts"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_fluid_dent_desc"],
+			"texture": {
+				"name": "chisel_fluid_dent",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_fluid_dent_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_fluid_french_1_desc"],
+			"texture": {
+				"name": "chisel_fluid_french_1",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_fluid_french_2_desc"],
+			"texture": {
+				"name": "chisel_fluid_french_2",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_fluid_jellybean_desc"],
+			"texture": {
+				"name": "chisel_fluid_jellybean",
+				"extension": "png",
+				"type": "ctm"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_fluid_layers_desc"],
+			"texture": {
+				"name": "chisel_fluid_layers",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_fluid_mosaic_desc"],
+			"texture": {
+				"name": "chisel_fluid_mosaic",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_fluid_mosaic_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_fluid_ornate_desc"],
+			"texture": {
+				"name": "chisel_fluid_ornate",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_fluid_panel_desc"],
+			"texture": {
+				"name": "chisel_fluid_panel",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_fluid_pillar_side_desc"],
+			"texture": {
+				"name": "chisel_fluid_pillar_side",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_fluid_pillar_top_desc"],
+			"texture": {
+				"name": "chisel_fluid_pillar_top",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_fluid_prism_desc"],
+			"texture": {
+				"name": "chisel_fluid_prism",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_fluid_raw_desc"],
+			"texture": {
+				"name": "chisel_fluid_raw",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_fluid_road_desc"],
+			"texture": {
+				"name": "chisel_fluid_road",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_fluid_slanted_desc"],
+			"texture": {
+				"name": "chisel_fluid_slanted",
+				"extension": "png",
+				"type": "ctm"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_fluid_tiles_large_desc"],
+			"texture": {
+				"name": "chisel_fluid_tiles_large",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_fluid_tiles_large_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_fluid_tiles_medium_desc"],
+			"texture": {
+				"name": "chisel_fluid_tiles_medium",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_fluid_tiles_small_desc"],
+			"texture": {
+				"name": "chisel_fluid_tiles_small",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_fluid_twisted_side_desc"],
+			"texture": {
+				"name": "chisel_fluid_twisted_side",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_fluid_twisted_top_desc"],
+			"texture": {
+				"name": "chisel_fluid_twisted_top",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_fluid_weaver_desc"],
+			"texture": {
+				"name": "chisel_fluid_weaver",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_fluid_weaver_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_fluid_zag_desc"],
+			"texture": {
+				"name": "chisel_fluid_zag",
+				"extension": "png",
+				"type": "ctm"
+			}
+		}
+	]
 }

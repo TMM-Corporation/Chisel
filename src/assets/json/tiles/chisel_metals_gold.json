@@ -1,128 +1,108 @@
 {
-    "name": "metals/gold",
-    "register": true,
-    "localization": [
-        "tile_chisel_metals_gold_name"
-    ],
-    "variations": [
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_gold_badgreggy_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_gold_badgreggy",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_metals_gold_badgreggy_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_gold_bolted_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_gold_bolted",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_gold_caution_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_gold_caution",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_metals_gold_caution_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_gold_crate_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_gold_crate",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_metals_gold_crate_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_gold_machine_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_gold_machine",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_gold_scaffold_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_gold_scaffold",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_metals_gold_scaffold_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_gold_thermal_bottom_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_gold_thermal_bottom",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_gold_thermal_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_gold_thermal_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_gold_thermal_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_gold_thermal_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        }
-    ]
+	"name": "metals/gold",
+	"register": true,
+	"localization": ["tile_chisel_metals_gold_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_gold_badgreggy_desc"],
+			"texture": {
+				"name": "chisel_metals_gold_badgreggy",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_metals_gold_badgreggy_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_gold_bolted_desc"],
+			"texture": {
+				"name": "chisel_metals_gold_bolted",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_gold_caution_desc"],
+			"texture": {
+				"name": "chisel_metals_gold_caution",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_metals_gold_caution_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_gold_crate_desc"],
+			"texture": {
+				"name": "chisel_metals_gold_crate",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_metals_gold_crate_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_gold_machine_desc"],
+			"texture": {
+				"name": "chisel_metals_gold_machine",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_gold_scaffold_desc"],
+			"texture": {
+				"name": "chisel_metals_gold_scaffold",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_metals_gold_scaffold_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_gold_thermal_bottom_desc"],
+			"texture": {
+				"name": "chisel_metals_gold_thermal_bottom",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_gold_thermal_side_desc"],
+			"texture": {
+				"name": "chisel_metals_gold_thermal_side",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_gold_thermal_top_desc"],
+			"texture": {
+				"name": "chisel_metals_gold_thermal_top",
+				"extension": "png",
+				"type": "normal"
+			}
+		}
+	]
 }

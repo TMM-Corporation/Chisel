@@ -1,128 +1,108 @@
 {
-    "name": "metals/nickel",
-    "register": true,
-    "localization": [
-        "tile_chisel_metals_nickel_name"
-    ],
-    "variations": [
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_nickel_badgreggy_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_nickel_badgreggy",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_metals_nickel_badgreggy_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_nickel_bolted_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_nickel_bolted",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_nickel_caution_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_nickel_caution",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_metals_nickel_caution_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_nickel_crate_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_nickel_crate",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_metals_nickel_crate_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_nickel_machine_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_nickel_machine",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_nickel_scaffold_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_nickel_scaffold",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_metals_nickel_scaffold_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_nickel_thermal_bottom_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_nickel_thermal_bottom",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_nickel_thermal_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_nickel_thermal_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_nickel_thermal_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_nickel_thermal_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        }
-    ]
+	"name": "metals/nickel",
+	"register": true,
+	"localization": ["tile_chisel_metals_nickel_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_nickel_badgreggy_desc"],
+			"texture": {
+				"name": "chisel_metals_nickel_badgreggy",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_metals_nickel_badgreggy_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_nickel_bolted_desc"],
+			"texture": {
+				"name": "chisel_metals_nickel_bolted",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_nickel_caution_desc"],
+			"texture": {
+				"name": "chisel_metals_nickel_caution",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_metals_nickel_caution_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_nickel_crate_desc"],
+			"texture": {
+				"name": "chisel_metals_nickel_crate",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_metals_nickel_crate_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_nickel_machine_desc"],
+			"texture": {
+				"name": "chisel_metals_nickel_machine",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_nickel_scaffold_desc"],
+			"texture": {
+				"name": "chisel_metals_nickel_scaffold",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_metals_nickel_scaffold_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_nickel_thermal_bottom_desc"],
+			"texture": {
+				"name": "chisel_metals_nickel_thermal_bottom",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_nickel_thermal_side_desc"],
+			"texture": {
+				"name": "chisel_metals_nickel_thermal_side",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_nickel_thermal_top_desc"],
+			"texture": {
+				"name": "chisel_metals_nickel_thermal_top",
+				"extension": "png",
+				"type": "normal"
+			}
+		}
+	]
 }

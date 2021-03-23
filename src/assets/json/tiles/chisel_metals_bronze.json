@@ -1,128 +1,108 @@
 {
-    "name": "metals/bronze",
-    "register": true,
-    "localization": [
-        "tile_chisel_metals_bronze_name"
-    ],
-    "variations": [
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_bronze_badgreggy_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_bronze_badgreggy",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_metals_bronze_badgreggy_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_bronze_bolted_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_bronze_bolted",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_bronze_caution_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_bronze_caution",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_metals_bronze_caution_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_bronze_crate_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_bronze_crate",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_metals_bronze_crate_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_bronze_machine_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_bronze_machine",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_bronze_scaffold_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_bronze_scaffold",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_metals_bronze_scaffold_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_bronze_thermal_bottom_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_bronze_thermal_bottom",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_bronze_thermal_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_bronze_thermal_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_metals_bronze_thermal_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_metals_bronze_thermal_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        }
-    ]
+	"name": "metals/bronze",
+	"register": true,
+	"localization": ["tile_chisel_metals_bronze_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_bronze_badgreggy_desc"],
+			"texture": {
+				"name": "chisel_metals_bronze_badgreggy",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_metals_bronze_badgreggy_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_bronze_bolted_desc"],
+			"texture": {
+				"name": "chisel_metals_bronze_bolted",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_bronze_caution_desc"],
+			"texture": {
+				"name": "chisel_metals_bronze_caution",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_metals_bronze_caution_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_bronze_crate_desc"],
+			"texture": {
+				"name": "chisel_metals_bronze_crate",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_metals_bronze_crate_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_bronze_machine_desc"],
+			"texture": {
+				"name": "chisel_metals_bronze_machine",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_bronze_scaffold_desc"],
+			"texture": {
+				"name": "chisel_metals_bronze_scaffold",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_metals_bronze_scaffold_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_bronze_thermal_bottom_desc"],
+			"texture": {
+				"name": "chisel_metals_bronze_thermal_bottom",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_bronze_thermal_side_desc"],
+			"texture": {
+				"name": "chisel_metals_bronze_thermal_side",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_metals_bronze_thermal_top_desc"],
+			"texture": {
+				"name": "chisel_metals_bronze_thermal_top",
+				"extension": "png",
+				"type": "normal"
+			}
+		}
+	]
 }

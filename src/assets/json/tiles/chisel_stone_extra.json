@@ -1,47 +1,39 @@
 {
-    "name": "stone/extra",
-    "register": true,
-    "localization": [
-        "tile_chisel_stone_extra_name"
-    ],
-    "variations": [
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_stone_extra_largeornate_desc"
-            ],
-            "texture": {
-                "name": "chisel_stone_extra_largeornate",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_stone_extra_poison_desc"
-            ],
-            "texture": {
-                "name": "chisel_stone_extra_poison",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_stone_extra_sunken_desc"
-            ],
-            "texture": {
-                "name": "chisel_stone_extra_sunken",
-                "extension": "png",
-                "type": "normal",
-                "ctm": {
-                    "name": "chisel_chisel_stone_extra_sunken_ctm",
-                    "extension": "png",
-                    "type": "ctm"
-                }
-            }
-        }
-    ]
+	"name": "stone/extra",
+	"register": true,
+	"localization": ["tile_chisel_stone_extra_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_stone_extra_largeornate_desc"],
+			"texture": {
+				"name": "chisel_stone_extra_largeornate",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_stone_extra_poison_desc"],
+			"texture": {
+				"name": "chisel_stone_extra_poison",
+				"extension": "png",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_stone_extra_sunken_desc"],
+			"texture": {
+				"name": "chisel_stone_extra_sunken",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_stone_extra_sunken_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		}
+	]
 }
