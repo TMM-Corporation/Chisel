@@ -4,7 +4,7 @@
 		"lib": [
 			"ESNext"
 		],
-		"outFile": "D:\\ToxesFoxes\\Desktop\\\u0425\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0435\\Projects\\Github\\A ToolChain Mods\\toolchain\\build\\project\\sources\\JMAL.js",
+		"outFile": "F:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\build\\project\\sources\\JMAL.js",
 		"experimentalDecorators": true,
 		"downlevelIteration": true,
 		"allowJs": true
@@ -21,10 +21,10 @@
 		"preloader.ts"
 	],
 	"files": [
-		"D:\\ToxesFoxes\\Desktop\\\u0425\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0435\\Projects\\Github\\A ToolChain Mods\\toolchain\\declarations\\android-declarations.d.ts",
-		"D:\\ToxesFoxes\\Desktop\\\u0425\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0435\\Projects\\Github\\A ToolChain Mods\\toolchain\\declarations\\android.d.ts",
-		"D:\\ToxesFoxes\\Desktop\\\u0425\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0435\\Projects\\Github\\A ToolChain Mods\\toolchain\\declarations\\connected-texture.d.ts",
-		"D:\\ToxesFoxes\\Desktop\\\u0425\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0435\\Projects\\Github\\A ToolChain Mods\\toolchain\\declarations\\core-engine.d.ts",
-		"D:\\ToxesFoxes\\Desktop\\\u0425\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0435\\Projects\\Github\\A ToolChain Mods\\toolchain\\declarations\\pre-loader.d.ts"
+		"F:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\android-declarations.d.ts",
+		"F:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\android.d.ts",
+		"F:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\connected-texture.d.ts",
+		"F:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\core-engine.d.ts",
+		"F:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\pre-loader.d.ts"
 	]
 }

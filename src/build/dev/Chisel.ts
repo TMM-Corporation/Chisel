@@ -4,7 +4,7 @@
 
 // 	}
 // }
-// Carvable.addTile(OpenTile('chisel_andesite'))
+Carvable.addTile(OpenTile('chisel_andesite'))
 // Carvable.addTile(OpenTile('chisel_ancient_stone'))
 // Carvable.addTile(OpenTile('chisel_andesite'))
 // Carvable.addTile(OpenTile('chisel_animations'))

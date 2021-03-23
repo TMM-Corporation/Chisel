@@ -1,7 +1,7 @@
 
 interface ICTMProps {
 	// ctm sliceable texture name
-	name?: string
+	name: string
 	// ctm type name
 	type?: string | default_ctm_names
 	// texture width
@@ -20,6 +20,7 @@ interface ICTMProps {
 
 type default_ctm_names = 'ctm' | 'ctmh' | 'ctmv'
 const default_ctm_values: ICTMProps = {
+	name: "ctm",
 	width: 32,
 	height: 32,
 	textureSize: 16,
@@ -33,7 +34,7 @@ interface ITexture {
 	// custom texture data, default is 0
 	data?: number | 0
 	// ctm properties for variation
-	ctm?: ICTMProps | default_ctm_names
+	ctm?: ICTMProps
 	// custom variation type, default is 'normal', for example ctm, ctmh, ctmv
 	type?: string | 'normal'
 	// file extension, default is '.png'
@@ -113,9 +114,9 @@ interface ICarvable {
 	addTile(Tile: IChiselTile): void
 	createTranslation(mod_name: string, strings: string[]): void
 	// create default block with type = normal
-	createBlock(variation: ITileVariation, localization: string[]): void
+	createBlock(variation: ITileVariation, Tile: IChiselTile): void
 	// if block type != normal, creating ctm block variation
-	createCTMBlock(variation: ITileVariation): void
+	createCTMBlock(variation: ITileVariation, id: number, data: number, Tile: IChiselTile): void
 	// returns all variations of block for group
 	getBlocksByGroupID(group: string): ITileVariation[]
 	// return group of block variation
@@ -137,7 +138,7 @@ var Carvable: ICarvable = {
 		Tile.variations.forEach((v: ITileVariation) => {
 			let result = -1
 			if (v.register)
-				result = this.createBlock(v, Tile.localization)
+				result = this.createBlock(v, Tile)
 			if (result != -1)
 				ids.push(result)
 		})
@@ -147,19 +148,24 @@ var Carvable: ICarvable = {
 	createTranslation() {
 
 	},
-	createBlock(variation: ITileVariation, tile_localization: string[]) {
+	createBlock(variation: ITileVariation, Tile: IChiselTile): number {
 		let type = variation.texture.type
 		let numID = -1
-		if (type == 'normal') {
-			let id = variation.texture.name
-			Logger.Log(`Creating ${id}`, RM.mod)
-			numID = IDRegistry.genBlockID(id)
-			Block.createBlock(id, [{ name: id, texture: [[id, 0]], inCreative: true }])
-			Logger.Log(`New ID = ${numID}`, RM.mod)
-		} else this.createCTMBlock(variation)
+		let id = variation.texture.name
+		Logger.Log(`Creating ${id}`, RM.mod)
+		numID = IDRegistry.genBlockID(id)
+		Block.createBlock(id, [{ name: id, texture: [[id, 0]], inCreative: true }])
+		Logger.Log(`New ID = ${numID}`, RM.mod)
+		if (variation.texture.ctm)
+			this.createCTMBlock(variation, numID, 0, Tile)
 		return numID
 	},
-	createCTMBlock(variation: ITileVariation) {
+	createCTMBlock(variation: ITileVariation, id: number, data: number, Tile?: IChiselTile) {
+		let block = new CTMBLock([variation.texture.name, variation.texture.ctm.name])
+		block.addToGroup(id, data, variation.texture.name)
+		block.createModel()
+		block.setItemModel(id, data, variation.texture.name)
+		block.setRender(id, data, block.model)
 		Logger.Log(`${variation.texture.name} has CTM`, RM.mod)
 	},
 	getBlocksByGroupID(group: string): ITileVariation[] {
@@ -195,15 +201,16 @@ class CTMBLock {
 	group: ICRender.Group
 	model: ICRender.Model
 	currentMesh: RenderMesh
-	constructor(textures: [base: string, ctm: string], mesh: RenderMesh) {
+	constructor(textures: [base: string, ctm: string], mesh?: RenderMesh) {
 		this.textures = textures
-		this.currentMesh = mesh
+		this.currentMesh = mesh || new RenderMesh()
 	}
 	addToGroup(id: number, data: number, groupName?: string) {
 		const group = ICRender.getGroup(groupName || ("CTM_" + id + ":" + data))
 		group.add(id, data)
+		this.group = group
 	}
-	BLOCK(coords, group, mode?) {
+	BLOCK(coords: Vector, group: ICRender.Group, mode?: boolean) {
 		return ICRender.BLOCK(coords.x || 0, coords.y || 0, coords.z || 0, group, mode || false)
 	}
 	addCondition(render: ICRender.Model, model: BlockRenderer.Model, condition: ICRender.CONDITION) {
@@ -214,11 +221,14 @@ class CTMBLock {
 		render.addEntry(BlockRenderer.createTexturedBlock([[texture, 0]]))
 		ItemModel.getFor(id, data).setModel(render)
 	}
-	createModel(texture) {
+	setRender(id: number, data: number, model: ICRender.Model) {
+		BlockRenderer.setStaticICRender(id, data, model)
+	}
+	createModel() {
 		const render = new ICRender.Model()
 		const group = this.group
 		const BLOCK = this.BLOCK
-		let coords1, coords2, coords3, H, V, D, mesh, model
+		let coords1, coords2, coords3
 		let i = 0, j = 0, u = 0, v = 0
 
 		for (let axis in CTMAxis) {
@@ -228,28 +238,21 @@ class CTMBLock {
 				coords3 = {}
 				coords1[CTMAxis[axis][0]] = i & 1 ? 1 : -1
 				coords2[CTMAxis[axis][1]] = i >> 1 ? 1 : -1
-				H = BLOCK(coords1, group)
-				V = BLOCK(coords2, group)
-				D = BLOCK({ x: coords1.x || coords2.x, y: coords1.y || coords2.y, z: coords1.z || coords2.z }, group)
 				u = i & 1 ? 0.5 : 0
 				v = i >> 1 ? 0.5 : 0
 				coords3[CTMAxis[axis][0]] = u
 				coords3[CTMAxis[axis][1]] = v
+				let renderConditions = this.renderConditions(
+					BLOCK(coords1, group),
+					BLOCK(coords2, group),
+					BLOCK({
+						x: coords1.x || coords2.x,
+						y: coords1.y || coords2.y,
+						z: coords1.z || coords2.z
+					}, group)
+				)
 				for (j = 0; j < 5; j++) {
-					mesh = new RenderMesh()
-					mesh.setBlockTexture(texture, j)
-					coords3[axis] = 0
-					this.addSurface(coords3, CTMAxis[axis], { u: u, v: v })
-					coords3[axis] = 1
-					this.addSurface(coords3, CTMAxis[axis], { u: u, v: v })
-					model = new BlockRenderer.Model(mesh)
-					switch (j) {
-						case 0: this.addCondition(render, model, AND(NOT(H), NOT(V))); break
-						case 1: this.addCondition(render, model, AND(H, NOT(V))); break
-						case 2: this.addCondition(render, model, AND(NOT(H), V)); break
-						case 3: this.addCondition(render, model, AND(H, V, NOT(D))); break
-						case 4: this.addCondition(render, model, AND(H, V, D)); break
-					}
+					this.addCondition(render, this.createSurfaces(j, coords3, axis), renderConditions[j])
 				}
 			}
 		}
@@ -266,6 +269,7 @@ class CTMBLock {
 			}
 		}
 		if (key > 0) {
+			out.texture = texture[1]
 			out.uv.scale = 0.25
 			switch (key) {
 				case 2:
@@ -280,30 +284,30 @@ class CTMBLock {
 					break
 			}
 		}
+		return out
 	}
-	createSurfaces() {
+	createSurfaces(j, coords3, axis) {
+		let texture_uv = this.getTextureAndUV(j)
 		let mesh = new RenderMesh()
-		mesh.setBlockTexture(texture, j)
+		mesh.setBlockTexture(texture_uv.texture, 0)
 		coords3[axis] = 0
-		this.addSurface(coords3, CTMAxis[axis], { u: u, v: v })
+		this.addSurface(coords3, CTMAxis[axis], texture_uv.uv)
 		coords3[axis] = 1
-		this.addSurface(coords3, CTMAxis[axis], { u: u, v: v })
-		model = new BlockRenderer.Model(mesh)
-
+		this.addSurface(coords3, CTMAxis[axis], texture_uv.uv)
+		return new BlockRenderer.Model(mesh)
 	}
-	renderConditions(value: number, H, V, D,) {
+	renderConditions(H, V, D) {
 		const NOT = ICRender.NOT
 		const AND = ICRender.AND
-		const conditions = [
+		return [
 			AND(NOT(H), NOT(V)),
 			AND(H, NOT(V)),
 			AND(NOT(H), V),
 			AND(H, V, NOT(D)),
 			AND(H, V, D)
 		]
-		return conditions[value]
 	}
-	addSurface(c: Vector, axis: ICTMAxisList, uv: IVertexUV) {
+	addSurface(c: Vector, axis: ICTMAxisList, uv: IVertexUV, vertexScale?: number) {
 		this.addSurfacePart(c, axis, uv)
 	}
 	getAxisScale(axis: ICTMAxisList, value: number, scale: number) {
@@ -329,7 +333,6 @@ class CTMBLock {
 		mesh.addVertex(c.x + axisScale1[0].x, c.y + axisScale1[0].y, c.z + axisScale1[0].z, u, v + scale)
 		mesh.addVertex(c.x + axisScale1[1].x, c.y + axisScale1[1].y, c.z + axisScale1[1].z, u + scale, v + scale)
 	}
-
 }
 
 class CarvableGroup {
