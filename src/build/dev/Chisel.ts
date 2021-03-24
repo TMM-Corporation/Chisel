@@ -39,16 +39,51 @@ Carvable.addTile({
 		}
 	]
 })
-Carvable.createCTMBlockFromLib({
+Carvable.addTile({
+	"name": "dbg_mode_horizontal",
 	"register": true,
-	"localization": ["tile_chisel_dbg_slice_desc"],
-	"texture": {
-		"name": "chisel_dbg_slice",
-		"extension": "png",
-		"type": "normal"
-	}
+	"localization": ["tile_chisel_dbg_horizontal_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_dbg_horizontal_left_desc"],
+			"texture": {
+				"name": "chisel_dbg_horizontal_left_top",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_dbg_horizontal_left_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_dbg_horizontal_right_desc"],
+			"texture": {
+				"name": "chisel_dbg_horizontal_right_top",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
+					"name": "chisel_dbg_horizontal_right_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		}
+	]
 })
-// Carvable.addTile(OpenTile('chisel_andesite'))
+// Carvable.createCTMBlockFromLib({
+// 	"register": true,
+// 	"localization": ["tile_chisel_dbg_slice_desc"],
+// 	"texture": {
+// 		"name": "chisel_dbg_slice",
+// 		"extension": "png",
+// 		"type": "normal"
+// 	}
+// })
+
 // Carvable.addTile(OpenTile('chisel_ancient_stone'))
 // Carvable.addTile(OpenTile('chisel_andesite'))
 // Carvable.addTile(OpenTile('chisel_animations'))
