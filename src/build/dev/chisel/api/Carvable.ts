@@ -118,6 +118,7 @@ interface ICarvable {
 	createBlock(variation: ITileVariation, Tile: IChiselTile): void
 	// if block type != normal, creating ctm block variation
 	createCTMBlock(variation: ITileVariation, id: number, data: number, Tile: IChiselTile): void
+	createCTMBlockFromLib(variation: ITileVariation): void
 	// returns all variations of block for group
 	getBlocksByGroupID(group: string): ITileVariation[]
 	// return group of block variation
@@ -168,6 +169,12 @@ var Carvable: ICarvable = {
 		block.setItemModel(id, data, variation.texture.name)
 		block.setRender(id, data, block.model)
 		Logger.Log(`${variation.texture.name} has CTM`, RM.mod)
+	},
+	createCTMBlockFromLib(variation: ITileVariation) {
+		let id = variation.texture.name
+		let numID = IDRegistry.genBlockID(id)
+		Block.createBlock(id, [{ name: id, texture: [[id, 0]], inCreative: true }])
+		ConnectedTexture.setModel(numID, 0, "chisel_dbg_slice")
 	},
 	getBlocksByGroupID(group: string): ITileVariation[] {
 		return []
@@ -229,15 +236,14 @@ class CTMBLock {
 		const render = new ICRender.Model()
 		const group = this.group
 		const BLOCK = this.BLOCK
-		let coords1, coords2, coords3
-		let i = 0, j = 0, u = 0, v = 0
+		let coords1, coords2
+		let i = 0, j = 0
 
 		for (let axis in CTMAxis) {
 			// creating surfrace parts
 			for (i = 0; i < 4; i++) {
 				coords1 = {}
 				coords2 = {}
-				coords3 = {}
 				coords1[CTMAxis[axis][0]] = i & 1 ? 1 : -1
 				coords2[CTMAxis[axis][1]] = i >> 1 ? 1 : -1
 				let renderConditions = this.renderConditions(
@@ -258,48 +264,37 @@ class CTMBLock {
 		this.model = render
 	}
 	getTextureAndUV(texture_index: number, i: number, axis: string) {
-		let texture = this.textures
-		let u = i & 1 ? 0.5 : 0
-		let v = i >> 1 ? 0.5 : 0
+		let uCond = i & 1, vCond = i >> 1, texture, scale
+		let u = uCond ? 0.5 : 0, v = vCond ? 0.5 : 0
 		let coords3 = { x: 0, y: 0, z: 0 }
 		coords3[CTMAxis[axis][0]] = u
 		coords3[CTMAxis[axis][1]] = v
-		let out = {
-			texture: texture[0],
-			uv: {
-				u: u,
-				v: v,
-				scale: 0.5
-			},
-			coords3: coords3
-		}
-		if (texture_index > 0) {
-			out.texture = texture[1]
-			let o = i - 1
-			u = o & 1 ? 0.25 : 0
-			v = o >> 1 ? 0.25 : 0
-			if (o == 3) u = v = 0
-			out.uv.v = v
-			out.uv.u = u
-			out.uv.scale = 0.25
+		if (texture_index == 0)
+			texture = this.textures[0], scale = 0.5
+		else {
+			texture = this.textures[1]
+			scale = 0.25
+			u = uCond ? 0.25 : 0
+			v = vCond ? 0.25 : 0
 			switch (texture_index) {
-				case 1:
-					out.uv.v += 0.5
+				case 1: // Vertical
+					v += 0.5
 					break
-				case 2:
-					out.uv.u += 0.5
+				case 2: // Horizontal
+					u += 0.5
 					break
-				case 3:
-					out.uv.u += 0.5
-					out.uv.v += 0.5
-					break
-				case 4:
-					out.uv.u = 0
-					out.uv.v = 0
+				case 3: // Center
+					u += 0.5
+					v += 0.5
 					break
 			}
 		}
-		return out
+		Logger.Log(`(t_i-1=${texture_index}) (uCond=${uCond}, vCond=${vCond}) (u=${u}, v=${v})`, "CTM")
+		return {
+			texture: texture,
+			uv: { u: u, v: v, scale: scale },
+			coords3: coords3
+		}
 	}
 	createSurfaces(j: number, i: number, axis: string) {
 		let texture_uv = this.getTextureAndUV(j, i, axis)

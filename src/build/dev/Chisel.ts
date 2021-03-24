@@ -17,6 +17,20 @@ Carvable.addTile({
 				"extension": "png",
 				"type": "normal",
 				"ctm": {
+					"name": "chisel_dbg_ctm",
+					"extension": "png",
+					"type": "ctm"
+				}
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_test_desc"],
+			"texture": {
+				"name": "chisel_test",
+				"extension": "png",
+				"type": "normal",
+				"ctm": {
 					"name": "chisel_test_ctm",
 					"extension": "png",
 					"type": "ctm"
@@ -24,6 +38,15 @@ Carvable.addTile({
 			}
 		}
 	]
+})
+Carvable.createCTMBlockFromLib({
+	"register": true,
+	"localization": ["tile_chisel_dbg_slice_desc"],
+	"texture": {
+		"name": "chisel_dbg_slice",
+		"extension": "png",
+		"type": "normal"
+	}
 })
 // Carvable.addTile(OpenTile('chisel_andesite'))
 // Carvable.addTile(OpenTile('chisel_ancient_stone'))

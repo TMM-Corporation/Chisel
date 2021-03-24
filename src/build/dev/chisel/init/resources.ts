@@ -25,3 +25,5 @@ RM.resources = {
 		blocks: 'json/blocks.json',
 	}
 }
+
+IMPORT("ConnectedTexture")
