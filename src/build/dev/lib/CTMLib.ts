@@ -1,9 +1,16 @@
 namespace CTM {
 	export enum TYPE {
-		RANDOM,
-		CTM,
-		CTMH,
-		CTMV,
+		random,
+		ctm,
+		ctmh,
+		ctmv
+	}
+	export type StrType = "random" | "ctm" | "ctmh" | "ctmv"
+	export interface Texture {
+
+		name: string
+		extension: string
+		type: StrType
 	}
 	export namespace IVertex {
 		export interface UV {
@@ -201,6 +208,7 @@ namespace CTM {
 			return AdditionalFuncs.createModel(group, textures, getTextureAndUV)
 		}
 	}
+	// TODO: Rework this lol
 	export namespace HorizontalCTM {
 		enum CTMTextures {
 			Top,
@@ -210,76 +218,29 @@ namespace CTM {
 			Single
 		}
 		export type defaultTextures = [top: string, ctm: string]
-		export function getTextureAndUV(data: IVertex.Data): UV.Data {
-			let uCond = data.surfacePart & 1,
-				vCond = data.surfacePart >> 1,
-				t = data.textureIndex,
-				textures = data.textures,
-				texture, scale
-
-			let u = uCond ? 0.5 : 0, v = vCond ? 0.5 : 0
-			let coords3 = { x: 0, y: 0, z: 0 }
-
-			coords3[data.axisList[data.axis][0]] = u
-			coords3[data.axisList[data.axis][1]] = v
-			if (t == 0)
-				texture = textures[0], scale = 0.5
-			else {
-				texture = textures[1]
-				scale = 0.25
-				u = uCond ? 0.25 : 0
-				v = vCond ? 0.25 : 0
-				u += (t == CTMTextures.DirectionStart || t == CTMTextures.DirectionEnd) ? 0.5 : 0
-				v += (t == CTMTextures.DirectionFull || t == CTMTextures.DirectionEnd) ? 0.5 : 0
-			}
-			return {
-				texture: texture,
-				uv: { u: u, v: v, scale: scale },
-				coords3: coords3
-			}
-		}
-		export function renderConditions(H: ICRender.CONDITION, V: ICRender.CONDITION, D: ICRender.CONDITION): ICRender.CONDITION[] {
-			const NOT = ICRender.NOT
-			const AND = ICRender.AND
-			return [
-				AND(NOT(H), NOT(V)),
-				AND(H, NOT(V)),
-				AND(NOT(H), V),
-				AND(H, V, NOT(D)),
-				AND(H, V, D)
-			]
-		}
 		export function createModel(group: ICRender.Group, textures: defaultTextures): ICRender.Model {
 			const render = new ICRender.Model()
-			const BLOCK = AdditionalFuncs.BLOCK
-			const CTMAxis = IAxis.CTMAxis
-			let coords1, coords2, i = 0, j = 0
-
-			for (let axis in CTMAxis) {
-				// creating surfrace parts
-				for (i = 0; i < 4; i++) {
-					coords1 = {}
-					coords2 = {}
-					coords1[CTMAxis[axis][0]] = i & 1 ? 1 : -1
-					coords2[CTMAxis[axis][1]] = i >> 1 ? 1 : -1
-					let renderConditions = HorizontalCTM.renderConditions(
-						BLOCK(coords1, group),
-						BLOCK(coords2, group),
-						BLOCK({
-							x: coords1.x || coords2.x,
-							y: 0,
-							z: coords1.z || coords2.z
-						}, group)
-					)
-					// adding 5 surfaces with textures texture_j.png in original
-					for (j = 0; j < 5; j++)
-						AdditionalFuncs.addCondition(render,
-							AdditionalFuncs.createSurfaces({
-								axis: axis, axisList: CTMAxis, textureIndex: j, surfacePart: i, textures
-							}, getTextureAndUV), renderConditions[j])
-				}
-			}
+			let mesh = new RenderMesh()
+			mesh.setBlockTexture(textures[1], 0)
+			addSurface(mesh, { x: 1, y: 0, z: 0 }, IAxis.CTMAxis.x, { u: 0, v: 0 })
+			addSurface(mesh, { x: 0, y: 0, z: 0 }, IAxis.CTMAxis.x, { u: 0, v: 0 })
+			addSurface(mesh, { x: 0, y: 0, z: 1 }, IAxis.CTMAxis.z, { u: 0, v: 0 })
+			addSurface(mesh, { x: 0, y: 0, z: 0 }, IAxis.CTMAxis.z, { u: 0, v: 0 })
+			addSurface(mesh, { x: 0, y: 1, z: 0 }, IAxis.CTMAxis.y, { u: 0, v: 0 })
+			addSurface(mesh, { x: 0, y: 0, z: 0 }, IAxis.CTMAxis.y, { u: 0, v: 0 })
+			render.addEntry(new BlockRenderer.Model(mesh))
 			return render
+		}
+		export function addSurface(mesh: RenderMesh, c: Vector, axis: IAxis.List, uv: IVertex.UV, vertexScale?: number): void {
+			let surfacePart = mesh, u = uv.u, v = uv.v, scale = vertexScale || 1, uvScale = uv.scale || 0.5
+			let axisScale0 = AdditionalFuncs.axisScaleFrom(axis, 0, scale)
+			let axisScale1 = AdditionalFuncs.axisScaleFrom(axis, 1, scale)
+			surfacePart.addVertex(c.x, c.y, c.z, u, v)
+			surfacePart.addVertex(c.x + axisScale0[0].x, c.y + axisScale0[0].y, c.z + axisScale0[0].z, u + uvScale, v)
+			surfacePart.addVertex(c.x + axisScale1[0].x, c.y + axisScale1[0].y, c.z + axisScale1[0].z, u, v + uvScale)
+			surfacePart.addVertex(c.x + axisScale0[0].x, c.y + axisScale0[0].y, c.z + axisScale0[0].z, u + uvScale, v)
+			surfacePart.addVertex(c.x + axisScale1[0].x, c.y + axisScale1[0].y, c.z + axisScale1[0].z, u, v + uvScale)
+			surfacePart.addVertex(c.x + axisScale1[1].x, c.y + axisScale1[1].y, c.z + axisScale1[1].z, u + uvScale, v + uvScale)
 		}
 	}
 }

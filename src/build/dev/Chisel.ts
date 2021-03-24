@@ -4,48 +4,13 @@
 
 // 	}
 // }
-Carvable.addTile({
-	"name": "dbg_mode",
-	"register": true,
-	"localization": ["tile_chisel_dbg_name"],
-	"variations": [
-		{
-			"register": true,
-			"localization": ["tile_chisel_dbg_desc"],
-			"texture": {
-				"name": "chisel_dbg",
-				"extension": "png",
-				"type": "normal",
-				"ctm": {
-					"name": "chisel_dbg_ctm",
-					"extension": "png",
-					"type": "ctm"
-				}
-			}
-		},
-		{
-			"register": true,
-			"localization": ["tile_chisel_test_desc"],
-			"texture": {
-				"name": "chisel_test",
-				"extension": "png",
-				"type": "normal",
-				"ctm": {
-					"name": "chisel_test_ctm",
-					"extension": "png",
-					"type": "ctm"
-				}
-			}
-		}
-	]
-})
-Carvable.addTile({
+
+let gr = new Carvable.Group("debug", "Debug group")
+gr.addFromDescription({
 	"name": "dbg_mode_horizontal",
-	"register": true,
 	"localization": ["tile_chisel_dbg_horizontal_name"],
 	"variations": [
 		{
-			"register": true,
 			"localization": ["tile_chisel_dbg_horizontal_left_desc"],
 			"texture": {
 				"name": "chisel_dbg_horizontal_left_top",
@@ -54,12 +19,11 @@ Carvable.addTile({
 				"ctm": {
 					"name": "chisel_dbg_horizontal_left_ctm",
 					"extension": "png",
-					"type": "ctm"
+					"type": "ctmh"
 				}
 			}
 		},
 		{
-			"register": true,
 			"localization": ["tile_chisel_dbg_horizontal_right_desc"],
 			"texture": {
 				"name": "chisel_dbg_horizontal_right_top",
@@ -68,7 +32,7 @@ Carvable.addTile({
 				"ctm": {
 					"name": "chisel_dbg_horizontal_right_ctm",
 					"extension": "png",
-					"type": "ctm"
+					"type": "ctmh"
 				}
 			}
 		}
