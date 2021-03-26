@@ -38,18 +38,54 @@ gr.addFromDescription({
 		}
 	]
 })
-Callback.addCallback("ItemUse", function (coords, item, block, player) {	
-	new WindowShell.Standart(WindowShell.GUIStyle.classic).open()
+let stoneGroup = new Carvable.Group("stone_group", "Stone Group")
+stoneGroup.addFromDescription({
+	name: "stone",
+	variations: [
+		{
+			block: {
+				id: 1, data: 0
+			}
+		},
+		{
+			block: {
+				id: 98, data: 0
+			}
+		},
+		{
+			block: {
+				id: 98, data: 1
+			}
+		},
+		{
+			block: {
+				id: 98, data: 2
+			}
+		},
+		{
+			block: {
+				id: 98, data: 3
+			}
+		}
+	]
 })
-// Carvable.createCTMBlockFromLib({
-// 	"register": true,
-// 	"localization": ["tile_chisel_dbg_slice_desc"],
-// 	"texture": {
-// 		"name": "chisel_dbg_slice",
-// 		"extension": "png",
-// 		"type": "normal"
-// 	}
-// })
+Callback.addCallback("ItemUse", function (c, item, tile, isExternal, player) {
+	let result
+	console.info(`{item: ${Item.getName(item.id, item.data)} [${item.id}${item.data}], block: ${Item.getName(tile.id, tile.data)} - ${tile.id}:${tile.data}}`)
+
+	if (Entity.getSneaking(player))
+		result = Carvable.Groups.prevBlockFor(tile.id, tile.data)
+	else
+		result = Carvable.Groups.nextBlockFor(tile.id, tile.data)
+
+	if (result.id != -1) {
+		console.info(`Result in tap: [${result.id}:${result.data}]`)
+
+		let source = BlockSource.getDefaultForActor(player)
+		source.setBlock(c.x, c.y, c.z, result.id, result.data)
+	} else console.warn(`Result id = -1`)
+}) // 1:0, 98:0, 98:1, 98:2, 98:3
+new WindowShell.Standart(WindowShell.GUIStyle.classic).open()
 
 // Carvable.addTile(OpenTile('chisel_ancient_stone'))
 // Carvable.addTile(OpenTile('chisel_andesite'))

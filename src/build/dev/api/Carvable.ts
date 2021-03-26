@@ -17,11 +17,12 @@ namespace Carvable {
 		export interface Description {
 			name: string
 			register?: boolean
-			localization: Localization
+			localization?: Localization
 			variations: Variation[]
 		}
 		export interface Variation {
-			texture: Texture
+			block?: { id: number, data?: number }
+			texture?: Texture
 			localization?: Localization
 			register?: boolean
 		}
@@ -60,31 +61,27 @@ namespace Carvable {
 		}
 	}
 	export namespace Groups {
-		export var List: { [name: string]: Group }
+		export var List: { [name: string]: Group } = {}
 
 		export function addGroup(group: Group) {
-			if (!List[group.name.groupName])
+			if (!(group.name.groupName in List))
 				List[group.name.groupName] = group
 		}
 
-		export function findGroupByBlockIdOrName(id: number, groupName?: string): Group | null {
+		export function findGroupByBlock(id: number, data: number = 0): Group | null {
 			var group: Group
-			if (groupName) {
-				if (List[groupName])
-					if (List[groupName].hasBlockId(id))
-						group = List[groupName]
-			} else {
-				for (let name in List) {
-					group = List[name]
-					if (group.hasBlockId(id))
-						break
-					else continue
-				}
+			console.info(`Trying to find group from ${id}:${data}`)
+			for (let name in List) {
+				console.info(`${group}, ${name}`)
+				group = List[name]
+				if (group.bindingExists(id, data))
+					return group
+				else continue
 			}
-
-			return group
+			console.info(`Search result ${JSON.stringify(group)}`)
+			return null
 		}
-		
+
 		export function groupByName(groupName: string): Group | null {
 			return List[groupName]
 		}
@@ -93,48 +90,72 @@ namespace Carvable {
 			return name in List
 		}
 
-		export function nextBlockFor(id: number): number | null {
-			let group = findGroupByBlockIdOrName(id)
+		export function nextBlockFor(id: number, data: number = 0): { id: number, data: number } {
+			let group = findGroupByBlock(id, data)
 			if (group)
-				return group.getNextBlockFor(id)
-			return null
+				return group.getNextBlockFor(id, data)
+			return { id: -1, data: 0 }
 		}
 
-		export function prevBlockFor(id: number): number | null {
-			let group = findGroupByBlockIdOrName(id)
+		export function prevBlockFor(id: number, data: number = 0): { id: number, data: number } {
+			let group = findGroupByBlock(id)
 			if (group)
 				return group.getPrevBlockFor(id)
-			return null
+			return { id: -1, data: 0 }
 		}
 	}
-	export class Group {
 
+	export interface GroupData {
+		names: string[],
+		binding: {
+			id: number[],
+			data: number[],
+		}
+		search: string[]
+	}
+
+	export class Group {
 		name: {
 			groupName: string,
 			display: string
 		}
-		data: { ids: number[], names: string[] } = {
-			ids: [], names: []
+		data: GroupData = {
+			names: [],
+			binding: {
+				id: [],
+				data: []
+			},
+			search: []
 		}
 
 		constructor(groupName: string, display: string) {
 			this.name = { groupName, display }
+			Groups.addGroup(this)
 		}
 
 		add(tile: Tile.Variation): number {
 			return Tile.create(tile)
 		}
 
-		addMultiple(tile: Tile.Variation[]): number[] {
-			let ids: number[] = []
+		addMultiple(tile: Tile.Variation[]): { id: number[], data: number[] } {
+			let idList: number[] = []
+			let dataList: number[] = []
 			tile.forEach((variation: Tile.Variation) => {
 				if (variation.register != false) {
-					let id = this.add(variation)
-					this.data.ids.push(id)
-					ids.push(id)
+					let id = 0, data = 0
+					if (variation.block) {
+						id = variation.block.id
+						data = variation.block.data || 0
+					} else {
+						id = this.add(variation)
+						data = 0
+					}
+					idList.push(id)
+					dataList.push(data)
+					this.data.search.push(`${id}:${data}`)
 				}
 			})
-			return ids
+			return { id: idList, data: dataList }
 		}
 
 		addFromDescription(description: Tile.Description) {
@@ -145,25 +166,73 @@ namespace Carvable {
 			else Logger.Log(`Skipping creation from descrption [${description.name}] is disabled`, ModuleName)
 		}
 
-		creativeGroupFromIds() {
-			if (this.data.ids.length > 1)
-				Item.addCreativeGroup(this.name.groupName, this.name.display, this.data.ids)
+		addBinding(id: number, data: number = 0) {
+			let binding = this.data.binding
+			if (this.bindingExists(id, data))
+				console.warn(`Id ${id}:${data} already exists in ${this.name.groupName} group`)
+			else {
+				binding.id.push(id)
+				binding.data.push(data)
+				console.info(`Id ${id}:${data} successfully binded to ${this.name.groupName} group`)
+			}
 		}
 
-		hasBlockId(id: number) {
-			return !!~this.data.ids.lastIndexOf(id)
-		}
-		get Ids() {
-			return this.data.ids
-		}
-		getNextBlockFor(id: number): any {
-			let items = this.data.ids
-			return Additional.getFor(items, id, Additional.Direction.NEXT)
+		bindingExists(id: number, data: number = 0): boolean {
+			let i = this.bindingIndex(id, data)
+			console.info(`Binding Index for ${id}:${data} = ${i}, exists: ${!!~i}`)
+			return !!~i
 		}
 
-		getPrevBlockFor(id: number): any {
-			let items = this.data.ids
-			return Additional.getFor(items, id, Additional.Direction.PREV)
+		bindingIndex(id: number, data: number = 0): number {
+			let i = this.data.search.lastIndexOf(`${id}:${data}`)
+			console.info(`Binding Index for ${id}:${data} = ${i}`)
+			return i
+		}
+
+		bindingData(id: number, data: number = 0): number {
+			return this.data.binding.data[this.bindingIndex(id, data)] || 0
+		}
+
+		// creativeGroupFromIds(): void {
+		// 	if (this.data.ids.length > 1)
+		// 		Item.addCreativeGroup(this.name.groupName, this.name.display, this.data.ids)
+		// }
+
+		hasBlockId(id: number): boolean {
+			return !!~this.data.binding.id.lastIndexOf(id)
+		}
+
+		get bindings() {
+			return this.data.binding
+		}
+		bindingDataFromId(id: number) {
+			return this.bindingExists(id) ? this.bindingData(id) : 0
+		}
+
+		get ids() {
+			return this.data.binding.id
+		}
+
+		getNextBlockFor(id: number, data: number = 0): { id: number, data: number } {
+			let blocks = this.data.search
+			console.info(`Trying to find NEXT block in ${this.name.groupName} group`)
+			let result = Additional.findFor(blocks, `${id}:${data}`, Additional.Direction.NEXT)
+			if (result != -1) {
+				result = result.split(":")
+				console.info(`Result ${result[0]}:${result[1]}`)
+				return { id: result[0], data: result[1] }
+			}
+		}
+
+		getPrevBlockFor(id: number, data: number = 0): { id: number, data: number } {
+			let blocks = this.data.search
+			console.info(`Trying to find PREV block in ${this.name.groupName} group`)
+			let result = Additional.findFor(blocks, `${id}:${data}`, Additional.Direction.PREV)
+			if (result != -1) {
+				result = result.split(":")
+				console.info(`Result ${result[0]}:${result[1]}`)
+				return { id: result[0], data: result[1] }
+			}
 		}
 	}
 }

@@ -76,8 +76,11 @@ var console = {
 	debug(message: string, prefix?: string) {
 		Logger.Log(`${message}`, prefix || 'DEBUG')
 	},
-	error(exception: java.lang.Throwable) {
-		Logger.LogError(exception)
+	error(exception: java.lang.Throwable | string, prefix?: string) {
+		if (typeof exception === 'string')
+			Logger.Log(`${exception}`, prefix || 'ERROR')
+		else
+			Logger.LogError(exception)
 	},
 	info(message: string, prefix?: string) {
 		Logger.Log(`${message}`, prefix || 'INFO')
@@ -106,14 +109,16 @@ namespace Additional {
 	export enum Direction {
 		NEXT, PREV
 	}
-	export function getFor(array: Array<any>, item: number, direction: Direction): any {
-		let len = array.length, i = array.indexOf(item)
+	export function findFor(array: Array<any>, item: any, direction: Direction): any {
+		let len = array.length, i = array.lastIndexOf(item)
+		console.info(`Direction: ${direction}, next: ${array[(i + 1) % len]}, prev ${array[(i + len - 1) % len]}`)
 		if (i != -1) {
 			if (direction == Direction.NEXT)
 				return array[(i + 1) % len]
 			if (direction == Direction.PREV)
 				return array[(i + len - 1) % len]
 		}
+		console.error(`[findFor] Something went wrong`)
 		return null
 	}
 }
