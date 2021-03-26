@@ -5,6 +5,8 @@
 ./resources.ts
 # Compile libs
 ./lib/CTMLib.ts
+./lib/WindowShell.ts
 # Compile other
 ./api/Carvable.ts
+./api/ChiselItem.ts
 ./Chisel.ts

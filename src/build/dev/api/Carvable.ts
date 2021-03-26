@@ -60,22 +60,22 @@ namespace Carvable {
 		}
 	}
 	export namespace Groups {
-		export var GroupList: { [name: string]: Group }
+		export var List: { [name: string]: Group }
 
 		export function addGroup(group: Group) {
-			if (!GroupList[group.name.groupName])
-				GroupList[group.name.groupName] = group
+			if (!List[group.name.groupName])
+				List[group.name.groupName] = group
 		}
 
 		export function findGroupByBlockIdOrName(id: number, groupName?: string): Group | null {
 			var group: Group
 			if (groupName) {
-				if (GroupList[groupName])
-					if (GroupList[groupName].hasBlockId(id))
-						group = GroupList[groupName]
+				if (List[groupName])
+					if (List[groupName].hasBlockId(id))
+						group = List[groupName]
 			} else {
-				for (let name in GroupList) {
-					group = GroupList[name]
+				for (let name in List) {
+					group = List[name]
 					if (group.hasBlockId(id))
 						break
 					else continue
@@ -84,13 +84,13 @@ namespace Carvable {
 
 			return group
 		}
-
+		
 		export function groupByName(groupName: string): Group | null {
-			return GroupList[groupName]
+			return List[groupName]
 		}
 
 		export function groupExitsts(name: string) {
-			return name in GroupList
+			return name in List
 		}
 
 		export function nextBlockFor(id: number): number | null {
@@ -153,7 +153,9 @@ namespace Carvable {
 		hasBlockId(id: number) {
 			return !!~this.data.ids.lastIndexOf(id)
 		}
-
+		get Ids() {
+			return this.data.ids
+		}
 		getNextBlockFor(id: number): any {
 			let items = this.data.ids
 			return Additional.getFor(items, id, Additional.Direction.NEXT)

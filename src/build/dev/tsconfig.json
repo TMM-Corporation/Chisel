@@ -20,7 +20,9 @@
 		"api/ResManager.ts",
 		"resources.ts",
 		"lib/CTMLib.ts",
+		"lib/WindowShell.ts",
 		"api/Carvable.ts",
+		"api/ChiselItem.ts",
 		"Chisel.ts"
 	],
 	"files": [

@@ -100,6 +100,7 @@ ctx.runOnUiThread(new java.lang.Runnable({
 	}
 }))
 
+var Color = android.graphics.Color
 
 namespace Additional {
 	export enum Direction {

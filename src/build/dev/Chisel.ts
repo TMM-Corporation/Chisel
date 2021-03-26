@@ -38,6 +38,9 @@ gr.addFromDescription({
 		}
 	]
 })
+Callback.addCallback("ItemUse", function (coords, item, block, player) {	
+	new WindowShell.Standart(WindowShell.GUIStyle.classic).open()
+})
 // Carvable.createCTMBlockFromLib({
 // 	"register": true,
 // 	"localization": ["tile_chisel_dbg_slice_desc"],
