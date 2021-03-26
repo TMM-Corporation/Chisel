@@ -15,12 +15,12 @@
 		"webpack"
 	],
 	"include": [
-		"chisel/common/ResManager.ts",
-		"chisel/init/resources.ts",
+		"header.ts",
+		"api/Additional.ts",
+		"api/ResManager.ts",
+		"resources.ts",
 		"lib/CTMLib.ts",
-		"chisel/api/ctmblock.ts",
-		"chisel/api/Carvable.ts",
-		"chisel/init/ChiselTiles.ts",
+		"api/Carvable.ts",
 		"Chisel.ts"
 	],
 	"files": [

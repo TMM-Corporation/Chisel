@@ -25,5 +25,7 @@ RM.resources = {
 		blocks: 'json/blocks.json',
 	}
 }
-
-IMPORT("ConnectedTexture")
+function OpenTile(tile_name: string): any {
+	let file = RM.Select(`${__dir__}${RM.resources.dirs.json}/tiles/${tile_name}.json`)
+	return RM.ReadJSON(file)
+}

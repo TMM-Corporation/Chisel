@@ -1,7 +1,0 @@
-./chisel/common/ResManager.ts
-./chisel/init/resources.ts
-./lib/CTMLib.ts
-./chisel/api/ctmblock.ts
-./chisel/api/Carvable.ts
-./chisel/init/ChiselTiles.ts
-./Chisel.ts

@@ -61,22 +61,54 @@ namespace Carvable {
 	}
 	export namespace Groups {
 		export var GroupList: { [name: string]: Group }
+
 		export function addGroup(group: Group) {
 			if (!GroupList[group.name.groupName])
 				GroupList[group.name.groupName] = group
 		}
-		export function findGroupByBlockId(id: number): Group | void {
+
+		export function findGroupByBlockIdOrName(id: number, groupName?: string): Group | null {
 			var group: Group
-			for (let name in GroupList) {
-				group = GroupList[name]
-				if (group.searchByBlockId(id))
-					break
-				else continue
+			if (groupName) {
+				if (GroupList[groupName])
+					if (GroupList[groupName].hasBlockId(id))
+						group = GroupList[groupName]
+			} else {
+				for (let name in GroupList) {
+					group = GroupList[name]
+					if (group.hasBlockId(id))
+						break
+					else continue
+				}
 			}
+
 			return group
+		}
+
+		export function groupByName(groupName: string): Group | null {
+			return GroupList[groupName]
+		}
+
+		export function groupExitsts(name: string) {
+			return name in GroupList
+		}
+
+		export function nextBlockFor(id: number): number | null {
+			let group = findGroupByBlockIdOrName(id)
+			if (group)
+				return group.getNextBlockFor(id)
+			return null
+		}
+
+		export function prevBlockFor(id: number): number | null {
+			let group = findGroupByBlockIdOrName(id)
+			if (group)
+				return group.getPrevBlockFor(id)
+			return null
 		}
 	}
 	export class Group {
+
 		name: {
 			groupName: string,
 			display: string
@@ -104,6 +136,7 @@ namespace Carvable {
 			})
 			return ids
 		}
+
 		addFromDescription(description: Tile.Description) {
 			if (description.register != false) {
 				Logger.Log(`Creating group from description, group: { groupName: ${this.name.groupName}, display: ${this.name.display} }, desc name: ${description.name}`, ModuleName)
@@ -111,12 +144,24 @@ namespace Carvable {
 			}
 			else Logger.Log(`Skipping creation from descrption [${description.name}] is disabled`, ModuleName)
 		}
+
 		creativeGroupFromIds() {
 			if (this.data.ids.length > 1)
 				Item.addCreativeGroup(this.name.groupName, this.name.display, this.data.ids)
 		}
-		searchByBlockId(id: number) {
+
+		hasBlockId(id: number) {
 			return !!~this.data.ids.lastIndexOf(id)
+		}
+
+		getNextBlockFor(id: number): any {
+			let items = this.data.ids
+			return Additional.getFor(items, id, Additional.Direction.NEXT)
+		}
+
+		getPrevBlockFor(id: number): any {
+			let items = this.data.ids
+			return Additional.getFor(items, id, Additional.Direction.PREV)
 		}
 	}
 }

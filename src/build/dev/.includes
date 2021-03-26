@@ -1,10 +1,10 @@
+./header.ts
+./api/Additional.ts
 # Compile resources 
-./chisel/common/ResManager.ts
-./chisel/init/resources.ts
+./api/ResManager.ts
+./resources.ts
 # Compile libs
 ./lib/CTMLib.ts
 # Compile other
-./chisel/api/ctmblock.ts
-./chisel/api/Carvable.ts
-./chisel/init/ChiselTiles.ts
+./api/Carvable.ts
 ./Chisel.ts
