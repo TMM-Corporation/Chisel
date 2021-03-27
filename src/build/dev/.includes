@@ -1,4 +1,5 @@
 ./header.ts
+./api/CLI.ts
 ./api/Additional.ts
 # Compile resources 
 ./api/ResManager.ts
