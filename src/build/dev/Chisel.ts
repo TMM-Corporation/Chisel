@@ -69,24 +69,20 @@ stoneGroup.addFromDescription({
 		}
 	]
 })
-Callback.addCallback("ItemUse", function (c, item, tile, isExternal, player) {
-	let result
-	console.info(`{item: ${Item.getName(item.id, item.data)} [${item.id}${item.data}], block: ${Item.getName(tile.id, tile.data)} - ${tile.id}:${tile.data}}`)
 
-	if (Entity.getSneaking(player))
-		result = Carvable.Groups.prevBlockFor(tile.id, tile.data)
-	else
-		result = Carvable.Groups.nextBlockFor(tile.id, tile.data)
-
-	if (result.id != -1) {
-		console.info(`Result in tap: [${result.id}:${result.data}]`)
-
-		let source = BlockSource.getDefaultForActor(player)
-		source.setBlock(c.x, c.y, c.z, result.id, result.data)
-	} else console.warn(`Result id = -1`)
-}) // 1:0, 98:0, 98:1, 98:2, 98:3
-new WindowShell.Standart(WindowShell.GUIStyle.classic).open()
-
+let itemGui = new WindowShell.Standart(WindowShell.GUIStyle.classic)
+new ChiselItem.Custom({
+	gui: itemGui,
+	item: {
+		name: "Chisel Diamond",
+		namedId: "chisel_diamond",
+		texture: {
+			name: "chisel_diamond",
+			data: 0
+		},
+		durability: 1999
+	}
+})
 // Carvable.addTile(OpenTile('chisel_ancient_stone'))
 // Carvable.addTile(OpenTile('chisel_andesite'))
 // Carvable.addTile(OpenTile('chisel_animations'))

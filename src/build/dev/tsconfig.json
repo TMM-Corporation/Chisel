@@ -16,6 +16,7 @@
 	],
 	"include": [
 		"header.ts",
+		"api/CLI.ts",
 		"api/Additional.ts",
 		"api/ResManager.ts",
 		"resources.ts",
