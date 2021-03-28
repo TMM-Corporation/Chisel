@@ -102,8 +102,15 @@ namespace ChiselItem {
 		}
 
 		onUse(player: number): boolean {
-			let data = Entity.getCarriedItem(player)
-			Entity.setCarriedItem(player, data.id, 1, --data.data, data.extra)
+			let item = Entity.getCarriedItem(player)
+			let maxDamage = Item.getMaxDamage(item.id)
+			
+			if (item.data >= maxDamage)
+				Entity.setCarriedItem(player, 0, 0, 0)
+			else
+				Entity.setCarriedItem(player, item.id, 1, ++item.data, item.extra)
+			
+			console.debug(`Data: ${item.data}/${maxDamage}`)
 			return true
 		}
 
