@@ -5,9 +5,9 @@ namespace ChiselItem {
 		/* BreakBlockStart to open GUI, Tap to chisel */
 		PE
 	}
-	
+
 	export var Mode = WorkMode.PE
-	
+
 	export enum CurrentState {
 		Normal,
 		BreakBlock,
@@ -70,7 +70,7 @@ namespace ChiselItem {
 		}
 
 		carveBlock(c, tile, player): boolean {
-			if (!this.isChiselHandle(Entity.getCarriedItem(player)))
+			if (!this.isHandleChisel(Entity.getCarriedItem(player)))
 				return false
 
 			let result
@@ -97,7 +97,8 @@ namespace ChiselItem {
 		setWindow(window: WindowShell.Group) {
 			this.data.gui = window
 		}
-		isChiselHandle(handItem: ItemInstance) {
+
+		isHandleChisel(handItem: ItemInstance) {
 			return handItem.id == this.data.item.id
 		}
 
@@ -115,33 +116,23 @@ namespace ChiselItem {
 		}
 
 		initCallbacks() {
-			Callback.addCallback("DestroyBlockStart", (c, tile, player) => {
-				switch (Mode) {
-					case WorkMode.PE:
-						Game.prevent()
-						this.open(player, Entity.getCarriedItem(player))
-						break
-					default:
-						if (this.carveBlock(c, tile, player))
-							Game.prevent()
-						break
-				}
+			Callback.addCallback("ItemUseNoTarget", (item, player) => {
+				this.open(player, item)
 			})
+
+			Callback.addCallback("DestroyBlockStart", (c, tile, player) => {
+				if (this.data.state == CurrentState.OpenGui && this.isHandleChisel(Entity.getCarriedItem(player)))
+					Game.prevent()
+			})
+
 			Callback.addCallback("ItemUse", (c, item, tile, isExternal, player) => {
-				switch (Mode) {
-					case WorkMode.PE:
-						this.carveBlock(c, tile, player)
-						break
-					default:
-						this.open(player, Entity.getCarriedItem(player))
-						break
-				}
+				this.carveBlock(c, tile, player)
 				console.debug(`{item: ${Item.getName(item.id, item.data)} [${item.id}${item.data}], block: ${Item.getName(tile.id, tile.data)} - ${tile.id}:${tile.data}}`)
 			}) // 1:0, 98:0, 98:1, 98:2, 98:3
 		}
 
 		open(player: number, item: ItemInstance): boolean {
-			if (this.isChiselHandle(item))
+			if (this.isHandleChisel(item))
 				if (!Entity.getSneaking(player)) {
 					this.setState(CurrentState.OpenGui)
 					this.data.gui.open()
