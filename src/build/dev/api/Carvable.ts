@@ -70,15 +70,15 @@ namespace Carvable {
 
 		export function findGroupByBlock(id: number, data: number = 0): Group | null {
 			var group: Group
-			console.info(`Trying to find group from ${id}:${data}`)
+			console.info(`Trying to find group form id:data = ${id}:${data}`, `[Carvable.ts] Groups.findGroupByBlock`)
 			for (let name in List) {
-				console.info(`${group}, ${name}`)
 				group = List[name]
+				console.info(`Group [${name}] = ${group}`, `[Carvable.ts] Groups.findGroupByBlock`)
 				if (group.bindingExists(id, data))
 					return group
 				else continue
 			}
-			console.info(`Search result ${JSON.stringify(group)}`)
+			console.info(`Search result ${JSON.stringify(group)}`, `[Carvable.ts] Groups.findGroupByBlock`)
 			return null
 		}
 
@@ -86,21 +86,13 @@ namespace Carvable {
 			return List[groupName]
 		}
 
-		export function groupExitsts(name: string) {
+		export function groupExists(name: string) {
 			return name in List
 		}
-
-		export function nextBlockFor(id: number, data: number = 0): { id: number, data: number } {
+		export function searchBlock(id: number, data: number = 0, direction: Search.Direction) {
 			let group = findGroupByBlock(id, data)
 			if (group)
-				return group.getNextBlockFor(id, data)
-			return { id: -1, data: 0 }
-		}
-
-		export function prevBlockFor(id: number, data: number = 0): { id: number, data: number } {
-			let group = findGroupByBlock(id)
-			if (group)
-				return group.getPrevBlockFor(id)
+				return group.findBlock(id, data, direction)
 			return { id: -1, data: 0 }
 		}
 	}
@@ -169,23 +161,23 @@ namespace Carvable {
 		addBinding(id: number, data: number = 0) {
 			let binding = this.data.binding
 			if (this.bindingExists(id, data))
-				console.warn(`Id ${id}:${data} already exists in ${this.name.groupName} group`)
+				console.warn(`Id ${id}:${data} already exists in ${this.name.groupName} group`, `[Carvable.ts] Group.addBinding`)
 			else {
 				binding.id.push(id)
 				binding.data.push(data)
-				console.info(`Id ${id}:${data} successfully binded to ${this.name.groupName} group`)
+				console.info(`Id ${id}:${data} successfully binded to ${this.name.groupName} group`, `[Carvable.ts] Group.addBinding`)
 			}
 		}
 
 		bindingExists(id: number, data: number = 0): boolean {
 			let i = this.bindingIndex(id, data)
-			console.info(`Binding Index for ${id}:${data} = ${i}, exists: ${!!~i}`)
+			console.info(`Binding for ${id}:${data} ${!!~i == true ? "exists, index: " + i : "not exists"} in ${this.name.groupName} group`, `[Carvable.ts] Group.bindingExists`)
 			return !!~i
 		}
 
 		bindingIndex(id: number, data: number = 0): number {
 			let i = this.data.search.lastIndexOf(`${id}:${data}`)
-			console.info(`Binding Index for ${id}:${data} = ${i}`)
+			// console.info(`Binding Index for ${id}:${data} = ${i}`)
 			return i
 		}
 
@@ -199,38 +191,24 @@ namespace Carvable {
 		// }
 
 		hasBlockId(id: number): boolean {
-			return !!~this.data.binding.id.lastIndexOf(id)
+			return !!~this.data.binding.id.indexOf(id)
 		}
 
 		get bindings() {
 			return this.data.binding
 		}
-		bindingDataFromId(id: number) {
-			return this.bindingExists(id) ? this.bindingData(id) : 0
-		}
 
 		get ids() {
 			return this.data.binding.id
 		}
-
-		getNextBlockFor(id: number, data: number = 0): { id: number, data: number } {
+		findBlock(id: number, data: number = 0, direction: Search.Direction): { id: number, data: number } {
 			let blocks = this.data.search
-			console.info(`Trying to find NEXT block in ${this.name.groupName} group`)
-			let result = Additional.findFor(blocks, `${id}:${data}`, Additional.Direction.NEXT)
-			if (result != -1) {
-				result = result.split(":")
-				console.info(`Result ${result[0]}:${result[1]}`)
-				return { id: result[0], data: result[1] }
-			}
-		}
+			console.info(`Trying to find ${direction == Search.Direction.NEXT ? "NEXT" : "PREV"} block in ${this.name.groupName} group`, `[Carvable.ts] Group.findBlock`)
+			let result = Search.find(blocks, `${id}:${data}`, direction)
 
-		getPrevBlockFor(id: number, data: number = 0): { id: number, data: number } {
-			let blocks = this.data.search
-			console.info(`Trying to find PREV block in ${this.name.groupName} group`)
-			let result = Additional.findFor(blocks, `${id}:${data}`, Additional.Direction.PREV)
-			if (result != -1) {
+			if (result != -1 && result) {
 				result = result.split(":")
-				console.info(`Result ${result[0]}:${result[1]}`)
+				console.info(`Result ${result[0]}:${result[1]}`, `[Carvable.ts] Group.findBlock`)
 				return { id: result[0], data: result[1] }
 			}
 		}
