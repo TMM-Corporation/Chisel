@@ -25,5 +25,5 @@ Callback.addCallback("NativeCommand", function (value: string) {
 	if (CLI.run(name, args))
 		Game.prevent()
 
-	console.debug(`Command: ${name}, args: [${args}]`)
+	console.info(`Command: ${name}, args: [${args}]`, `[CLI.ts] Callback.NativeCommand`)
 })

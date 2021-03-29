@@ -37,7 +37,7 @@ namespace WindowShell {
 			if (!elements[name] || rewrite)
 				elements[name] = element
 			else
-				console.warn(`Cannot add element "${name}, element is exists"`)
+				console.warn(`Cannot add element "${name}, element is exists"`, `[WindowShell.ts] WindowShell.Default.addElement`)
 		}
 
 		protected addElements(elements: UI.ElementSet, rewrite?: boolean) {
@@ -190,7 +190,7 @@ namespace WindowShell {
 		private setupClassic() {
 			this.setLocation({
 				padding: {
-					top: 55, left: this.marginLR-10, bottom: 250, right: this.marginLR-10
+					top: 55, left: this.marginLR - 10, bottom: 250, right: this.marginLR - 10
 				}
 			})
 
@@ -198,7 +198,7 @@ namespace WindowShell {
 			let HEIGHT = 80
 			this.addDrawings([
 				{ type: "color", color: Color.TRANSPARENT },
-				{ type: "text", x: 40, y: HEIGHT*0.9, text: "No Title", font: { align: 0, size: HEIGHT * 0.55, color: -16777216, shadow: 0 } }
+				{ type: "text", x: 40, y: HEIGHT * 0.9, text: "No Title", font: { align: 0, size: HEIGHT * 0.55, color: -16777216, shadow: 0 } }
 			])
 			this.addElement("default-close-button", { type: "closeButton", x: 994.0 - (HEIGHT) * 1.25, y: 10, scale: (HEIGHT / 18) * 1.25, bitmap: "style:close_button_up", bitmap2: "style:close_button_down" })
 		}
@@ -226,7 +226,7 @@ namespace WindowShell {
 			alert(`ContentWindow: [height = ${this.Window.getLocation().getWindowHeight()}]`)
 			this.addDrawings([
 				{ type: "color", color: 0 },
-				{ type: "frame", x: 0, y: 0, width: this.Window.getLocation().getWindowWidth(), height: this.Window.getLocation().getWindowHeight(), scale: 1, bitmap: "style:frame_background_border", color: Color.rgb(198, 198, 198) }
+				{ type: "frame", x: 0, y: 0, width: this.Window.getLocation().getWindowWidth(), height: this.Window.getLocation().getWindowHeight(), scale: 1, bitmap: "style:frame_background_border", color: Color.rgb(198, 198, 198) },
 			])
 
 			this.Window.setBackgroundColor(0)
@@ -235,7 +235,7 @@ namespace WindowShell {
 		private setupClassic() {
 			this.setLocation({
 				padding: {
-					top: 90, left: this.marginLR-3, bottom: 200, right: this.marginLR-5
+					top: 90, left: this.marginLR - 3, bottom: 200, right: this.marginLR - 5
 				}
 			})
 			alert(`ContentWindow: [height = ${this.Window.getLocation().getWindowHeight()}]`)
@@ -258,10 +258,10 @@ namespace WindowShell {
 		private setupDefault() {
 			let window = this.Window
 			this.setLocation({
-				padding: { top: 60, bottom: -1 },
+				padding: { top: 60, bottom: 0 },
 			})
 			this.addDrawings([
-				{ type: "color", color: 0 },
+				{ type: "background", color: 0 },
 				{ type: "frame", x: 0, y: 0, width: window.getLocation().getWindowWidth(), height: window.getLocation().getWindowHeight(), scale: 3, bitmap: "style:frame_background_border", color: Color.rgb(198, 198, 198) },
 				{ type: "bitmap", x: 0, y: 15, scale: 2, bitmap: "_standart_header_shadow" }
 			])
@@ -271,12 +271,12 @@ namespace WindowShell {
 		private setupClassic() {
 			this.setLocation({
 				padding: {
-					top: 0, left: 0, bottom: -1, right: 0
+					top: 0, left: 0, bottom: 0, right: 0
 				}
 			})
 			let window = this.Window
 			this.addDrawings([
-				{ type: "color", color: 0 },
+				{ type: "background", color: Color.argb(128, 0, 0, 0) },
 				{ type: "frame", x: this.marginLR - 10, y: 50, width: 340, height: window.getLocation().getWindowHeight() - 70, scale: 2, bitmap: "style:frame_background_border", color: Color.rgb(198, 198, 198) },
 			])
 			this.setStyle(this.style)
