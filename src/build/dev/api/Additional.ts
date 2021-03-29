@@ -64,33 +64,34 @@ class Scriptable {
 		this.getProperty(obj, value, ifFalse, "Float")
 	}
 }
-var TextureSource = {
-	instance: {
-		getSafe(bitmap: string): android.graphics.Bitmap {
+namespace TextureSource {
+
+	namespace instance {
+		export function getSafe(bitmap: string): android.graphics.Bitmap {
 			return RM.ReadBitmap(`${__dir__}gui/`, bitmap + '.png')
 		}
 	}
 }
 var ScriptableObjectHelper = new Scriptable()
-var console = {
-	debug(message: string, prefix?: string) {
-		Logger.Log(`${message}`, prefix || 'DEBUG')
-	},
-	error(exception: java.lang.Throwable | string, prefix?: string) {
-		if (typeof exception === 'string')
-			Logger.Log(`${exception}`, prefix || 'ERROR')
-		else
-			Logger.LogError(exception)
-	},
-	info(message: string, prefix?: string) {
-		Logger.Log(`${message}`, prefix || 'INFO')
-	},
-	log(message: string, prefix?: string) {
-		Logger.Log(`${message}`, prefix || 'LOG')
-	},
-	warn(message: string, prefix?: string) {
-		Logger.Log(`${message}`, prefix || 'WARN')
-	},
+namespace console {
+	export function debug(message: string, prefix?: string) {
+		Logger.Log(`${prefix ? "[" + prefix + "]" : ""} ${message}`, 'DEBUG')
+	}
+	export function error(message: string, prefix?: string) {
+		Logger.Log(`${prefix ? "[" + prefix + "]" : ""} ${message}`, 'ERROR')
+	}
+	export function exception(exception: java.lang.Throwable) {
+		Logger.LogError(exception)
+	}
+	export function info(message: string, prefix?: string) {
+		Logger.Log(`${prefix ? "[" + prefix + "]" : ""} ${message}`, 'INFO')
+	}
+	export function log(message: string, prefix?: string) {
+		Logger.Log(`${prefix ? "[" + prefix + "]" : ""} ${message}`, 'LOG')
+	}
+	export function warn(message: string, prefix?: string) {
+		Logger.Log(`${prefix ? "[" + prefix + "]" : ""} ${message}`, 'WARN')
+	}
 }
 
 var ctx = UI.getContext()
@@ -105,20 +106,21 @@ ctx.runOnUiThread(new java.lang.Runnable({
 
 var Color = android.graphics.Color
 
-namespace Additional {
+namespace Search {
 	export enum Direction {
 		NEXT, PREV
 	}
-	export function findFor(array: Array<any>, item: any, direction: Direction): any {
+	export function find(array: Array<any>, item: any, direction: Direction): any {
 		let len = array.length, i = array.lastIndexOf(item)
-		console.info(`Direction: ${direction}, next: ${array[(i + 1) % len]}, prev ${array[(i + len - 1) % len]}`)
 		if (i != -1) {
+			console.info(`Direction: ${direction}, Current: ${item} next: ${array[(i + 1) % len]}, prev ${array[(i + len - 1) % len]}`, `[Additional.ts] Search.find`)
 			if (direction == Direction.NEXT)
 				return array[(i + 1) % len]
 			if (direction == Direction.PREV)
 				return array[(i + len - 1) % len]
-		}
-		console.error(`[findFor] Something went wrong`)
+		} else
+			console.error(`Cannot find index of ${item}`, `[Additional.ts] Search.find`)
+
 		return null
 	}
 }
