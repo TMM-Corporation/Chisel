@@ -1,3 +1,4 @@
+
 namespace ChiselItem {
 	export enum WorkMode {
 		/* Tap to open GUI, BreakBlockStart to chisel */
@@ -33,6 +34,8 @@ namespace ChiselItem {
 		durability: number
 		namedId: string
 		name: string
+		description?: string[]
+		from_mod?: string[]
 		texture: Item.TextureData
 	}
 	export interface DefaultData {
@@ -75,21 +78,22 @@ namespace ChiselItem {
 
 			let result
 			if (Entity.getSneaking(player))
-				result = Carvable.Groups.prevBlockFor(tile.id, tile.data)
+				result = Carvable.Groups.searchBlock(tile.id, tile.data, Search.Direction.PREV)
 			else
-				result = Carvable.Groups.nextBlockFor(tile.id, tile.data)
+				result = Carvable.Groups.searchBlock(tile.id, tile.data, Search.Direction.NEXT)
 
 			if (result.id != -1) {
 				this.setState(CurrentState.BreakBlock)
-				console.info(`Result in tap: [${result.id}:${result.data}]`)
+				console.info(`Result in tap: [${result.id}:${result.data}]`, `[ChiselItem.ts] ChiselItem.Custom.carveBlock`)
 
 				let source = BlockSource.getDefaultForActor(player)
 				source.setBlock(c.x, c.y, c.z, result.id, result.data)
+
 				this.onUse(player)
 				this.setState(CurrentState.Normal)
 
 				return true
-			} else console.warn(`Result id = -1`)
+			} else console.warn(`Result id = -1`, `[ChiselItem.ts] ChiselItem.Custom.carveBlock`)
 
 			return false
 		}
@@ -105,13 +109,13 @@ namespace ChiselItem {
 		onUse(player: number): boolean {
 			let item = Entity.getCarriedItem(player)
 			let maxDamage = Item.getMaxDamage(item.id)
-			
+
 			if (item.data >= maxDamage)
 				Entity.setCarriedItem(player, 0, 0, 0)
-			else
+			else if (new PlayerActor(player).getGameMode() != 1)
 				Entity.setCarriedItem(player, item.id, 1, ++item.data, item.extra)
-			
-			console.debug(`Data: ${item.data}/${maxDamage}`)
+
+			console.info(`Data: ${item.data}/${maxDamage}`, `[ChiselItem.ts] ChiselItem.Custom.onUse`)
 			return true
 		}
 
@@ -121,13 +125,13 @@ namespace ChiselItem {
 			})
 
 			Callback.addCallback("DestroyBlockStart", (c, tile, player) => {
-				if (this.data.state == CurrentState.OpenGui && this.isHandleChisel(Entity.getCarriedItem(player)))
+				if (this.isHandleChisel(Entity.getCarriedItem(player)))
 					Game.prevent()
 			})
 
 			Callback.addCallback("ItemUse", (c, item, tile, isExternal, player) => {
 				this.carveBlock(c, tile, player)
-				console.debug(`{item: ${Item.getName(item.id, item.data)} [${item.id}${item.data}], block: ${Item.getName(tile.id, tile.data)} - ${tile.id}:${tile.data}}`)
+				// console.debug(`{item: ${Item.getName(item.id, item.data)} [${item.id}:(${item.data}/${Item.getMaxDamage(item.id)})], block: ${Item.getName(tile.id, tile.data)} - ${tile.id}:${tile.data}}`, `[ChiselItem.ts] ChiselItem.Custom.initCallbacks Callback.ItemUse`)
 			}) // 1:0, 98:0, 98:1, 98:2, 98:3
 		}
 
