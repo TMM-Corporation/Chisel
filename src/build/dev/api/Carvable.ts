@@ -25,6 +25,7 @@ namespace Carvable {
 			texture?: Texture
 			localization?: Localization
 			register?: boolean
+			sound?: string
 		}
 		export function create(variation: Variation): number {
 			let id = variation.texture.name
@@ -89,16 +90,21 @@ namespace Carvable {
 		export function groupExists(name: string) {
 			return name in List
 		}
-		export function searchBlock(id: number, data: number = 0): Search.ResultItem {
+		export function searchBlock(id: number, data: number = 0): { result: Search.ResultItem, group: Carvable.Group } {
 			let group = findGroupByBlock(id, data)
-			return group ? group.findBlock(id, data) : Search.NullItem
+			return group ?
+				{
+					result: group.findBlock(id, data), group: group
+				} : {
+					result: Search.NullItem, group: null
+				}
 		}
 
 		export function idDataFromSearch(value: Search.ResultItem) {
 			if (value.next && value.prev) {
 				let result = {
-					next: splitIdData(value.next),
-					prev: splitIdData(value.prev)
+					next: splitIdData(value.next.element),
+					prev: splitIdData(value.prev.element)
 				}
 				console.info(`Result [next=${result.next.id}:${result.next.data}, prev=${result.prev.id}:${result.prev.data}]`, `[Carvable.ts] Group.findBlock`)
 				return result
@@ -119,6 +125,7 @@ namespace Carvable {
 			data: number[],
 		}
 		search: string[]
+		variations: Tile.Variation[]
 	}
 
 	export class Group {
@@ -132,7 +139,8 @@ namespace Carvable {
 				id: [],
 				data: []
 			},
-			search: []
+			search: [],
+			variations: [],
 		}
 
 		constructor(groupName: string, display: string) {
@@ -150,6 +158,7 @@ namespace Carvable {
 			tile.forEach((variation: Tile.Variation) => {
 				if (variation.register != false) {
 					let id = 0, data = 0
+
 					if (variation.block) {
 						id = variation.block.id
 						data = variation.block.data || 0
@@ -157,8 +166,10 @@ namespace Carvable {
 						id = this.add(variation)
 						data = 0
 					}
+
 					idList.push(id)
 					dataList.push(data)
+					this.data.variations.push(variation)
 					this.data.search.push(`${id}:${data}`)
 				}
 			})
@@ -216,6 +227,12 @@ namespace Carvable {
 		get ids() {
 			return this.data.binding.id
 		}
+
+		findVariationByIndex(index: number): Tile.Variation {
+			let variations = this.data.variations
+			return variations[index] ? variations[index] : null
+		}
+
 		findBlock(id: number, data: number = 0): Search.ResultItem {
 			let blocks = this.data.search
 			console.info(`Trying to find block ${id}:${data} in ${this.name.groupName} group`, `[Carvable.ts] Group.findBlock`)
