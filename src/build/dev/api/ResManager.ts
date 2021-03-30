@@ -40,7 +40,7 @@ function isObject(obj: any) {
 }
 interface IResourceManager {
 	preloaderModule: boolean
-	resources: IResourceFileList
+	resources: obj
 	mod: string
 	Select(dir: string, name?: string): java.io.File
 	ReadFrom(_File: java.io.File): string
@@ -60,7 +60,6 @@ const ResourceManager: IResourceManager = {
 	resources: {files: [], dirs: {}},
 	mod: '',
 	/**
-	 * 
 	 * @param dir full path with / at the end
 	 * @param name file name with extension
 	 * @returns File of dir+name

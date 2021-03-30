@@ -1,13 +1,19 @@
 ./header.ts
-./api/CLI.ts
-./api/Additional.ts
+
 # Compile resources 
 ./api/ResManager.ts
-./resources.ts
+./register/resources.ts
+
+# Some api
+./api/CLI.ts
+./api/Additional.ts
+
 # Compile libs
 ./lib/CTMLib.ts
 ./lib/WindowShell.ts
+
 # Compile other
+./register/sounds.ts
 ./api/Carvable.ts
 ./api/ChiselItem.ts
 ./Chisel.ts
