@@ -107,13 +107,19 @@ ctx.runOnUiThread(new java.lang.Runnable({
 var Color = android.graphics.Color
 
 namespace Search {
+	export interface ResultData {
+		element: any
+		index: number
+	}
 	export interface ResultItem {
-		next: any,
-		prev: any
+		prev: ResultData,
+		current: ResultData,
+		next: ResultData,
 	}
 	export const NullItem = {
-		next: null,
-		prev: null
+		prev: null,
+		current: null,
+		next: null
 	}
 	export enum Direction {
 		NEXT, PREV
@@ -129,7 +135,12 @@ namespace Search {
 
 		if (i != -1) {
 			console.info(`Current: ${item} next: ${array[index.next]}$${index.next}, prev ${array[index.prev]}$${index.prev}`, `[Additional.ts] Search.find`)
-			return { next: array[index.next], prev: array[index.prev] }
+			return {
+				prev: { element: array[index.prev], index: index.prev },
+				current: { element: item, index: i },
+				next: { element: array[index.next], index: index.next },
+
+			}
 		}
 
 		console.error(`Cannot find index of ${item}`, `[Additional.ts] Search.find`)
