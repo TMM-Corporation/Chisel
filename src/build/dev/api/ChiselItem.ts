@@ -95,7 +95,7 @@ namespace ChiselItem {
 				if (used) {
 					source.setBlock(c.x, c.y, c.z, result.id, result.data)
 
-					SoundManager.playSoundAtBlock({ x: c.x, y: c.y, z: c.z }, getSoundFromConstName(sound), 0.5, 8)
+					SoundManager.playSoundAtBlock({ x: c.x, y: c.y, z: c.z }, getSoundFromConstName(sound), 1, 8)
 				}
 				this.setState(CurrentState.Normal)
 
@@ -112,23 +112,27 @@ namespace ChiselItem {
 		isHandleChisel(handItem: ItemInstance) {
 			return handItem.id == this.data.item.id
 		}
-
+		breakItem(player: number) {
+			Entity.setCarriedItem(player, 0, 0, 0)
+			SoundManager.playSoundAtEntity(player, "item_break", 1, )
+		}
 		onUse(player: number): boolean {
 			let item = Entity.getCarriedItem(player)
 			let maxDamage = Item.getMaxDamage(item.id)
-
-			if (new PlayerActor(player).getGameMode() != 1 && item.data <= maxDamage) {
-				if (item.data == maxDamage)
-					Entity.setCarriedItem(player, 0, 0, 0)
+			let playerGM = new PlayerActor(player).getGameMode()
+			if (playerGM != 1 && item.data <= maxDamage) {
+				if (++item.data == maxDamage)
+					this.breakItem(player)
 				else
-					Entity.setCarriedItem(player, item.id, 1, ++item.data, item.extra)
+					Entity.setCarriedItem(player, item.id, 1, item.data, item.extra)
+				console.info(`Data: ${item.data}/${maxDamage}, playerGM: ${playerGM}`, `[ChiselItem.ts] ChiselItem.Custom.onUse`)
 				return true
 			} else if (item.data > maxDamage) {
-				Entity.setCarriedItem(player, 0, 0, 0)
+				this.breakItem(player)
+				console.info(`Data: ${item.data}/${maxDamage}, playerGM: ${playerGM}`, `[ChiselItem.ts] ChiselItem.Custom.onUse`)
 				console.error(`How you chiseled with data > maxDamage?`, `[ChiselItem.ts] ChiselItem.Custom.onUse`)
 				return false
 			}
-			console.info(`Data: ${item.data} /${maxDamage}`, `[ChiselItem.ts] ChiselItem.Custom.onUse`)
 
 			return true
 		}

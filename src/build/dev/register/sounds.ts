@@ -29,6 +29,9 @@ var SoundList = {
 	"metal7": "dig/metal7.ogg",
 	"metal8": "dig/metal8.ogg",
 
+	/* DIR: sounds/item/*.ogg */
+	"item_break": "item/break.ogg",
+
 	/* DIR: sounds/random/*.ogg */
 	"squash": "random/squash.ogg",
 	"squash2": "random/squash2.ogg",
@@ -103,6 +106,9 @@ var SoundConst = {
 		"templeblock4",
 		"templeblock5",
 	],
+	"item.break": [
+		"item_break"
+	]
 }
 for (let name in SoundList) {
 	SoundManager.registerSound(name, SoundList[name])
