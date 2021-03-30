@@ -11,7 +11,7 @@ namespace ChiselItem {
 
 	export enum CurrentState {
 		Normal,
-		BreakBlock,
+		Carving,
 		OpenGui
 	}
 	export enum UseMode {
@@ -76,20 +76,27 @@ namespace ChiselItem {
 			if (!this.isHandleChisel(Entity.getCarriedItem(player)))
 				return false
 			let search = Carvable.Groups.searchBlock(tile.id, tile.data)
-			let searchDecoded = Carvable.Groups.idDataFromSearch(search)
+			let searchResult = search.result
+			let searchGroup = search.group
+			let searchDecoded = Carvable.Groups.idDataFromSearch(searchResult)
+			let sneaking = Entity.getSneaking(player)
 			let result =
-				Entity.getSneaking(player) && search.prev ? searchDecoded.prev :
-					search.next ? searchDecoded.next : { id: -1, data: -1 }
+				sneaking && searchResult.prev ? searchDecoded.prev :
+					searchResult.next ? searchDecoded.next : { id: -1, data: -1 }
 
 
 			if (result.id != -1) {
-				this.setState(CurrentState.BreakBlock)
+				this.setState(CurrentState.Carving)
 				console.info(`Result in tap: [${result.id}:${result.data}]`, `[ChiselItem.ts] ChiselItem.Custom.carveBlock`)
 
 				let source = BlockSource.getDefaultForActor(player)
-				source.setBlock(c.x, c.y, c.z, result.id, result.data)
+				let sound = searchGroup.findVariationByIndex(sneaking ? searchResult.prev.index : searchResult.next.index).sound || "chisel.fallback"
+				let used = this.onUse(player)
+				if (used) {
+					source.setBlock(c.x, c.y, c.z, result.id, result.data)
 
-				this.onUse(player)
+					SoundManager.playSoundAtBlock({ x: c.x, y: c.y, z: c.z }, getSoundFromConstName(sound), 0.5, 8)
+				}
 				this.setState(CurrentState.Normal)
 
 				return true
@@ -110,12 +117,19 @@ namespace ChiselItem {
 			let item = Entity.getCarriedItem(player)
 			let maxDamage = Item.getMaxDamage(item.id)
 
-			if (item.data >= maxDamage)
+			if (new PlayerActor(player).getGameMode() != 1 && item.data <= maxDamage) {
+				if (item.data == maxDamage)
+					Entity.setCarriedItem(player, 0, 0, 0)
+				else
+					Entity.setCarriedItem(player, item.id, 1, ++item.data, item.extra)
+				return true
+			} else if (item.data > maxDamage) {
 				Entity.setCarriedItem(player, 0, 0, 0)
-			else if (new PlayerActor(player).getGameMode() != 1)
-				Entity.setCarriedItem(player, item.id, 1, ++item.data, item.extra)
+				console.error(`How you chiseled with data > maxDamage?`, `[ChiselItem.ts] ChiselItem.Custom.onUse`)
+				return false
+			}
+			console.info(`Data: ${item.data} /${maxDamage}`, `[ChiselItem.ts] ChiselItem.Custom.onUse`)
 
-			console.info(`Data: ${item.data}/${maxDamage}`, `[ChiselItem.ts] ChiselItem.Custom.onUse`)
 			return true
 		}
 
