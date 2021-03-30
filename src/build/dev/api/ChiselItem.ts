@@ -128,11 +128,13 @@ namespace ChiselItem {
 				if (this.isHandleChisel(Entity.getCarriedItem(player)))
 					Game.prevent()
 			})
-
+			Callback.addCallback("DestroyBlock", (c, tile, player) => {
+				if (this.isHandleChisel(Entity.getCarriedItem(player)))
+					Game.prevent()
+			})
 			Callback.addCallback("ItemUse", (c, item, tile, isExternal, player) => {
 				this.carveBlock(c, tile, player)
-				// console.debug(`{item: ${Item.getName(item.id, item.data)} [${item.id}:(${item.data}/${Item.getMaxDamage(item.id)})], block: ${Item.getName(tile.id, tile.data)} - ${tile.id}:${tile.data}}`, `[ChiselItem.ts] ChiselItem.Custom.initCallbacks Callback.ItemUse`)
-			}) // 1:0, 98:0, 98:1, 98:2, 98:3
+			})
 		}
 
 		open(player: number, item: ItemInstance): boolean {
