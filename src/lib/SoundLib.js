@@ -104,11 +104,11 @@ var SoundManager;
 		return playSoundAt(pos.x, pos.y, pos.z, soundName, volume, pitch, radius)
 	}
 	SoundManager.playSoundAtEntity = playSoundAtEntity
-	function playSoundAtBlock(tile, soundName, volume, radius) {
+	function playSoundAtBlock(tile, soundName, volume, pitch, radius) {
 		if (radius === void 0) { radius = 16 }
 		if (tile.dimension != undefined && tile.dimension != Player.getDimension())
 			return 0
-		return playSoundAt(tile.x + .5, tile.y + .5, tile.z + .5, soundName, volume, 1, radius)
+		return playSoundAt(tile.x + .5, tile.y + .5, tile.z + .5, soundName, volume, pitch, radius)
 	}
 	SoundManager.playSoundAtBlock = playSoundAtBlock
 	function createSource(sourceType, source, soundName, volume, radius) {
