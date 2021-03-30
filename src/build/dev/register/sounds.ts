@@ -1,6 +1,6 @@
 
 SoundManager.init(16)
-SoundManager.setResourcePath(__dir__ + RM.resources.dirs.sounds)
+SoundManager.setResourcePath(__dir__ + ModData.dirs.sounds)
 
 var SoundList = {
 	/* DIR: sounds/chisel/*.ogg */

@@ -1,5 +1,5 @@
 
-const ModData = {
+var ModData = {
 	name: {
 		small: 'chisel',
 		normal: 'Chisel'
@@ -16,7 +16,7 @@ const ModData = {
 		/** @returns block textures path, ends with / */
 		terrain_atlas: 'resources/ic_mod/terrain-atlas/',
 		/** @returns sounds path, ends with / */
-		sound: 'resources/ic_mod/sounds/',
+		sounds: 'resources/ic_mod/sounds/',
 		/** @returns ui textures path, ends with / */
 		ui: 'gui/ui/',
 		/** @returns ui textures path, ends with / */
