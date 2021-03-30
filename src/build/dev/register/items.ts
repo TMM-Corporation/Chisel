@@ -8,7 +8,7 @@ new ChiselItem.Custom({
 		texture: {
 			name: "chisel_iron"
 		},
-		durability: 2
+		durability: 512
 	}
 })
 new ChiselItem.Custom({
