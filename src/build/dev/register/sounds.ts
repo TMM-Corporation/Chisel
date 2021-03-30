@@ -47,6 +47,67 @@ var SoundList = {
 	"templeblock5": "step/templeblock5.ogg",
 }
 
+var SoundConst = {
+	"chisel.dirt": [
+		"dirt1",
+		"dirt2",
+		"dirt3",
+		"dirt4",
+	],
+	"chisel.fallback": [
+		"fallback",
+	],
+	"chisel.wood": [
+		"wood2",
+		"wood3",
+		"wood4",
+		"wood5",
+		"wood8",
+		"wood9",
+		"wood11",
+	],
+	"dig.grimstone": [
+		"grimstone1",
+	],
+	"dig.holystone": [
+		"holystone1",
+		"holystone2",
+		"holystone5",
+	],
+	"dig.metal": [
+		"metal",
+		"metal1",
+		"metal2",
+		"metal3",
+		"metal7",
+		"metal8",
+	],
+	"random.squash": [
+		"squash",
+		"squash2",
+	],
+	"step.holystone": [
+		"holystone3",
+		"holystone7",
+	],
+	"step.metal": [
+		"metal4",
+		"metal5",
+		"metal6",
+		"metal9",
+	],
+	"step.templeblock": [
+		"templeblock1",
+		"templeblock2",
+		"templeblock3",
+		"templeblock4",
+		"templeblock5",
+	],
+}
 for (let name in SoundList) {
 	SoundManager.registerSound(name, SoundList[name])
+}
+function getSoundFromConstName(value: string) {
+	let sounds = SoundConst[value]
+	return sounds[Math.floor(Math.random() * sounds.length)]
 }
