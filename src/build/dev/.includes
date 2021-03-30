@@ -11,6 +11,7 @@
 # Compile libs
 ./lib/CTMLib.ts
 ./lib/WindowShell.ts
+./lib/ItemName.ts
 
 # Compile other
 ./register/sounds.ts

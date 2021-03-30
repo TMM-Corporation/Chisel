@@ -16,12 +16,14 @@
 	],
 	"include": [
 		"header.ts",
+		"api/ResManager.ts",
+		"register/resources.ts",
 		"api/CLI.ts",
 		"api/Additional.ts",
-		"api/ResManager.ts",
-		"resources.ts",
 		"lib/CTMLib.ts",
 		"lib/WindowShell.ts",
+		"lib/ItemName.ts",
+		"register/sounds.ts",
 		"api/Carvable.ts",
 		"api/ChiselItem.ts",
 		"Chisel.ts"
@@ -31,6 +33,8 @@
 		"F:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\android.d.ts",
 		"F:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\connected-texture.d.ts",
 		"F:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\core-engine.d.ts",
-		"F:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\pre-loader.d.ts"
+		"F:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\pre-loader.d.ts",
+		"F:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\SoundAPI.d.ts",
+		"F:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\SoundLib.d.ts"
 	]
 }
