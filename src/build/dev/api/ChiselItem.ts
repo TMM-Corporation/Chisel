@@ -72,7 +72,7 @@ namespace ChiselItem {
 			this.data.state = state
 		}
 
-		carveBlock(c, tile, player): boolean {
+		carveBlock(c: Callback.ItemUseCoordinates, tile: Tile, player: number): boolean {
 			if (!this.isHandleChisel(Entity.getCarriedItem(player)))
 				return false
 			let search = Carvable.Groups.searchBlock(tile.id, tile.data)
@@ -80,10 +80,8 @@ namespace ChiselItem {
 			let searchGroup = search.group
 			let searchDecoded = Carvable.Groups.idDataFromSearch(searchResult)
 			let sneaking = Entity.getSneaking(player)
-			let result =
-				sneaking && searchResult.prev ? searchDecoded.prev :
-					searchResult.next ? searchDecoded.next : { id: -1, data: -1 }
-
+			let result = sneaking && searchResult.prev ? searchDecoded.prev :
+				searchResult.next ? searchDecoded.next : { id: -1, data: -1 }
 
 			if (result.id != -1) {
 				this.setState(CurrentState.Carving)
@@ -92,13 +90,13 @@ namespace ChiselItem {
 				let source = BlockSource.getDefaultForActor(player)
 				let sound = searchGroup.findVariationByIndex(sneaking ? searchResult.prev.index : searchResult.next.index).sound || "chisel.fallback"
 				let used = this.onUse(player)
+
 				if (used) {
 					source.setBlock(c.x, c.y, c.z, result.id, result.data)
-
-					SoundManager.playSoundAtBlock({ x: c.x, y: c.y, z: c.z }, getSoundFromConstName(sound), 1, 8)
+					SoundManager.playSoundAtBlock({ x: c.x, y: c.y, z: c.z }, getSoundFromConstName(sound), 1, getRandomArbitrary(0.7, 1), 8)
 				}
-				this.setState(CurrentState.Normal)
 
+				this.setState(CurrentState.Normal)
 				return true
 			} else console.warn(`Result id = -1`, `[ChiselItem.ts] ChiselItem.Custom.carveBlock`)
 
@@ -114,12 +112,13 @@ namespace ChiselItem {
 		}
 		breakItem(player: number) {
 			Entity.setCarriedItem(player, 0, 0, 0)
-			SoundManager.playSoundAtEntity(player, "item_break", 1, )
+			SoundManager.playSoundAtEntity(player, "item_break", 1, getRandomArbitrary(0.85, 1))
 		}
 		onUse(player: number): boolean {
 			let item = Entity.getCarriedItem(player)
 			let maxDamage = Item.getMaxDamage(item.id)
 			let playerGM = new PlayerActor(player).getGameMode()
+
 			if (playerGM != 1 && item.data <= maxDamage) {
 				if (++item.data == maxDamage)
 					this.breakItem(player)

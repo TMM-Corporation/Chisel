@@ -177,3 +177,6 @@ namespace GameSetting {
 		alert(`UIMode: ${mode}`)
 	})
 }
+function getRandomArbitrary(min: number, max: number) {
+	return Math.random() * (max - min) + min
+}
