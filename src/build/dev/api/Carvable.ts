@@ -89,11 +89,26 @@ namespace Carvable {
 		export function groupExists(name: string) {
 			return name in List
 		}
-		export function searchBlock(id: number, data: number = 0, direction: Search.Direction) {
+		export function searchBlock(id: number, data: number = 0): Search.ResultItem {
 			let group = findGroupByBlock(id, data)
-			if (group)
-				return group.findBlock(id, data, direction)
-			return { id: -1, data: 0 }
+			return group ? group.findBlock(id, data) : Search.NullItem
+		}
+
+		export function idDataFromSearch(value: Search.ResultItem) {
+			if (value.next && value.prev) {
+				let result = {
+					next: splitIdData(value.next),
+					prev: splitIdData(value.prev)
+				}
+				console.info(`Result [next=${result.next.id}:${result.next.data}, prev=${result.prev.id}:${result.prev.data}]`, `[Carvable.ts] Group.findBlock`)
+				return result
+			}
+		}
+		export function splitIdData(value: string) {
+			if (value) {
+				let splitted = value.split(":")
+				return { id: Number(splitted[0]), data: Number(splitted[1]) }
+			}
 		}
 	}
 
@@ -201,16 +216,10 @@ namespace Carvable {
 		get ids() {
 			return this.data.binding.id
 		}
-		findBlock(id: number, data: number = 0, direction: Search.Direction): { id: number, data: number } {
+		findBlock(id: number, data: number = 0): Search.ResultItem {
 			let blocks = this.data.search
-			console.info(`Trying to find ${direction == Search.Direction.NEXT ? "NEXT" : "PREV"} block in ${this.name.groupName} group`, `[Carvable.ts] Group.findBlock`)
-			let result = Search.find(blocks, `${id}:${data}`, direction)
-
-			if (result != -1 && result) {
-				result = result.split(":")
-				console.info(`Result ${result[0]}:${result[1]}`, `[Carvable.ts] Group.findBlock`)
-				return { id: result[0], data: result[1] }
-			}
+			console.info(`Trying to find block ${id}:${data} in ${this.name.groupName} group`, `[Carvable.ts] Group.findBlock`)
+			return Search.find(blocks, `${id}:${data}`)
 		}
 	}
 }

@@ -75,12 +75,12 @@ namespace ChiselItem {
 		carveBlock(c, tile, player): boolean {
 			if (!this.isHandleChisel(Entity.getCarriedItem(player)))
 				return false
+			let search = Carvable.Groups.searchBlock(tile.id, tile.data)
+			let searchDecoded = Carvable.Groups.idDataFromSearch(search)
+			let result =
+				Entity.getSneaking(player) && search.prev ? searchDecoded.prev :
+					search.next ? searchDecoded.next : { id: -1, data: -1 }
 
-			let result
-			if (Entity.getSneaking(player))
-				result = Carvable.Groups.searchBlock(tile.id, tile.data, Search.Direction.PREV)
-			else
-				result = Carvable.Groups.searchBlock(tile.id, tile.data, Search.Direction.NEXT)
 
 			if (result.id != -1) {
 				this.setState(CurrentState.BreakBlock)
@@ -123,7 +123,6 @@ namespace ChiselItem {
 			Callback.addCallback("ItemUseNoTarget", (item, player) => {
 				this.open(player, item)
 			})
-
 			Callback.addCallback("DestroyBlockStart", (c, tile, player) => {
 				if (this.isHandleChisel(Entity.getCarriedItem(player)))
 					Game.prevent()

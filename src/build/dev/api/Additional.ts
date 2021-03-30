@@ -107,20 +107,62 @@ ctx.runOnUiThread(new java.lang.Runnable({
 var Color = android.graphics.Color
 
 namespace Search {
+	export interface ResultItem {
+		next: any,
+		prev: any
+	}
+	export const NullItem = {
+		next: null,
+		prev: null
+	}
 	export enum Direction {
 		NEXT, PREV
 	}
-	export function find(array: Array<any>, item: any, direction: Direction): any {
-		let len = array.length, i = array.lastIndexOf(item)
-		if (i != -1) {
-			console.info(`Direction: ${direction}, Current: ${item} next: ${array[(i + 1) % len]}, prev ${array[(i + len - 1) % len]}`, `[Additional.ts] Search.find`)
-			if (direction == Direction.NEXT)
-				return array[(i + 1) % len]
-			if (direction == Direction.PREV)
-				return array[(i + len - 1) % len]
-		} else
-			console.error(`Cannot find index of ${item}`, `[Additional.ts] Search.find`)
-
-		return null
+	export function findIndex(index: number, length: number): { next: number, prev: number } {
+		let next: number = (index + 1) % length
+		let prev: number = (index + length - 1) % length
+		return { next, prev }
 	}
+	export function find(array: Array<any>, item: any): ResultItem {
+		let len = array.length, i = array.lastIndexOf(item)
+		let index = findIndex(i, len)
+
+		if (i != -1) {
+			console.info(`Current: ${item} next: ${array[index.next]}$${index.next}, prev ${array[index.prev]}$${index.prev}`, `[Additional.ts] Search.find`)
+			return { next: array[index.next], prev: array[index.prev] }
+		}
+
+		console.error(`Cannot find index of ${item}`, `[Additional.ts] Search.find`)
+		return NullItem
+	}
+}
+
+
+
+namespace GameSetting {
+	export var lang: string
+	export type UiMode = "pc" | "pe"
+	export var UIMode: string
+
+	export function getSetting(data: string) {
+		return FileTools.ReadKeyValueFile("games/com.mojang/minecraftpe/options.txt")[data]
+	}
+	export function getLang() {
+		return GameSetting.getSetting("game_language")
+	}
+	export function getUIMode() {
+		return GameSetting.getSetting("gfx_ui_profile")
+	}
+	Threading.initThread("AdditionalCallbacks", () => {
+		if (lang != getLang())
+			Callback.invokeCallback("LanguageChanged", lang = getLang())
+		if (UIMode != getUIMode())
+			Callback.invokeCallback("UIModeChanged", UIMode = getUIMode())
+	})
+	Callback.addCallback("LanguageChanged", (lang: string) => {
+		alert(`Language: ${lang}`)
+	})
+	Callback.addCallback("UIModeChanged", (mode: string) => {
+		alert(`UIMode: ${mode}`)
+	})
 }
