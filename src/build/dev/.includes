@@ -7,6 +7,8 @@
 # Some api
 ./api/CLI.ts
 ./api/Additional.ts
+./api/Carvable.ts
+./api/ChiselItem.ts
 
 # Compile libs
 ./lib/CTMLib.ts
@@ -15,6 +17,6 @@
 
 # Compile other
 ./register/sounds.ts
-./api/Carvable.ts
-./api/ChiselItem.ts
+./register/gui.ts
+./register/items.ts
 ./Chisel.ts

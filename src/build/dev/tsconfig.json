@@ -20,12 +20,14 @@
 		"register/resources.ts",
 		"api/CLI.ts",
 		"api/Additional.ts",
+		"api/Carvable.ts",
+		"api/ChiselItem.ts",
 		"lib/CTMLib.ts",
 		"lib/WindowShell.ts",
 		"lib/ItemName.ts",
 		"register/sounds.ts",
-		"api/Carvable.ts",
-		"api/ChiselItem.ts",
+		"register/gui.ts",
+		"register/items.ts",
 		"Chisel.ts"
 	],
 	"files": [

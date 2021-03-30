@@ -45,7 +45,7 @@ stoneGroup.addFromDescription({
 		{
 			block: {
 				id: 1, data: 0
-			}
+			},
 		},
 		{
 			block: {
@@ -70,42 +70,6 @@ stoneGroup.addFromDescription({
 	]
 })
 
-let itemGui = new WindowShell.Standart(WindowShell.GUIStyle.classic)
-itemGui.open()
-new ChiselItem.Custom({
-	gui: itemGui,
-	item: {
-		name: "item_chisel_iron_name",
-		namedId: "chisel_iron",
-		description: ["item.chisel"],
-		texture: {
-			name: "chisel_iron"
-		},
-		durability: 512
-	}
-})
-new ChiselItem.Custom({
-	gui: itemGui,
-	item: {
-		name: "item_chisel_diamond_name",
-		namedId: "chisel_diamond",
-		texture: {
-			name: "chisel_diamond"
-		},
-		durability: 5056
-	}
-})
-new ChiselItem.Custom({
-	gui: itemGui,
-	item: {
-		name: "item_chisel_hitech_name",
-		namedId: "chisel_hitech",
-		texture: {
-			name: "chisel_hitech"
-		},
-		durability: 10048
-	}
-})
 
 // Carvable.addTile(OpenTile('chisel_ancient_stone'))
 // Carvable.addTile(OpenTile('chisel_andesite'))
