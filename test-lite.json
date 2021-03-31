@@ -10,6 +10,10 @@
 		"api": "CoreEngine"
 	},
 	"make": {
+		"debugAbi": "armeabi-v7a",
+		"abis": ["armeabi-v7a", "x86"],
+		"linkNative": ["minecraftpe", "innercore", "nativejs"],
+		"excludeFromRelease": [],
 		"pushTo": "storage/emulated/0/games/horizon/packs/Inner_Core_Test/innercore/mods/Chisel-test",
 		"ndkPath": null
 	},
@@ -47,7 +51,12 @@
 			"language": "javascript"
 		}
 	],
-	"compile": [],
+	"compile": [
+		{
+			"source": "src/build/native/*",
+			"type": "native"
+		}
+	],
 	"additional": [
 		{
 			"source": "src/config.json",

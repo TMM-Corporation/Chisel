@@ -152,8 +152,10 @@ namespace Search {
 
 namespace GameSetting {
 	export var lang: string
-	export type UiMode = "pc" | "pe"
-	export var UIMode: string
+	export enum UiMode {
+		classic, pocket
+	}
+	export var UIMode: number
 
 	export function getSetting(data: string) {
 		return FileTools.ReadKeyValueFile("games/com.mojang/minecraftpe/options.txt")[data]
@@ -162,20 +164,21 @@ namespace GameSetting {
 		return GameSetting.getSetting("game_language")
 	}
 	export function getUIMode() {
-		return GameSetting.getSetting("gfx_ui_profile")
+		return tryRun(OptionsModule, "getUIProfile")
+		// return GameSetting.getSetting("gfx_ui_profile")
 	}
-	Threading.initThread("AdditionalCallbacks", () => {
-		if (lang != getLang())
-			Callback.invokeCallback("LanguageChanged", lang = getLang())
-		if (UIMode != getUIMode())
-			Callback.invokeCallback("UIModeChanged", UIMode = getUIMode())
-	})
-	Callback.addCallback("LanguageChanged", (lang: string) => {
-		alert(`Language: ${lang}`)
-	})
-	Callback.addCallback("UIModeChanged", (mode: string) => {
-		alert(`UIMode: ${mode}`)
-	})
+	// Threading.initThread("AdditionalCallbacks", () => {
+	// 	if (lang != getLang())
+	// 		Callback.invokeCallback("LanguageChanged", lang = getLang())
+	// 	if (UIMode != getUIMode())
+	// 		Callback.invokeCallback("UIModeChanged", UIMode = getUIMode())
+	// })
+	// Callback.addCallback("LanguageChanged", (lang: string) => {
+	// 	alert(`Language: ${lang}`)
+	// })
+	// Callback.addCallback("UIModeChanged", (mode: string) => {
+	// 	alert(`UIMode: ${mode}`)
+	// })
 }
 function getRandomArbitrary(min: number, max: number) {
 	return Math.random() * (max - min) + min

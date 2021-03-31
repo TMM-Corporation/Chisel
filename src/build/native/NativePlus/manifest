@@ -1,0 +1,13 @@
+{
+    "shared": {
+        "name": "native_plus",
+		"include": [
+			"shared_headers"
+		]
+    },
+
+    "depends": [
+    	"innercore",
+    	"nativejs"
+	]
+}
