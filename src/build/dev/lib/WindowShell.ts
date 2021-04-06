@@ -1,5 +1,40 @@
+
+namespace AndroidMetrics {
+	const ctx = UI.getContext()
+	const Point = android.graphics.Point
+	export const Metrics = new android.util.DisplayMetrics()
+	export const DecorView = ctx.getWindow().getDecorView()
+	export const Display = ctx.getWindowManager().getDefaultDisplay()
+
+	ctx.getWindowManager().getDefaultDisplay().getMetrics(Metrics)
+	export namespace Screen {
+		var point1 = new Point()
+		Display.getRealSize(point1)
+		var point2 = new Point()
+		Display.getSize(point2)
+		var loc = [0, 0]
+		DecorView.getLocationOnScreen(loc)
+
+		export const realSize = {
+			width: Math.max(point1.x, point1.y) - loc[0],
+			height: Math.min(point1.x, point1.y)
+		}
+		export const size = {
+			width: Math.max(point2.x, point2.y),
+			height: Math.min(point2.x, point2.y)
+		}
+	}
+	export const width = Math.max(Metrics.widthPixels, Metrics.heightPixels)
+	export const height = Math.min(Metrics.widthPixels, Metrics.heightPixels)
+}
+
+
 namespace WindowShell {
 	export var WindowMarginLR = 340
+	export var DP = {
+		W: 1000 / AndroidMetrics.width,
+		H: AndroidMetrics.height * 1000 / AndroidMetrics.width
+	}
 	export interface IStyle {
 		location?: UI.WindowLocationParams
 		elements?: UI.ElementSet
@@ -137,9 +172,22 @@ namespace WindowShell {
 			this.Window.setInventoryNeeded(true)
 		}
 		private setupClassic() {
+			let ND = {
+				SH: (1080 * 1000) / 1920,
+				SW: 1000 / 1920,
+				_16x9T: 322,
+				_16x9B: 35,
+			}
+			let formula = {
+				a: ND.SH - DP.H,
+				b: ND.SW - DP.W
+			}
 			this.setLocation({
 				padding: {
-					top: 280, left: this.marginLR, bottom: 35, right: this.marginLR
+					top: ND._16x9T - formula.a / 2, //330 || 280
+					left: this.marginLR,
+					bottom: 40,
+					right: this.marginLR
 				}
 			})
 
@@ -157,7 +205,7 @@ namespace WindowShell {
 
 			this.addDrawings([
 				{ type: "color", color: 0 },
-				// { type: "frame", x: 0, y: 0, width: this.Window.getLocation().getWindowWidth(), height: this.Window.getLocation().getWindowHeight(), scale: 1, bitmap: "style:frame_background_border", color: Color.rgb(198, 198, 198) }
+				{ type: "frame", x: 0, y: 0, width: this.Window.getLocation().getWindowWidth(), height: this.Window.getLocation().getWindowHeight(), scale: 1, bitmap: "style:frame_background_border", color: Color.rgb(198, 198, 198) }
 			])
 
 			this.Window.setDynamic(false)
@@ -295,4 +343,78 @@ namespace WindowShell {
 			this.instance.addWindowInstance("inventory_default", new Inventory(style).Window)
 		}
 	}
+}
+
+namespace Window {
+	const DP = WindowShell.DP
+	export interface List { [name: string]: WindowShell.Group }
+	export interface Location {
+		align: {
+			vertical: Metrics.alignV,
+			horizontal: Metrics.alignH
+		},
+		width: number,
+		height: number,
+	}
+	export interface Description {
+		windows: List
+		description: {
+			header: {
+				title: {
+					text?: string,
+					font?: string,
+					size?: number,
+					color?: number,
+					shadow?: number
+				},
+				closeButton?: boolean
+			}
+			style: {
+				pc: {
+					main: {
+						location: Location
+					}
+					inventory: {
+						location: Location
+					}
+				}
+			}
+		}
+	}
+
+	export namespace Metrics {
+		export type alignV = "center" | "top" | "bottom"
+
+		export type alignH = "center" | "left" | "right"
+
+		export type Type = "vw" | "vh"
+
+		export function vw(value: number): number {
+			return value
+		}
+		export function vh(value: number): number {
+			return value * (2 - (AndroidMetrics.Screen.realSize.width / 1920))
+		}
+		export function scaleW(value: number, scale: number) {
+			return vw(value) * scale
+		}
+		export function scaleH(value: number, scale: number) {
+			return vh(value) * scale
+		}
+		export function scale(value: number, scale: number, type: Type) {
+			return type == "vh" ? scaleH(value, scale) : type == "vw" ? scaleW(value, scale) : value * scale
+		}
+	}
+	export class Standart {
+		constructor(data: Description) {
+
+		}
+	}
+	console.log(`UI.getScreenHeight() = ${UI.getScreenHeight()}`)
+	console.log(`vh 280: ${Metrics.vh(280)}, vh 35: ${Metrics.vh(35)}`)
+	console.log(`${280 * (DP.W - DP.H)}, ${35 * (DP.W - DP.H)}`)
+	console.log(`${280 * (DP.H - DP.W)}, ${35 * (DP.H - DP.W)}`)
+	console.log(`DPW: ${DP.W}`)
+	console.log(`DPH: ${DP.H}`)
+	// console.info(`${}`)
 }

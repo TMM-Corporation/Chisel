@@ -74,33 +74,33 @@ namespace TextureSource {
 }
 var ScriptableObjectHelper = new Scriptable()
 namespace console {
-	export function debug(message: string, prefix?: string) {
+	export function debug(message: string | number, prefix?: string) {
 		Logger.Log(`${prefix ? "[" + prefix + "]" : ""} ${message}`, 'DEBUG')
 	}
-	export function error(message: string, prefix?: string) {
+	export function error(message: string | number, prefix?: string) {
 		Logger.Log(`${prefix ? "[" + prefix + "]" : ""} ${message}`, 'ERROR')
 	}
 	export function exception(exception: java.lang.Throwable) {
 		Logger.LogError(exception)
 	}
-	export function info(message: string, prefix?: string) {
+	export function info(message: string | number, prefix?: string) {
 		Logger.Log(`${prefix ? "[" + prefix + "]" : ""} ${message}`, 'INFO')
 	}
-	export function log(message: string, prefix?: string) {
+	export function log(message: string | number, prefix?: string) {
 		Logger.Log(`${prefix ? "[" + prefix + "]" : ""} ${message}`, 'LOG')
 	}
-	export function warn(message: string, prefix?: string) {
+	export function warn(message: string | number, prefix?: string) {
 		Logger.Log(`${prefix ? "[" + prefix + "]" : ""} ${message}`, 'WARN')
 	}
 }
 
-var ctx = UI.getContext()
-ctx.runOnUiThread(new java.lang.Runnable({
+UI.getContext().runOnUiThread(new java.lang.Runnable({
 	run: function () {
-		ctx.getWindow().setFlags(
+		UI.getContext().getWindow().setFlags(
 			android.view.WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
 			android.view.WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
 		)
+		// UI.getContext().getWindow().getAttributes().layoutInDisplayCutoutMode = android.view.WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES
 	}
 }))
 
