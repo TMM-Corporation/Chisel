@@ -1,54 +1,84 @@
 
 namespace ItemName {
-	var Data: { [id: number]: NameData }
-	export interface NameData {
+	var Data: { [id: number]: Bind }
+	export interface BindingData {
 		inGui: string
 		inWorld: string
 		toolTip: string
-		normal: string
+		default: string
 		mod: string
 	}
+	export enum State {
+		Default,
+		World,
+		Gui
+	}
+	export interface OverrideFunction {
+		(item: ItemInstance, translation: string, name: string, state: State, data: BindingData): string | void
+	}
+	export interface BindingRegistration {
+		callback: boolean,
+		default: boolean
+	}
 	export class Bind {
-		data: NameData
-		itemData: ItemInstance
-		nameOverrideFunction: Callback.ItemNameOverrideFunction
-		constructor(data: NameData, itemData: ItemInstance, nameOverrideFunction: Callback.ItemNameOverrideFunction) {
+		data: BindingData
+		formatted: BindingData
+		itemID: number
+		nameOverrideFunction: OverrideFunction
+		registered: BindingRegistration = { callback: false, default: false }
+		constructor(data: BindingData, itemID: number) {
 			this.data = data
-			this.itemData = itemData
-			this.nameOverrideFunction = nameOverrideFunction
+			this.itemID = itemID
+			this.setFormattedNames(data)
 		}
-		setCustomNameOverrideFunction(item: ItemInstance, translation: string, name: string) {
-			// Item.registerNameOverrideFunction(itemData.id, (itemC: ItemInstance, translationC: string, nameC: string) => {
-				switch (MCGUI.Screen.Latest.enumType) {
-					case MCGUI.Screen.Types.ENTITY:
-					case MCGUI.Screen.Types.NATIVE_TILE:
-					case MCGUI.Screen.Types.INVENTORY:
-						return this.data.normal + this.data.inGui + this.data.mod
-					case MCGUI.Screen.Types.GAMEPLAY:
-						return this.data.normal + this.data.inWorld
-					default:
-						return this.data.normal
-				}
-			// })
+		registerCustomNameOverrideFunction(nameOverrideFunction: OverrideFunction) {
+			Item.registerNameOverrideFunction(this.itemID, (item: ItemInstance, translation: string, name: string) => {
+				return nameOverrideFunction(item, translation, name, this.getNameState(), this.data)
+			})
+			this.registered.default = true
 		}
-		setBaseName(value: string) {
-			this.data.normal = value
+		registerCustomNameOverrideCallback(nameOverrideFunction: OverrideFunction) {
+			Callback.addCallback("ItemNameOverride", (item: ItemInstance, translation: string, name: string) => {
+				if (item.id == this.itemID)
+					return nameOverrideFunction(item, translation, name, this.getNameState(), this.data)
+			})
+			this.registered.callback = true
 		}
-		setToolTip(value: string) {
-			this.data.toolTip = value
+		getNameState(): State {
+			switch (MCGUI.Screen.Latest.enumType) {
+				case MCGUI.Screen.Types.ENTITY:
+				case MCGUI.Screen.Types.NATIVE_TILE:
+				case MCGUI.Screen.Types.INVENTORY:
+					return State.Gui
+				case MCGUI.Screen.Types.GAMEPLAY:
+					return State.World
+				default:
+					return State.Default
+			}
 		}
-		setModName(value: string) {
-			this.data.mod = `${Native.Color.DARK_PURPLE}${value}`
-		}
-		setInGuiName(value: string) {
-			this.data.inGui = value
-		}
-		setInWorldName(value: string) {
-			this.data.inWorld = value
+		setFormattedNames(data: BindingData) {
+			this.formatted = {
+				default: data.default,
+				toolTip: `${Native.Color.GRAY}${data.toolTip}`,
+				mod: `${Native.Color.DARK_PURPLE}${data.mod}`,
+				inGui: data.inGui,
+				inWorld: data.inWorld
+			}
 		}
 		get default() {
-			return this.data.normal
+			return this.data.default
+		}
+		get toolTip() {
+			return this.data.toolTip
+		}
+		get mod() {
+			return this.data.mod
+		}
+		get inGui() {
+			return this.data.inGui
+		}
+		get inWorld() {
+			return this.data.inWorld
 		}
 	}
-
 }
