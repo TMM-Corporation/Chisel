@@ -18,6 +18,7 @@
 		"header.ts",
 		"api/ResManager.ts",
 		"register/resources.ts",
+		"api/MCGUI.ts",
 		"api/CLI.ts",
 		"api/Additional.ts",
 		"api/Carvable.ts",

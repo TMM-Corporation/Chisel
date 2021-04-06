@@ -5,6 +5,7 @@
 ./register/resources.ts
 
 # Some api
+./api/MCGUI.ts
 ./api/CLI.ts
 ./api/Additional.ts
 ./api/Carvable.ts
