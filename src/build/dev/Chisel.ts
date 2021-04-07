@@ -71,8 +71,6 @@ stoneGroup.addFromDescription({
 })
 
 
-// Carvable.addTile(OpenTile('chisel_ancient_stone'))
-// Carvable.addTile(OpenTile('chisel_andesite'))
 // Carvable.addTile(OpenTile('chisel_animations'))
 // Carvable.addTile(OpenTile('chisel_antiblock'))
 // Carvable.addTile(OpenTile('chisel_arcane_stone'))
