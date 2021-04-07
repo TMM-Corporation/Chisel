@@ -16,8 +16,8 @@
 	],
 	"include": [
 		"header.ts",
-		"api/ResManager.ts",
 		"register/resources.ts",
+		"api/ResManager.ts",
 		"api/MCGUI.ts",
 		"api/CLI.ts",
 		"api/Additional.ts",
@@ -29,6 +29,7 @@
 		"register/sounds.ts",
 		"register/gui.ts",
 		"register/items.ts",
+		"register/tiles.ts",
 		"Chisel.ts"
 	],
 	"files": [

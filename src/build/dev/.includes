@@ -1,8 +1,8 @@
 ./header.ts
 
 # Compile resources 
-./api/ResManager.ts
 ./register/resources.ts
+./api/ResManager.ts
 
 # Some api
 ./api/MCGUI.ts
@@ -20,4 +20,5 @@
 ./register/sounds.ts
 ./register/gui.ts
 ./register/items.ts
+./register/tiles.ts
 ./Chisel.ts

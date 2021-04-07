@@ -38,26 +38,26 @@ function toFileName(mod_name: string, parts: arr) {
 function isObject(obj: any) {
 	return (obj instanceof Object && !(obj instanceof Array))
 }
-interface IResourceManager {
-	preloaderModule: boolean
-	resources: obj
-	mod: string
-	Select(dir: string, name?: string): java.io.File
-	ReadFrom(_File: java.io.File): string
-	Rewrite(File: java.io.File, text: string): void
-	CopyToDest(src: string, dst: string): boolean
-	ReadBitmap(path: string, filename: string): android.graphics.Bitmap
-	CropBitmap(source: android.graphics.Bitmap, x: number, y: number, width: number, height: number): android.graphics.Bitmap
-	WriteBitmap(bitmap: android.graphics.Bitmap, path: string, filename: string): boolean
-	getFilesList(path: string): IResourceFileList
-	getFilesListRecursive(path: string, parentName: string): IResourceFileList
-	getBuildConfig(): IBuildConfig
-	ReadJSON(File: java.io.File): any
-	WriteJSON(File: java.io.File, json: {}): void
-}
-const ResourceManager: IResourceManager = {
+// interface IResourceManager {
+// 	preloaderModule: boolean
+// 	resources: obj
+// 	mod: string
+// 	Select(dir: string, name?: string): java.io.File
+// 	ReadFrom(_File: java.io.File): string
+// 	Rewrite(File: java.io.File, text: string): void
+// 	CopyToDest(src: string, dst: string): boolean
+// 	ReadBitmap(path: string, filename: string): android.graphics.Bitmap
+// 	CropBitmap(source: android.graphics.Bitmap, x: number, y: number, width: number, height: number): android.graphics.Bitmap
+// 	WriteBitmap(bitmap: android.graphics.Bitmap, path: string, filename: string): boolean
+// 	getFilesList(path: string): IResourceFileList
+// 	getFilesListRecursive(path: string, parentName: string): IResourceFileList
+// 	getBuildConfig(): IBuildConfig
+// 	ReadJSON(File: java.io.File): any
+// 	WriteJSON(File: java.io.File, json: {}): void
+// }
+const ResourceManager = {
 	preloaderModule: false,
-	resources: {files: [], dirs: {}},
+	resources: ModData,
 	mod: '',
 	/**
 	 * @param dir full path with / at the end
@@ -252,20 +252,20 @@ var ScriptingManager = {
 		variable: new RegExp(/\$([A-z0-9]\S{0,})/)
 	},
 
-	readResource(rm: IResourceManager, path: string) {
-		let readed = rm.ReadJSON(rm.Select(path))
+	readResource(path: string) {
+		let readed = RM.ReadJSON(RM.Select(path))
 		if (!this.namespaces[readed.namespace])
 			this.namespaces[readed.namespace] = readed
 		else
 			("Namespace " + readed.namespace + " is exists", "MOD")
 	},
 
-	readAllResources(rm: IResourceManager): void {
-		let json = rm.ReadJSON(rm.Select(rm.resources.files.contents))
-		for (let i in json.files) {
-			this.readResource(rm.resources.dirs.assets + json.files[i])
-		}
-		rm.Rewrite(rm.Select(rm.resources.files.cache), JSON.stringify(this.readPropertyRecusive(this.namespaces)))
+	readAllResources(): void {
+		// let json = RM.ReadJSON(RM.Select(RM.resources.files.contents))
+		// for (let i in json.files) {
+		// 	this.readResource(RM.resources.dirs.assets + json.files[i])
+		// }
+		// RM.Rewrite(RM.Select(RM.resources.files.cache), JSON.stringify(this.readPropertyRecusive(this.namespaces)))
 	},
 
 	readReference(str: string) {
