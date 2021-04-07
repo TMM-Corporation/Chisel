@@ -19,7 +19,7 @@ var ModData = {
 		sounds: 'resources/ic_mod/sounds/',
 		/** @returns ui textures path, ends with / */
 		ui: 'gui/ui/',
-		/** @returns ui textures path, ends with / */
+		/** @returns json files path, ends with / */
 		json: 'json/'
 	},
 	files: {
