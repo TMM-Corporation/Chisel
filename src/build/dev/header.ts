@@ -16,6 +16,6 @@ function tryRun(module, method) {
 function msg(msg, value) {
 	Game.message(msg + ": " + value)
 }
-Callback.addCallback("ItemUse", function () {
-	msg("Ui Profile", tryRun(OptionsModule, "getUIProfile"))
-})
+// Callback.addCallback("ItemUse", function () {
+// 	msg("Ui Profile", tryRun(OptionsModule, "getUIProfile"))
+// })
