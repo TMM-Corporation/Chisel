@@ -176,7 +176,7 @@ namespace MCGUI {
 		export function findCurrentType(): ScreenInfo {
 			var currentType: string = null
 			var currentName: string = null
-			for (let name in Types) {
+			for (let name in List) {
 				let isCurrent = false
 				const screens = List[name]
 				screens.forEach((screenName: string) => {
@@ -194,25 +194,24 @@ namespace MCGUI {
 				sub: findSubScreen(currentName)
 			}
 		}
-		export function findSubScreen(currentName) {
+		export function findSubScreen(currentName: string) {
 			var subScreen: SubScreenInfo = null
-			if (currentName.match(" - ")) {
-				let splitted = currentName.split(" - ")
-				let childs = []
-				for (let i = 1; i < splitted.length; i++) {
-					childs.push(splitted[i])
+			if (typeof currentName == "string")
+				if (currentName.match(" - ")) {
+					let splitted = currentName.split(" - ")
+					let childs = []
+					for (let i = 1; i < splitted.length; i++) {
+						childs.push(splitted[i])
+					}
+					subScreen = {
+						parent: splitted[0],
+						childs
+					}
 				}
-				subScreen = {
-					parent: splitted[0],
-					childs
-				}
-			}
 			return subScreen
 		}
 		export function isCurrentScreen(name: string) {
 			if (Latest.current == name)
-				return true
-			else if (Latest.last == name && Latest.isPush)
 				return true
 			return false
 		}
