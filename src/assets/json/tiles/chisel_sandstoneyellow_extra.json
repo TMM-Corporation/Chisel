@@ -1,42 +1,31 @@
 {
-    "name": "sandstoneyellow/extra",
-    "register": true,
-    "localization": [
-        "tile_chisel_sandstoneyellow_extra_name"
-    ],
-    "variations": [
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_sandstoneyellow_extra_bevel_creeper_desc"
-            ],
-            "texture": {
-                "name": "chisel_sandstoneyellow_extra_bevel_creeper",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_sandstoneyellow_extra_glpyhs_desc"
-            ],
-            "texture": {
-                "name": "chisel_sandstoneyellow_extra_glpyhs",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_sandstoneyellow_extra_small_desc"
-            ],
-            "texture": {
-                "name": "chisel_sandstoneyellow_extra_small",
-                "extension": "png",
-                "type": "normal"
-            }
-        }
-    ]
+	"name": "sandstoneyellow/extra",
+	"register": true,
+	"localization": ["tile_chisel_sandstoneyellow_extra_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_sandstoneyellow_extra_bevel_creeper_desc"],
+			"texture": {
+				"name": "chisel_sandstoneyellow_extra_bevel_creeper",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_sandstoneyellow_extra_glpyhs_desc"],
+			"texture": {
+				"name": "chisel_sandstoneyellow_extra_glpyhs",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_sandstoneyellow_extra_small_desc"],
+			"texture": {
+				"name": "chisel_sandstoneyellow_extra_small",
+				"type": "normal"
+			}
+		}
+	]
 }

@@ -8,7 +8,6 @@
 			"localization": ["tile_chisel_glowstone_array_desc"],
 			"texture": {
 				"name": "chisel_glowstone_array",
-				"extension": "png",
 				"type": "ctmh"
 			}
 		},
@@ -17,7 +16,6 @@
 			"localization": ["tile_chisel_glowstone_braid_desc"],
 			"texture": {
 				"name": "chisel_glowstone_braid",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -26,7 +24,6 @@
 			"localization": ["tile_chisel_glowstone_bricks_cracked_desc"],
 			"texture": {
 				"name": "chisel_glowstone_bricks_cracked",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -35,11 +32,9 @@
 			"localization": ["tile_chisel_glowstone_bricks_encased_desc"],
 			"texture": {
 				"name": "chisel_glowstone_bricks_encased",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_glowstone_bricks_encased_ctm",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -49,7 +44,6 @@
 			"localization": ["tile_chisel_glowstone_bricks_small_desc"],
 			"texture": {
 				"name": "chisel_glowstone_bricks_small",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -58,7 +52,6 @@
 			"localization": ["tile_chisel_glowstone_bricks_soft_desc"],
 			"texture": {
 				"name": "chisel_glowstone_bricks_soft",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -67,7 +60,6 @@
 			"localization": ["tile_chisel_glowstone_bricks_solid_desc"],
 			"texture": {
 				"name": "chisel_glowstone_bricks_solid",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -76,7 +68,6 @@
 			"localization": ["tile_chisel_glowstone_bricks_triple_desc"],
 			"texture": {
 				"name": "chisel_glowstone_bricks_triple",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -85,7 +76,6 @@
 			"localization": ["tile_chisel_glowstone_chaotic_medium_desc"],
 			"texture": {
 				"name": "chisel_glowstone_chaotic_medium",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -94,7 +84,6 @@
 			"localization": ["tile_chisel_glowstone_chaotic_small_desc"],
 			"texture": {
 				"name": "chisel_glowstone_chaotic_small",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -103,7 +92,6 @@
 			"localization": ["tile_chisel_glowstone_circular_desc"],
 			"texture": {
 				"name": "chisel_glowstone_circular",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -112,7 +100,6 @@
 			"localization": ["tile_chisel_glowstone_cracked_desc"],
 			"texture": {
 				"name": "chisel_glowstone_cracked",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -121,11 +108,9 @@
 			"localization": ["tile_chisel_glowstone_dent_desc"],
 			"texture": {
 				"name": "chisel_glowstone_dent",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_glowstone_dent_ctm",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -135,7 +120,6 @@
 			"localization": ["tile_chisel_glowstone_french_1_desc"],
 			"texture": {
 				"name": "chisel_glowstone_french_1",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -144,7 +128,6 @@
 			"localization": ["tile_chisel_glowstone_french_2_desc"],
 			"texture": {
 				"name": "chisel_glowstone_french_2",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -153,7 +136,6 @@
 			"localization": ["tile_chisel_glowstone_jellybean_desc"],
 			"texture": {
 				"name": "chisel_glowstone_jellybean",
-				"extension": "png",
 				"type": "ctm"
 			}
 		},
@@ -162,7 +144,6 @@
 			"localization": ["tile_chisel_glowstone_layers_desc"],
 			"texture": {
 				"name": "chisel_glowstone_layers",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -171,11 +152,9 @@
 			"localization": ["tile_chisel_glowstone_mosaic_desc"],
 			"texture": {
 				"name": "chisel_glowstone_mosaic",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_glowstone_mosaic_ctm",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -185,7 +164,6 @@
 			"localization": ["tile_chisel_glowstone_ornate_desc"],
 			"texture": {
 				"name": "chisel_glowstone_ornate",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -194,7 +172,6 @@
 			"localization": ["tile_chisel_glowstone_panel_desc"],
 			"texture": {
 				"name": "chisel_glowstone_panel",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -203,7 +180,6 @@
 			"localization": ["tile_chisel_glowstone_pillar_side_desc"],
 			"texture": {
 				"name": "chisel_glowstone_pillar_side",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -212,7 +188,6 @@
 			"localization": ["tile_chisel_glowstone_pillar_top_desc"],
 			"texture": {
 				"name": "chisel_glowstone_pillar_top",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -221,7 +196,6 @@
 			"localization": ["tile_chisel_glowstone_prism_desc"],
 			"texture": {
 				"name": "chisel_glowstone_prism",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -230,7 +204,6 @@
 			"localization": ["tile_chisel_glowstone_road_desc"],
 			"texture": {
 				"name": "chisel_glowstone_road",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -239,7 +212,6 @@
 			"localization": ["tile_chisel_glowstone_slanted_desc"],
 			"texture": {
 				"name": "chisel_glowstone_slanted",
-				"extension": "png",
 				"type": "ctm"
 			}
 		},
@@ -248,11 +220,9 @@
 			"localization": ["tile_chisel_glowstone_tiles_large_desc"],
 			"texture": {
 				"name": "chisel_glowstone_tiles_large",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_glowstone_tiles_large_ctm",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -262,7 +232,6 @@
 			"localization": ["tile_chisel_glowstone_tiles_medium_desc"],
 			"texture": {
 				"name": "chisel_glowstone_tiles_medium",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -271,7 +240,6 @@
 			"localization": ["tile_chisel_glowstone_tiles_small_desc"],
 			"texture": {
 				"name": "chisel_glowstone_tiles_small",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -280,7 +248,6 @@
 			"localization": ["tile_chisel_glowstone_twisted_side_desc"],
 			"texture": {
 				"name": "chisel_glowstone_twisted_side",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -289,7 +256,6 @@
 			"localization": ["tile_chisel_glowstone_twisted_top_desc"],
 			"texture": {
 				"name": "chisel_glowstone_twisted_top",
-				"extension": "png",
 				"type": "normal"
 			}
 		}

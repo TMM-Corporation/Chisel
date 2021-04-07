@@ -1,119 +1,87 @@
 {
-    "name": "valentines",
-    "register": true,
-    "localization": [
-        "tile_chisel_valentines_name"
-    ],
-    "variations": [
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_valentines_1_desc"
-            ],
-            "texture": {
-                "name": "chisel_valentines_1",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_valentines_2_desc"
-            ],
-            "texture": {
-                "name": "chisel_valentines_2",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_valentines_3_desc"
-            ],
-            "texture": {
-                "name": "chisel_valentines_3",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_valentines_4_desc"
-            ],
-            "texture": {
-                "name": "chisel_valentines_4",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_valentines_5_desc"
-            ],
-            "texture": {
-                "name": "chisel_valentines_5",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_valentines_6_desc"
-            ],
-            "texture": {
-                "name": "chisel_valentines_6",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_valentines_7_desc"
-            ],
-            "texture": {
-                "name": "chisel_valentines_7",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_valentines_8_desc"
-            ],
-            "texture": {
-                "name": "chisel_valentines_8",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_valentines_9_desc"
-            ],
-            "texture": {
-                "name": "chisel_valentines_9",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_valentines_companion_desc"
-            ],
-            "texture": {
-                "name": "chisel_valentines_companion",
-                "extension": "png",
-                "type": "normal"
-            }
-        }
-    ]
+	"name": "valentines",
+	"register": true,
+	"localization": ["tile_chisel_valentines_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_valentines_1_desc"],
+			"texture": {
+				"name": "chisel_valentines_1",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_valentines_2_desc"],
+			"texture": {
+				"name": "chisel_valentines_2",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_valentines_3_desc"],
+			"texture": {
+				"name": "chisel_valentines_3",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_valentines_4_desc"],
+			"texture": {
+				"name": "chisel_valentines_4",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_valentines_5_desc"],
+			"texture": {
+				"name": "chisel_valentines_5",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_valentines_6_desc"],
+			"texture": {
+				"name": "chisel_valentines_6",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_valentines_7_desc"],
+			"texture": {
+				"name": "chisel_valentines_7",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_valentines_8_desc"],
+			"texture": {
+				"name": "chisel_valentines_8",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_valentines_9_desc"],
+			"texture": {
+				"name": "chisel_valentines_9",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_valentines_companion_desc"],
+			"texture": {
+				"name": "chisel_valentines_companion",
+				"type": "normal"
+			}
+		}
+	]
 }

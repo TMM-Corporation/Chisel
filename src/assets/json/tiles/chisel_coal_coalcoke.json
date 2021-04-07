@@ -8,7 +8,6 @@
 			"localization": ["tile_chisel_coal_coalcoke_array_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_array",
-				"extension": "png",
 				"type": "ctmh"
 			}
 		},
@@ -17,7 +16,6 @@
 			"localization": ["tile_chisel_coal_coalcoke_braid_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_braid",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -26,7 +24,6 @@
 			"localization": ["tile_chisel_coal_coalcoke_bricks_chaotic_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_bricks_chaotic",
-				"extension": "png",
 				"type": "bricks-chaotic"
 			}
 		},
@@ -35,7 +32,6 @@
 			"localization": ["tile_chisel_coal_coalcoke_bricks_cracked_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_bricks_cracked",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -44,11 +40,9 @@
 			"localization": ["tile_chisel_coal_coalcoke_bricks_encased_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_bricks_encased",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_coal_coalcoke_bricks_encased_ctm",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -58,7 +52,6 @@
 			"localization": ["tile_chisel_coal_coalcoke_bricks_large_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_bricks_large",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -67,7 +60,6 @@
 			"localization": ["tile_chisel_coal_coalcoke_bricks_small_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_bricks_small",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -76,7 +68,6 @@
 			"localization": ["tile_chisel_coal_coalcoke_bricks_soft_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_bricks_soft",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -85,7 +76,6 @@
 			"localization": ["tile_chisel_coal_coalcoke_bricks_solid_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_bricks_solid",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -94,7 +84,6 @@
 			"localization": ["tile_chisel_coal_coalcoke_bricks_triple_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_bricks_triple",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -103,7 +92,6 @@
 			"localization": ["tile_chisel_coal_coalcoke_chaotic_medium_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_chaotic_medium",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -112,7 +100,6 @@
 			"localization": ["tile_chisel_coal_coalcoke_chaotic_small_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_chaotic_small",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -121,7 +108,6 @@
 			"localization": ["tile_chisel_coal_coalcoke_chaotic_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_chaotic",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -130,11 +116,9 @@
 			"localization": ["tile_chisel_coal_coalcoke_circular_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_circular",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_coal_coalcoke_circular_ctm",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -144,7 +128,6 @@
 			"localization": ["tile_chisel_coal_coalcoke_cracked_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_cracked",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -153,7 +136,6 @@
 			"localization": ["tile_chisel_coal_coalcoke_cuts_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_cuts",
-				"extension": "png",
 				"type": "cuts"
 			}
 		},
@@ -162,11 +144,9 @@
 			"localization": ["tile_chisel_coal_coalcoke_dent_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_dent",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_coal_coalcoke_dent_ctm",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -176,7 +156,6 @@
 			"localization": ["tile_chisel_coal_coalcoke_french_1_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_french_1",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -185,7 +164,6 @@
 			"localization": ["tile_chisel_coal_coalcoke_french_2_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_french_2",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -194,7 +172,6 @@
 			"localization": ["tile_chisel_coal_coalcoke_french_alt_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_french_alt",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -203,7 +180,6 @@
 			"localization": ["tile_chisel_coal_coalcoke_french_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_french",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -212,7 +188,6 @@
 			"localization": ["tile_chisel_coal_coalcoke_jellybean_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_jellybean",
-				"extension": "png",
 				"type": "ctm"
 			}
 		},
@@ -221,7 +196,6 @@
 			"localization": ["tile_chisel_coal_coalcoke_layers_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_layers",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -230,7 +204,6 @@
 			"localization": ["tile_chisel_coal_coalcoke_masonry_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_masonry",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -239,11 +212,9 @@
 			"localization": ["tile_chisel_coal_coalcoke_mosaic_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_mosaic",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_coal_coalcoke_mosaic_ctm",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -253,7 +224,6 @@
 			"localization": ["tile_chisel_coal_coalcoke_ornate_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_ornate",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -262,7 +232,6 @@
 			"localization": ["tile_chisel_coal_coalcoke_panel_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_panel",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -271,7 +240,6 @@
 			"localization": ["tile_chisel_coal_coalcoke_pillar_side_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_pillar_side",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -280,7 +248,6 @@
 			"localization": ["tile_chisel_coal_coalcoke_pillar_top_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_pillar_top",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -289,7 +256,6 @@
 			"localization": ["tile_chisel_coal_coalcoke_prism_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_prism",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -298,7 +264,6 @@
 			"localization": ["tile_chisel_coal_coalcoke_raw_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_raw",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -307,7 +272,6 @@
 			"localization": ["tile_chisel_coal_coalcoke_road_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_road",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -316,7 +280,6 @@
 			"localization": ["tile_chisel_coal_coalcoke_slanted_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_slanted",
-				"extension": "png",
 				"type": "ctm"
 			}
 		},
@@ -325,11 +288,9 @@
 			"localization": ["tile_chisel_coal_coalcoke_tiles_large_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_tiles_large",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_coal_coalcoke_tiles_large_ctm",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -339,7 +300,6 @@
 			"localization": ["tile_chisel_coal_coalcoke_tiles_med_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_tiles_med",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -348,7 +308,6 @@
 			"localization": ["tile_chisel_coal_coalcoke_tiles_medium_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_tiles_medium",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -357,7 +316,6 @@
 			"localization": ["tile_chisel_coal_coalcoke_tiles_small_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_tiles_small",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -366,7 +324,6 @@
 			"localization": ["tile_chisel_coal_coalcoke_twisted_side_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_twisted_side",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -375,7 +332,6 @@
 			"localization": ["tile_chisel_coal_coalcoke_twisted_top_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_twisted_top",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -384,11 +340,9 @@
 			"localization": ["tile_chisel_coal_coalcoke_weaver_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_weaver",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_coal_coalcoke_weaver_ctm",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -398,7 +352,6 @@
 			"localization": ["tile_chisel_coal_coalcoke_zag_desc"],
 			"texture": {
 				"name": "chisel_coal_coalcoke_zag",
-				"extension": "png",
 				"type": "ctm"
 			}
 		}

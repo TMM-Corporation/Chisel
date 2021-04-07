@@ -1,119 +1,87 @@
 {
-    "name": "bookshelf",
-    "register": true,
-    "localization": [
-        "tile_chisel_bookshelf_name"
-    ],
-    "variations": [
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_bookshelf_abandoned_desc"
-            ],
-            "texture": {
-                "name": "chisel_bookshelf_abandoned",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_bookshelf_brim_desc"
-            ],
-            "texture": {
-                "name": "chisel_bookshelf_brim",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_bookshelf_cans_desc"
-            ],
-            "texture": {
-                "name": "chisel_bookshelf_cans",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_bookshelf_historician_desc"
-            ],
-            "texture": {
-                "name": "chisel_bookshelf_historician",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_bookshelf_hoarder_desc"
-            ],
-            "texture": {
-                "name": "chisel_bookshelf_hoarder",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_bookshelf_necromancer_novice_desc"
-            ],
-            "texture": {
-                "name": "chisel_bookshelf_necromancer_novice",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_bookshelf_necromancer_desc"
-            ],
-            "texture": {
-                "name": "chisel_bookshelf_necromancer",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_bookshelf_papers_desc"
-            ],
-            "texture": {
-                "name": "chisel_bookshelf_papers",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_bookshelf_rainbow_desc"
-            ],
-            "texture": {
-                "name": "chisel_bookshelf_rainbow",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_bookshelf_redtomes_desc"
-            ],
-            "texture": {
-                "name": "chisel_bookshelf_redtomes",
-                "extension": "png",
-                "type": "normal"
-            }
-        }
-    ]
+	"name": "bookshelf",
+	"register": true,
+	"localization": ["tile_chisel_bookshelf_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_bookshelf_abandoned_desc"],
+			"texture": {
+				"name": "chisel_bookshelf_abandoned",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_bookshelf_brim_desc"],
+			"texture": {
+				"name": "chisel_bookshelf_brim",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_bookshelf_cans_desc"],
+			"texture": {
+				"name": "chisel_bookshelf_cans",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_bookshelf_historician_desc"],
+			"texture": {
+				"name": "chisel_bookshelf_historician",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_bookshelf_hoarder_desc"],
+			"texture": {
+				"name": "chisel_bookshelf_hoarder",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_bookshelf_necromancer_novice_desc"],
+			"texture": {
+				"name": "chisel_bookshelf_necromancer_novice",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_bookshelf_necromancer_desc"],
+			"texture": {
+				"name": "chisel_bookshelf_necromancer",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_bookshelf_papers_desc"],
+			"texture": {
+				"name": "chisel_bookshelf_papers",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_bookshelf_rainbow_desc"],
+			"texture": {
+				"name": "chisel_bookshelf_rainbow",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_bookshelf_redtomes_desc"],
+			"texture": {
+				"name": "chisel_bookshelf_redtomes",
+				"type": "normal"
+			}
+		}
+	]
 }

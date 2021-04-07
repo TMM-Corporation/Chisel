@@ -1,108 +1,79 @@
 {
-    "name": "lapis",
-    "register": true,
-    "localization": [
-        "tile_chisel_lapis_name"
-    ],
-    "variations": [
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_lapis_a1_blocklapis_ornatelayer_desc"
-            ],
-            "texture": {
-                "name": "chisel_lapis_a1_blocklapis_ornatelayer",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_lapis_a1_blocklapis_panel_desc"
-            ],
-            "texture": {
-                "name": "chisel_lapis_a1_blocklapis_panel",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_lapis_a1_blocklapis_smooth_desc"
-            ],
-            "texture": {
-                "name": "chisel_lapis_a1_blocklapis_smooth",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_lapis_masonrylapis_desc"
-            ],
-            "texture": {
-                "name": "chisel_lapis_masonrylapis",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_lapis_terrain_lapisblock_chunky_desc"
-            ],
-            "texture": {
-                "name": "chisel_lapis_terrain_lapisblock_chunky",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_lapis_terrain_lapisblock_panel_desc"
-            ],
-            "texture": {
-                "name": "chisel_lapis_terrain_lapisblock_panel",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_lapis_terrain_lapisblock_zelda_desc"
-            ],
-            "texture": {
-                "name": "chisel_lapis_terrain_lapisblock_zelda",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_lapis_terrain_lapisornate_desc"
-            ],
-            "texture": {
-                "name": "chisel_lapis_terrain_lapisornate",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_lapis_terrain_lapistile_desc"
-            ],
-            "texture": {
-                "name": "chisel_lapis_terrain_lapistile",
-                "extension": "png",
-                "type": "normal"
-            }
-        }
-    ]
+	"name": "lapis",
+	"register": true,
+	"localization": ["tile_chisel_lapis_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_lapis_a1_blocklapis_ornatelayer_desc"],
+			"texture": {
+				"name": "chisel_lapis_a1_blocklapis_ornatelayer",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_lapis_a1_blocklapis_panel_desc"],
+			"texture": {
+				"name": "chisel_lapis_a1_blocklapis_panel",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_lapis_a1_blocklapis_smooth_desc"],
+			"texture": {
+				"name": "chisel_lapis_a1_blocklapis_smooth",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_lapis_masonrylapis_desc"],
+			"texture": {
+				"name": "chisel_lapis_masonrylapis",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_lapis_terrain_lapisblock_chunky_desc"],
+			"texture": {
+				"name": "chisel_lapis_terrain_lapisblock_chunky",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_lapis_terrain_lapisblock_panel_desc"],
+			"texture": {
+				"name": "chisel_lapis_terrain_lapisblock_panel",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_lapis_terrain_lapisblock_zelda_desc"],
+			"texture": {
+				"name": "chisel_lapis_terrain_lapisblock_zelda",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_lapis_terrain_lapisornate_desc"],
+			"texture": {
+				"name": "chisel_lapis_terrain_lapisornate",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_lapis_terrain_lapistile_desc"],
+			"texture": {
+				"name": "chisel_lapis_terrain_lapistile",
+				"type": "normal"
+			}
+		}
+	]
 }

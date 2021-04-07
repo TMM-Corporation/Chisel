@@ -1,163 +1,119 @@
 {
-    "name": "netherrack",
-    "register": true,
-    "localization": [
-        "tile_chisel_netherrack_name"
-    ],
-    "variations": [
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_netherrack_a1_netherrack_bloodgravel_desc"
-            ],
-            "texture": {
-                "name": "chisel_netherrack_a1_netherrack_bloodgravel",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_netherrack_a1_netherrack_bloodrock_desc"
-            ],
-            "texture": {
-                "name": "chisel_netherrack_a1_netherrack_bloodrock",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_netherrack_a1_netherrack_bloodrockgrey_desc"
-            ],
-            "texture": {
-                "name": "chisel_netherrack_a1_netherrack_bloodrockgrey",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_netherrack_a1_netherrack_brinstar_desc"
-            ],
-            "texture": {
-                "name": "chisel_netherrack_a1_netherrack_brinstar",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_netherrack_a1_netherrack_brinstarshale_desc"
-            ],
-            "texture": {
-                "name": "chisel_netherrack_a1_netherrack_brinstarshale",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_netherrack_a1_netherrack_classic_desc"
-            ],
-            "texture": {
-                "name": "chisel_netherrack_a1_netherrack_classic",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_netherrack_a1_netherrack_classicspatter_desc"
-            ],
-            "texture": {
-                "name": "chisel_netherrack_a1_netherrack_classicspatter",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_netherrack_a1_netherrack_guts_desc"
-            ],
-            "texture": {
-                "name": "chisel_netherrack_a1_netherrack_guts",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_netherrack_a1_netherrack_gutsdark_desc"
-            ],
-            "texture": {
-                "name": "chisel_netherrack_a1_netherrack_gutsdark",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_netherrack_a1_netherrack_meat_desc"
-            ],
-            "texture": {
-                "name": "chisel_netherrack_a1_netherrack_meat",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_netherrack_a1_netherrack_meatred_desc"
-            ],
-            "texture": {
-                "name": "chisel_netherrack_a1_netherrack_meatred",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_netherrack_a1_netherrack_meatrock_desc"
-            ],
-            "texture": {
-                "name": "chisel_netherrack_a1_netherrack_meatrock",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_netherrack_a1_netherrack_red_desc"
-            ],
-            "texture": {
-                "name": "chisel_netherrack_a1_netherrack_red",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_netherrack_a1_netherrack_wells_desc"
-            ],
-            "texture": {
-                "name": "chisel_netherrack_a1_netherrack_wells",
-                "extension": "png",
-                "type": "normal"
-            }
-        }
-    ]
+	"name": "netherrack",
+	"register": true,
+	"localization": ["tile_chisel_netherrack_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_netherrack_a1_netherrack_bloodgravel_desc"],
+			"texture": {
+				"name": "chisel_netherrack_a1_netherrack_bloodgravel",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_netherrack_a1_netherrack_bloodrock_desc"],
+			"texture": {
+				"name": "chisel_netherrack_a1_netherrack_bloodrock",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_netherrack_a1_netherrack_bloodrockgrey_desc"],
+			"texture": {
+				"name": "chisel_netherrack_a1_netherrack_bloodrockgrey",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_netherrack_a1_netherrack_brinstar_desc"],
+			"texture": {
+				"name": "chisel_netherrack_a1_netherrack_brinstar",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_netherrack_a1_netherrack_brinstarshale_desc"],
+			"texture": {
+				"name": "chisel_netherrack_a1_netherrack_brinstarshale",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_netherrack_a1_netherrack_classic_desc"],
+			"texture": {
+				"name": "chisel_netherrack_a1_netherrack_classic",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_netherrack_a1_netherrack_classicspatter_desc"],
+			"texture": {
+				"name": "chisel_netherrack_a1_netherrack_classicspatter",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_netherrack_a1_netherrack_guts_desc"],
+			"texture": {
+				"name": "chisel_netherrack_a1_netherrack_guts",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_netherrack_a1_netherrack_gutsdark_desc"],
+			"texture": {
+				"name": "chisel_netherrack_a1_netherrack_gutsdark",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_netherrack_a1_netherrack_meat_desc"],
+			"texture": {
+				"name": "chisel_netherrack_a1_netherrack_meat",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_netherrack_a1_netherrack_meatred_desc"],
+			"texture": {
+				"name": "chisel_netherrack_a1_netherrack_meatred",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_netherrack_a1_netherrack_meatrock_desc"],
+			"texture": {
+				"name": "chisel_netherrack_a1_netherrack_meatrock",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_netherrack_a1_netherrack_red_desc"],
+			"texture": {
+				"name": "chisel_netherrack_a1_netherrack_red",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_netherrack_a1_netherrack_wells_desc"],
+			"texture": {
+				"name": "chisel_netherrack_a1_netherrack_wells",
+				"type": "normal"
+			}
+		}
+	]
 }

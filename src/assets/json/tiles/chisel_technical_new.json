@@ -8,11 +8,9 @@
 			"localization": ["tile_chisel_technical_new_engineering_0_desc"],
 			"texture": {
 				"name": "chisel_technical_new_engineering_0",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_technical_new_engineering_0_ctm",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -22,11 +20,9 @@
 			"localization": ["tile_chisel_technical_new_engineering_1_desc"],
 			"texture": {
 				"name": "chisel_technical_new_engineering_1",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_technical_new_engineering_1_ctm",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -36,11 +32,9 @@
 			"localization": ["tile_chisel_technical_new_engineering_2_desc"],
 			"texture": {
 				"name": "chisel_technical_new_engineering_2",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_technical_new_engineering_2_ctm",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -50,11 +44,9 @@
 			"localization": ["tile_chisel_technical_new_engineering_3_desc"],
 			"texture": {
 				"name": "chisel_technical_new_engineering_3",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_technical_new_engineering_3_ctm",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -64,11 +56,9 @@
 			"localization": ["tile_chisel_technical_new_engineering_desc"],
 			"texture": {
 				"name": "chisel_technical_new_engineering",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_technical_new_engineering_ctm",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -78,11 +68,9 @@
 			"localization": ["tile_chisel_technical_new_exhaustplating_desc"],
 			"texture": {
 				"name": "chisel_technical_new_exhaustplating",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_technical_new_exhaustplating_ctm",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -92,7 +80,6 @@
 			"localization": ["tile_chisel_technical_new_makeshiftpanels_desc"],
 			"texture": {
 				"name": "chisel_technical_new_makeshiftpanels",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -101,7 +88,6 @@
 			"localization": ["tile_chisel_technical_new_megacell_bottom_desc"],
 			"texture": {
 				"name": "chisel_technical_new_megacell_bottom",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -110,7 +96,6 @@
 			"localization": ["tile_chisel_technical_new_megacell_side_desc"],
 			"texture": {
 				"name": "chisel_technical_new_megacell_side",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -119,7 +104,6 @@
 			"localization": ["tile_chisel_technical_new_megacell_top_desc"],
 			"texture": {
 				"name": "chisel_technical_new_megacell_top",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -128,7 +112,6 @@
 			"localization": ["tile_chisel_technical_new_oldetimeyserveranim_desc"],
 			"texture": {
 				"name": "chisel_technical_new_oldetimeyserveranim",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -137,7 +120,6 @@
 			"localization": ["tile_chisel_technical_new_piping_desc"],
 			"texture": {
 				"name": "chisel_technical_new_piping",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -146,11 +128,9 @@
 			"localization": ["tile_chisel_technical_new_scaffoldlarge_0_desc"],
 			"texture": {
 				"name": "chisel_technical_new_scaffoldlarge_0",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_technical_new_scaffoldlarge_0_ctm",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -160,11 +140,9 @@
 			"localization": ["tile_chisel_technical_new_scaffoldlarge_1_desc"],
 			"texture": {
 				"name": "chisel_technical_new_scaffoldlarge_1",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_technical_new_scaffoldlarge_1_ctm",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -174,11 +152,9 @@
 			"localization": ["tile_chisel_technical_new_scaffoldlarge_2_desc"],
 			"texture": {
 				"name": "chisel_technical_new_scaffoldlarge_2",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_technical_new_scaffoldlarge_2_ctm",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -188,11 +164,9 @@
 			"localization": ["tile_chisel_technical_new_scaffoldlarge_3_desc"],
 			"texture": {
 				"name": "chisel_technical_new_scaffoldlarge_3",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_technical_new_scaffoldlarge_3_ctm",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -202,11 +176,9 @@
 			"localization": ["tile_chisel_technical_new_scaffoldlarge_desc"],
 			"texture": {
 				"name": "chisel_technical_new_scaffoldlarge",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_technical_new_scaffoldlarge_ctm",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -216,11 +188,9 @@
 			"localization": ["tile_chisel_technical_new_sturdy_desc"],
 			"texture": {
 				"name": "chisel_technical_new_sturdy",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_technical_new_sturdy_ctm",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -230,7 +200,6 @@
 			"localization": ["tile_chisel_technical_new_tapedrive_desc"],
 			"texture": {
 				"name": "chisel_technical_new_tapedrive",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -239,7 +208,6 @@
 			"localization": ["tile_chisel_technical_new_weatheredgreenpanels_desc"],
 			"texture": {
 				"name": "chisel_technical_new_weatheredgreenpanels",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -248,7 +216,6 @@
 			"localization": ["tile_chisel_technical_new_weatheredorangepanels_desc"],
 			"texture": {
 				"name": "chisel_technical_new_weatheredorangepanels",
-				"extension": "png",
 				"type": "normal"
 			}
 		}

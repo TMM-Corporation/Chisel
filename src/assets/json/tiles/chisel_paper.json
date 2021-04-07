@@ -1,108 +1,79 @@
 {
-    "name": "paper",
-    "register": true,
-    "localization": [
-        "tile_chisel_paper_name"
-    ],
-    "variations": [
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_paper_box_desc"
-            ],
-            "texture": {
-                "name": "chisel_paper_box",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_paper_cross_desc"
-            ],
-            "texture": {
-                "name": "chisel_paper_cross",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_paper_door_desc"
-            ],
-            "texture": {
-                "name": "chisel_paper_door",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_paper_floral_desc"
-            ],
-            "texture": {
-                "name": "chisel_paper_floral",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_paper_horizontal_desc"
-            ],
-            "texture": {
-                "name": "chisel_paper_horizontal",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_paper_plain_desc"
-            ],
-            "texture": {
-                "name": "chisel_paper_plain",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_paper_sixsections_desc"
-            ],
-            "texture": {
-                "name": "chisel_paper_sixsections",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_paper_throughmiddle_desc"
-            ],
-            "texture": {
-                "name": "chisel_paper_throughmiddle",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_paper_vertical_desc"
-            ],
-            "texture": {
-                "name": "chisel_paper_vertical",
-                "extension": "png",
-                "type": "normal"
-            }
-        }
-    ]
+	"name": "paper",
+	"register": true,
+	"localization": ["tile_chisel_paper_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_paper_box_desc"],
+			"texture": {
+				"name": "chisel_paper_box",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_paper_cross_desc"],
+			"texture": {
+				"name": "chisel_paper_cross",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_paper_door_desc"],
+			"texture": {
+				"name": "chisel_paper_door",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_paper_floral_desc"],
+			"texture": {
+				"name": "chisel_paper_floral",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_paper_horizontal_desc"],
+			"texture": {
+				"name": "chisel_paper_horizontal",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_paper_plain_desc"],
+			"texture": {
+				"name": "chisel_paper_plain",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_paper_sixsections_desc"],
+			"texture": {
+				"name": "chisel_paper_sixsections",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_paper_throughmiddle_desc"],
+			"texture": {
+				"name": "chisel_paper_throughmiddle",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_paper_vertical_desc"],
+			"texture": {
+				"name": "chisel_paper_vertical",
+				"type": "normal"
+			}
+		}
+	]
 }

@@ -1,196 +1,143 @@
 {
-    "name": "sandstonered-scribbles",
-    "register": true,
-    "localization": [
-        "tile_chisel_sandstonered_scribbles_name"
-    ],
-    "variations": [
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_sandstonered_scribbles_scribbles_0_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_sandstonered_scribbles_scribbles_0_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_sandstonered_scribbles_scribbles_0_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_sandstonered_scribbles_scribbles_0_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_sandstonered_scribbles_scribbles_1_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_sandstonered_scribbles_scribbles_1_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_sandstonered_scribbles_scribbles_10_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_sandstonered_scribbles_scribbles_10_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_sandstonered_scribbles_scribbles_11_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_sandstonered_scribbles_scribbles_11_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_sandstonered_scribbles_scribbles_12_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_sandstonered_scribbles_scribbles_12_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_sandstonered_scribbles_scribbles_13_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_sandstonered_scribbles_scribbles_13_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_sandstonered_scribbles_scribbles_14_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_sandstonered_scribbles_scribbles_14_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_sandstonered_scribbles_scribbles_15_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_sandstonered_scribbles_scribbles_15_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_sandstonered_scribbles_scribbles_2_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_sandstonered_scribbles_scribbles_2_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_sandstonered_scribbles_scribbles_3_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_sandstonered_scribbles_scribbles_3_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_sandstonered_scribbles_scribbles_4_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_sandstonered_scribbles_scribbles_4_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_sandstonered_scribbles_scribbles_5_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_sandstonered_scribbles_scribbles_5_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_sandstonered_scribbles_scribbles_6_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_sandstonered_scribbles_scribbles_6_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_sandstonered_scribbles_scribbles_7_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_sandstonered_scribbles_scribbles_7_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_sandstonered_scribbles_scribbles_8_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_sandstonered_scribbles_scribbles_8_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_sandstonered_scribbles_scribbles_9_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_sandstonered_scribbles_scribbles_9_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        }
-    ]
+	"name": "sandstonered-scribbles",
+	"register": true,
+	"localization": ["tile_chisel_sandstonered_scribbles_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_sandstonered_scribbles_scribbles_0_side_desc"],
+			"texture": {
+				"name": "chisel_sandstonered_scribbles_scribbles_0_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_sandstonered_scribbles_scribbles_0_top_desc"],
+			"texture": {
+				"name": "chisel_sandstonered_scribbles_scribbles_0_top",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_sandstonered_scribbles_scribbles_1_side_desc"],
+			"texture": {
+				"name": "chisel_sandstonered_scribbles_scribbles_1_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_sandstonered_scribbles_scribbles_10_side_desc"],
+			"texture": {
+				"name": "chisel_sandstonered_scribbles_scribbles_10_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_sandstonered_scribbles_scribbles_11_side_desc"],
+			"texture": {
+				"name": "chisel_sandstonered_scribbles_scribbles_11_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_sandstonered_scribbles_scribbles_12_side_desc"],
+			"texture": {
+				"name": "chisel_sandstonered_scribbles_scribbles_12_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_sandstonered_scribbles_scribbles_13_side_desc"],
+			"texture": {
+				"name": "chisel_sandstonered_scribbles_scribbles_13_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_sandstonered_scribbles_scribbles_14_side_desc"],
+			"texture": {
+				"name": "chisel_sandstonered_scribbles_scribbles_14_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_sandstonered_scribbles_scribbles_15_side_desc"],
+			"texture": {
+				"name": "chisel_sandstonered_scribbles_scribbles_15_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_sandstonered_scribbles_scribbles_2_side_desc"],
+			"texture": {
+				"name": "chisel_sandstonered_scribbles_scribbles_2_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_sandstonered_scribbles_scribbles_3_side_desc"],
+			"texture": {
+				"name": "chisel_sandstonered_scribbles_scribbles_3_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_sandstonered_scribbles_scribbles_4_side_desc"],
+			"texture": {
+				"name": "chisel_sandstonered_scribbles_scribbles_4_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_sandstonered_scribbles_scribbles_5_side_desc"],
+			"texture": {
+				"name": "chisel_sandstonered_scribbles_scribbles_5_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_sandstonered_scribbles_scribbles_6_side_desc"],
+			"texture": {
+				"name": "chisel_sandstonered_scribbles_scribbles_6_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_sandstonered_scribbles_scribbles_7_side_desc"],
+			"texture": {
+				"name": "chisel_sandstonered_scribbles_scribbles_7_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_sandstonered_scribbles_scribbles_8_side_desc"],
+			"texture": {
+				"name": "chisel_sandstonered_scribbles_scribbles_8_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_sandstonered_scribbles_scribbles_9_side_desc"],
+			"texture": {
+				"name": "chisel_sandstonered_scribbles_scribbles_9_side",
+				"type": "normal"
+			}
+		}
+	]
 }

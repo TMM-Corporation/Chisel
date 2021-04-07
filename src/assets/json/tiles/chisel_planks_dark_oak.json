@@ -1,185 +1,135 @@
 {
-    "name": "planks-dark-oak",
-    "register": true,
-    "localization": [
-        "tile_chisel_planks_dark_oak_name"
-    ],
-    "variations": [
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_planks_dark_oak_blinds_desc"
-            ],
-            "texture": {
-                "name": "chisel_planks_dark_oak_blinds",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_planks_dark_oak_chaotic_hor_desc"
-            ],
-            "texture": {
-                "name": "chisel_planks_dark_oak_chaotic_hor",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_planks_dark_oak_chaotic_desc"
-            ],
-            "texture": {
-                "name": "chisel_planks_dark_oak_chaotic",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_planks_dark_oak_clean_desc"
-            ],
-            "texture": {
-                "name": "chisel_planks_dark_oak_clean",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_planks_dark_oak_crate_fancy_desc"
-            ],
-            "texture": {
-                "name": "chisel_planks_dark_oak_crate_fancy",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_planks_dark_oak_crate_desc"
-            ],
-            "texture": {
-                "name": "chisel_planks_dark_oak_crate",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_planks_dark_oak_crateex_desc"
-            ],
-            "texture": {
-                "name": "chisel_planks_dark_oak_crateex",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_planks_dark_oak_double_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_planks_dark_oak_double_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_planks_dark_oak_double_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_planks_dark_oak_double_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_planks_dark_oak_fancy_desc"
-            ],
-            "texture": {
-                "name": "chisel_planks_dark_oak_fancy",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_planks_dark_oak_large_desc"
-            ],
-            "texture": {
-                "name": "chisel_planks_dark_oak_large",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_planks_dark_oak_panel_nails_desc"
-            ],
-            "texture": {
-                "name": "chisel_planks_dark_oak_panel_nails",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_planks_dark_oak_parquet_desc"
-            ],
-            "texture": {
-                "name": "chisel_planks_dark_oak_parquet",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_planks_dark_oak_short_desc"
-            ],
-            "texture": {
-                "name": "chisel_planks_dark_oak_short",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_planks_dark_oak_vertical_uneven_desc"
-            ],
-            "texture": {
-                "name": "chisel_planks_dark_oak_vertical_uneven",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_planks_dark_oak_vertical_desc"
-            ],
-            "texture": {
-                "name": "chisel_planks_dark_oak_vertical",
-                "extension": "png",
-                "type": "normal"
-            }
-        }
-    ]
+	"name": "planks-dark-oak",
+	"register": true,
+	"localization": ["tile_chisel_planks_dark_oak_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_planks_dark_oak_blinds_desc"],
+			"texture": {
+				"name": "chisel_planks_dark_oak_blinds",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_planks_dark_oak_chaotic_hor_desc"],
+			"texture": {
+				"name": "chisel_planks_dark_oak_chaotic_hor",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_planks_dark_oak_chaotic_desc"],
+			"texture": {
+				"name": "chisel_planks_dark_oak_chaotic",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_planks_dark_oak_clean_desc"],
+			"texture": {
+				"name": "chisel_planks_dark_oak_clean",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_planks_dark_oak_crate_fancy_desc"],
+			"texture": {
+				"name": "chisel_planks_dark_oak_crate_fancy",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_planks_dark_oak_crate_desc"],
+			"texture": {
+				"name": "chisel_planks_dark_oak_crate",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_planks_dark_oak_crateex_desc"],
+			"texture": {
+				"name": "chisel_planks_dark_oak_crateex",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_planks_dark_oak_double_side_desc"],
+			"texture": {
+				"name": "chisel_planks_dark_oak_double_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_planks_dark_oak_double_top_desc"],
+			"texture": {
+				"name": "chisel_planks_dark_oak_double_top",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_planks_dark_oak_fancy_desc"],
+			"texture": {
+				"name": "chisel_planks_dark_oak_fancy",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_planks_dark_oak_large_desc"],
+			"texture": {
+				"name": "chisel_planks_dark_oak_large",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_planks_dark_oak_panel_nails_desc"],
+			"texture": {
+				"name": "chisel_planks_dark_oak_panel_nails",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_planks_dark_oak_parquet_desc"],
+			"texture": {
+				"name": "chisel_planks_dark_oak_parquet",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_planks_dark_oak_short_desc"],
+			"texture": {
+				"name": "chisel_planks_dark_oak_short",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_planks_dark_oak_vertical_uneven_desc"],
+			"texture": {
+				"name": "chisel_planks_dark_oak_vertical_uneven",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_planks_dark_oak_vertical_desc"],
+			"texture": {
+				"name": "chisel_planks_dark_oak_vertical",
+				"type": "normal"
+			}
+		}
+	]
 }

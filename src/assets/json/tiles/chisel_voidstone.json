@@ -8,11 +8,9 @@
 			"localization": ["tile_chisel_voidstone_bevel_desc"],
 			"texture": {
 				"name": "chisel_voidstone_bevel",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_voidstone_bevel_ctm",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -22,7 +20,6 @@
 			"localization": ["tile_chisel_voidstone_eye_desc"],
 			"texture": {
 				"name": "chisel_voidstone_eye",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -31,11 +28,9 @@
 			"localization": ["tile_chisel_voidstone_metalborder_desc"],
 			"texture": {
 				"name": "chisel_voidstone_metalborder",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_voidstone_metalborder_ctm",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -45,7 +40,6 @@
 			"localization": ["tile_chisel_voidstone_pillar_top_desc"],
 			"texture": {
 				"name": "chisel_voidstone_pillar_top",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -54,7 +48,6 @@
 			"localization": ["tile_chisel_voidstone_quarters_desc"],
 			"texture": {
 				"name": "chisel_voidstone_quarters",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -63,7 +56,6 @@
 			"localization": ["tile_chisel_voidstone_raw_desc"],
 			"texture": {
 				"name": "chisel_voidstone_raw",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -72,7 +64,6 @@
 			"localization": ["tile_chisel_voidstone_rune_desc"],
 			"texture": {
 				"name": "chisel_voidstone_rune",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -81,7 +72,6 @@
 			"localization": ["tile_chisel_voidstone_skulls_desc"],
 			"texture": {
 				"name": "chisel_voidstone_skulls",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -90,7 +80,6 @@
 			"localization": ["tile_chisel_voidstone_smooth_desc"],
 			"texture": {
 				"name": "chisel_voidstone_smooth",
-				"extension": "png",
 				"type": "normal"
 			}
 		}

@@ -1,163 +1,119 @@
 {
-    "name": "emerald",
-    "register": true,
-    "localization": [
-        "tile_chisel_emerald_name"
-    ],
-    "variations": [
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_emerald_cell_desc"
-            ],
-            "texture": {
-                "name": "chisel_emerald_cell",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_emerald_cellbismuth_desc"
-            ],
-            "texture": {
-                "name": "chisel_emerald_cellbismuth",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_emerald_chunk_desc"
-            ],
-            "texture": {
-                "name": "chisel_emerald_chunk",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_emerald_emeraldcircle_desc"
-            ],
-            "texture": {
-                "name": "chisel_emerald_emeraldcircle",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_emerald_emeraldprismatic_desc"
-            ],
-            "texture": {
-                "name": "chisel_emerald_emeraldprismatic",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_emerald_four_desc"
-            ],
-            "texture": {
-                "name": "chisel_emerald_four",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_emerald_fourornate_desc"
-            ],
-            "texture": {
-                "name": "chisel_emerald_fourornate",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_emerald_goldborder_desc"
-            ],
-            "texture": {
-                "name": "chisel_emerald_goldborder",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_emerald_masonryemerald_desc"
-            ],
-            "texture": {
-                "name": "chisel_emerald_masonryemerald",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_emerald_ornate_desc"
-            ],
-            "texture": {
-                "name": "chisel_emerald_ornate",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_emerald_panel_desc"
-            ],
-            "texture": {
-                "name": "chisel_emerald_panel",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_emerald_panelclassic_desc"
-            ],
-            "texture": {
-                "name": "chisel_emerald_panelclassic",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_emerald_smooth_desc"
-            ],
-            "texture": {
-                "name": "chisel_emerald_smooth",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_emerald_zelda_desc"
-            ],
-            "texture": {
-                "name": "chisel_emerald_zelda",
-                "extension": "png",
-                "type": "normal"
-            }
-        }
-    ]
+	"name": "emerald",
+	"register": true,
+	"localization": ["tile_chisel_emerald_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_emerald_cell_desc"],
+			"texture": {
+				"name": "chisel_emerald_cell",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_emerald_cellbismuth_desc"],
+			"texture": {
+				"name": "chisel_emerald_cellbismuth",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_emerald_chunk_desc"],
+			"texture": {
+				"name": "chisel_emerald_chunk",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_emerald_emeraldcircle_desc"],
+			"texture": {
+				"name": "chisel_emerald_emeraldcircle",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_emerald_emeraldprismatic_desc"],
+			"texture": {
+				"name": "chisel_emerald_emeraldprismatic",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_emerald_four_desc"],
+			"texture": {
+				"name": "chisel_emerald_four",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_emerald_fourornate_desc"],
+			"texture": {
+				"name": "chisel_emerald_fourornate",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_emerald_goldborder_desc"],
+			"texture": {
+				"name": "chisel_emerald_goldborder",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_emerald_masonryemerald_desc"],
+			"texture": {
+				"name": "chisel_emerald_masonryemerald",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_emerald_ornate_desc"],
+			"texture": {
+				"name": "chisel_emerald_ornate",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_emerald_panel_desc"],
+			"texture": {
+				"name": "chisel_emerald_panel",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_emerald_panelclassic_desc"],
+			"texture": {
+				"name": "chisel_emerald_panelclassic",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_emerald_smooth_desc"],
+			"texture": {
+				"name": "chisel_emerald_smooth",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_emerald_zelda_desc"],
+			"texture": {
+				"name": "chisel_emerald_zelda",
+				"type": "normal"
+			}
+		}
+	]
 }

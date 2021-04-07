@@ -1,196 +1,143 @@
 {
-    "name": "antiblock",
-    "register": true,
-    "localization": [
-        "tile_chisel_antiblock_name"
-    ],
-    "variations": [
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_antiblock_antiblock_desc"
-            ],
-            "texture": {
-                "name": "chisel_antiblock_antiblock",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_antiblock_black_desc"
-            ],
-            "texture": {
-                "name": "chisel_antiblock_black",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_antiblock_blue_desc"
-            ],
-            "texture": {
-                "name": "chisel_antiblock_blue",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_antiblock_brown_desc"
-            ],
-            "texture": {
-                "name": "chisel_antiblock_brown",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_antiblock_cyan_desc"
-            ],
-            "texture": {
-                "name": "chisel_antiblock_cyan",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_antiblock_gray_desc"
-            ],
-            "texture": {
-                "name": "chisel_antiblock_gray",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_antiblock_green_desc"
-            ],
-            "texture": {
-                "name": "chisel_antiblock_green",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_antiblock_light_blue_desc"
-            ],
-            "texture": {
-                "name": "chisel_antiblock_light_blue",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_antiblock_lime_desc"
-            ],
-            "texture": {
-                "name": "chisel_antiblock_lime",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_antiblock_magenta_desc"
-            ],
-            "texture": {
-                "name": "chisel_antiblock_magenta",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_antiblock_orange_desc"
-            ],
-            "texture": {
-                "name": "chisel_antiblock_orange",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_antiblock_pink_desc"
-            ],
-            "texture": {
-                "name": "chisel_antiblock_pink",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_antiblock_purple_desc"
-            ],
-            "texture": {
-                "name": "chisel_antiblock_purple",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_antiblock_red_desc"
-            ],
-            "texture": {
-                "name": "chisel_antiblock_red",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_antiblock_silver_desc"
-            ],
-            "texture": {
-                "name": "chisel_antiblock_silver",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_antiblock_white_desc"
-            ],
-            "texture": {
-                "name": "chisel_antiblock_white",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_antiblock_yellow_desc"
-            ],
-            "texture": {
-                "name": "chisel_antiblock_yellow",
-                "extension": "png",
-                "type": "normal"
-            }
-        }
-    ]
+	"name": "antiblock",
+	"register": true,
+	"localization": ["tile_chisel_antiblock_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_antiblock_antiblock_desc"],
+			"texture": {
+				"name": "chisel_antiblock_antiblock",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_antiblock_black_desc"],
+			"texture": {
+				"name": "chisel_antiblock_black",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_antiblock_blue_desc"],
+			"texture": {
+				"name": "chisel_antiblock_blue",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_antiblock_brown_desc"],
+			"texture": {
+				"name": "chisel_antiblock_brown",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_antiblock_cyan_desc"],
+			"texture": {
+				"name": "chisel_antiblock_cyan",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_antiblock_gray_desc"],
+			"texture": {
+				"name": "chisel_antiblock_gray",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_antiblock_green_desc"],
+			"texture": {
+				"name": "chisel_antiblock_green",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_antiblock_light_blue_desc"],
+			"texture": {
+				"name": "chisel_antiblock_light_blue",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_antiblock_lime_desc"],
+			"texture": {
+				"name": "chisel_antiblock_lime",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_antiblock_magenta_desc"],
+			"texture": {
+				"name": "chisel_antiblock_magenta",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_antiblock_orange_desc"],
+			"texture": {
+				"name": "chisel_antiblock_orange",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_antiblock_pink_desc"],
+			"texture": {
+				"name": "chisel_antiblock_pink",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_antiblock_purple_desc"],
+			"texture": {
+				"name": "chisel_antiblock_purple",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_antiblock_red_desc"],
+			"texture": {
+				"name": "chisel_antiblock_red",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_antiblock_silver_desc"],
+			"texture": {
+				"name": "chisel_antiblock_silver",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_antiblock_white_desc"],
+			"texture": {
+				"name": "chisel_antiblock_white",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_antiblock_yellow_desc"],
+			"texture": {
+				"name": "chisel_antiblock_yellow",
+				"type": "normal"
+			}
+		}
+	]
 }

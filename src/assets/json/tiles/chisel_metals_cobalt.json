@@ -8,11 +8,9 @@
 			"localization": ["tile_chisel_metals_cobalt_badgreggy_desc"],
 			"texture": {
 				"name": "chisel_metals_cobalt_badgreggy",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_metals_cobalt_badgreggy_ctm",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -22,7 +20,6 @@
 			"localization": ["tile_chisel_metals_cobalt_bolted_desc"],
 			"texture": {
 				"name": "chisel_metals_cobalt_bolted",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -31,11 +28,9 @@
 			"localization": ["tile_chisel_metals_cobalt_caution_desc"],
 			"texture": {
 				"name": "chisel_metals_cobalt_caution",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_metals_cobalt_caution_ctm",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -45,11 +40,9 @@
 			"localization": ["tile_chisel_metals_cobalt_crate_desc"],
 			"texture": {
 				"name": "chisel_metals_cobalt_crate",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_metals_cobalt_crate_ctm",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -59,7 +52,6 @@
 			"localization": ["tile_chisel_metals_cobalt_machine_desc"],
 			"texture": {
 				"name": "chisel_metals_cobalt_machine",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -68,11 +60,9 @@
 			"localization": ["tile_chisel_metals_cobalt_scaffold_desc"],
 			"texture": {
 				"name": "chisel_metals_cobalt_scaffold",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_metals_cobalt_scaffold_ctm",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -82,7 +72,6 @@
 			"localization": ["tile_chisel_metals_cobalt_thermal_bottom_desc"],
 			"texture": {
 				"name": "chisel_metals_cobalt_thermal_bottom",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -91,7 +80,6 @@
 			"localization": ["tile_chisel_metals_cobalt_thermal_side_desc"],
 			"texture": {
 				"name": "chisel_metals_cobalt_thermal_side",
-				"extension": "png",
 				"type": "normal"
 			}
 		},
@@ -100,7 +88,6 @@
 			"localization": ["tile_chisel_metals_cobalt_thermal_top_desc"],
 			"texture": {
 				"name": "chisel_metals_cobalt_thermal_top",
-				"extension": "png",
 				"type": "normal"
 			}
 		}

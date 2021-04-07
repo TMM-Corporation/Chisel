@@ -8,11 +8,9 @@
 			"localization": ["tile_chisel_glass_stained_orange_brick_desc"],
 			"texture": {
 				"name": "chisel_glass_stained_orange_brick",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_glass_stained_orange_brick_ct",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -22,11 +20,9 @@
 			"localization": ["tile_chisel_glass_stained_orange_framed_desc"],
 			"texture": {
 				"name": "chisel_glass_stained_orange_framed",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_glass_stained_orange_framed_ct",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -36,11 +32,9 @@
 			"localization": ["tile_chisel_glass_stained_orange_panel_desc"],
 			"texture": {
 				"name": "chisel_glass_stained_orange_panel",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_glass_stained_orange_panel_ct",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -50,11 +44,9 @@
 			"localization": ["tile_chisel_glass_stained_orange_rough_desc"],
 			"texture": {
 				"name": "chisel_glass_stained_orange_rough",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_glass_stained_orange_rough_ct",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -64,7 +56,6 @@
 			"localization": ["tile_chisel_glass_stained_orange_streaks_desc"],
 			"texture": {
 				"name": "chisel_glass_stained_orange_streaks",
-				"extension": "png",
 				"type": "normal"
 			}
 		}

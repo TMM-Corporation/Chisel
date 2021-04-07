@@ -1,20 +1,15 @@
 {
-    "name": "cobblestonemossy",
-    "register": true,
-    "localization": [
-        "tile_chisel_cobblestonemossy_name"
-    ],
-    "variations": [
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_cobblestonemossy_mossy_desc"
-            ],
-            "texture": {
-                "name": "chisel_cobblestonemossy_mossy",
-                "extension": "png",
-                "type": "normal"
-            }
-        }
-    ]
+	"name": "cobblestonemossy",
+	"register": true,
+	"localization": ["tile_chisel_cobblestonemossy_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_cobblestonemossy_mossy_desc"],
+			"texture": {
+				"name": "chisel_cobblestonemossy_mossy",
+				"type": "normal"
+			}
+		}
+	]
 }

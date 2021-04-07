@@ -1,20 +1,15 @@
 {
-    "name": "redstoneold",
-    "register": true,
-    "localization": [
-        "tile_chisel_redstoneold_name"
-    ],
-    "variations": [
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_redstoneold_masonryredstone_desc"
-            ],
-            "texture": {
-                "name": "chisel_redstoneold_masonryredstone",
-                "extension": "png",
-                "type": "normal"
-            }
-        }
-    ]
+	"name": "redstoneold",
+	"register": true,
+	"localization": ["tile_chisel_redstoneold_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_redstoneold_masonryredstone_desc"],
+			"texture": {
+				"name": "chisel_redstoneold_masonryredstone",
+				"type": "normal"
+			}
+		}
+	]
 }

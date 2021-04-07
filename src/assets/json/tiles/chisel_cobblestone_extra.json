@@ -8,11 +8,9 @@
 			"localization": ["tile_chisel_cobblestone_extra_emboss_desc"],
 			"texture": {
 				"name": "chisel_cobblestone_extra_emboss",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_cobblestone_extra_emboss_ctm",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -22,11 +20,9 @@
 			"localization": ["tile_chisel_cobblestone_extra_indent_desc"],
 			"texture": {
 				"name": "chisel_cobblestone_extra_indent",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_cobblestone_extra_indent_ctm",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -36,7 +32,6 @@
 			"localization": ["tile_chisel_cobblestone_extra_marker_desc"],
 			"texture": {
 				"name": "chisel_cobblestone_extra_marker",
-				"extension": "png",
 				"type": "normal"
 			}
 		}

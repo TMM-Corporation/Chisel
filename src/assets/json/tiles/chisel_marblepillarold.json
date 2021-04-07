@@ -1,361 +1,263 @@
 {
-    "name": "marblepillarold",
-    "register": true,
-    "localization": [
-        "tile_chisel_marblepillarold_name"
-    ],
-    "variations": [
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_marblepillarold_a1_stoneornamental_marblegreek_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_marblepillarold_a1_stoneornamental_marblegreek_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_marblepillarold_a1_stoneornamental_marblegreek_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_marblepillarold_a1_stoneornamental_marblegreek_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_marblepillarold_a1_stonepillar_greek_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_marblepillarold_a1_stonepillar_greek_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_marblepillarold_a1_stonepillar_greek_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_marblepillarold_a1_stonepillar_greek_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_marblepillarold_a1_stonepillar_greekbottomgreek_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_marblepillarold_a1_stonepillar_greekbottomgreek_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_marblepillarold_a1_stonepillar_greekbottomgreek_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_marblepillarold_a1_stonepillar_greekbottomgreek_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_marblepillarold_a1_stonepillar_greekbottomplain_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_marblepillarold_a1_stonepillar_greekbottomplain_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_marblepillarold_a1_stonepillar_greekbottomplain_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_marblepillarold_a1_stonepillar_greekbottomplain_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_marblepillarold_a1_stonepillar_greektopgreek_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_marblepillarold_a1_stonepillar_greektopgreek_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_marblepillarold_a1_stonepillar_greektopgreek_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_marblepillarold_a1_stonepillar_greektopgreek_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_marblepillarold_a1_stonepillar_greektopplain_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_marblepillarold_a1_stonepillar_greektopplain_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_marblepillarold_a1_stonepillar_greektopplain_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_marblepillarold_a1_stonepillar_greektopplain_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_marblepillarold_a1_stonepillar_plain_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_marblepillarold_a1_stonepillar_plain_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_marblepillarold_a1_stonepillar_plain_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_marblepillarold_a1_stonepillar_plain_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_marblepillarold_a1_stonepillar_plainbottomgreek_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_marblepillarold_a1_stonepillar_plainbottomgreek_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_marblepillarold_a1_stonepillar_plainbottomgreek_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_marblepillarold_a1_stonepillar_plainbottomgreek_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_marblepillarold_a1_stonepillar_plainbottomplain_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_marblepillarold_a1_stonepillar_plainbottomplain_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_marblepillarold_a1_stonepillar_plainbottomplain_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_marblepillarold_a1_stonepillar_plainbottomplain_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_marblepillarold_a1_stonepillar_plaintopgreek_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_marblepillarold_a1_stonepillar_plaintopgreek_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_marblepillarold_a1_stonepillar_plaintopgreek_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_marblepillarold_a1_stonepillar_plaintopgreek_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_marblepillarold_a1_stonepillar_plaintopplain_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_marblepillarold_a1_stonepillar_plaintopplain_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_marblepillarold_a1_stonepillar_plaintopplain_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_marblepillarold_a1_stonepillar_plaintopplain_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_marblepillarold_base_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_marblepillarold_base_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_marblepillarold_base_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_marblepillarold_base_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_marblepillarold_capstone_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_marblepillarold_capstone_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_marblepillarold_capstone_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_marblepillarold_capstone_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_marblepillarold_column_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_marblepillarold_column_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_marblepillarold_column_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_marblepillarold_column_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_marblepillarold_pillar_carved_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_marblepillarold_pillar_carved_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_marblepillarold_pillar_carved_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_marblepillarold_pillar_carved_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_marblepillarold_small_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_marblepillarold_small_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_marblepillarold_small_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_marblepillarold_small_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        }
-    ]
+	"name": "marblepillarold",
+	"register": true,
+	"localization": ["tile_chisel_marblepillarold_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_marblepillarold_a1_stoneornamental_marblegreek_side_desc"],
+			"texture": {
+				"name": "chisel_marblepillarold_a1_stoneornamental_marblegreek_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_marblepillarold_a1_stoneornamental_marblegreek_top_desc"],
+			"texture": {
+				"name": "chisel_marblepillarold_a1_stoneornamental_marblegreek_top",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_marblepillarold_a1_stonepillar_greek_side_desc"],
+			"texture": {
+				"name": "chisel_marblepillarold_a1_stonepillar_greek_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_marblepillarold_a1_stonepillar_greek_top_desc"],
+			"texture": {
+				"name": "chisel_marblepillarold_a1_stonepillar_greek_top",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_marblepillarold_a1_stonepillar_greekbottomgreek_side_desc"],
+			"texture": {
+				"name": "chisel_marblepillarold_a1_stonepillar_greekbottomgreek_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_marblepillarold_a1_stonepillar_greekbottomgreek_top_desc"],
+			"texture": {
+				"name": "chisel_marblepillarold_a1_stonepillar_greekbottomgreek_top",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_marblepillarold_a1_stonepillar_greekbottomplain_side_desc"],
+			"texture": {
+				"name": "chisel_marblepillarold_a1_stonepillar_greekbottomplain_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_marblepillarold_a1_stonepillar_greekbottomplain_top_desc"],
+			"texture": {
+				"name": "chisel_marblepillarold_a1_stonepillar_greekbottomplain_top",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_marblepillarold_a1_stonepillar_greektopgreek_side_desc"],
+			"texture": {
+				"name": "chisel_marblepillarold_a1_stonepillar_greektopgreek_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_marblepillarold_a1_stonepillar_greektopgreek_top_desc"],
+			"texture": {
+				"name": "chisel_marblepillarold_a1_stonepillar_greektopgreek_top",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_marblepillarold_a1_stonepillar_greektopplain_side_desc"],
+			"texture": {
+				"name": "chisel_marblepillarold_a1_stonepillar_greektopplain_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_marblepillarold_a1_stonepillar_greektopplain_top_desc"],
+			"texture": {
+				"name": "chisel_marblepillarold_a1_stonepillar_greektopplain_top",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_marblepillarold_a1_stonepillar_plain_side_desc"],
+			"texture": {
+				"name": "chisel_marblepillarold_a1_stonepillar_plain_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_marblepillarold_a1_stonepillar_plain_top_desc"],
+			"texture": {
+				"name": "chisel_marblepillarold_a1_stonepillar_plain_top",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_marblepillarold_a1_stonepillar_plainbottomgreek_side_desc"],
+			"texture": {
+				"name": "chisel_marblepillarold_a1_stonepillar_plainbottomgreek_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_marblepillarold_a1_stonepillar_plainbottomgreek_top_desc"],
+			"texture": {
+				"name": "chisel_marblepillarold_a1_stonepillar_plainbottomgreek_top",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_marblepillarold_a1_stonepillar_plainbottomplain_side_desc"],
+			"texture": {
+				"name": "chisel_marblepillarold_a1_stonepillar_plainbottomplain_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_marblepillarold_a1_stonepillar_plainbottomplain_top_desc"],
+			"texture": {
+				"name": "chisel_marblepillarold_a1_stonepillar_plainbottomplain_top",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_marblepillarold_a1_stonepillar_plaintopgreek_side_desc"],
+			"texture": {
+				"name": "chisel_marblepillarold_a1_stonepillar_plaintopgreek_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_marblepillarold_a1_stonepillar_plaintopgreek_top_desc"],
+			"texture": {
+				"name": "chisel_marblepillarold_a1_stonepillar_plaintopgreek_top",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_marblepillarold_a1_stonepillar_plaintopplain_side_desc"],
+			"texture": {
+				"name": "chisel_marblepillarold_a1_stonepillar_plaintopplain_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_marblepillarold_a1_stonepillar_plaintopplain_top_desc"],
+			"texture": {
+				"name": "chisel_marblepillarold_a1_stonepillar_plaintopplain_top",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_marblepillarold_base_side_desc"],
+			"texture": {
+				"name": "chisel_marblepillarold_base_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_marblepillarold_base_top_desc"],
+			"texture": {
+				"name": "chisel_marblepillarold_base_top",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_marblepillarold_capstone_side_desc"],
+			"texture": {
+				"name": "chisel_marblepillarold_capstone_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_marblepillarold_capstone_top_desc"],
+			"texture": {
+				"name": "chisel_marblepillarold_capstone_top",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_marblepillarold_column_side_desc"],
+			"texture": {
+				"name": "chisel_marblepillarold_column_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_marblepillarold_column_top_desc"],
+			"texture": {
+				"name": "chisel_marblepillarold_column_top",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_marblepillarold_pillar_carved_side_desc"],
+			"texture": {
+				"name": "chisel_marblepillarold_pillar_carved_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_marblepillarold_pillar_carved_top_desc"],
+			"texture": {
+				"name": "chisel_marblepillarold_pillar_carved_top",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_marblepillarold_small_side_desc"],
+			"texture": {
+				"name": "chisel_marblepillarold_small_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_marblepillarold_small_top_desc"],
+			"texture": {
+				"name": "chisel_marblepillarold_small_top",
+				"type": "normal"
+			}
+		}
+	]
 }

@@ -8,11 +8,9 @@
 			"localization": ["tile_chisel_glass_stained_cyan_brick_desc"],
 			"texture": {
 				"name": "chisel_glass_stained_cyan_brick",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_glass_stained_cyan_brick_ct",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -22,11 +20,9 @@
 			"localization": ["tile_chisel_glass_stained_cyan_framed_desc"],
 			"texture": {
 				"name": "chisel_glass_stained_cyan_framed",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_glass_stained_cyan_framed_ct",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -36,11 +32,9 @@
 			"localization": ["tile_chisel_glass_stained_cyan_panel_desc"],
 			"texture": {
 				"name": "chisel_glass_stained_cyan_panel",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_glass_stained_cyan_panel_ct",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -50,11 +44,9 @@
 			"localization": ["tile_chisel_glass_stained_cyan_rough_desc"],
 			"texture": {
 				"name": "chisel_glass_stained_cyan_rough",
-				"extension": "png",
 				"type": "normal",
 				"ctm": {
 					"name": "chisel_glass_stained_cyan_rough_ct",
-					"extension": "png",
 					"type": "ctm"
 				}
 			}
@@ -64,7 +56,6 @@
 			"localization": ["tile_chisel_glass_stained_cyan_streaks_desc"],
 			"texture": {
 				"name": "chisel_glass_stained_cyan_streaks",
-				"extension": "png",
 				"type": "normal"
 			}
 		}

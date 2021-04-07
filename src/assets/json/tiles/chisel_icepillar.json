@@ -1,108 +1,79 @@
 {
-    "name": "icepillar",
-    "register": true,
-    "localization": [
-        "tile_chisel_icepillar_name"
-    ],
-    "variations": [
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_icepillar_carved_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_icepillar_carved_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_icepillar_carved_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_icepillar_carved_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_icepillar_convexplain_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_icepillar_convexplain_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_icepillar_greekgreek_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_icepillar_greekgreek_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_icepillar_greekplain_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_icepillar_greekplain_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_icepillar_ornamental_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_icepillar_ornamental_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_icepillar_ornamental_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_icepillar_ornamental_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_icepillar_plaingreek_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_icepillar_plaingreek_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_icepillar_plainplain_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_icepillar_plainplain_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        }
-    ]
+	"name": "icepillar",
+	"register": true,
+	"localization": ["tile_chisel_icepillar_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_icepillar_carved_side_desc"],
+			"texture": {
+				"name": "chisel_icepillar_carved_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_icepillar_carved_top_desc"],
+			"texture": {
+				"name": "chisel_icepillar_carved_top",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_icepillar_convexplain_top_desc"],
+			"texture": {
+				"name": "chisel_icepillar_convexplain_top",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_icepillar_greekgreek_top_desc"],
+			"texture": {
+				"name": "chisel_icepillar_greekgreek_top",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_icepillar_greekplain_top_desc"],
+			"texture": {
+				"name": "chisel_icepillar_greekplain_top",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_icepillar_ornamental_side_desc"],
+			"texture": {
+				"name": "chisel_icepillar_ornamental_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_icepillar_ornamental_top_desc"],
+			"texture": {
+				"name": "chisel_icepillar_ornamental_top",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_icepillar_plaingreek_top_desc"],
+			"texture": {
+				"name": "chisel_icepillar_plaingreek_top",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_icepillar_plainplain_top_desc"],
+			"texture": {
+				"name": "chisel_icepillar_plainplain_top",
+				"type": "normal"
+			}
+		}
+	]
 }

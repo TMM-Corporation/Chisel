@@ -1,383 +1,279 @@
 {
-    "name": "templemossy",
-    "register": true,
-    "localization": [
-        "tile_chisel_templemossy_name"
-    ],
-    "variations": [
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_templemossy_bricks_disarray_desc"
-            ],
-            "texture": {
-                "name": "chisel_templemossy_bricks_disarray",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_templemossy_bricks_large_desc"
-            ],
-            "texture": {
-                "name": "chisel_templemossy_bricks_large",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_templemossy_bricks_weared_desc"
-            ],
-            "texture": {
-                "name": "chisel_templemossy_bricks_weared",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_templemossy_bricks_desc"
-            ],
-            "texture": {
-                "name": "chisel_templemossy_bricks",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_templemossy_cobble_0_desc"
-            ],
-            "texture": {
-                "name": "chisel_templemossy_cobble_0",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_templemossy_cobble_1_desc"
-            ],
-            "texture": {
-                "name": "chisel_templemossy_cobble_1",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_templemossy_cobble_2_desc"
-            ],
-            "texture": {
-                "name": "chisel_templemossy_cobble_2",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_templemossy_cobble_3_desc"
-            ],
-            "texture": {
-                "name": "chisel_templemossy_cobble_3",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_templemossy_cobble_desc"
-            ],
-            "texture": {
-                "name": "chisel_templemossy_cobble",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_templemossy_column_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_templemossy_column_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_templemossy_column_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_templemossy_column_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_templemossy_ornate_desc"
-            ],
-            "texture": {
-                "name": "chisel_templemossy_ornate",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_templemossy_plate_cracked_0_desc"
-            ],
-            "texture": {
-                "name": "chisel_templemossy_plate_cracked_0",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_templemossy_plate_cracked_1_desc"
-            ],
-            "texture": {
-                "name": "chisel_templemossy_plate_cracked_1",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_templemossy_plate_cracked_2_desc"
-            ],
-            "texture": {
-                "name": "chisel_templemossy_plate_cracked_2",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_templemossy_plate_cracked_3_desc"
-            ],
-            "texture": {
-                "name": "chisel_templemossy_plate_cracked_3",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_templemossy_plate_cracked_4_desc"
-            ],
-            "texture": {
-                "name": "chisel_templemossy_plate_cracked_4",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_templemossy_plate_cracked_5_desc"
-            ],
-            "texture": {
-                "name": "chisel_templemossy_plate_cracked_5",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_templemossy_plate_cracked_6_desc"
-            ],
-            "texture": {
-                "name": "chisel_templemossy_plate_cracked_6",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_templemossy_plate_cracked_7_desc"
-            ],
-            "texture": {
-                "name": "chisel_templemossy_plate_cracked_7",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_templemossy_plate_cracked_8_desc"
-            ],
-            "texture": {
-                "name": "chisel_templemossy_plate_cracked_8",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_templemossy_plate_cracked_desc"
-            ],
-            "texture": {
-                "name": "chisel_templemossy_plate_cracked",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_templemossy_plate_desc"
-            ],
-            "texture": {
-                "name": "chisel_templemossy_plate",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_templemossy_smalltiles_light_desc"
-            ],
-            "texture": {
-                "name": "chisel_templemossy_smalltiles_light",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_templemossy_smalltiles_desc"
-            ],
-            "texture": {
-                "name": "chisel_templemossy_smalltiles",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_templemossy_stand_creeper_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_templemossy_stand_creeper_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_templemossy_stand_creeper_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_templemossy_stand_creeper_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_templemossy_stand_mosaic_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_templemossy_stand_mosaic_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_templemossy_stand_mosaic_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_templemossy_stand_mosaic_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_templemossy_stand_side_desc"
-            ],
-            "texture": {
-                "name": "chisel_templemossy_stand_side",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_templemossy_stand_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_templemossy_stand_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_templemossy_temple_top_desc"
-            ],
-            "texture": {
-                "name": "chisel_templemossy_temple_top",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_templemossy_tiles_light_desc"
-            ],
-            "texture": {
-                "name": "chisel_templemossy_tiles_light",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_templemossy_tiles_desc"
-            ],
-            "texture": {
-                "name": "chisel_templemossy_tiles",
-                "extension": "png",
-                "type": "normal"
-            }
-        }
-    ]
+	"name": "templemossy",
+	"register": true,
+	"localization": ["tile_chisel_templemossy_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_templemossy_bricks_disarray_desc"],
+			"texture": {
+				"name": "chisel_templemossy_bricks_disarray",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_templemossy_bricks_large_desc"],
+			"texture": {
+				"name": "chisel_templemossy_bricks_large",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_templemossy_bricks_weared_desc"],
+			"texture": {
+				"name": "chisel_templemossy_bricks_weared",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_templemossy_bricks_desc"],
+			"texture": {
+				"name": "chisel_templemossy_bricks",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_templemossy_cobble_0_desc"],
+			"texture": {
+				"name": "chisel_templemossy_cobble_0",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_templemossy_cobble_1_desc"],
+			"texture": {
+				"name": "chisel_templemossy_cobble_1",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_templemossy_cobble_2_desc"],
+			"texture": {
+				"name": "chisel_templemossy_cobble_2",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_templemossy_cobble_3_desc"],
+			"texture": {
+				"name": "chisel_templemossy_cobble_3",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_templemossy_cobble_desc"],
+			"texture": {
+				"name": "chisel_templemossy_cobble",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_templemossy_column_side_desc"],
+			"texture": {
+				"name": "chisel_templemossy_column_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_templemossy_column_top_desc"],
+			"texture": {
+				"name": "chisel_templemossy_column_top",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_templemossy_ornate_desc"],
+			"texture": {
+				"name": "chisel_templemossy_ornate",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_templemossy_plate_cracked_0_desc"],
+			"texture": {
+				"name": "chisel_templemossy_plate_cracked_0",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_templemossy_plate_cracked_1_desc"],
+			"texture": {
+				"name": "chisel_templemossy_plate_cracked_1",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_templemossy_plate_cracked_2_desc"],
+			"texture": {
+				"name": "chisel_templemossy_plate_cracked_2",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_templemossy_plate_cracked_3_desc"],
+			"texture": {
+				"name": "chisel_templemossy_plate_cracked_3",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_templemossy_plate_cracked_4_desc"],
+			"texture": {
+				"name": "chisel_templemossy_plate_cracked_4",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_templemossy_plate_cracked_5_desc"],
+			"texture": {
+				"name": "chisel_templemossy_plate_cracked_5",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_templemossy_plate_cracked_6_desc"],
+			"texture": {
+				"name": "chisel_templemossy_plate_cracked_6",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_templemossy_plate_cracked_7_desc"],
+			"texture": {
+				"name": "chisel_templemossy_plate_cracked_7",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_templemossy_plate_cracked_8_desc"],
+			"texture": {
+				"name": "chisel_templemossy_plate_cracked_8",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_templemossy_plate_cracked_desc"],
+			"texture": {
+				"name": "chisel_templemossy_plate_cracked",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_templemossy_plate_desc"],
+			"texture": {
+				"name": "chisel_templemossy_plate",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_templemossy_smalltiles_light_desc"],
+			"texture": {
+				"name": "chisel_templemossy_smalltiles_light",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_templemossy_smalltiles_desc"],
+			"texture": {
+				"name": "chisel_templemossy_smalltiles",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_templemossy_stand_creeper_side_desc"],
+			"texture": {
+				"name": "chisel_templemossy_stand_creeper_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_templemossy_stand_creeper_top_desc"],
+			"texture": {
+				"name": "chisel_templemossy_stand_creeper_top",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_templemossy_stand_mosaic_side_desc"],
+			"texture": {
+				"name": "chisel_templemossy_stand_mosaic_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_templemossy_stand_mosaic_top_desc"],
+			"texture": {
+				"name": "chisel_templemossy_stand_mosaic_top",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_templemossy_stand_side_desc"],
+			"texture": {
+				"name": "chisel_templemossy_stand_side",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_templemossy_stand_top_desc"],
+			"texture": {
+				"name": "chisel_templemossy_stand_top",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_templemossy_temple_top_desc"],
+			"texture": {
+				"name": "chisel_templemossy_temple_top",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_templemossy_tiles_light_desc"],
+			"texture": {
+				"name": "chisel_templemossy_tiles_light",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_templemossy_tiles_desc"],
+			"texture": {
+				"name": "chisel_templemossy_tiles",
+				"type": "normal"
+			}
+		}
+	]
 }

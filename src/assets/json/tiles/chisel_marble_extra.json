@@ -1,20 +1,15 @@
 {
-    "name": "marble/extra",
-    "register": true,
-    "localization": [
-        "tile_chisel_marble_extra_name"
-    ],
-    "variations": [
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_marble_extra_raw_desc"
-            ],
-            "texture": {
-                "name": "chisel_marble_extra_raw",
-                "extension": "png",
-                "type": "normal"
-            }
-        }
-    ]
+	"name": "marble/extra",
+	"register": true,
+	"localization": ["tile_chisel_marble_extra_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_marble_extra_raw_desc"],
+			"texture": {
+				"name": "chisel_marble_extra_raw",
+				"type": "normal"
+			}
+		}
+	]
 }

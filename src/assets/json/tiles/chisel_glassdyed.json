@@ -1,889 +1,647 @@
 {
-    "name": "glassdyed",
-    "register": true,
-    "localization": [
-        "tile_chisel_glassdyed_name"
-    ],
-    "variations": [
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_black_bubble_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_black_bubble",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_black_forestry_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_black_forestry",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_black_panel_fancy_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_black_panel_fancy",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_black_panel_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_black_panel",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_black_transparent_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_black_transparent",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_blue_bubble_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_blue_bubble",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_blue_forestry_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_blue_forestry",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_blue_panel_fancy_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_blue_panel_fancy",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_blue_panel_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_blue_panel",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_blue_transparent_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_blue_transparent",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_brown_bubble_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_brown_bubble",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_brown_forestry_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_brown_forestry",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_brown_panel_fancy_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_brown_panel_fancy",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_brown_panel_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_brown_panel",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_brown_transparent_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_brown_transparent",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_cyan_bubble_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_cyan_bubble",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_cyan_forestry_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_cyan_forestry",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_cyan_panel_fancy_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_cyan_panel_fancy",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_cyan_panel_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_cyan_panel",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_cyan_transparent_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_cyan_transparent",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_gray_bubble_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_gray_bubble",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_gray_forestry_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_gray_forestry",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_gray_panel_fancy_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_gray_panel_fancy",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_gray_panel_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_gray_panel",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_gray_transparent_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_gray_transparent",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_green_bubble_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_green_bubble",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_green_forestry_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_green_forestry",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_green_panel_fancy_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_green_panel_fancy",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_green_panel_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_green_panel",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_green_transparent_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_green_transparent",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_lightblue_bubble_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_lightblue_bubble",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_lightblue_forestry_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_lightblue_forestry",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_lightblue_panel_fancy_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_lightblue_panel_fancy",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_lightblue_panel_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_lightblue_panel",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_lightblue_transparent_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_lightblue_transparent",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_lightgray_bubble_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_lightgray_bubble",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_lightgray_forestry_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_lightgray_forestry",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_lightgray_panel_fancy_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_lightgray_panel_fancy",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_lightgray_panel_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_lightgray_panel",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_lightgray_transparent_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_lightgray_transparent",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_lime_bubble_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_lime_bubble",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_lime_forestry_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_lime_forestry",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_lime_panel_fancy_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_lime_panel_fancy",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_lime_panel_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_lime_panel",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_lime_transparent_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_lime_transparent",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_magenta_bubble_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_magenta_bubble",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_magenta_forestry_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_magenta_forestry",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_magenta_panel_fancy_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_magenta_panel_fancy",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_magenta_panel_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_magenta_panel",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_magenta_transparent_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_magenta_transparent",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_orange_bubble_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_orange_bubble",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_orange_forestry_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_orange_forestry",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_orange_panel_fancy_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_orange_panel_fancy",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_orange_panel_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_orange_panel",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_orange_transparent_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_orange_transparent",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_pink_bubble_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_pink_bubble",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_pink_forestry_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_pink_forestry",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_pink_panel_fancy_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_pink_panel_fancy",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_pink_panel_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_pink_panel",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_pink_transparent_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_pink_transparent",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_purple_bubble_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_purple_bubble",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_purple_forestry_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_purple_forestry",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_purple_panel_fancy_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_purple_panel_fancy",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_purple_panel_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_purple_panel",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_purple_transparent_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_purple_transparent",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_red_bubble_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_red_bubble",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_red_forestry_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_red_forestry",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_red_panel_fancy_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_red_panel_fancy",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_red_panel_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_red_panel",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_red_transparent_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_red_transparent",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_white_bubble_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_white_bubble",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_white_forestry_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_white_forestry",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_white_panel_fancy_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_white_panel_fancy",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_white_panel_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_white_panel",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_white_transparent_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_white_transparent",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_yellow_bubble_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_yellow_bubble",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_yellow_forestry_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_yellow_forestry",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_yellow_panel_fancy_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_yellow_panel_fancy",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_yellow_panel_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_yellow_panel",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_glassdyed_yellow_transparent_desc"
-            ],
-            "texture": {
-                "name": "chisel_glassdyed_yellow_transparent",
-                "extension": "png",
-                "type": "normal"
-            }
-        }
-    ]
+	"name": "glassdyed",
+	"register": true,
+	"localization": ["tile_chisel_glassdyed_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_black_bubble_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_black_bubble",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_black_forestry_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_black_forestry",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_black_panel_fancy_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_black_panel_fancy",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_black_panel_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_black_panel",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_black_transparent_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_black_transparent",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_blue_bubble_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_blue_bubble",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_blue_forestry_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_blue_forestry",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_blue_panel_fancy_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_blue_panel_fancy",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_blue_panel_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_blue_panel",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_blue_transparent_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_blue_transparent",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_brown_bubble_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_brown_bubble",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_brown_forestry_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_brown_forestry",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_brown_panel_fancy_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_brown_panel_fancy",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_brown_panel_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_brown_panel",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_brown_transparent_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_brown_transparent",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_cyan_bubble_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_cyan_bubble",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_cyan_forestry_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_cyan_forestry",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_cyan_panel_fancy_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_cyan_panel_fancy",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_cyan_panel_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_cyan_panel",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_cyan_transparent_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_cyan_transparent",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_gray_bubble_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_gray_bubble",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_gray_forestry_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_gray_forestry",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_gray_panel_fancy_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_gray_panel_fancy",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_gray_panel_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_gray_panel",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_gray_transparent_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_gray_transparent",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_green_bubble_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_green_bubble",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_green_forestry_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_green_forestry",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_green_panel_fancy_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_green_panel_fancy",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_green_panel_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_green_panel",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_green_transparent_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_green_transparent",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_lightblue_bubble_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_lightblue_bubble",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_lightblue_forestry_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_lightblue_forestry",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_lightblue_panel_fancy_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_lightblue_panel_fancy",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_lightblue_panel_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_lightblue_panel",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_lightblue_transparent_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_lightblue_transparent",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_lightgray_bubble_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_lightgray_bubble",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_lightgray_forestry_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_lightgray_forestry",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_lightgray_panel_fancy_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_lightgray_panel_fancy",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_lightgray_panel_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_lightgray_panel",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_lightgray_transparent_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_lightgray_transparent",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_lime_bubble_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_lime_bubble",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_lime_forestry_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_lime_forestry",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_lime_panel_fancy_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_lime_panel_fancy",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_lime_panel_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_lime_panel",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_lime_transparent_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_lime_transparent",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_magenta_bubble_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_magenta_bubble",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_magenta_forestry_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_magenta_forestry",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_magenta_panel_fancy_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_magenta_panel_fancy",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_magenta_panel_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_magenta_panel",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_magenta_transparent_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_magenta_transparent",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_orange_bubble_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_orange_bubble",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_orange_forestry_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_orange_forestry",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_orange_panel_fancy_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_orange_panel_fancy",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_orange_panel_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_orange_panel",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_orange_transparent_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_orange_transparent",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_pink_bubble_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_pink_bubble",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_pink_forestry_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_pink_forestry",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_pink_panel_fancy_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_pink_panel_fancy",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_pink_panel_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_pink_panel",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_pink_transparent_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_pink_transparent",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_purple_bubble_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_purple_bubble",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_purple_forestry_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_purple_forestry",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_purple_panel_fancy_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_purple_panel_fancy",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_purple_panel_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_purple_panel",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_purple_transparent_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_purple_transparent",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_red_bubble_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_red_bubble",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_red_forestry_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_red_forestry",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_red_panel_fancy_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_red_panel_fancy",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_red_panel_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_red_panel",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_red_transparent_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_red_transparent",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_white_bubble_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_white_bubble",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_white_forestry_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_white_forestry",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_white_panel_fancy_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_white_panel_fancy",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_white_panel_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_white_panel",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_white_transparent_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_white_transparent",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_yellow_bubble_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_yellow_bubble",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_yellow_forestry_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_yellow_forestry",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_yellow_panel_fancy_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_yellow_panel_fancy",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_yellow_panel_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_yellow_panel",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_glassdyed_yellow_transparent_desc"],
+			"texture": {
+				"name": "chisel_glassdyed_yellow_transparent",
+				"type": "normal"
+			}
+		}
+	]
 }

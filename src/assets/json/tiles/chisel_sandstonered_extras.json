@@ -1,42 +1,31 @@
 {
-    "name": "sandstonered/extras",
-    "register": true,
-    "localization": [
-        "tile_chisel_sandstonered_extras_name"
-    ],
-    "variations": [
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_sandstonered_extras_bevel_skeleton_desc"
-            ],
-            "texture": {
-                "name": "chisel_sandstonered_extras_bevel_skeleton",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_sandstonered_extras_glyphs_desc"
-            ],
-            "texture": {
-                "name": "chisel_sandstonered_extras_glyphs",
-                "extension": "png",
-                "type": "normal"
-            }
-        },
-        {
-            "register": true,
-            "localization": [
-                "tile_chisel_sandstonered_extras_small_desc"
-            ],
-            "texture": {
-                "name": "chisel_sandstonered_extras_small",
-                "extension": "png",
-                "type": "normal"
-            }
-        }
-    ]
+	"name": "sandstonered/extras",
+	"register": true,
+	"localization": ["tile_chisel_sandstonered_extras_name"],
+	"variations": [
+		{
+			"register": true,
+			"localization": ["tile_chisel_sandstonered_extras_bevel_skeleton_desc"],
+			"texture": {
+				"name": "chisel_sandstonered_extras_bevel_skeleton",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_sandstonered_extras_glyphs_desc"],
+			"texture": {
+				"name": "chisel_sandstonered_extras_glyphs",
+				"type": "normal"
+			}
+		},
+		{
+			"register": true,
+			"localization": ["tile_chisel_sandstonered_extras_small_desc"],
+			"texture": {
+				"name": "chisel_sandstonered_extras_small",
+				"type": "normal"
+			}
+		}
+	]
 }
