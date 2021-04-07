@@ -33,3 +33,14 @@ new ChiselItem.Custom({
 		durability: 10048
 	}
 })
+
+
+Item.setProperties("chisel_iron", JSON.stringify({
+	"minecraft:explodable": false
+}))
+Item.setProperties("chisel_diamond", JSON.stringify({
+	"minecraft:explodable": false
+}))
+Item.setProperties("chisel_hitech", JSON.stringify({
+	"minecraft:explodable": false
+}))
