@@ -34,3 +34,81 @@
 // 		"slotEnergy": { type: "slot", x: 600, y: 130, isValid: function (id) { return ChargeItemRegistry.isValidItem(id, "Eu", 0) } },
 // 		"sun": { type: "image", x: 608, y: 194, bitmap: "sun_off", scale: GUI_SCALE }
 // 	})
+
+
+namespace ChiselGui {
+	function backgroundTransparent(): UI.ColorDrawing {
+		return { type: "background", color: Color.TRANSPARENT }
+	}
+	function backgroundShadow(): UI.ColorDrawing {
+		return { type: "background", color: android.graphics.Color.argb(90, 0, 0, 0) }
+	}
+	function backgroundFrame(height: number): UI.FrameDrawing {
+		return { type: "frame", x: 0, y: 0, bitmap: "", width: 1000, height }
+	}
+	function grayCenter(size: number) {
+		return { color: Color.rgb(64, 64, 64), size, alignment: UI.Font.ALIGN_CENTER }
+	}
+	class Header {
+		name: string = ""
+		constructor(name: string) {
+			this.name = name
+		}
+		get title() {
+			return Translation.translate(this.name)
+		}
+	}
+	class IronChisel {
+		slots: [horizontal: number, vertical: number, size: number] = [10, 6, 72]
+		header: Header = new Header("container_chisel_title")
+		window: UI.Window
+		constructor() {
+			this.window = this.init()
+		}
+		getHeader(): Header {
+			return this.header
+		}
+		getWindow(): UI.Window {
+			return this.window
+		}
+		init(): UI.Window {
+			let wh = UI.getScreenHeight()
+			let paddings = (1000 - wh) / 2
+			let slotSize = this.slots[2]
+			let topPadding = 100
+			let contentWindow = new UI.Window({
+				location: { x: paddings, y: 0, width: wh, height: wh },
+				drawing: [
+					backgroundTransparent(),
+					{ type: "frame", x: 0, y: topPadding, width: 1000, height: 1000 - topPadding * 2, scale: 3, bitmap: "style:frame_background_border", color: Color.rgb(198, 198, 198) }
+				],
+				elements: (() => {
+					let elements: UI.ElementSet = {
+						textTitle: { type: 'text', x: 130, y: topPadding + 235, font: grayCenter(18), text: this.header.title },
+						slotPreview: { type: "slot", x: 25, y: topPadding + 25, bitmap: "chisel2gui_1", size: 200 },
+					}
+					for (let yy = 0, i = 0; yy < this.slots[1]; yy++)
+						for (let xx = 0; xx < this.slots[0]; xx++)
+							elements[`slotVariation${i++}`] = { type: "slot", x: 250 + slotSize * xx, y: topPadding + 25 + slotSize * yy, size: slotSize, visual: true, isDarkenAtZero: true }
+
+					for (let i = 0; i < 9; i++) elements[`slotInventory${i}`] = { type: "invSlot", x: 250 + (slotSize / 2) + slotSize * i, y: topPadding + 415 + (slotSize * 4), size: slotSize, index: i }
+					for (let i = 9; i < 36; i++) elements[`slotInventory${i}`] = { type: "invSlot", x: 250 + (slotSize / 2) + slotSize * (i % 9), y: topPadding + 400 + Math.floor(i / 9) * slotSize, size: slotSize, index: i }
+
+					return elements
+				})()
+			})
+			let mainWindow = new UI.Window({
+				location: { x: 0, y: 0, width: 1000, height: wh + 50 },
+				drawing: [backgroundShadow()],
+				elements: {}
+			})
+
+			mainWindow.setInventoryNeeded(true)
+			mainWindow.setCloseOnBackPressed(true)
+			mainWindow.addAdjacentWindow(contentWindow)
+			return mainWindow
+		}
+	}
+	export var IronChiselGUI = new IronChisel()
+	IronChiselGUI.getWindow().open()
+}

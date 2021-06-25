@@ -40,7 +40,7 @@ namespace ChiselItem {
 	}
 	export interface DefaultData {
 		state?: CurrentState
-		gui?: WindowShell.Group
+		gui?: UI.Window
 		item: ItemData
 		group?: {
 			name: string,
@@ -103,7 +103,7 @@ namespace ChiselItem {
 			return false
 		}
 
-		setWindow(window: WindowShell.Group) {
+		setWindow(window: UI.Window) {
 			this.data.gui = window
 		}
 

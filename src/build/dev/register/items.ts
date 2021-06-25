@@ -1,6 +1,6 @@
 
 new ChiselItem.Custom({
-	// gui: itemGui,
+	gui: ChiselGui.IronChiselGUI.window,
 	item: {
 		name: "item_chisel_iron_name",
 		namedId: "chisel_iron",

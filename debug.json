@@ -29,12 +29,6 @@
 	],
 	"sources": [
 		{
-			"source": "src/build/preloader",
-			"target": "JMAL.js",
-			"type": "preloader",
-			"language": "typescript"
-		},
-		{
 			"source": "src/build/dev",
 			"target": "main.js",
 			"type": "main",
