@@ -40,7 +40,7 @@ namespace ChiselItem {
 	}
 	export interface DefaultData {
 		state?: CurrentState
-		gui: WindowShell.Group
+		gui?: WindowShell.Group
 		item: ItemData
 		group?: {
 			name: string,
@@ -155,12 +155,13 @@ namespace ChiselItem {
 
 		open(player: number, item: ItemInstance): boolean {
 			if (this.isHandleChisel(item))
-				if (!Entity.getSneaking(player)) {
-					this.setState(CurrentState.OpenGui)
-					this.data.gui.open()
-					this.setState(CurrentState.Normal)
-					return true
-				}
+				if (!Entity.getSneaking(player))
+					if (this.data.gui) {
+						this.setState(CurrentState.OpenGui)
+						this.data.gui.open()
+						this.setState(CurrentState.Normal)
+						return true
+					}
 			return false
 		}
 	}
