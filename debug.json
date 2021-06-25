@@ -1,11 +1,11 @@
 {
 	"global": {
 		"info": {
-			"name": "Chisel-lite",
+			"name": "Chisel Debug",
 			"author": "TooManyMods",
 			"version": "Horizon Beta 1.16.201",
 			"description": "Removed pc_mod textures for speed",
-			"icon": "src/assets/mod_icon.png"
+			"icon": "src/assets/mod_debug.png"
 		},
 		"api": "CoreEngine"
 	},
@@ -14,7 +14,7 @@
 		"abis": ["armeabi-v7a", "x86"],
 		"linkNative": ["minecraftpe", "innercore", "nativejs"],
 		"excludeFromRelease": [],
-		"pushTo": "storage/emulated/0/games/horizon/packs/Inner_Core_Test/innercore/mods/Chisel-test",
+		"pushTo": "storage/emulated/0/games/horizon/packs/innercore-dev/innercore/mods/Chisel-Debug",
 		"ndkPath": null
 	},
 	"resources": [

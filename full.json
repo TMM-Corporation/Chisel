@@ -14,7 +14,7 @@
 		"abis": ["armeabi-v7a", "x86"],
 		"linkNative": ["minecraftpe", "innercore", "nativejs"],
 		"excludeFromRelease": [],
-		"pushTo": "storage/emulated/0/games/horizon/packs/Inner_Core_Test/innercore/mods/Chisel",
+		"pushTo": "storage/emulated/0/games/horizon/packs/innercore-dev/innercore/mods/Chisel",
 		"ndkPath": null
 	},
 	"resources": [
