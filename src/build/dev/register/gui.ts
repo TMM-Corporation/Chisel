@@ -1,39 +1,3 @@
-
-// let itemGui = new WindowShell.Standart(WindowShell.GUIStyle.classic)
-// itemGui.open()
-// namespace IronChiselGui {
-// 	export function BuildInventory() {
-// 		const slots: { [name: string]: UI.UISlotElement } = {}
-// 		const slotSize = 60
-// 		const slotGrid = [10, 6]
-// 		for (let y = 0, i = 0; y < slotGrid[1]; y++)
-// 			for (let x = 0; x < slotGrid[0]; x++)
-// 				slots["decorativeSlot" + (i++)] = { type: "slot", x: 205 + (x * slotSize), y: 24 + (y * slotSize), size: slotSize + 1, visual:true,isDarkenAtZero:true}
-// 		slots["previewSlot"] = { type: "slot", x: 24, y: 24, size: 168, visual: true, isDarkenAtZero: true }
-// 		slots["selectionSlot"] = { type: "slot", x: 0, y: 0, size: 60, visual: true, isDarkenAtZero: true, bitmap:"chiseljei_0" }
-// 	}
-// }
-// new UI.StandardWindow({
-// 	standart: {
-// 		header: { text: { text: "Litherite Solar Panel" } },
-// 		inventory: { standart: true },
-// 		background: { standart: true }
-// 	},
-
-// 	params: {
-// 		slot: "default_slot",
-// 		invSlot: "default_slot"
-// 	},
-
-// 	drawing: [
-// 		{ type: "background", color: android.graphics.Color.rgb(179, 179, 179) },
-// 	],
-
-// 	elements: {
-// 		"textGen": { font: { color: android.graphics.Color.WHITE, shadow: 0.6, size: 18 }, type: "text", x: 660, y: 204, width: 300, height: 39, text: "Generating: " },
-// 		"slotEnergy": { type: "slot", x: 600, y: 130, isValid: function (id) { return ChargeItemRegistry.isValidItem(id, "Eu", 0) } },
-// 		"sun": { type: "image", x: 608, y: 194, bitmap: "sun_off", scale: GUI_SCALE }
-// 	})
 namespace GUI {
 	export namespace Element {
 		export class BasicElement {
@@ -320,34 +284,6 @@ namespace ChiselGui {
 				startIndex: 0,
 				element: { type: 'invSlot', x: 250 + (this.slotSize / 2), y: this.topPadding + 415 + (this.slotSize * 4), size: this.slotSize }
 			})
-			// for (let yy = 0, i = 0; yy < slotData.vertical; yy++)
-			// 	for (let xx = 0; xx < 10; xx++)
-			// 		elements[`${slotData.name}${i++}`] = {
-			// 			type: "slot",
-			// 			x: 250 + slotData.size * xx,
-			// 			y: topPadding + 25 + slotData.size * yy,
-			// 			size: slotData.size,
-			// 			visual: true,
-			// 			isDarkenAtZero: slotData.isDarkenAtZero
-			// 		}
-
-			// for (let i = 0; i < 9; i++)
-			// 	elements[`slotInventory${i}`] = {
-			// 		type: "invSlot",
-			// 		x: 250 + (slotData.size / 2) + slotData.size * i,
-			// 		y: topPadding + 415 + (slotData.size * 4),
-			// 		size: slotData.size,
-			// 		index: i
-			// 	}
-			// for (let i = 9; i < 36; i++)
-			// 	elements[`slotInventory${i}`] = {
-			// 		type: "invSlot",
-			// 		x: 250 + (slotData.size / 2) + slotData.size * (i % 9),
-			// 		y: topPadding + 400 + Math.floor(i / 9) * slotData.size,
-			// 		size: slotData.size,
-			// 		index: i
-			// 	}
-
 			return elements
 		}
 	}
