@@ -40,7 +40,7 @@ namespace ChiselItem {
 	}
 	export interface DefaultData {
 		state?: CurrentState
-		gui?: UI.Window
+		gui?: ChiselGUI.Base
 		item: ItemData
 		group?: {
 			name: string,
@@ -103,7 +103,7 @@ namespace ChiselItem {
 			return false
 		}
 
-		setWindow(window: UI.Window) {
+		setWindow(window: ChiselGUI.Base) {
 			this.data.gui = window
 		}
 
@@ -137,9 +137,13 @@ namespace ChiselItem {
 		}
 
 		initCallbacks() {
-			Callback.addCallback("ItemUseNoTarget", (item, player) => {
-				this.open(player, item)
-			})
+			Item.registerNoTargetUseFunction(this.data.item.id,
+				(item, player) => this.openGuiFor(player, item)
+			)
+
+			// Callback.addCallback("ItemUseNoTarget", (item, player) => {
+			// 	this.open(player, item)
+			// })
 			Callback.addCallback("DestroyBlockStart", (c, tile, player) => {
 				if (this.isHandleChisel(Entity.getCarriedItem(player)))
 					Game.prevent()
@@ -152,14 +156,35 @@ namespace ChiselItem {
 				this.carveBlock(c, tile, player)
 			})
 		}
+		createDefaultExtra(player: number, item: ItemInstance) {
+			if (!item.extra)
+				item.extra = new ItemExtraData()
+			let iID = item.extra.getInt("handleItemID", 0)
+			let iData = item.extra.getInt("handleItemData", 0)
 
-		open(player: number, item: ItemInstance): boolean {
+			if (iID === 0 && iData === 0) {
+				item.extra.putInt("handleItemID", iID)
+				item.extra.putInt("handleItemData", iData)
+				Entity.setCarriedItem(player, item.id, item.count, item.data, item.extra)
+			}
+		}
+		createContainerAndOpen(gui: ChiselGUI.Base, client: NetworkClient) {
+			var container = new ItemContainer()
+			if (!container.getClientContainerTypeName())
+				gui.setupContainer(container)
+
+			container.openFor(client, gui.getGuiID())
+		}
+		openGuiFor(player: number, item: ItemInstance): boolean {
+			var client = Network.getClientForPlayer(player)
+			if (!client) {
+				return false
+			}
 			if (this.isHandleChisel(item))
 				if (!Entity.getSneaking(player))
 					if (this.data.gui) {
-						this.setState(CurrentState.OpenGui)
-						this.data.gui.open()
-						this.setState(CurrentState.Normal)
+						this.createDefaultExtra(player, item)
+						this.createContainerAndOpen(this.data.gui, client)
 						return true
 					}
 			return false
