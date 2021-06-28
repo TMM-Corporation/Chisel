@@ -23,7 +23,7 @@ new ChiselItem.Custom({
 	}
 })
 new ChiselItem.Custom({
-	// gui: itemGui,
+	gui: ChiselGUI.HiTechChiselGUI,
 	item: {
 		name: "item_chisel_hitech_name",
 		namedId: "chisel_hitech",

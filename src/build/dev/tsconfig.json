@@ -15,6 +15,7 @@
 		"webpack"
 	],
 	"include": [
+		"polyfill/Object/assign.ts",
 		"header.ts",
 		"register/resources.ts",
 		"api/ResManager.ts",
@@ -23,11 +24,12 @@
 		"api/Additional.ts",
 		"api/Carvable.ts",
 		"api/ChiselItem.ts",
+		"api/Gui.ts",
 		"lib/CTMLib.ts",
 		"lib/WindowShell.ts",
 		"lib/ItemName.ts",
 		"register/sounds.ts",
-		"register/gui.ts",
+		"register/chiselgui.ts",
 		"register/items.ts",
 		"register/tiles.ts",
 		"Chisel.ts"
