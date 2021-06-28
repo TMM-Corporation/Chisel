@@ -1,5 +1,52 @@
 
 namespace ChiselGUI {
+	export namespace Data {
+		interface Structure {
+			nextUniquieID?: number
+			containers?: { [name: string]: ItemContainer }
+		}
+		const keyPrefix = 'cUID'
+		export var nextUniqueID = 0
+		export var containers = {}
+		
+		Saver.addSavesScope("ChiselGUI.Data",
+			function read(data: Structure) {
+				var nUID, savedContainers
+				nextUniqueID = (nUID = data.nextUniquieID) !== null && nUID !== void 0 ? nUID : 1
+				containers = (savedContainers = data.containers) !== null && savedContainers !== void 0 ? savedContainers : {}
+			}, function save() { return { nextUniqueID, containers } }
+		)
+		/**
+		 * Get container by cUID
+		 * @param cUID container unique id
+		 * @returns ItemContainer
+		 */
+		export function getContainerByUID(cUID: number): ItemContainer {
+			var container = isContainerExists(cUID, true)
+			setContainerForUID(container, cUID)
+			return container
+		}
+		/**
+		 * Check containers with cUID for exists
+		 * @param cUID container unique id
+		 * @param createNew create new container when not exists
+		 * @returns ItemContainer
+		 */
+		function isContainerExists(cUID: number, createNew: boolean): ItemContainer {
+			let exists = containers[`${keyPrefix}${cUID}`]
+			let result = exists ? exists : (createNew ? new ItemContainer() : exists)
+			console.info((!exists ? `Created new: ${result}` : `Already Exists: ${exists}`) + `, createNewWhenNotExists: ${createNew}`)
+			return result
+		}
+		/**
+		 * Replace container for cUID
+		 * @param container ItemContainer to set for cUID
+		 * @param cUID container unique id
+		 */
+		function setContainerForUID(container: ItemContainer, cUID: number) {
+			containers[`${keyPrefix}${cUID}`] = container
+		}
+	}
 	function backgroundTransparent(): UI.ColorDrawing {
 		return { type: "background", color: Color.TRANSPARENT }
 	}
@@ -41,6 +88,9 @@ namespace ChiselGUI {
 					return this.group
 				return null
 			})
+		}
+		setupServerSide(container: ItemContainer) {
+
 		}
 		setupContainer(container: ItemContainer) {
 			container.setClientContainerTypeName(this.getGuiID())
@@ -90,8 +140,8 @@ namespace ChiselGUI {
 		}
 		getElements(): UI.ElementSet {
 			let elements: UI.ElementSet = {
-				textTitle: { type: 'text', x: 132, y: this.topPadding + 240, font: grayCenter(18), text: this.header.title },
-				slotPreview: { type: "slot", x: 25, y: this.topPadding + 25, bitmap: "chisel2gui_1", size: 200 },
+				textTitle: { type: 'text', x: 132, y: this.topPadding + 225, font: grayCenter(20), text: this.header.title },
+				slotPreview: { type: "slot", x: 25, y: this.topPadding + 25, bitmap: "chisel2gui_1", size: 202 },
 				closeButton: { type: 'closeButton', x: 928, y: 67, bitmap: "button_close_up_light", bitmap2: "button_close_down_light", scale: 4.25, global: true }
 			}
 
@@ -126,15 +176,15 @@ namespace ChiselGUI {
 		}
 		getElements(): UI.ElementSet {
 			let elements: UI.ElementSet = {
-				textTitle: { type: 'text', x: 132, y: this.topPadding + 240, font: grayCenter(18), text: this.header.title },
-				slotPreview: { type: "slot", x: 25, y: this.topPadding + 25, bitmap: "chisel2gui_1", size: 200 },
+				textTitle: { type: 'text', x: 132, y: this.topPadding + 225, font: grayCenter(20), text: this.header.title },
+				slotPreview: { type: "slot", x: 25, y: this.topPadding + 25, bitmap: "chisel2gui_1", size: 202 },
 				closeButton: { type: 'closeButton', x: 928, y: 67, bitmap: "button_close_up_light", bitmap2: "button_close_down_light", scale: 4.25, global: true }
 			}
 
-			new ModeButton.Single(39, 430).addTo(elements)
-			new ModeButton.Panel(139, 430).addTo(elements)
-			new ModeButton.Column(39, 530).addTo(elements)
-			new ModeButton.Row(139, 530).addTo(elements)
+			new ModeButton.Single(35, this.topPadding + 270).addTo(elements)
+			new ModeButton.Panel(135, this.topPadding + 270).addTo(elements)
+			new ModeButton.Column(35, this.topPadding + 370).addTo(elements)
+			new ModeButton.Row(135, this.topPadding + 370).addTo(elements)
 
 			new GUI.Grid.Element(elements, {
 				name: "slotVariation",
@@ -167,43 +217,45 @@ namespace ChiselGUI {
 		}
 		getElements(): UI.ElementSet {
 			let elements: UI.ElementSet = {
-				textTitle: { type: 'text', x: 132, y: this.topPadding + 240, font: grayCenter(18), text: this.header.title },
-				slotPreview: { type: "slot", x: 25, y: this.topPadding + 25, bitmap: "chisel2gui_1", size: 200 },
-				closeButton: { type: 'closeButton', x: 928, y: 67, bitmap: "button_close_up_light", bitmap2: "button_close_down_light", scale: 4.25, global: true }
+				textTitle: { type: 'text', x: 166, y: this.topPadding + 305, font: grayCenter(20), text: this.header.title },
+				slotPreview: { type: "slot", x: 25, y: this.topPadding + 25, bitmap: "chiselguihitech_0", size: 280 },
+				closeButton: { type: 'closeButton', x: 928, y: 67, bitmap: "button_close_up_light", bitmap2: "button_close_down_light", scale: 4.25, global: true },
+				chiselButton: { type: 'button', x: 25, y: this.topPadding + 346, scale: 5, bitmap: "chisel_button_up", bitmap2: "chisel_button_down" },
+				modeButton: { type: 'button', x: 25, y: this.topPadding + 436, scale: 5, bitmap: "chisel_button_up", bitmap2: "chisel_button_down" },
 			}
 
-			new ModeButton.Single(39, 430).addTo(elements)
-			new ModeButton.Panel(139, 430).addTo(elements)
-			new ModeButton.Column(39, 530).addTo(elements)
-			new ModeButton.Row(139, 530).addTo(elements)
+			new ModeButton.Single(25, this.topPadding + 524).addTo(elements)
+			new ModeButton.Panel(125, this.topPadding + 524).addTo(elements)
+			new ModeButton.Column(225, this.topPadding + 524).addTo(elements)
 
-			// new GUI.Element.Button()
+			new ModeButton.Row(25, this.topPadding + 624).addTo(elements)
+			new ModeButton.Contiguous(125, this.topPadding + 624).addTo(elements)
+			new ModeButton.Contiguous_2D(225, this.topPadding + 624).addTo(elements)
 
 			new GUI.Grid.Element(elements, {
 				name: "slotVariation",
-				horizontal: { count: 10, offset: 0 },
+				horizontal: { count: 9, offset: 0 },
 				vertical: { count: 6, offset: 0 },
 				startIndex: 0,
-				element: { type: 'slot', x: 245, y: this.topPadding + 25, size: this.slotSize, visual: true, darken: true, isDarkenAtZero: true }
+				element: { type: 'slot', x: 318, y: this.topPadding + 25, size: this.slotSize, visual: true, darken: true, isDarkenAtZero: true }
 			})
 			new GUI.Grid.Element(elements, {
 				name: "slotInventory",
 				horizontal: { count: 9, offset: 0 },
 				vertical: { count: 3, offset: 0 },
 				startIndex: 9,
-				element: { type: 'invSlot', x: 250 + (this.slotSize / 2), y: this.topPadding + 400 + (this.slotSize), size: this.slotSize }
+				element: { type: 'invSlot', x: 318, y: this.topPadding + 482, size: this.slotSize }
 			})
 			new GUI.Grid.Element(elements, {
 				name: "slotInventory",
 				horizontal: { count: 9, offset: 0 },
 				vertical: { count: 1, offset: 0 },
 				startIndex: 0,
-				element: { type: 'invSlot', x: 250 + (this.slotSize / 2), y: this.topPadding + 415 + (this.slotSize * 4), size: this.slotSize }
+				element: { type: 'invSlot', x: 318, y: this.topPadding + 716, size: this.slotSize }
 			})
 			return elements
 		}
 	}
-
 	export namespace ModeButton {
 		type UseMode =
 			/* Chisel a 3x1 column of blocks */
@@ -236,7 +288,9 @@ namespace ChiselGUI {
 				let this_ = this
 				return {
 					onClick(position: Vector, container: ItemContainer) {
-						alert(`${this_.modeName}`)
+						let slot = container.getSlot("slotPreview")
+						// container.addServerEventListener("")
+						alert(`${this_.modeName}; ID:Data = ${slot.id}:${slot.data}, extra ${slot.extra}`)
 					}
 				}
 			}

@@ -57,7 +57,6 @@ namespace ChiselItem {
 			this.initCallbacks()
 			this.setState(CurrentState.Normal)
 		}
-
 		private createItem(item: ItemData): { item: Item.NativeItem, numID: number } {
 			let id = IDRegistry.genItemID(item.namedId)
 			let nativeItem = Item.createItem(item.namedId, item.name, item.texture, { stack: 1, isTech: false })
@@ -67,11 +66,9 @@ namespace ChiselItem {
 
 			return { item: nativeItem, numID: id }
 		}
-
 		setState(state: CurrentState) {
 			this.data.state = state
 		}
-
 		carveBlock(c: Callback.ItemUseCoordinates, tile: Tile, player: number): boolean {
 			if (!this.isHandleChisel(Entity.getCarriedItem(player)))
 				return false
@@ -102,11 +99,9 @@ namespace ChiselItem {
 
 			return false
 		}
-
 		setWindow(window: ChiselGUI.Base) {
 			this.data.gui = window
 		}
-
 		isHandleChisel(handItem: ItemInstance) {
 			return handItem.id == this.data.item.id
 		}
@@ -140,10 +135,6 @@ namespace ChiselItem {
 			Item.registerNoTargetUseFunction(this.data.item.id,
 				(item, player) => this.openGuiFor(player, item)
 			)
-
-			// Callback.addCallback("ItemUseNoTarget", (item, player) => {
-			// 	this.open(player, item)
-			// })
 			Callback.addCallback("DestroyBlockStart", (c, tile, player) => {
 				if (this.isHandleChisel(Entity.getCarriedItem(player)))
 					Game.prevent()
@@ -156,35 +147,45 @@ namespace ChiselItem {
 				this.carveBlock(c, tile, player)
 			})
 		}
-		createDefaultExtra(player: number, item: ItemInstance) {
+		/**
+		 * 
+		 * @param player - player entity id
+		 * @param item - item
+		 * @returns container id for this item
+		 */
+		getChiselExtraData(player: number, item: ItemInstance): number {
 			if (!item.extra)
 				item.extra = new ItemExtraData()
-			let iID = item.extra.getInt("handleItemID", 0)
-			let iData = item.extra.getInt("handleItemData", 0)
+			let cUID = item.extra.getInt("containerUID", -1)
 
-			if (iID === 0 && iData === 0) {
-				item.extra.putInt("handleItemID", iID)
-				item.extra.putInt("handleItemData", iData)
+			if (cUID === -1) {
+				cUID = ChiselGUI.Data.nextUniqueID++
+				item.extra.putInt("containerUID", cUID)
 				Entity.setCarriedItem(player, item.id, item.count, item.data, item.extra)
 			}
+			console.info(`cUID: ${cUID}`)
+			return cUID
 		}
-		createContainerAndOpen(gui: ChiselGUI.Base, client: NetworkClient) {
-			var container = new ItemContainer()
+		prepareContainer(gui: ChiselGUI.Base, client: NetworkClient, player: number, item: ItemInstance) {
+			var container, cUID
+			cUID = this.getChiselExtraData(player, item)
+			container = ChiselGUI.Data.getContainerByUID(cUID)
+			// var container = new ItemContainer()
 			if (!container.getClientContainerTypeName())
 				gui.setupContainer(container)
 
 			container.openFor(client, gui.getGuiID())
+			return container
 		}
 		openGuiFor(player: number, item: ItemInstance): boolean {
 			var client = Network.getClientForPlayer(player)
-			if (!client) {
+			if (!client)
 				return false
-			}
+
 			if (this.isHandleChisel(item))
 				if (!Entity.getSneaking(player))
 					if (this.data.gui) {
-						this.createDefaultExtra(player, item)
-						this.createContainerAndOpen(this.data.gui, client)
+						this.prepareContainer(this.data.gui, client, player, item)
 						return true
 					}
 			return false
