@@ -1,3 +1,4 @@
+./polyfill/object-assign.ts
 ./header.ts
 
 # Compile resources 
