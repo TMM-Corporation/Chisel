@@ -1,3 +1,5 @@
+# noEmitOnError
+
 ./polyfill/object-assign.ts
 ./header.ts
 

@@ -7,7 +7,8 @@
 		"outFile": "F:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\build\\project\\sources\\main.js",
 		"experimentalDecorators": true,
 		"downlevelIteration": true,
-		"allowJs": true
+		"allowJs": true,
+		"noEmitOnError": true
 	},
 	"exclude": [
 		"**/node_modules/*",
@@ -15,7 +16,7 @@
 		"webpack"
 	],
 	"include": [
-		"polyfill/Object/assign.ts",
+		"polyfill/object-assign.ts",
 		"header.ts",
 		"register/resources.ts",
 		"api/ResManager.ts",
