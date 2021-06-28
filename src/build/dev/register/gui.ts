@@ -295,7 +295,7 @@ namespace ChiselGUI {
 		}
 		getElements(): UI.ElementSet {
 			let elements: UI.ElementSet = {
-				textTitle: { type: 'text', x: 132, y: this.topPadding + 247, font: grayCenter(18), text: this.header.title },
+				textTitle: { type: 'text', x: 132, y: this.topPadding + 240, font: grayCenter(18), text: this.header.title },
 				slotPreview: { type: "slot", x: 25, y: this.topPadding + 25, bitmap: "chisel2gui_1", size: 200 },
 				closeButton: { type: 'closeButton', x: 928, y: 67, bitmap: "button_close_up_light", bitmap2: "button_close_down_light", scale: 4.25, global: true }
 			}
@@ -331,15 +331,15 @@ namespace ChiselGUI {
 		}
 		getElements(): UI.ElementSet {
 			let elements: UI.ElementSet = {
-				textTitle: { type: 'text', x: 132, y: this.topPadding + 247, font: grayCenter(18), text: this.header.title },
+				textTitle: { type: 'text', x: 132, y: this.topPadding + 240, font: grayCenter(18), text: this.header.title },
 				slotPreview: { type: "slot", x: 25, y: this.topPadding + 25, bitmap: "chisel2gui_1", size: 200 },
 				closeButton: { type: 'closeButton', x: 928, y: 67, bitmap: "button_close_up_light", bitmap2: "button_close_down_light", scale: 4.25, global: true }
 			}
 
-			new ModeButton.Single(35, 392).addTo(elements)
-			new ModeButton.Panel(136, 392).addTo(elements)
-			new ModeButton.Column(35, 493).addTo(elements)
-			new ModeButton.Row(136, 493).addTo(elements)
+			new ModeButton.Single(39, 430).addTo(elements)
+			new ModeButton.Panel(139, 430).addTo(elements)
+			new ModeButton.Column(39, 530).addTo(elements)
+			new ModeButton.Row(139, 530).addTo(elements)
 
 			new GUI.Grid.Element(elements, {
 				name: "slotVariation",
