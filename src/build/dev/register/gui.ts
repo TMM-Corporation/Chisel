@@ -232,26 +232,33 @@ namespace ChiselGUI {
 		}
 	}
 	export class Base {
-		window: UI.Window
+		group: UI.WindowGroup
 		header: Header
+		topPadding: number = 131
+		slotSize: number = 73
 		constructor(header: Header) {
 			this.header = header
 			this.setupClientSide()
 		}
 		setupClientSide() {
-			ItemContainer.registerScreenFactory(this.getGuiID(), () => this.window)
+			ItemContainer.registerScreenFactory(this.getGuiID(), (container, name) => {
+				if (name == this.header.guiID)
+					return this.group
+				return null
+			})
 		}
 		setupContainer(container: ItemContainer) {
 			container.setClientContainerTypeName(this.getGuiID())
 		}
-		createGUI(elements: UI.ElementSet, innerTopBottomPadding: number = 100): UI.Window {
+		createGUI(elements: UI.ElementSet, innerTopBottomPadding: number = this.topPadding): UI.WindowGroup {
 			let wh = UI.getScreenHeight(),
 				paddings = (1000 - wh) / 2,
 				contentWindow = new UI.Window({
 					location: { x: paddings, y: 0, width: wh, height: wh },
 					drawing: [
 						backgroundTransparent(),
-						{ type: "frame", x: 0, y: innerTopBottomPadding, width: 1000, height: 1000 - innerTopBottomPadding * 2, scale: 3, bitmap: "style:frame_background_border", color: Color.rgb(198, 198, 198) }
+						{ type: "frame", x: 916, y: 55, width: 84, height: 96, scale: 3, bitmap: "button_frame_close", color: Color.rgb(64, 64, 64) },
+						{ type: "frame", x: 0, y: innerTopBottomPadding, width: 1000, height: 814, scale: 3, bitmap: "style:frame_background_border", color: Color.rgb(198, 198, 198) },
 					],
 					elements
 				}),
@@ -261,10 +268,15 @@ namespace ChiselGUI {
 					elements: {}
 				})
 
-			mainWindow.setInventoryNeeded(true)
-			mainWindow.setCloseOnBackPressed(true)
-			mainWindow.addAdjacentWindow(contentWindow)
-			return mainWindow
+			contentWindow.setInventoryNeeded(true)
+
+			let group = new UI.WindowGroup()
+			group.addWindowInstance("background", mainWindow)
+			group.addWindowInstance("content", contentWindow)
+			group.setCloseOnBackPressed(true)
+			group.setDebugEnabled(true)
+
+			return group
 		}
 		getHeader(): Header {
 			return this.header
@@ -272,21 +284,20 @@ namespace ChiselGUI {
 		getGuiID(): string {
 			return this.getHeader().guiID
 		}
-		getWindow(): UI.Window {
-			return this.window
+		getGroup(): UI.WindowGroup {
+			return this.group
 		}
 	}
 	class IronChisel extends Base {
 		constructor() {
 			super(new Header("container_chisel_title", "chisel_iron.ui"))
-			this.window = this.createGUI(this.getElements())
+			this.group = this.createGUI(this.getElements())
 		}
-		topPadding: number = 100
-		slotSize: number = 73
 		getElements(): UI.ElementSet {
 			let elements: UI.ElementSet = {
 				textTitle: { type: 'text', x: 132, y: this.topPadding + 247, font: grayCenter(18), text: this.header.title },
 				slotPreview: { type: "slot", x: 25, y: this.topPadding + 25, bitmap: "chisel2gui_1", size: 200 },
+				closeButton: { type: 'closeButton', x: 928, y: 67, bitmap: "button_close_up_light", bitmap2: "button_close_down_light", scale: 4.25, global: true }
 			}
 
 			new GUI.Grid.Element(elements, {
@@ -316,15 +327,19 @@ namespace ChiselGUI {
 	class DiamondChisel extends Base {
 		constructor() {
 			super(new Header("container_chisel_title", "chisel_diamond.ui"))
-			this.window = this.createGUI(this.getElements())
+			this.group = this.createGUI(this.getElements())
 		}
-		topPadding: number = 100
-		slotSize: number = 73
 		getElements(): UI.ElementSet {
 			let elements: UI.ElementSet = {
 				textTitle: { type: 'text', x: 132, y: this.topPadding + 247, font: grayCenter(18), text: this.header.title },
 				slotPreview: { type: "slot", x: 25, y: this.topPadding + 25, bitmap: "chisel2gui_1", size: 200 },
+				closeButton: { type: 'closeButton', x: 928, y: 67, bitmap: "button_close_up_light", bitmap2: "button_close_down_light", scale: 4.25, global: true }
 			}
+
+			new ModeButton.Single(35, 392).addTo(elements)
+			new ModeButton.Panel(136, 392).addTo(elements)
+			new ModeButton.Column(35, 493).addTo(elements)
+			new ModeButton.Row(136, 493).addTo(elements)
 
 			new GUI.Grid.Element(elements, {
 				name: "slotVariation",
@@ -352,7 +367,7 @@ namespace ChiselGUI {
 	}
 
 
-	export namespace ModeButtons {
+	export namespace ModeButton {
 		type UseMode =
 			/* Chisel a 3x1 column of blocks */
 			'column' |
@@ -366,60 +381,69 @@ namespace ChiselGUI {
 			'row' |
 			/* Chisel a single block */
 			'single'
-		class BasicButton {
+		export class BasicButton {
 			button: GUI.Element.Button
 			coverImage: GUI.Element.Image
-			constructor(x: number = 0, y: number = 0, mode: UseMode) {
+			modeName: string = ""
+			constructor(x: number = 0, y: number = 0, mode: UseMode, icon: string) {
+				this.modeName = mode
 				this.button = new GUI.Element.Button(
 					{
 						type: 'button', x, y,
-						bitmap: 'chisel_button',
-						bitmap2: 'chisel_button_down',
-						scale: 5, clicker: this.clicker
+						bitmap: 'style:classic_button_up',
+						bitmap2: 'style:classic_button_down',
+						scale: 5, clicker: this.clicker, z: 1
 					})
-				this.coverImage = new GUI.Element.Image({ type: 'image', x: x + 15, y: y + 15, scale: 2.083 })
+				this.coverImage = new GUI.Element.Image({ type: 'image', x: x + 15, y: y + 15, scale: 2.083, bitmap: icon, z: 2 })
 			}
-			clicker: UI.UIClickEvent = {
-				onClick(position: Vector, container: ItemContainer) {
-
+			get clicker(): UI.UIClickEvent {
+				let this_ = this
+				return {
+					onClick(position: Vector, container: ItemContainer) {
+						alert(`${this_.modeName}`)
+					}
 				}
 			}
+			addTo(elements: UI.ElementSet) {
+				elements[`cover_image_mode_${this.modeName}`] = this.coverImage
+				elements[`button_mode_${this.modeName}`] = this.button
+			}
 		}
 
-		class Single extends BasicButton {
+		export class Single extends BasicButton {
 			constructor(x: number, y: number) {
-				super(x, y, 'single')
+				super(x, y, 'single', 'modeicons_0')
 			}
 		}
-		class Panel extends BasicButton {
+		export class Panel extends BasicButton {
 			constructor(x: number, y: number) {
-				super(x, y, 'panel')
+				super(x, y, 'panel', 'modeicons_1')
 			}
 		}
-		class Column extends BasicButton {
+		export class Column extends BasicButton {
 			constructor(x: number, y: number) {
-				super(x, y, 'column')
+				super(x, y, 'column', 'modeicons_2')
 			}
 		}
-		class Row extends BasicButton {
+		export class Row extends BasicButton {
 			constructor(x: number, y: number) {
-				super(x, y, 'row')
+				super(x, y, 'row', 'modeicons_3')
 			}
 		}
-		class Contiguous_2D extends BasicButton {
+		export class Contiguous_2D extends BasicButton {
 			constructor(x: number, y: number) {
-				super(x, y, 'contiguous_2d')
+				super(x, y, 'contiguous_2d', 'modeicons_4')
 			}
 		}
-		class Contiguous extends BasicButton {
+		export class Contiguous extends BasicButton {
 			constructor(x: number, y: number) {
-				super(x, y, 'contiguous')
+				super(x, y, 'contiguous', 'modeicons_5')
 			}
 		}
 	}
 	export var IronChiselGUI = new IronChisel()
-	IronChiselGUI.getWindow().open()
+	IronChiselGUI.getGroup().open()
 	export var DiamondChiselGUI = new DiamondChisel()
-	DiamondChiselGUI.getWindow().open()
+	DiamondChiselGUI.getGroup().open()
 }
 
