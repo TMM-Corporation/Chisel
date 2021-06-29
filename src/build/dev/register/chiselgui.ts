@@ -72,7 +72,7 @@ namespace ChiselGUI {
 		constructor(header: Header) {
 			this.header = header
 			this.setupClientSide()
-			this.controls = new GUI.Controls.PC(856, 55, true, true)
+			this.controls = new GUI.Controls.PC(916, 55, true, true)
 		}
 		setupClientSide() {
 			ItemContainer.registerScreenFactory(this.getGuiID(), (container, name) => {

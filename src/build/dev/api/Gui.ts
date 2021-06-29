@@ -90,8 +90,8 @@ namespace GUI {
 			y: number
 			global: boolean
 			needHelpButton: boolean
-			constructor(x: number, y: number, global: boolean = true, needHelpButton: boolean = false) {
-				this.x = x
+			constructor(x: number, y: number, global: boolean = true, needHelpButton: boolean = false, createButtonOffset: boolean = true) {
+				this.x = createButtonOffset ? x - 60 : x
 				this.y = y
 				this.global = global
 				this.needHelpButton = needHelpButton
@@ -103,7 +103,7 @@ namespace GUI {
 				}
 			}
 			createFrame(width: number, height: number): UI.FrameDrawing {
-				return { type: "frame", x: this.x, y: this.y, width, height, scale: 3, bitmap: "button_frame_close", color: GUI.MCColor.DarkGray }
+				return { type: "frame", x: this.x, y: this.y, width, height, scale: 3, bitmap: "button_frame_close", color: Color.rgb(64, 64, 64) }
 			}
 			createButtons(): UI.ElementSet {
 				let { x, y } = { x: this.x, y: this.y },
@@ -121,8 +121,8 @@ namespace GUI {
 			y: number
 			global: boolean
 			needHelpButton: boolean
-			constructor(x: number, y: number, global: boolean = true, needHelpButton: boolean = false) {
-				this.x = x
+			constructor(x: number, y: number, global: boolean = true, needHelpButton: boolean = false, createButtonOffset: boolean = true) {
+				this.x = createButtonOffset ? x - 60 : x
 				this.y = y
 				this.global = global
 				this.needHelpButton = needHelpButton
@@ -134,19 +134,18 @@ namespace GUI {
 				}
 			}
 			createFrame(width: number, height: number): UI.FrameDrawing {
-				return { type: "frame", x: this.x, y: this.y, width, height, scale: 3, bitmap: "button_frame_close", color: GUI.MCColor.DarkGray }
+				return { type: "frame", x: this.x, y: this.y, width, height, scale: 3, bitmap: "button_frame_close", color: Color.rgb(64, 64, 64) }
 			}
 			createButtons(): UI.ElementSet {
 				let { x, y } = { x: this.x, y: this.y },
-					_closeButton: UI.UICloseButtonElement = { type: 'closeButton', x: x + 12, y: y + 12, bitmap: "button_close_up_light", bitmap2: "button_close_down_light", scale: 4.25, global: this.global },
-					_helpButton: UI.UIButtonElement = { type: 'button', x: x + 12, y: y + 12, bitmap: "button_how_to_play_up_light", bitmap2: "button_how_to_play_down_light", scale: 4.25 }
+					_closeButton: UI.UICloseButtonElement = { type: 'closeButton', x: x + 12, y: y + 12, bitmap: "button_close_up_light", bitmap2: "button_close_down_light", scale: 4, global: this.global },
+					_helpButton: UI.UIButtonElement = { type: 'button', x: x + 12, y: y + 12, bitmap: "button_how_to_play_up_light", bitmap2: "button_how_to_play_down_light", scale: 4 }
 
 				if (this.needHelpButton)
 					_closeButton.x += 60
 
 				return this.needHelpButton ? { _closeButton, _helpButton } : { _closeButton }
 			}
-
 		}
 	}
 }
