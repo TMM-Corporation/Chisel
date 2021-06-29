@@ -8,7 +8,7 @@ namespace ChiselGUI {
 		const keyPrefix = 'cUID'
 		export var nextUniqueID = 0
 		export var containers = {}
-		
+
 		Saver.addSavesScope("ChiselGUI.Data",
 			function read(data: Structure) {
 				var nUID, savedContainers
@@ -47,18 +47,6 @@ namespace ChiselGUI {
 			containers[`${keyPrefix}${cUID}`] = container
 		}
 	}
-	function backgroundTransparent(): UI.ColorDrawing {
-		return { type: "background", color: Color.TRANSPARENT }
-	}
-	function backgroundShadow(): UI.ColorDrawing {
-		return { type: "background", color: android.graphics.Color.argb(90, 0, 0, 0) }
-	}
-	function backgroundFrame(height: number): UI.FrameDrawing {
-		return { type: "frame", x: 0, y: 0, bitmap: "", width: 1000, height }
-	}
-	function grayCenter(size: number) {
-		return { color: Color.rgb(64, 64, 64), size, alignment: UI.Font.ALIGN_CENTER }
-	}
 	class Header {
 		name: string = ""
 		guiName: string = "chisel.ui"
@@ -78,9 +66,13 @@ namespace ChiselGUI {
 		header: Header
 		topPadding: number = 131
 		slotSize: number = 73
+		elements: UI.ElementSet = {}
+		drawing: UI.DrawingSet = []
+		controls: GUI.ControlTypes
 		constructor(header: Header) {
 			this.header = header
 			this.setupClientSide()
+			this.controls = new GUI.Controls.PC(856, 55, true, true)
 		}
 		setupClientSide() {
 			ItemContainer.registerScreenFactory(this.getGuiID(), (container, name) => {
@@ -95,21 +87,27 @@ namespace ChiselGUI {
 		setupContainer(container: ItemContainer) {
 			container.setClientContainerTypeName(this.getGuiID())
 		}
-		createGUI(elements: UI.ElementSet, innerTopBottomPadding: number = this.topPadding): UI.WindowGroup {
+
+		addDrawing(element: UI.DrawingElements) {
+			this.drawing.push(element)
+		}
+		prepareBackground() {
+			this.addDrawing(GUI.BG.transparent)
+			this.addDrawing(this.controls.getControls().drawing)
+			this.addDrawing({ type: "frame", x: 0, y: this.topPadding, width: 1000, height: 814, scale: 3, bitmap: "style:frame_background_border", color: Color.rgb(198, 198, 198) },)
+		}
+		createGUI(elements: UI.ElementSet): UI.WindowGroup {
+			this.prepareBackground()
 			let wh = UI.getScreenHeight(),
 				paddings = (1000 - wh) / 2,
 				contentWindow = new UI.Window({
 					location: { x: paddings, y: 0, width: wh, height: wh },
-					drawing: [
-						backgroundTransparent(),
-						{ type: "frame", x: 916, y: 55, width: 84, height: 96, scale: 3, bitmap: "button_frame_close", color: Color.rgb(64, 64, 64) },
-						{ type: "frame", x: 0, y: innerTopBottomPadding, width: 1000, height: 814, scale: 3, bitmap: "style:frame_background_border", color: Color.rgb(198, 198, 198) },
-					],
-					elements
+					drawing: this.drawing,
+					elements: Object.assign({}, elements, this.controls.getControls().elements)
 				}),
 				mainWindow = new UI.Window({
 					location: { x: 0, y: 0, width: 1000, height: wh + 50 },
-					drawing: [backgroundShadow()],
+					drawing: [GUI.BG.shadow],
 					elements: {}
 				})
 
@@ -140,9 +138,8 @@ namespace ChiselGUI {
 		}
 		getElements(): UI.ElementSet {
 			let elements: UI.ElementSet = {
-				textTitle: { type: 'text', x: 132, y: this.topPadding + 225, font: grayCenter(20), text: this.header.title },
+				textTitle: { type: 'text', x: 132, y: this.topPadding + 225, font: GUI.Font.Center(GUI.MCColor.DarkGray, 20), text: this.header.title },
 				slotPreview: { type: "slot", x: 25, y: this.topPadding + 25, bitmap: "chisel2gui_1", size: 202 },
-				closeButton: { type: 'closeButton', x: 928, y: 67, bitmap: "button_close_up_light", bitmap2: "button_close_down_light", scale: 4.25, global: true }
 			}
 
 			new GUI.Grid.Element(elements, {
@@ -176,9 +173,8 @@ namespace ChiselGUI {
 		}
 		getElements(): UI.ElementSet {
 			let elements: UI.ElementSet = {
-				textTitle: { type: 'text', x: 132, y: this.topPadding + 225, font: grayCenter(20), text: this.header.title },
+				textTitle: { type: 'text', x: 132, y: this.topPadding + 225, font: GUI.Font.Center(GUI.MCColor.DarkGray, 20), text: this.header.title },
 				slotPreview: { type: "slot", x: 25, y: this.topPadding + 25, bitmap: "chisel2gui_1", size: 202 },
-				closeButton: { type: 'closeButton', x: 928, y: 67, bitmap: "button_close_up_light", bitmap2: "button_close_down_light", scale: 4.25, global: true }
 			}
 
 			new ModeButton.Single(35, this.topPadding + 270).addTo(elements)
@@ -217,9 +213,8 @@ namespace ChiselGUI {
 		}
 		getElements(): UI.ElementSet {
 			let elements: UI.ElementSet = {
-				textTitle: { type: 'text', x: 166, y: this.topPadding + 305, font: grayCenter(20), text: this.header.title },
+				textTitle: { type: 'text', x: 166, y: this.topPadding + 305, font: GUI.Font.Center(GUI.MCColor.DarkGray, 20), text: this.header.title },
 				slotPreview: { type: "slot", x: 25, y: this.topPadding + 25, bitmap: "chiselguihitech_0", size: 280 },
-				closeButton: { type: 'closeButton', x: 928, y: 67, bitmap: "button_close_up_light", bitmap2: "button_close_down_light", scale: 4.25, global: true },
 				chiselButton: { type: 'button', x: 25, y: this.topPadding + 346, scale: 5, bitmap: "chisel_button_up", bitmap2: "chisel_button_down" },
 				modeButton: { type: 'button', x: 25, y: this.topPadding + 436, scale: 5, bitmap: "chisel_button_up", bitmap2: "chisel_button_down" },
 			}
