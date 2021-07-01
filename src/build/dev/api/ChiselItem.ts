@@ -148,25 +148,28 @@ namespace ChiselItem {
 			})
 		}
 		/**
-		 * 
+		 * Creating item extra data for container
 		 * @param player - player entity id
 		 * @param item - item
 		 * @returns container id for this item
 		 */
+		//BUG: catch extra data when new item is created, found why new item has old cUID
 		getChiselExtraData(player: number, item: ItemInstance): number {
+			console.json(item.extra)
 			if (!item.extra)
 				item.extra = new ItemExtraData()
 			let cUID = item.extra.getInt("containerUID", -1)
-
+			console.debug(`Current cUID: ${cUID}`)
 			if (cUID === -1) {
 				cUID = ChiselGUI.Data.nextUniqueID++
+				console.warn(`Creating new cUID: ${cUID}`)
 				item.extra.putInt("containerUID", cUID)
 				Entity.setCarriedItem(player, item.id, item.count, item.data, item.extra)
 			}
-			console.info(`cUID: ${cUID}`)
+			console.info(`Result cUID: ${cUID}`)
 			return cUID
 		}
-		prepareContainer(gui: ChiselGUI.Base, client: NetworkClient, player: number, item: ItemInstance) {
+		prepareContainer(gui: ChiselGUI.Base, client: NetworkClient, player: number, item: ItemInstance): ItemContainer {
 			var container, cUID
 			cUID = this.getChiselExtraData(player, item)
 			container = ChiselGUI.Data.getContainerByUID(cUID)
