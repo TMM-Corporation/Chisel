@@ -1,6 +1,10 @@
 
+var IronChiselGUI = new IronChisel()
+var DiamondChiselGUI = new DiamondChisel()
+var HiTechChiselGUI = new HiTechChisel()
+
 new ChiselItem.Custom({
-	gui: ChiselGUI.IronChiselGUI,
+	gui: IronChiselGUI,
 	item: {
 		name: "item_chisel_iron_name",
 		namedId: "chisel_iron",
@@ -12,7 +16,7 @@ new ChiselItem.Custom({
 	}
 })
 new ChiselItem.Custom({
-	gui: ChiselGUI.DiamondChiselGUI,
+	gui: DiamondChiselGUI,
 	item: {
 		name: "item_chisel_diamond_name",
 		namedId: "chisel_diamond",
@@ -23,7 +27,7 @@ new ChiselItem.Custom({
 	}
 })
 new ChiselItem.Custom({
-	gui: ChiselGUI.HiTechChiselGUI,
+	gui: HiTechChiselGUI,
 	item: {
 		name: "item_chisel_hitech_name",
 		namedId: "chisel_hitech",
