@@ -69,9 +69,9 @@ stoneGroup.addFromDescription({
 		}
 	]
 })
-ChiselGUI.IronChiselGUI.getGroup().open()
-ChiselGUI.DiamondChiselGUI.getGroup().open()
-ChiselGUI.HiTechChiselGUI.getGroup().open()
+// IronChiselGUI.getGroup().open()
+// DiamondChiselGUI.getGroup().open()
+// HiTechChiselGUI.getGroup().open()
 
 
 // Carvable.addTile(OpenTile('chisel_animations'))
