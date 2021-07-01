@@ -71,7 +71,7 @@ namespace Carvable {
 
 		export function findGroupByBlock(id: number, data: number = 0): Group | null {
 			var group: Group
-			console.info(`Trying to find group form id:data = ${id}:${data}`, `[Carvable.ts] Groups.findGroupByBlock`)
+			console.info(`Trying to find group for id:data = ${id}:${data}`, `[Carvable.ts] Groups.findGroupByBlock`)
 			for (let name in List) {
 				group = List[name]
 				console.info(`Group [${name}] = ${group}`, `[Carvable.ts] Groups.findGroupByBlock`)
