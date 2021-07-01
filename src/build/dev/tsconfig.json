@@ -4,7 +4,7 @@
 		"lib": [
 			"ESNext"
 		],
-		"outFile": "F:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\build\\project\\sources\\main.js",
+		"outFile": "D:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\build\\project\\sources\\main.js",
 		"experimentalDecorators": true,
 		"downlevelIteration": true,
 		"allowJs": true,
@@ -26,23 +26,24 @@
 		"api/Carvable.ts",
 		"api/ChiselItem.ts",
 		"api/Gui.ts",
+		"api/ChiselGUI.ts",
 		"lib/CTMLib.ts",
 		"lib/WindowShell.ts",
 		"lib/ItemName.ts",
 		"register/sounds.ts",
-		"register/chiselgui.ts",
+		"register/gui/chisel.ts",
 		"register/items.ts",
 		"register/tiles.ts",
 		"Chisel.ts"
 	],
 	"files": [
-		"F:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\android-declarations.d.ts",
-		"F:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\android.d.ts",
-		"F:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\connected-texture.d.ts",
-		"F:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\core-engine.d.ts",
-		"F:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\layout.d.ts",
-		"F:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\pre-loader.d.ts",
-		"F:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\SoundAPI.d.ts",
-		"F:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\SoundLib.d.ts"
+		"D:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\android-declarations.d.ts",
+		"D:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\android.d.ts",
+		"D:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\connected-texture.d.ts",
+		"D:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\core-engine.d.ts",
+		"D:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\layout.d.ts",
+		"D:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\pre-loader.d.ts",
+		"D:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\SoundAPI.d.ts",
+		"D:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\SoundLib.d.ts"
 	]
 }

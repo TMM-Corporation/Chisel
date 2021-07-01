@@ -22,8 +22,8 @@ namespace ChiselGUI {
 		 * @returns ItemContainer
 		 */
 		export function getContainerByUID(cUID: number): ItemContainer {
-			var container = isContainerExists(cUID, true)
-			setContainerForUID(container, cUID)
+			var container = containerExists(cUID, true)
+			bindContainerUID(container, cUID)
 			return container
 		}
 		/**
@@ -32,7 +32,7 @@ namespace ChiselGUI {
 		 * @param createNew create new container when not exists
 		 * @returns ItemContainer
 		 */
-		function isContainerExists(cUID: number, createNew: boolean): ItemContainer {
+		function containerExists(cUID: number, createNew: boolean): ItemContainer {
 			let exists = containers[`${keyPrefix}${cUID}`]
 			let result = exists ? exists : (createNew ? new ItemContainer() : exists)
 			console.info((!exists ? `Created new: ${result}` : `Already Exists: ${exists}`) + `, createNewWhenNotExists: ${createNew}`)
@@ -43,11 +43,11 @@ namespace ChiselGUI {
 		 * @param container ItemContainer to set for cUID
 		 * @param cUID container unique id
 		 */
-		function setContainerForUID(container: ItemContainer, cUID: number) {
+		function bindContainerUID(container: ItemContainer, cUID: number) {
 			containers[`${keyPrefix}${cUID}`] = container
 		}
 	}
-	class Header {
+	export class Header {
 		name: string = ""
 		guiName: string = "chisel.ui"
 		constructor(name: string, guiName: string) {
@@ -64,6 +64,12 @@ namespace ChiselGUI {
 	export class Base {
 		group: UI.WindowGroup
 		header: Header
+		variationSlots: {
+			x: number
+			y: number
+			count: number
+			name?: string
+		} = { x: 0, y: 0, count: 0, name: "slotVariation" }
 		topPadding: number = 131
 		slotSize: number = 73
 		elements: UI.ElementSet = {}
@@ -81,13 +87,64 @@ namespace ChiselGUI {
 				return null
 			})
 		}
-		setupServerSide(container: ItemContainer) {
-
-		}
 		setupContainer(container: ItemContainer) {
+			var GUIBASE = this
 			container.setClientContainerTypeName(this.getGuiID())
-		}
 
+			container.setSlotGetTransferPolicy('slotPreview',
+				function (itemContainer: ItemContainer, name: string, id: number, amount: number, data: number, extra: ItemExtraData, playerUid: number) {
+					console.debug(`[FROM] Slot '${name}', Item: [${id}:${data}, ${amount}] (${Item.getName(id, data)}), UID ${playerUid}`, 'TransferPolicy')
+					let slot = itemContainer.getSlot(name)
+
+					if (slot.count == amount)
+						GUIBASE.clearVariationSlots(container)
+
+					return amount
+				}
+			)
+			container.setSlotAddTransferPolicy('slotPreview',
+				function (itemContainer: ItemContainer, name: string, id: number, amount: number, data: number, extra: ItemExtraData, playerUid: number) {
+					console.debug(`[INTO] Slot '${name}', Item: [${id}:${data}, ${amount}] (${Item.getName(id, data)}), UID: ${playerUid}`, 'TransferPolicy')
+					let slot = itemContainer.getSlot(name)
+
+					if (slot.id === 0 && amount > 0) {
+						console.json(GUIBASE.variationSlots)
+						GUIBASE.fillVariationSlots(container, { id, count: amount, data, extra })
+					}
+
+					var available = (Item.getMaxStack(id) - slot.count)
+					return amount <= available ? amount : available
+				}
+			)
+			container.addServerEventListener("updateVariationSelection", function (ccontainer: ItemContainer, client: NetworkClient, data: { slot: UI.UISlotElement, uiHandler: any }) {
+				console.json(data)
+			})
+		}
+		clearVariationSlots(container: ItemContainer): void {
+			for (let i = 0; i < this.variationSlots.count; i++)
+				container.clearSlot(`${this.variationSlots.name}${i}`)
+
+			container.sendChanges()
+		}
+		fillVariationSlots(container: ItemContainer, item: ItemInstance) {
+			let ids, result = Carvable.Groups.searchBlock(item.id, item.data)
+
+			if (result.group)
+				ids = result.group.data.search
+
+			if (ids)
+				for (let i = 0, u = 0; i < ids.length; i++) {
+					const element = ids[i]
+					let splitted = Carvable.Groups.splitIdData(element)
+					if ((item.id == splitted.id && item.data == splitted.data))
+						u += 1
+					else
+						container.setSlot(`${this.variationSlots.name}${i - u}`, splitted.id, 1, splitted.data)
+					console.info(`${splitted.id}:${splitted.data}, ${item.id}:${item.data} - [${item.id == splitted.id}, ${item.data == splitted.data}]`)
+				}
+			container.sendChanges()
+			// console.json(result)
+		}
 		addDrawing(element: UI.DrawingElements) {
 			this.drawing.push(element)
 		}
@@ -103,7 +160,10 @@ namespace ChiselGUI {
 				contentWindow = new UI.Window({
 					location: { x: paddings, y: 0, width: wh, height: wh },
 					drawing: this.drawing,
-					elements: Object.assign({}, elements, this.controls.getControls().elements)
+					elements: Object.assign({}, elements, this.controls.getControls().elements),
+					params: {
+						selection: "chisel2gui_selection",
+					}
 				}),
 				mainWindow = new UI.Window({
 					location: { x: 0, y: 0, width: 1000, height: wh + 50 },
@@ -117,7 +177,7 @@ namespace ChiselGUI {
 			group.addWindowInstance("background", mainWindow)
 			group.addWindowInstance("content", contentWindow)
 			group.setCloseOnBackPressed(true)
-			group.setDebugEnabled(true)
+			// group.setDebugEnabled(true)
 
 			return group
 		}
@@ -129,126 +189,6 @@ namespace ChiselGUI {
 		}
 		getGroup(): UI.WindowGroup {
 			return this.group
-		}
-	}
-	class IronChisel extends Base {
-		constructor() {
-			super(new Header("Iron Chisel", "chisel_iron.ui"))
-			this.group = this.createGUI(this.getElements())
-		}
-		getElements(): UI.ElementSet {
-			let elements: UI.ElementSet = {
-				textTitle: { type: 'text', x: 132, y: this.topPadding + 225, font: GUI.Font.Center(GUI.MCColor.DarkGray, 20), text: this.header.title },
-				slotPreview: { type: "slot", x: 25, y: this.topPadding + 25, bitmap: "chisel2gui_1", size: 202 },
-			}
-
-			new GUI.Grid.Element(elements, {
-				name: "slotVariation",
-				horizontal: { count: 10, offset: 0 },
-				vertical: { count: 6, offset: 0 },
-				startIndex: 0,
-				element: { type: 'slot', x: 245, y: this.topPadding + 25, size: this.slotSize, visual: true, darken: true, isDarkenAtZero: true }
-			})
-			new GUI.Grid.Element(elements, {
-				name: "slotInventory",
-				horizontal: { count: 9, offset: 0 },
-				vertical: { count: 3, offset: 0 },
-				startIndex: 9,
-				element: { type: 'invSlot', x: 250 + (this.slotSize / 2), y: this.topPadding + 400 + (this.slotSize), size: this.slotSize }
-			})
-			new GUI.Grid.Element(elements, {
-				name: "slotInventory",
-				horizontal: { count: 9, offset: 0 },
-				vertical: { count: 1, offset: 0 },
-				startIndex: 0,
-				element: { type: 'invSlot', x: 250 + (this.slotSize / 2), y: this.topPadding + 415 + (this.slotSize * 4), size: this.slotSize }
-			})
-			return elements
-		}
-	}
-	class DiamondChisel extends Base {
-		constructor() {
-			super(new Header("Diamond Chisel", "chisel_diamond.ui"))
-			this.group = this.createGUI(this.getElements())
-		}
-		getElements(): UI.ElementSet {
-			let elements: UI.ElementSet = {
-				textTitle: { type: 'text', x: 132, y: this.topPadding + 225, font: GUI.Font.Center(GUI.MCColor.DarkGray, 20), text: this.header.title },
-				slotPreview: { type: "slot", x: 25, y: this.topPadding + 25, bitmap: "chisel2gui_1", size: 202 },
-			}
-
-			new ModeButton.Single(35, this.topPadding + 270).addTo(elements)
-			new ModeButton.Panel(135, this.topPadding + 270).addTo(elements)
-			new ModeButton.Column(35, this.topPadding + 370).addTo(elements)
-			new ModeButton.Row(135, this.topPadding + 370).addTo(elements)
-
-			new GUI.Grid.Element(elements, {
-				name: "slotVariation",
-				horizontal: { count: 10, offset: 0 },
-				vertical: { count: 6, offset: 0 },
-				startIndex: 0,
-				element: { type: 'slot', x: 245, y: this.topPadding + 25, size: this.slotSize, visual: true, darken: true, isDarkenAtZero: true }
-			})
-			new GUI.Grid.Element(elements, {
-				name: "slotInventory",
-				horizontal: { count: 9, offset: 0 },
-				vertical: { count: 3, offset: 0 },
-				startIndex: 9,
-				element: { type: 'invSlot', x: 250 + (this.slotSize / 2), y: this.topPadding + 400 + (this.slotSize), size: this.slotSize }
-			})
-			new GUI.Grid.Element(elements, {
-				name: "slotInventory",
-				horizontal: { count: 9, offset: 0 },
-				vertical: { count: 1, offset: 0 },
-				startIndex: 0,
-				element: { type: 'invSlot', x: 250 + (this.slotSize / 2), y: this.topPadding + 415 + (this.slotSize * 4), size: this.slotSize }
-			})
-			return elements
-		}
-	}
-	class HiTechChisel extends Base {
-		constructor() {
-			super(new Header("HiTech Chisel", "chisel_hitech.ui"))
-			this.group = this.createGUI(this.getElements())
-		}
-		getElements(): UI.ElementSet {
-			let elements: UI.ElementSet = {
-				textTitle: { type: 'text', x: 166, y: this.topPadding + 305, font: GUI.Font.Center(GUI.MCColor.DarkGray, 20), text: this.header.title },
-				slotPreview: { type: "slot", x: 25, y: this.topPadding + 25, bitmap: "chiselguihitech_0", size: 280 },
-				chiselButton: { type: 'button', x: 25, y: this.topPadding + 346, scale: 5, bitmap: "chisel_button_up", bitmap2: "chisel_button_down" },
-				modeButton: { type: 'button', x: 25, y: this.topPadding + 436, scale: 5, bitmap: "chisel_button_up", bitmap2: "chisel_button_down" },
-			}
-
-			new ModeButton.Single(25, this.topPadding + 524).addTo(elements)
-			new ModeButton.Panel(125, this.topPadding + 524).addTo(elements)
-			new ModeButton.Column(225, this.topPadding + 524).addTo(elements)
-
-			new ModeButton.Row(25, this.topPadding + 624).addTo(elements)
-			new ModeButton.Contiguous(125, this.topPadding + 624).addTo(elements)
-			new ModeButton.Contiguous_2D(225, this.topPadding + 624).addTo(elements)
-
-			new GUI.Grid.Element(elements, {
-				name: "slotVariation",
-				horizontal: { count: 9, offset: 0 },
-				vertical: { count: 6, offset: 0 },
-				startIndex: 0,
-				element: { type: 'slot', x: 318, y: this.topPadding + 25, size: this.slotSize, visual: true, darken: true, isDarkenAtZero: true }
-			})
-			new GUI.Grid.Element(elements, {
-				name: "slotInventory",
-				horizontal: { count: 9, offset: 0 },
-				vertical: { count: 3, offset: 0 },
-				startIndex: 9,
-				element: { type: 'invSlot', x: 318, y: this.topPadding + 482, size: this.slotSize }
-			})
-			new GUI.Grid.Element(elements, {
-				name: "slotInventory",
-				horizontal: { count: 9, offset: 0 },
-				vertical: { count: 1, offset: 0 },
-				startIndex: 0,
-				element: { type: 'invSlot', x: 318, y: this.topPadding + 716, size: this.slotSize }
-			})
-			return elements
 		}
 	}
 	export namespace ModeButton {
@@ -326,8 +266,4 @@ namespace ChiselGUI {
 			}
 		}
 	}
-	export var IronChiselGUI = new IronChisel()
-	export var DiamondChiselGUI = new DiamondChisel()
-	export var HiTechChiselGUI = new HiTechChisel()
 }
-

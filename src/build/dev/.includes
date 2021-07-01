@@ -14,6 +14,7 @@
 ./api/Carvable.ts
 ./api/ChiselItem.ts
 ./api/Gui.ts
+./api/ChiselGUI.ts
 
 # Compile libs
 ./lib/CTMLib.ts
@@ -22,7 +23,7 @@
 
 # Compile other
 ./register/sounds.ts
-./register/chiselgui.ts
+./register/gui/chisel.ts
 ./register/items.ts
 ./register/tiles.ts
 ./Chisel.ts
