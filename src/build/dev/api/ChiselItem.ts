@@ -55,7 +55,7 @@ namespace ChiselItem {
 			let item = this.createItem(data.item)
 			this.data.item.id = item.numID
 			this.initCallbacks()
-			this.setState(CurrentState.Normal)
+			// this.setState(CurrentState.Normal)
 		}
 		private createItem(item: ItemData): { item: Item.NativeItem, numID: number } {
 			let id = IDRegistry.genItemID(item.namedId)
@@ -69,33 +69,119 @@ namespace ChiselItem {
 		setState(state: CurrentState) {
 			this.data.state = state
 		}
-		carveBlock(c: Callback.ItemUseCoordinates, tile: Tile, player: number): boolean {
+		getCarvingBlock(player: number, tile: Tile): { id: number, data: number, sound: string, change: boolean } {
+			let defaultResult = { id: -1, data: -1, sound: "chisel.fallback", change: false }
+			let finalResult = { id: -1, data: -1, sound: "chisel.fallback", change: false }
+			let searchDecoded, sneaking, extra
+			let item = Entity.getCarriedItem(player)
+			if (item.extra)
+				extra = { id: item.extra.getInt("variationId"), data: item.extra.getInt("variationData") }
+
+			let tileSearch = Carvable.Groups.searchBlock(tile.id, tile.data)
+			console.json(tileSearch)
+
+			//If tile group not exists, nothing to do
+			if (!tileSearch.group) {
+				console.warn(`Tile not found, nothing to carve`)
+				return defaultResult
+			}
+			// Searching block group inside chisel
+			let fromItemSearch = Carvable.Groups.searchBlock(extra.id, extra.data)
+			console.json(fromItemSearch)
+			let groups = [fromItemSearch.group, tileSearch.group]
+
+			// If ID in chisel and in tile same
+			if (extra.id == tile.id && tile.data == extra.data) {
+				console.warn(`ID in world and in item is same [${extra.id}:${extra.data} == ${tile.id}:${tile.data}]`)
+				return defaultResult
+			}
+
+			// If tile group and in chisel block group not same
+			if (fromItemSearch.group && tileSearch.group) {
+				let names = [groups[0].name || null, groups[1].name || null]
+				if (names[1].groupName != names[0].groupName) {
+					console.warn(`Carvable Groups in world and in item is not same [${names[1]} != ${names[0]}]`)
+					return defaultResult
+				} else {
+					// If all ok, return block from chisel
+					let fromItemSearchResult = fromItemSearch.result
+					finalResult = {
+						id: extra.id,
+						data: extra.data,
+						sound: tileSearch.group.findVariationByIndex(fromItemSearchResult.current.index).sound || "chisel.fallback",
+						change: true
+					}
+					console.info(`Returning [${extra.id}:${extra.data}], sound: ${finalResult.sound}`)
+					return finalResult
+				}
+			}
+			// If ID in chisel == -1
+			// Searching next/prev tile from current group
+			if (extra.id == -1 && groups[1]) {
+				let tileSearchResult = tileSearch.result
+				searchDecoded = Carvable.Groups.idDataFromSearch(tileSearchResult)
+				sneaking = Entity.getSneaking(player)
+				let { prev, next } = { prev: tileSearchResult.prev, next: tileSearchResult.next }
+				let result = sneaking &&
+					prev ? searchDecoded.prev :
+					next ? searchDecoded.next : { id: -1, data: -1 }
+				finalResult = {
+					id: result.id,
+					data: result.data,
+					sound: tileSearch.group.findVariationByIndex(sneaking ? tileSearchResult.prev.index : tileSearchResult.next.index).sound || "chisel.fallback",
+					change: true
+				}
+				console.info(`Returning ${JSON.stringify(finalResult)}`)
+				return finalResult
+			}
+			if (finalResult.id == -1 && !tileSearch.group) {
+				console.info(`Group for tile and carve id not found`)
+				return finalResult
+			}
+			// if (groups[0]) {
+			// 	resultd.sound = groups[0].findVariationByIndex(fromItemSearch.result.current.index).sound || "chisel.fallback"
+			// 	return resultd
+			// } else if (tileSearch.group) {
+
+			// }
+			// if (tileSearch.group && resultedSearch.group) {
+			// if (tileSearch.group.name.groupName == resultedSearch.group.name.groupName)
+			// }
+			// if()
+			// searchResult = search.result
+			// searchGroup = search.group
+			// searchDecoded = Carvable.Groups.idDataFromSearch(searchResult)
+			// sneaking = Entity.getSneaking(player)
+			// resultd.sound = searchGroup.findVariationByIndex(sneaking ? searchResult.prev.index : searchResult.next.index).sound || "chisel.fallback"
+			// let result = sneaking && searchResult.prev ? searchDecoded.prev :
+			// 	searchResult.next ? searchDecoded.next : { id: -1, data: -1 }
+			console.warn(`${JSON.stringify(finalResult)}, some shit happend, [${JSON.stringify(groups[0])}, ${JSON.stringify(groups[1])}] [${extra.id}:${extra.data} | ${tile.id}:${tile.data}]`)
+			return finalResult
+		}
+		carveBlock(coords: Callback.ItemUseCoordinates, tile: Tile, player: number): boolean {
 			if (!this.isHandleChisel(Entity.getCarriedItem(player)))
 				return false
-			let search = Carvable.Groups.searchBlock(tile.id, tile.data)
-			let searchResult = search.result
-			let searchGroup = search.group
-			let searchDecoded = Carvable.Groups.idDataFromSearch(searchResult)
-			let sneaking = Entity.getSneaking(player)
-			let result = sneaking && searchResult.prev ? searchDecoded.prev :
-				searchResult.next ? searchDecoded.next : { id: -1, data: -1 }
+			let carveResults = this.getCarvingBlock(player, tile)
 
-			if (result.id != -1) {
-				this.setState(CurrentState.Carving)
-				console.info(`Result in tap: [${result.id}:${result.data}]`, `[ChiselItem.ts] ChiselItem.Custom.carveBlock`)
+			if (carveResults.change == false)
+				return false
 
-				let source = BlockSource.getDefaultForActor(player)
-				let sound = searchGroup.findVariationByIndex(sneaking ? searchResult.prev.index : searchResult.next.index).sound || "chisel.fallback"
-				let used = this.onUse(player)
+			// if (result.id != -1) {
+			// this.setState(CurrentState.Carving)
+			// console.info(`Result in tap: [${result.id}:${result.data}]`, `[ChiselItem.ts] ChiselItem.Custom.carveBlock`)
 
-				if (used) {
-					source.setBlock(c.x, c.y, c.z, result.id, result.data)
-					SoundManager.playSoundAtBlock({ x: c.x, y: c.y, z: c.z }, getSoundFromConstName(sound), 1, getRandomArbitrary(0.7, 1), 8)
-				}
+			let bs = BlockSource.getDefaultForActor(player)
+			let itemUse = this.onUse(player, Entity.getCarriedItem(player))
 
-				this.setState(CurrentState.Normal)
+			if (itemUse.used) {
+				bs.setBlock(coords.x, coords.y, coords.z, carveResults.id, carveResults.data)
+				SoundManager.playSoundAtBlock({ x: coords.x, y: coords.y, z: coords.z }, getSoundFromConstName(carveResults.sound), 1, getRandomArbitrary(0.7, 1), 8)
 				return true
-			} else console.warn(`Result id = -1`, `[ChiselItem.ts] ChiselItem.Custom.carveBlock`)
+			}
+
+			// this.setState(CurrentState.Normal)
+			// return true
+			// } else console.warn(`Result id = -1`, `[ChiselItem.ts] ChiselItem.Custom.carveBlock`)
 
 			return false
 		}
@@ -108,27 +194,36 @@ namespace ChiselItem {
 		breakItem(player: number) {
 			Entity.setCarriedItem(player, 0, 0, 0)
 			SoundManager.playSoundAtEntity(player, "item_break", 1, getRandomArbitrary(0.85, 1))
+			return true
 		}
-		onUse(player: number): boolean {
-			let item = Entity.getCarriedItem(player)
+		onUse(player: number, item: ItemInstance, damage: number = 1): { appliedDamage: number, breaked: boolean, used: boolean } {
 			let maxDamage = Item.getMaxDamage(item.id)
 			let playerGM = new PlayerActor(player).getGameMode()
+			let breaked = false
+			var available = maxDamage - item.data
+			var appliedDamage = damage <= available ? damage : available
 
-			if (playerGM != 1 && item.data <= maxDamage) {
-				if (++item.data == maxDamage)
-					this.breakItem(player)
-				else
-					Entity.setCarriedItem(player, item.id, 1, item.data, item.extra)
-				console.info(`Data: ${item.data}/${maxDamage}, playerGM: ${playerGM}`, `[ChiselItem.ts] ChiselItem.Custom.onUse`)
-				return true
-			} else if (item.data > maxDamage) {
-				this.breakItem(player)
-				console.info(`Data: ${item.data}/${maxDamage}, playerGM: ${playerGM}`, `[ChiselItem.ts] ChiselItem.Custom.onUse`)
-				console.error(`How you chiseled with data > maxDamage?`, `[ChiselItem.ts] ChiselItem.Custom.onUse`)
-				return false
-			}
+			if (playerGM == 0) item.data += appliedDamage
+			if (item.data >= maxDamage)
+				breaked = this.breakItem(player)
+			else
+				Entity.setCarriedItem(player, item.id, 1, item.data, item.extra)
+			console.info(`Data: ${item.data}/${maxDamage}, playerGM: ${playerGM}`, `[ChiselItem.ts] ChiselItem.Custom.onUse`)
+			return { appliedDamage, breaked, used: appliedDamage >= 1 }
+			// if (playerGM == 0 && item.data <= maxDamage) {
+			// 	if (item.data + damage >= maxDamage)
+			// 		this.breakItem(player)
+			// 	else
+			// 		Entity.setCarriedItem(player, item.id, 1, item.data, item.extra)
+			// 	return true
+			// } else if (item.data > maxDamage) {
+			// 	this.breakItem(player)
+			// 	console.info(`Data: ${item.data}/${maxDamage}, playerGM: ${playerGM}`, `[ChiselItem.ts] ChiselItem.Custom.onUse`)
+			// 	console.error(`How you chiseled with data > maxDamage?`, `[ChiselItem.ts] ChiselItem.Custom.onUse`)
+			// 	return false
+			// }
 
-			return true
+			// return true
 		}
 
 		initCallbacks() {
@@ -164,6 +259,9 @@ namespace ChiselItem {
 				cUID = ChiselGUI.Data.nextUniqueID++
 				console.warn(`Creating new cUID: ${cUID}`)
 				item.extra.putInt("containerUID", cUID)
+				item.extra.putInt("variationId", -1)
+				item.extra.putInt("variationData", -1)
+				item.extra.putInt("orangeSlot", -1)
 				Entity.setCarriedItem(player, item.id, item.count, item.data, item.extra)
 			}
 			console.info(`Result cUID: ${cUID}`)

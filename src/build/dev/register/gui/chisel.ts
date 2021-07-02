@@ -1,29 +1,32 @@
 class IronChisel extends ChiselGUI.Base {
 	constructor() {
 		super(new ChiselGUI.Header("Iron Chisel", "chisel_iron.ui"))
-		this.variationSlots = {
-			x: 10, y: 6, count: 60
-		}
+		this.setUpVariationSlots(10, 6, 60)
 		this.group = this.createGUI(this.getElements())
 	}
 	getElements(): UI.ElementSet {
+		let GUIBASE = this
 		let elements: UI.ElementSet = {
 			textTitle: { type: 'text', x: 132, y: this.topPadding + 225, font: GUI.Font.Center(GUI.MCColor.DarkGray, 20), text: this.header.title },
 			slotPreview: { type: "slot", x: 25, y: this.topPadding + 25, bitmap: "chisel2gui_1", size: 202 },
 		}
+		console.info(GUIBASE.variationSlots.name)
 		new GUI.Grid.Element(elements, {
-			name: this.variationSlots.name,
+			name: GUIBASE.variationSlots.name,
 			horizontal: { count: this.variationSlots.x, offset: 0 },
 			vertical: { count: this.variationSlots.y, offset: 0 },
 			startIndex: 0,
-			element: {
-				type: 'slot', x: 245, y: this.topPadding + 25, size: this.slotSize, visual: true, isDarkenAtZero: true, clicker: {
-					onClick(uiHandler: any, container: ItemContainer, slot: UI.UISlotElement, position: Vector) {
-						console.debug(uiHandler.getElement(`${this.variationSlots.name}0`))
-						console.info(uiHandler.getElement(`${this.variationSlots.name}0`))
-						container.sendEvent("updateVariationSelection", { test: 'asd' })
+			clicker: {
+				onClick(uiHandler: any, container: ItemContainer, slot: UI.UISlotElement, position: Vector, name: string, index: number) {
+					let _data = {
+						name, index,
+						baseName: GUIBASE.variationSlots.name
 					}
+					container.sendEvent("updateVariationSelection", _data)
 				}
+			},
+			element: {
+				type: 'slot', x: 245, y: this.topPadding + 25, size: this.slotSize, visual: true, isDarkenAtZero: true,
 			}
 		})
 		new GUI.Grid.Element(elements, {
@@ -46,9 +49,7 @@ class IronChisel extends ChiselGUI.Base {
 class DiamondChisel extends ChiselGUI.Base {
 	constructor() {
 		super(new ChiselGUI.Header("Diamond Chisel", "chisel_diamond.ui"))
-		this.variationSlots = {
-			x: 10, y: 6, count: 60
-		}
+		this.setUpVariationSlots(10, 6, 60)
 		this.group = this.createGUI(this.getElements())
 	}
 	getElements(): UI.ElementSet {
@@ -89,9 +90,7 @@ class DiamondChisel extends ChiselGUI.Base {
 class HiTechChisel extends ChiselGUI.Base {
 	constructor() {
 		super(new ChiselGUI.Header("HiTech Chisel", "chisel_hitech.ui"))
-		this.variationSlots = {
-			x: 9, y: 6, count: 54
-		}
+		this.setUpVariationSlots(9, 6, 54)
 		this.group = this.createGUI(this.getElements())
 	}
 	getElements(): UI.ElementSet {

@@ -80,6 +80,13 @@ namespace ChiselGUI {
 			this.setupClientSide()
 			this.controls = new GUI.Controls.PC(916, 55, true, true)
 		}
+		setUpVariationSlots(x: number, y: number, count: number, name?: string) {
+			let variationSlots = this.variationSlots
+			variationSlots.x = x
+			variationSlots.y = y
+			variationSlots.count = count
+			variationSlots.name = name || variationSlots.name
+		}
 		setupClientSide() {
 			ItemContainer.registerScreenFactory(this.getGuiID(), (container, name) => {
 				if (name == this.header.guiID)
@@ -96,29 +103,41 @@ namespace ChiselGUI {
 					console.debug(`[FROM] Slot '${name}', Item: [${id}:${data}, ${amount}] (${Item.getName(id, data)}), UID ${playerUid}`, 'TransferPolicy')
 					let slot = itemContainer.getSlot(name)
 
-					if (slot.count == amount)
+					if (slot.count == amount) {
+						GUIBASE.setVariation(playerUid, -1, -1)
 						GUIBASE.clearVariationSlots(container)
+					}
 
 					return amount
 				}
 			)
 			container.setSlotAddTransferPolicy('slotPreview',
 				function (itemContainer: ItemContainer, name: string, id: number, amount: number, data: number, extra: ItemExtraData, playerUid: number) {
+					if (!Carvable.Groups.searchBlock(id, data).group) {
+						console.debug(`Player trying to add not valid item [${id}:${data}]`)
+						return 0
+					}
 					console.debug(`[INTO] Slot '${name}', Item: [${id}:${data}, ${amount}] (${Item.getName(id, data)}), UID: ${playerUid}`, 'TransferPolicy')
 					let slot = itemContainer.getSlot(name)
-
 					if (slot.id === 0 && amount > 0) {
 						console.json(GUIBASE.variationSlots)
 						GUIBASE.fillVariationSlots(container, { id, count: amount, data, extra })
+						GUIBASE.setVariation(playerUid, id, data)
 					}
-
 					var available = (Item.getMaxStack(id) - slot.count)
 					return amount <= available ? amount : available
 				}
 			)
-			container.addServerEventListener("updateVariationSelection", function (ccontainer: ItemContainer, client: NetworkClient, data: { slot: UI.UISlotElement, uiHandler: any }) {
+			console.json(this.variationSlots)
+			container.addServerEventListener("updateVariationSelection", function (ccontainer: ItemContainer, client: NetworkClient, data: any) {
 				console.json(data)
 			})
+		}
+		setVariation(playerUid: number, id: number, data: number) {
+			let item = Entity.getCarriedItem(playerUid)
+			item.extra.putInt("variationId", id)
+			item.extra.putInt("variationData", data)
+			Entity.setCarriedItem(playerUid, item.id, item.count, item.data, item.extra)
 		}
 		clearVariationSlots(container: ItemContainer): void {
 			for (let i = 0; i < this.variationSlots.count; i++)
@@ -143,7 +162,6 @@ namespace ChiselGUI {
 					console.info(`${splitted.id}:${splitted.data}, ${item.id}:${item.data} - [${item.id == splitted.id}, ${item.data == splitted.data}]`)
 				}
 			container.sendChanges()
-			// console.json(result)
 		}
 		addDrawing(element: UI.DrawingElements) {
 			this.drawing.push(element)

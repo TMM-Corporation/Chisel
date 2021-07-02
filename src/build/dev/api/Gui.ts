@@ -2,44 +2,53 @@ namespace GUI {
 	export namespace Grid {
 		export class Element {
 			constructor(elements: UI.ElementSet, gridData: ElementGridData) {
-				let gridElement = gridData.element
-				for (let yy = 0, i = (gridData.startIndex || 0); yy < gridData.vertical.count; yy++)
-					for (let xx = 0; xx < gridData.horizontal.count; xx++)
-						elements[`${gridData.name}${i}`] = (() => {
-							let element
-							switch (gridElement.type) {
-								case 'slot':
+				let gridElement = gridData.element,
+					index = (gridData.startIndex || 0)
+
+				console.json(gridData)
+
+				for (let yy = 0; yy < gridData.vertical.count; yy++)
+					for (let xx = 0; xx < gridData.horizontal.count; xx++) {
+						const u = index, newElementName = `${gridData.name}${index}`
+						var element
+						switch (gridElement.type) {
+							case 'slot':
+								element = Object.assign({}, gridElement, {
+									x: (gridElement.x + gridElement.size * xx) + gridData.horizontal.offset,
+									y: (gridElement.y + gridElement.size * yy) + gridData.vertical.offset,
+									clicker: {
+										onClick(uiHandler: any, container: ItemContainer, slot: UI.UISlotElement, position: Vector) {
+											gridData.clicker!.onClick(uiHandler, container, slot, position, newElementName, u)
+										}
+									}
+								})
+								break
+							case 'invSlot' || 'invslot':
+								element = Object.assign({}, gridElement, {
+									x: (gridElement.x + gridElement.size * xx) + gridData.horizontal.offset,
+									y: (gridElement.y + gridElement.size * yy) + gridData.vertical.offset,
+									index: index
+								})
+								break
+							case 'frame':
+								if (gridElement.width && gridElement.height)
 									element = Object.assign({}, gridElement, {
-										x: (gridElement.x + gridElement.size * xx) + gridData.horizontal.offset,
-										y: (gridElement.y + gridElement.size * yy) + gridData.vertical.offset
+										x: (gridElement.x + gridElement.width * xx) + gridData.horizontal.offset,
+										y: (gridElement.y + gridElement.height * yy) + gridData.vertical.offset
 									})
-									break
-								case 'invSlot' || 'invslot':
+								break
+							case 'switch':
+								if (gridElement.scale)
 									element = Object.assign({}, gridElement, {
-										x: (gridElement.x + gridElement.size * xx) + gridData.horizontal.offset,
-										y: (gridElement.y + gridElement.size * yy) + gridData.vertical.offset,
-										index: i
+										x: (gridElement.x + (gridElement.scale) * xx) + gridData.horizontal.offset,
+										y: (gridElement.y + (gridElement.scale) * yy) + gridData.vertical.offset
 									})
-									break
-								case 'frame':
-									if (gridElement.width && gridElement.height)
-										element = Object.assign({}, gridElement, {
-											x: (gridElement.x + gridElement.width * xx) + gridData.horizontal.offset,
-											y: (gridElement.y + gridElement.height * yy) + gridData.vertical.offset
-										})
-									break
-								case 'switch':
-									if (gridElement.scale)
-										element = Object.assign({}, gridElement, {
-											x: (gridElement.x + (gridElement.scale) * xx) + gridData.horizontal.offset,
-											y: (gridElement.y + (gridElement.scale) * yy) + gridData.vertical.offset
-										})
-									break
-								default: break
-							}
-							i++
-							return element
-						})()
+								break
+							default: break
+						}
+						elements[newElementName] = element
+						index++
+					}
 			}
 
 		}
@@ -47,7 +56,10 @@ namespace GUI {
 			name: string
 			horizontal: { count: number, offset: number }
 			vertical: { count: number, offset: number }
-			startIndex: number
+			startIndex: number,
+			clicker?: {
+				onClick(uiHandler: any, container: ItemContainer, slot: UI.UISlotElement, position: Vector, name: string, index: number)
+			}
 			element: UI.Elements
 		}
 	}
