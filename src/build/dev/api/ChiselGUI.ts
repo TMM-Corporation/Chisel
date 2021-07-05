@@ -106,7 +106,9 @@ namespace ChiselGUI {
 					if (slot.count == amount) {
 						GUIBASE.setVariation(playerUid, -1, -1)
 						GUIBASE.clearVariationSlots(container)
-					}
+					} else
+						GUIBASE.updateVariationCount(itemContainer, slot.count - amount)
+
 
 					return amount
 				}
@@ -120,19 +122,24 @@ namespace ChiselGUI {
 					console.debug(`[INTO] Slot '${name}', Item: [${id}:${data}, ${amount}] (${Item.getName(id, data)}), UID: ${playerUid}`, 'TransferPolicy')
 					let slot = itemContainer.getSlot(name)
 					if (slot.id === 0 && amount > 0) {
-						console.json(GUIBASE.variationSlots)
-						GUIBASE.fillVariationSlots(container, { id, count: amount, data, extra })
+						// console.json(GUIBASE.variationSlots)
 						GUIBASE.setVariation(playerUid, id, data)
+						GUIBASE.fillVariationSlots(itemContainer, { id, count: amount, data, extra })
 					}
+
 					var available = (Item.getMaxStack(id) - slot.count)
-					return amount <= available ? amount : available
+					var result = amount <= available ? amount : available
+					GUIBASE.updateVariationCount(itemContainer, slot.count + result)
+					return result
 				}
 			)
+
 			console.json(this.variationSlots)
 			container.addServerEventListener("updateVariationSelection", function (ccontainer: ItemContainer, client: NetworkClient, data: any) {
 				console.json(data)
 			})
 		}
+		additionalContainerSetup(container: ItemContainer) { }
 		setVariation(playerUid: number, id: number, data: number) {
 			let item = Entity.getCarriedItem(playerUid)
 			item.extra.putInt("variationId", id)
@@ -142,25 +149,47 @@ namespace ChiselGUI {
 		clearVariationSlots(container: ItemContainer): void {
 			for (let i = 0; i < this.variationSlots.count; i++)
 				container.clearSlot(`${this.variationSlots.name}${i}`)
-
 			container.sendChanges()
 		}
-		fillVariationSlots(container: ItemContainer, item: ItemInstance) {
+		clearPreviewSlot(container: ItemContainer): void {
+			container.clearSlot('slotPreview')
+			container.sendChanges()
+		}
+		decreasePreviewSlot(container: ItemContainer, amount: number = 1): void {
+			let slot = container.getSlot('slotPreview')
+			container.setSlot('slotPreview', slot.id, slot.count - amount, slot.data, slot.extra)
+			container.sendChanges()
+		}
+		updateVariationCount(container: ItemContainer, count: number, name?: string) {
+			for (let i = 0, u = 0; i < this.variationSlots.count; i++) {
+				const elementName = `${this.variationSlots.name}${i}`
+				if (elementName == name) continue
+				let slot = container.getSlot(elementName)
+				container.setSlot(elementName, slot.id, count, slot.data)
+			}
+			container.sendChanges()
+		}
+		fillVariationSlots(container: ItemContainer, item: ItemInstance): void {
 			let ids, result = Carvable.Groups.searchBlock(item.id, item.data)
 
 			if (result.group)
 				ids = result.group.data.search
 
-			if (ids)
+			if (ids) {
+				let slotPreview = container.getSlot("slotPreview")
 				for (let i = 0, u = 0; i < ids.length; i++) {
 					const element = ids[i]
 					let splitted = Carvable.Groups.splitIdData(element)
 					if ((item.id == splitted.id && item.data == splitted.data))
 						u += 1
-					else
-						container.setSlot(`${this.variationSlots.name}${i - u}`, splitted.id, 1, splitted.data)
+					else {
+						const elementName = `${this.variationSlots.name}${i - u}`
+						container.setSlot(elementName, splitted.id, 1, splitted.data)
+						// container.setBinding(elementName, "text", `a${item.count}`)
+					}
 					console.info(`${splitted.id}:${splitted.data}, ${item.id}:${item.data} - [${item.id == splitted.id}, ${item.data == splitted.data}]`)
 				}
+			}
 			container.sendChanges()
 		}
 		addDrawing(element: UI.DrawingElements) {

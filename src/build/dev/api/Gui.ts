@@ -13,15 +13,18 @@ namespace GUI {
 						var element
 						switch (gridElement.type) {
 							case 'slot':
-								element = Object.assign({}, gridElement, {
+								let slot = {
 									x: (gridElement.x + gridElement.size * xx) + gridData.horizontal.offset,
 									y: (gridElement.y + gridElement.size * yy) + gridData.vertical.offset,
-									clicker: {
-										onClick(uiHandler: any, container: ItemContainer, slot: UI.UISlotElement, position: Vector) {
+								}
+								if (gridData.clicker) {
+									slot["clicker"] = {}
+									if (gridData.clicker.onClick)
+										slot['clicker'].onClick = function (uiHandler: any, container: ItemContainer, slot: UI.UISlotElement, position: Vector) {
 											gridData.clicker!.onClick(uiHandler, container, slot, position, newElementName, u)
 										}
-									}
-								})
+								}
+								element = Object.assign({}, gridElement, slot)
 								break
 							case 'invSlot' || 'invslot':
 								element = Object.assign({}, gridElement, {

@@ -272,9 +272,10 @@ namespace ChiselItem {
 			cUID = this.getChiselExtraData(player, item)
 			container = ChiselGUI.Data.getContainerByUID(cUID)
 			// var container = new ItemContainer()
-			if (!container.getClientContainerTypeName())
+			if (!container.getClientContainerTypeName()) {
 				gui.setupContainer(container)
-
+				gui.additionalContainerSetup(container)
+			}
 			container.openFor(client, gui.getGuiID())
 			return container
 		}
