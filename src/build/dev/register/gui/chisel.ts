@@ -18,8 +18,9 @@ class IronChisel extends ChiselGUI.Base {
 					if (amount == 1)
 						GUIBASE.decreasePreviewSlot(itemContainer, amount)
 					GUIBASE.updateVariationCount(itemContainer, slot.count - amount, name)
-					SoundManager.playSound(getSoundFromConstName('chisel.fallback'), 0.8, getRandomArbitrary(0.7, 1))
 				}
+				SoundManager.playSound(getSoundFromConstName('chisel.fallback'), 0.8, getRandomArbitrary(0.7, 1))
+				
 				// alert(`${name}, ${id}:${data}, ${amount}`)
 				// itemContainer.handleSlotToInventoryTransaction(
 				return amount
