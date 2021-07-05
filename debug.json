@@ -3,7 +3,7 @@
 		"info": {
 			"name": "Chisel Debug",
 			"author": "TooManyMods",
-			"version": "Horizon Beta 1.16.201",
+			"version": "v0.1-beta",
 			"description": "Removed pc_mod textures for speed",
 			"icon": "src/assets/mod_debug.png"
 		},
