@@ -125,7 +125,7 @@ namespace ChiselItem {
 			SoundManager.playSoundAtEntity(player, "item_break", 1, getRandomArbitrary(0.85, 1))
 			return true
 		}
-		static onUse(player: number, item: ItemInstance, damage: number = 1): { appliedDamage: number, breaked: boolean, used: boolean } {
+		static onUse(player: number, item: ItemInstance, damage: number = 1): { appliedDamage: number, breaked: boolean, used: boolean, playerGM: number } {
 			let maxDamage = Item.getMaxDamage(item.id)
 			let playerGM = new PlayerActor(player).getGameMode()
 			let breaked = false
@@ -138,7 +138,12 @@ namespace ChiselItem {
 			else
 				Entity.setCarriedItem(player, item.id, 1, item.data, item.extra)
 			console.info(`Data: [${item.data}/${maxDamage}], GameMode: ${playerGM}, damage/applied: [${damage}/${appliedDamage}]`, `[ChiselItem.ts] ChiselItem.Custom.onUse`)
-			return { appliedDamage, breaked, used: appliedDamage >= 1 }
+			return {
+				appliedDamage: (playerGM == 0 ? appliedDamage : 0),
+				used: appliedDamage >= 1,
+				playerGM,
+				breaked,
+			}
 		}
 		static isHandleChisel(handItem: ItemInstance, chisel: ChiselItem.ItemData) {
 			return handItem.id == chisel.id
