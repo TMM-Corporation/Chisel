@@ -48,20 +48,6 @@ class IronChisel extends ChiselGUI.Base {
 			horizontal: { count: this.variationSlots.x, offset: 0 },
 			vertical: { count: this.variationSlots.y, offset: 0 },
 			startIndex: 0,
-			// clicker: {
-			// 	onClick(uiHandler: any, itemContainer: ItemContainer, slot: UI.UISlotElement, position: Vector, name: string, index: number) {
-			// 		let _data = {
-			// 			name, index,
-			// 			baseName: GUIBASE.variationSlots.name
-			// 		}
-			// 		let containerSlot = itemContainer.getSlot(name)
-			// 		itemContainer.handleSlotToInventoryTransaction(name, containerSlot.count)
-			// 		GUIBASE.setVariation(Player.get(), -1, -1)
-			// 		GUIBASE.clearVariationSlots(itemContainer)
-			// 		GUIBASE.clearPreviewSlot(itemContainer)
-			// 		itemContainer.sendEvent("updateVariationSelection", _data)
-			// 	}
-			// },
 			element: {
 				type: 'slot', x: 245, y: this.topPadding + 25, size: this.slotSize, isDarkenAtZero: true,
 			}
