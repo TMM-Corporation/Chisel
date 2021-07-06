@@ -1,4 +1,5 @@
 # noEmitOnError
+./debug/Dumper.ts
 
 ./polyfill/object-assign.ts
 ./header.ts

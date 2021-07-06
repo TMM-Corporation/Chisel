@@ -269,10 +269,17 @@ namespace ChiselGUI {
 			get clicker(): UI.UIClickEvent {
 				let this_ = this
 				return {
-					onClick(position: Vector, container: ItemContainer) {
-						let slot = container.getSlot("slotPreview")
-						// container.addServerEventListener("")
-						alert(`${this_.modeName}; ID:Data = ${slot.id}:${slot.data}, extra ${slot.extra}`)
+					onClick(uiHandler: any, container: ItemContainer, uiElement: UI.UIButtonElement, position: Vector) {
+						// console.info('Start container')
+						// for (let i in container) {
+						// 	console.debug(`${i}, ${container[i]}`)
+						// }
+						console.debug(Dumper.toDTS(uiHandler, "ItemContainerUiHandler"))
+						console.debug(Dumper.toDTS(container, "ItemContainer"))
+						// console.info('Start uiElement')
+						// for (let i in uiElement) {
+						// 	console.debug(`${i}, ${uiElement[i]}`)
+						// }
 					}
 				}
 			}
