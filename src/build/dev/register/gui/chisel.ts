@@ -9,21 +9,27 @@ class IronChisel extends ChiselGUI.Base {
 		container.setSlotGetTransferPolicy(elementName,
 			function (itemContainer: ItemContainer, name: string, id: number, amount: number, data: number, extra: ItemExtraData, playerUid: number) {
 				let slot = itemContainer.getSlot(name)
-
-				if (slot.count == amount) {
+				let item = Entity.getCarriedItem(playerUid)
+				let onUsed = ChiselItem.Base.onUse(playerUid, item, amount)
+				let totalDamage = onUsed.playerGM == 0 ? onUsed.appliedDamage : amount
+				
+				if (slot.count == totalDamage && !onUsed.breaked) {
 					GUIBASE.setVariation(playerUid, -1, -1)
 					GUIBASE.clearVariationSlots(itemContainer)
 					GUIBASE.clearPreviewSlot(itemContainer)
 				} else {
-					if (amount == 1)
-						GUIBASE.decreasePreviewSlot(itemContainer, amount)
-					GUIBASE.updateVariationCount(itemContainer, slot.count - amount, name)
+					GUIBASE.decreasePreviewSlot(itemContainer, totalDamage)
+					GUIBASE.updateVariationCount(itemContainer, slot.count - totalDamage, name)
 				}
+				if (onUsed.breaked) {
+					let bs = BlockSource.getDefaultForActor(playerUid)
+					let { x, y, z } = Entity.getPosition(playerUid)
+					itemContainer.dropSlot(bs, "slotPreview", x, y, z)
+					itemContainer.closeFor(Network.getClientForPlayer(playerUid))
+				}
+
 				SoundManager.playSound(getSoundFromConstName('chisel.fallback'), 0.8, getRandomArbitrary(0.7, 1))
-				
-				// alert(`${name}, ${id}:${data}, ${amount}`)
-				// itemContainer.handleSlotToInventoryTransaction(
-				return amount
+				return totalDamage
 			}
 		)
 		container.setSlotAddTransferPolicy(elementName, () => { return 0 })
