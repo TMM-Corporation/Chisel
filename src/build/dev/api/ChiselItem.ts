@@ -72,7 +72,7 @@ namespace ChiselItem {
 		getCarvingBlock(player: number, tile: Tile): { id: number, data: number, sound: string, change: boolean } {
 			let defaultResult = { id: -1, data: -1, sound: "chisel.fallback", change: false }
 			let finalResult = { id: -1, data: -1, sound: "chisel.fallback", change: false }
-			let searchDecoded, sneaking, extra
+			let searchDecoded, sneaking, extra = { id: -1, data: -1 }
 			let item = Entity.getCarriedItem(player)
 			if (item.extra)
 				extra = { id: item.extra.getInt("variationId"), data: item.extra.getInt("variationData") }
@@ -85,6 +85,27 @@ namespace ChiselItem {
 				console.warn(`Tile not found, nothing to carve`)
 				return defaultResult
 			}
+
+			// If ID in chisel == -1
+			// Searching next/prev tile from current group
+			if (extra.id == -1 && tileSearch) {
+				let tileSearchResult = tileSearch.result
+				searchDecoded = Carvable.Groups.idDataFromSearch(tileSearchResult)
+				sneaking = Entity.getSneaking(player)
+				let { prev, next } = { prev: tileSearchResult.prev, next: tileSearchResult.next }
+				let result = sneaking &&
+					prev ? searchDecoded.prev :
+					next ? searchDecoded.next : { id: -1, data: -1 }
+				finalResult = {
+					id: result.id,
+					data: result.data,
+					sound: tileSearch.group.findVariationByIndex(sneaking ? tileSearchResult.prev.index : tileSearchResult.next.index).sound || "chisel.fallback",
+					change: true
+				}
+				console.info(`Returning ${JSON.stringify(finalResult)}`)
+				return finalResult
+			}
+
 			// Searching block group inside chisel
 			let fromItemSearch = Carvable.Groups.searchBlock(extra.id, extra.data)
 			console.json(fromItemSearch)
@@ -115,46 +136,12 @@ namespace ChiselItem {
 					return finalResult
 				}
 			}
-			// If ID in chisel == -1
-			// Searching next/prev tile from current group
-			if (extra.id == -1 && groups[1]) {
-				let tileSearchResult = tileSearch.result
-				searchDecoded = Carvable.Groups.idDataFromSearch(tileSearchResult)
-				sneaking = Entity.getSneaking(player)
-				let { prev, next } = { prev: tileSearchResult.prev, next: tileSearchResult.next }
-				let result = sneaking &&
-					prev ? searchDecoded.prev :
-					next ? searchDecoded.next : { id: -1, data: -1 }
-				finalResult = {
-					id: result.id,
-					data: result.data,
-					sound: tileSearch.group.findVariationByIndex(sneaking ? tileSearchResult.prev.index : tileSearchResult.next.index).sound || "chisel.fallback",
-					change: true
-				}
-				console.info(`Returning ${JSON.stringify(finalResult)}`)
-				return finalResult
-			}
+
 			if (finalResult.id == -1 && !tileSearch.group) {
 				console.info(`Group for tile and carve id not found`)
 				return finalResult
 			}
-			// if (groups[0]) {
-			// 	resultd.sound = groups[0].findVariationByIndex(fromItemSearch.result.current.index).sound || "chisel.fallback"
-			// 	return resultd
-			// } else if (tileSearch.group) {
 
-			// }
-			// if (tileSearch.group && resultedSearch.group) {
-			// if (tileSearch.group.name.groupName == resultedSearch.group.name.groupName)
-			// }
-			// if()
-			// searchResult = search.result
-			// searchGroup = search.group
-			// searchDecoded = Carvable.Groups.idDataFromSearch(searchResult)
-			// sneaking = Entity.getSneaking(player)
-			// resultd.sound = searchGroup.findVariationByIndex(sneaking ? searchResult.prev.index : searchResult.next.index).sound || "chisel.fallback"
-			// let result = sneaking && searchResult.prev ? searchDecoded.prev :
-			// 	searchResult.next ? searchDecoded.next : { id: -1, data: -1 }
 			console.warn(`${JSON.stringify(finalResult)}, some shit happend, [${JSON.stringify(groups[0])}, ${JSON.stringify(groups[1])}] [${extra.id}:${extra.data} | ${tile.id}:${tile.data}]`)
 			return finalResult
 		}
@@ -166,10 +153,6 @@ namespace ChiselItem {
 			if (carveResults.change == false)
 				return false
 
-			// if (result.id != -1) {
-			// this.setState(CurrentState.Carving)
-			// console.info(`Result in tap: [${result.id}:${result.data}]`, `[ChiselItem.ts] ChiselItem.Custom.carveBlock`)
-
 			let bs = BlockSource.getDefaultForActor(player)
 			let itemUse = this.onUse(player, Entity.getCarriedItem(player))
 
@@ -178,10 +161,6 @@ namespace ChiselItem {
 				SoundManager.playSoundAtBlock({ x: coords.x, y: coords.y, z: coords.z }, getSoundFromConstName(carveResults.sound), 1, getRandomArbitrary(0.7, 1), 8)
 				return true
 			}
-
-			// this.setState(CurrentState.Normal)
-			// return true
-			// } else console.warn(`Result id = -1`, `[ChiselItem.ts] ChiselItem.Custom.carveBlock`)
 
 			return false
 		}
