@@ -1,14 +1,5 @@
 
 namespace ChiselItem {
-	export enum WorkMode {
-		/* Tap to open GUI, BreakBlockStart to chisel */
-		PC,
-		/* BreakBlockStart to open GUI, Tap to chisel */
-		PE
-	}
-
-	export var Mode = WorkMode.PE
-
 	export enum CurrentState {
 		Normal,
 		Carving,
@@ -258,14 +249,3 @@ namespace ChiselItem {
 		}
 	}
 }
-
-CLI.reg("mode", (values: string[]) => {
-	switch (values[0]) {
-		case "0":
-			ChiselItem.Mode = ChiselItem.WorkMode.PC
-			break
-		case "1":
-			ChiselItem.Mode = ChiselItem.WorkMode.PE
-			break
-	}
-})
