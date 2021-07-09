@@ -1,11 +1,10 @@
 namespace GUI {
 	export namespace Grid {
 		export class Element {
-			constructor(elements: UI.ElementSet, gridData: ElementGridData) {
+			elements: UI.ElementSet = {}
+			constructor(gridData: ElementGridData, intoElements?: UI.ElementSet) {
 				let gridElement = gridData.element,
 					index = (gridData.startIndex || 0)
-
-				console.json(gridData)
 
 				for (let yy = 0; yy < gridData.vertical.count; yy++)
 					for (let xx = 0; xx < gridData.horizontal.count; xx++) {
@@ -49,11 +48,16 @@ namespace GUI {
 								break
 							default: break
 						}
-						elements[newElementName] = element
+						this.elements[newElementName] = element
 						index++
 					}
+				if (intoElements)
+					this.addInto(intoElements)
 			}
-
+			addInto(elements: UI.ElementSet) {
+				for (let name in this.elements)
+					elements[name] = this.elements[name]
+			}
 		}
 		export interface ElementGridData {
 			name: string

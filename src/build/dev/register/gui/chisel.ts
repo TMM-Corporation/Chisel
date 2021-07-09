@@ -12,7 +12,7 @@ class IronChisel extends ChiselGUI.Base {
 				let item = Entity.getCarriedItem(playerUid)
 				let onUsed = ChiselItem.Base.onUse(playerUid, item, amount)
 				let totalDamage = onUsed.playerGM == 0 ? onUsed.appliedDamage : amount
-				
+
 				if (slot.count == totalDamage && !onUsed.breaked) {
 					GUIBASE.setVariation(playerUid, -1, -1)
 					GUIBASE.clearVariationSlots(itemContainer)
@@ -49,7 +49,7 @@ class IronChisel extends ChiselGUI.Base {
 			slotPreview: { type: "slot", x: 25, y: this.topPadding + 25, bitmap: "chisel2gui_1", size: 202 },
 			currentUID: { type: 'text', x: 900, y: 980, text: "UID: -000000000", font: { size: 20, } }
 		}
-		new GUI.Grid.Element(elements, {
+		new GUI.Grid.Element({
 			name: GUIBASE.variationSlots.name,
 			horizontal: { count: this.variationSlots.x, offset: 0 },
 			vertical: { count: this.variationSlots.y, offset: 0 },
@@ -57,21 +57,21 @@ class IronChisel extends ChiselGUI.Base {
 			element: {
 				type: 'slot', x: 245, y: this.topPadding + 25, size: this.slotSize, isDarkenAtZero: true,
 			}
-		})
-		new GUI.Grid.Element(elements, {
+		}, elements)
+		new GUI.Grid.Element({
 			name: "slotInventory",
 			horizontal: { count: 9, offset: 0 },
 			vertical: { count: 3, offset: 0 },
 			startIndex: 9,
 			element: { type: 'invSlot', x: 250 + (this.slotSize / 2), y: this.topPadding + 400 + (this.slotSize), size: this.slotSize }
-		})
-		new GUI.Grid.Element(elements, {
+		}, elements)
+		new GUI.Grid.Element({
 			name: "slotInventory",
 			horizontal: { count: 9, offset: 0 },
 			vertical: { count: 1, offset: 0 },
 			startIndex: 0,
 			element: { type: 'invSlot', x: 250 + (this.slotSize / 2), y: this.topPadding + 415 + (this.slotSize * 4), size: this.slotSize }
-		})
+		}, elements)
 		return elements
 	}
 }
@@ -92,27 +92,27 @@ class DiamondChisel extends ChiselGUI.Base {
 		new ChiselGUI.ModeButton.Column(35, this.topPadding + 370).addTo(elements)
 		new ChiselGUI.ModeButton.Row(135, this.topPadding + 370).addTo(elements)
 
-		new GUI.Grid.Element(elements, {
+		new GUI.Grid.Element({
 			name: this.variationSlots.name,
 			horizontal: { count: this.variationSlots.x, offset: 0 },
 			vertical: { count: this.variationSlots.y, offset: 0 },
 			startIndex: 0,
 			element: { type: 'slot', x: 245, y: this.topPadding + 25, size: this.slotSize, visual: true, isDarkenAtZero: true }
-		})
-		new GUI.Grid.Element(elements, {
+		}, elements)
+		new GUI.Grid.Element({
 			name: "slotInventory",
 			horizontal: { count: 9, offset: 0 },
 			vertical: { count: 3, offset: 0 },
 			startIndex: 9,
 			element: { type: 'invSlot', x: 250 + (this.slotSize / 2), y: this.topPadding + 400 + (this.slotSize), size: this.slotSize }
-		})
-		new GUI.Grid.Element(elements, {
+		}, elements)
+		new GUI.Grid.Element({
 			name: "slotInventory",
 			horizontal: { count: 9, offset: 0 },
 			vertical: { count: 1, offset: 0 },
 			startIndex: 0,
 			element: { type: 'invSlot', x: 250 + (this.slotSize / 2), y: this.topPadding + 415 + (this.slotSize * 4), size: this.slotSize }
-		})
+		}, elements)
 		return elements
 	}
 }
@@ -138,27 +138,27 @@ class HiTechChisel extends ChiselGUI.Base {
 		new ChiselGUI.ModeButton.Contiguous(125, this.topPadding + 624).addTo(elements)
 		new ChiselGUI.ModeButton.Contiguous_2D(225, this.topPadding + 624).addTo(elements)
 
-		new GUI.Grid.Element(elements, {
+		new GUI.Grid.Element({
 			name: this.variationSlots.name,
 			horizontal: { count: this.variationSlots.x, offset: 0 },
 			vertical: { count: this.variationSlots.y, offset: 0 },
 			startIndex: 0,
 			element: { type: 'slot', x: 318, y: this.topPadding + 25, size: this.slotSize, visual: true, isDarkenAtZero: true }
-		})
-		new GUI.Grid.Element(elements, {
+		}, elements)
+		new GUI.Grid.Element({
 			name: "slotInventory",
 			horizontal: { count: 9, offset: 0 },
 			vertical: { count: 3, offset: 0 },
 			startIndex: 9,
 			element: { type: 'invSlot', x: 318, y: this.topPadding + 482, size: this.slotSize }
-		})
-		new GUI.Grid.Element(elements, {
+		}, elements)
+		new GUI.Grid.Element({
 			name: "slotInventory",
 			horizontal: { count: 9, offset: 0 },
 			vertical: { count: 1, offset: 0 },
 			startIndex: 0,
 			element: { type: 'invSlot', x: 318, y: this.topPadding + 716, size: this.slotSize }
-		})
+		}, elements)
 		return elements
 	}
 }
