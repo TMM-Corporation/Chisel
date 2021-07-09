@@ -133,11 +133,7 @@ namespace ChiselGUI {
 					return result
 				}
 			)
-
-			console.json(this.variationSlots)
-			container.addServerEventListener("updateVariationSelection", function (ccontainer: ItemContainer, client: NetworkClient, data: any) {
-				console.json(data)
-			})
+			VanillaSlots.registerForWindow(this.group, container)
 		}
 		additionalContainerSetup(container: ItemContainer) { }
 		setVariation(playerUid: number, id: number, data: number) {
