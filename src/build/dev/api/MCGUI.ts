@@ -24,7 +24,6 @@ namespace MCGUI {
 			WORLD,
 			XBOX,
 		}
-
 		export const List = {
 			"ACHIEVEMENTS": [
 				"/achievements",

@@ -133,7 +133,7 @@ namespace ChiselGUI {
 					return result
 				}
 			)
-			// VanillaSlots.registerForWindow(this.group, container)
+			VanillaSlots.registerForWindow(this.group, container)
 		}
 		additionalContainerSetup(container: ItemContainer) { }
 		setVariation(playerUid: number, id: number, data: number) {
