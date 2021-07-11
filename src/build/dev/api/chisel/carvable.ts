@@ -73,7 +73,7 @@ namespace Carvable {
 			console.info(`Trying to find group for id:data = ${id}:${data}`, `[Carvable.ts] Groups.findGroupByBlock`)
 			for (let name in List) {
 				group = List[name]
-				console.info(`Group [${name}] = ${group}`, `[Carvable.ts] Groups.findGroupByBlock`)
+				console.info(`Group [${name}] = ${JSON.stringify(group)}`, `[Carvable.ts] Groups.findGroupByBlock`)
 				if (group.bindingExists(id, data))
 					return group
 				else continue
