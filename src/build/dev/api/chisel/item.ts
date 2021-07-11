@@ -1,10 +1,6 @@
 
 namespace ChiselItem {
-	export enum CurrentState {
-		Normal,
-		Carving,
-		OpenGui
-	}
+	
 	export interface ItemData {
 		id?: number
 		durability: number
@@ -15,7 +11,6 @@ namespace ChiselItem {
 		texture: Item.TextureData
 	}
 	export interface DefaultData {
-		state?: CurrentState
 		gui?: ChiselGUI.Custom
 		item: ItemData
 		group?: {
@@ -165,12 +160,6 @@ namespace ChiselItem {
 
 			return { item: nativeItem, numID: id }
 		}
-		setState(state: CurrentState) {
-			this.data.state = state
-		}
-		setWindow(window: ChiselGUI.Custom) {
-			this.data.gui = window
-		}
 		initCallbacks() {
 			Item.registerNoTargetUseFunction(this.data.item.id,
 				(item, player) => this.openGuiFor(player, item)
@@ -200,7 +189,7 @@ namespace ChiselItem {
 			let cUID = item.extra.getInt("containerUID", -1)
 			console.debug(`Current cUID: ${cUID}`)
 			if (cUID == -1) {
-				cUID = ChiselGUI.Data.nextUniqueID++
+				cUID = ++ChiselGUI.Data.nextUniqueID
 				console.warn(`Creating new cUID: ${cUID}`)
 				item.extra.putInt("containerUID", cUID)
 				item.extra.putInt("variationId", -1)
@@ -238,4 +227,5 @@ namespace ChiselItem {
 			return false
 		}
 	}
+	
 }
