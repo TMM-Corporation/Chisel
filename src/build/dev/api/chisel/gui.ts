@@ -89,9 +89,7 @@ namespace ChiselGUI {
 		}
 		setupClientSide() {
 			ItemContainer.registerScreenFactory(this.getGuiID(), (container, name) => {
-				if (name == this.header.guiID)
-					return this.group
-				return null
+				return this.group
 			})
 		}
 		setupContainer(container: ItemContainer) {

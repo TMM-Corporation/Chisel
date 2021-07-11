@@ -38,6 +38,7 @@
 			"source": "src/build/dev",
 			"target": "main.js",
 			"type": "main",
+			"includes": ".includes-release",
 			"language": "typescript"
 		},
 		{

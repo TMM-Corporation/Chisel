@@ -3,8 +3,7 @@ namespace Carvable {
 	export var Tileset: {
 		[name: string]: Group[]
 	}
-	export type Localization =
-		string[]
+	export type Localization = string[]
 
 	export namespace Tile {
 		export var forceCTLib = false

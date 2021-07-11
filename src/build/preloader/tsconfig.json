@@ -4,7 +4,7 @@
 		"lib": [
 			"ESNext"
 		],
-		"outFile": "F:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\build\\project\\sources\\JMAL.js",
+		"outFile": "D:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\build\\project\\sources\\JMAL.js",
 		"experimentalDecorators": true,
 		"downlevelIteration": true,
 		"allowJs": true
@@ -15,19 +15,20 @@
 		"webpack"
 	],
 	"include": [
-		"ResManager.ts",
-		"PreloaderData.ts",
-		"TextureGeneration.ts",
-		"preloader.ts"
+		"./ResManager.ts",
+		"./PreloaderData.ts",
+		"./TextureGeneration.ts",
+		"./preloader.ts"
 	],
 	"files": [
-		"F:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\android-declarations.d.ts",
-		"F:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\android.d.ts",
-		"F:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\connected-texture.d.ts",
-		"F:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\core-engine.d.ts",
-		"F:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\layout.d.ts",
-		"F:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\pre-loader.d.ts",
-		"F:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\SoundAPI.d.ts",
-		"F:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\SoundLib.d.ts"
+		"D:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\android-declarations.d.ts",
+		"D:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\android.d.ts",
+		"D:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\connected-texture.d.ts",
+		"D:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\core-engine.d.ts",
+		"D:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\layout.d.ts",
+		"D:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\pre-loader.d.ts",
+		"D:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\SoundAPI.d.ts",
+		"D:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\SoundLib.d.ts",
+		"D:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\VanillaSlots.d.ts"
 	]
 }

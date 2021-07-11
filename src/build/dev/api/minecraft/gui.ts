@@ -173,8 +173,8 @@ namespace MCGUI {
 			sub: SubScreenInfo | null
 		}
 		export function findCurrentType(): ScreenInfo {
-			var currentType: string = null
-			var currentName: string = null
+			var currentType: string | null = null;
+			var currentName: string | null = null;
 			for (let name in List) {
 				let isCurrent = false
 				const screens = List[name]
