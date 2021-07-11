@@ -17,6 +17,7 @@
 	],
 	"include": [
 		"./header.ts",
+		"./api/core/randomString.ts",
 		"./api/debug/Dumper.ts",
 		"./api/polyfill/object-assign.ts",
 		"./api/core/other.ts",
@@ -29,6 +30,7 @@
 		"./api/core/resourceTools.ts",
 		"./api/icGUI.ts",
 		"./api/chisel/carvable.ts",
+		"./api/chisel/modes.ts",
 		"./api/chisel/item.ts",
 		"./api/chisel/gui.ts",
 		"./lib/CTM.ts",
@@ -38,7 +40,7 @@
 		"./register/gui/IronChisel.ts",
 		"./register/items.ts",
 		"./register/tiles/TileVariation.ts",
-		"./register/tiles/variations/*"
+		"./register/tiles/variations/tile_stone.ts"
 	],
 	"files": [
 		"D:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\android-declarations.d.ts",

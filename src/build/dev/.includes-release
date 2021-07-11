@@ -2,6 +2,7 @@
 
 ./header.ts
 
+./api/core/randomString.ts
 ./api/debug/Dumper.ts
 ./api/polyfill/object-assign.ts
 
@@ -9,6 +10,7 @@
 ./api/core/console.ts
 ./api/core/search.ts
 ./api/core/scriptable.ts
+
 ./api/minecraft/gameSettings.ts
 ./api/minecraft/gui.ts
 
@@ -17,6 +19,7 @@
 
 ./api/icGUI.ts
 ./api/chisel/carvable.ts
+./api/chisel/modes.ts
 ./api/chisel/item.ts
 ./api/chisel/gui.ts
 
@@ -27,5 +30,5 @@
 ./register/sounds.ts
 ./register/gui/IronChisel.ts
 ./register/items.ts
-./register/tiles/variations/base.ts
-./register/tiles/variations/debug.ts
+./register/tiles/TileVariation.ts
+./register/tiles/variations/*
