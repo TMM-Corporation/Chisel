@@ -52,7 +52,7 @@ class IronChiselGUI extends ChiselGUI.Custom {
 			(itemContainer: ItemContainer, name: string, id: number, amount: number, data: number, extra: ItemExtraData, playerUid: number) => {
 				let slot = itemContainer.getSlot(name)
 				let item = Entity.getCarriedItem(playerUid)
-				let onUsed = ChiselItem.Base.onUse(playerUid, item, amount)
+				let onUsed = ChiselItem.Controller.onUse(playerUid, item, amount)
 				let totalDamage = onUsed.playerGM == 0 ? onUsed.appliedDamage : amount
 
 				if (slot.count == totalDamage && !onUsed.breaked) {

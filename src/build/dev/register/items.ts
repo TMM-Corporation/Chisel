@@ -1,14 +1,12 @@
 new ChiselItem.Custom({
+	name: "item_chisel_iron_name",
+	durability: 512,
+	texture: {
+		name: "chisel_iron"
+	},
+	namedID: "chisel_iron",
+	// description: ["item.chisel"],
 	gui: new IronChiselGUI(),
-	item: {
-		name: "item_chisel_iron_name",
-		namedId: "chisel_iron",
-		description: ["item.chisel"],
-		texture: {
-			name: "chisel_iron"
-		},
-		durability: 512
-	}
 })
 // new ChiselItem.Custom({
 // 	gui: DiamondChiselGUI(),

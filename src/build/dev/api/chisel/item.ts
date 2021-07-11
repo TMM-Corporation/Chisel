@@ -1,26 +1,59 @@
-
 namespace ChiselItem {
-	
-	export interface ItemData {
-		id?: number
-		durability: number
-		namedId: string
+	export interface IChiselItem {
 		name: string
-		description?: string[]
-		from_mod?: string[]
+		durability: number
 		texture: Item.TextureData
-	}
-	export interface DefaultData {
+		namedID: string
+		numericID?: number
 		gui?: ChiselGUI.Custom
-		item: ItemData
-		group?: {
-			name: string,
-			id: number,
-			selectedSlot: number
+	}
+	export namespace Data {
+		interface Structure { [key: string]: IChiselItem }
+		export const chiselItems: Structure = {}
+		export function registerItem(namedID: string, description: IChiselItem) {
+			chiselItems[namedID] = description
+		}
+		export function unregisterItem(namedID: string) {
+			delete chiselItems[namedID]
+		}
+		export function isRegistered(namedID: string) {
+			return namedID in chiselItems
+		}
+		export function getDescriptionByName(namedID: string) {
+			return chiselItems[namedID]
+		}
+		function preventDestroy(playerUID: number) {
+			for (const name in chiselItems) {
+				if (Object.prototype.hasOwnProperty.call(chiselItems, name)) {
+					const element = chiselItems[name]
+					if (ChiselItem.Controller.isHandleChisel(Entity.getCarriedItem(playerUID), element))
+						Game.prevent()
+				}
+			}
+		}
+		export function init() {
+			Callback.addCallback("DestroyBlock", (c, tile, playerUID) => preventDestroy(playerUID))
+			Callback.addCallback("DestroyBlockStart", (c, tile, playerUID) => preventDestroy(playerUID))
 		}
 	}
-	export class Base {
-		static getCarvingBlock(player: number, tile: Tile): { id: number, data: number, sound: string, change: boolean } {
+
+	export namespace Controller {
+		export function createChiselItem(item: IChiselItem, extra?: ItemExtraData): { nativeItem: Item.NativeItem, id: number } {
+			let id = IDRegistry.genItemID(item.namedID)
+			let nativeItem = Item.createItem(item.namedID, item.name, item.texture, { stack: 1, isTech: extra ? true : false })
+
+			if (extra)
+				Item.addToCreative(item.namedID, 1, 0, extra)
+			if (item.durability)
+				Item.setMaxDamage(id, item.durability)
+
+			return { nativeItem, id }
+		}
+		export function isHandleChisel(item: ItemInstance, chisel: IChiselItem) {
+			return item.id == chisel.numericID
+		}
+		export interface ICarveResults { id: number, data: number, sound: string, change: boolean }
+		export function getCarvingBlock(player: number, tile: Tile): ICarveResults {
 			let defaultResult = { id: -1, data: -1, sound: "chisel.fallback", change: false }
 			let finalResult = { id: -1, data: -1, sound: "chisel.fallback", change: false }
 			let searchDecoded, sneaking, extra = { id: -1, data: -1 }
@@ -94,31 +127,18 @@ namespace ChiselItem {
 			console.warn(`${JSON.stringify(finalResult)}, some shit happend, [${JSON.stringify(groups[0])}, ${JSON.stringify(groups[1])}] [${extra.id}:${extra.data} | ${tile.id}:${tile.data}]`)
 			return finalResult
 		}
-		static carveBlock(coords: Callback.ItemUseCoordinates, tile: Tile, player: number, chiselItem: ChiselItem.ItemData): boolean {
-			if (!this.isHandleChisel(Entity.getCarriedItem(player), chiselItem))
+		export function carveBlock(coords: Callback.ItemUseCoordinates, item: ItemInstance, tile: Tile, player: number, chiselItem: IChiselItem): boolean {
+			if (!isHandleChisel(item, chiselItem))
 				return false
-			let carveResults = this.getCarvingBlock(player, tile)
-
-			if (carveResults.change == false)
-				return false
-
-			let bs = BlockSource.getDefaultForActor(player)
-			let itemUse = this.onUse(player, Entity.getCarriedItem(player))
-
-			if (itemUse.used) {
-				bs.setBlock(coords.x, coords.y, coords.z, carveResults.id, carveResults.data)
-				SoundManager.playSoundAtBlock({ x: coords.x, y: coords.y, z: coords.z }, getSoundFromConstName(carveResults.sound), 1, getRandomArbitrary(0.7, 1), 8)
-				return true
-			}
-
+			return ChiselModes.carveBlocks(coords, item, tile, player)
 			return false
 		}
-		static breakItem(player: number) {
+		export function breakItem(player: number) {
 			Entity.setCarriedItem(player, 0, 0, 0)
 			SoundManager.playSoundAtEntity(player, "item_break", 1, getRandomArbitrary(0.85, 1))
 			return true
 		}
-		static onUse(player: number, item: ItemInstance, damage: number = 1): { appliedDamage: number, breaked: boolean, used: boolean, playerGM: number } {
+		export function onUse(player: number, item: ItemInstance, damage: number = 1): { appliedDamage: number, breaked: boolean, used: boolean, playerGM: number } {
 			let maxDamage = Item.getMaxDamage(item.id)
 			let playerGM = new PlayerActor(player).getGameMode()
 			let breaked = false
@@ -138,94 +158,73 @@ namespace ChiselItem {
 				breaked,
 			}
 		}
-		static isHandleChisel(handItem: ItemInstance, chisel: ChiselItem.ItemData) {
-			return handItem.id == chisel.id
-		}
 	}
 	export class Custom {
-		data: DefaultData
-		constructor(data: DefaultData) {
-			this.data = data
-			let item = this.createItem(data.item)
-			this.data.item.id = item.numID
-			this.initCallbacks()
-			// this.setState(CurrentState.Normal)
-		}
-		private createItem(item: ItemData): { item: Item.NativeItem, numID: number } {
-			let id = IDRegistry.genItemID(item.namedId)
-			let nativeItem = Item.createItem(item.namedId, item.name, item.texture, { stack: 1, isTech: false })
-
-			if (item.durability)
-				Item.setMaxDamage(id, item.durability)
-
-			return { item: nativeItem, numID: id }
-		}
-		initCallbacks() {
-			Item.registerNoTargetUseFunction(this.data.item.id,
-				(item, player) => this.openGuiFor(player, item)
-			)
-			Callback.addCallback("DestroyBlockStart", (c, tile, player) => {
-				if (ChiselItem.Base.isHandleChisel(Entity.getCarriedItem(player), this.data.item))
-					Game.prevent()
-			})
-			Callback.addCallback("DestroyBlock", (c, tile, player) => {
-				if (ChiselItem.Base.isHandleChisel(Entity.getCarriedItem(player), this.data.item))
-					Game.prevent()
-			})
-			Callback.addCallback("ItemUse", (c, item, tile, isExternal, player) => {
-				ChiselItem.Base.carveBlock(c, tile, player, this.data.item)
+		description: IChiselItem
+		constructor(description: IChiselItem) {
+			this.description = description
+			let item = Controller.createChiselItem(description, this.buildDefaultExtra())
+			this.description.numericID = item.id
+			if (description.gui)
+				Item.registerNoTargetUseFunction(item.id, (item: ItemInstance, playerUID: number) => this.openGUI(item, playerUID))
+			Item.registerUseFunction(item.id, (c: Callback.ItemUseCoordinates, item: ItemInstance, tile: Tile, player: number) => {
+				Controller.carveBlock(c, item, tile, player, description)
 			})
 		}
-		/**
-		 * Creating item extra data for container
-		 * @param player - player entity id
-		 * @param item - item
-		 * @returns container id for this item
-		 */
-		//BUG: catch extra data when new item is created, found why new item has old cUID
-		getChiselExtraData(player: number, item: ItemInstance): number {
-			if (!item.extra)
-				item.extra = new ItemExtraData()
-			let cUID = item.extra.getInt("containerUID", -1)
-			console.debug(`Current cUID: ${cUID}`)
-			if (cUID == -1) {
-				cUID = ++ChiselGUI.Data.nextUniqueID
-				console.warn(`Creating new cUID: ${cUID}`)
-				item.extra.putInt("containerUID", cUID)
-				item.extra.putInt("variationId", -1)
-				item.extra.putInt("variationData", -1)
-				item.extra.putInt("orangeSlot", -1)
-				Entity.setCarriedItem(player, item.id, item.count, item.data, item.extra)
-			}
-			console.info(`Result cUID: ${cUID}`)
-			return cUID
+		buildDefaultExtra(): ItemExtraData {
+			var extra = new ItemExtraData()
+			extra.putString("containerUID", 'null')
+			extra.putInt("variationId", -1)
+			extra.putInt("variationData", -1)
+			extra.putInt("variationSelected", -1)
+			extra.putInt("carveMode", 0)
+			return extra
 		}
-		prepareContainer(gui: ChiselGUI.Custom, client: NetworkClient, player: number, item: ItemInstance): ItemContainer {
-			var container, cUID
-			cUID = this.getChiselExtraData(player, item)
-			container = ChiselGUI.Data.getContainerByUID(cUID)
-			// var container = new ItemContainer()
-			if (!container.getClientContainerTypeName()) {
-				gui.setupServerSide(container)
-				console.warn("Setting up server side ")
-			}
-
-			container.openFor(client, gui.getGuiID())
-			return container
-		}
-		openGuiFor(player: number, item: ItemInstance): boolean {
-			var client = Network.getClientForPlayer(player)
+		openGUI(item: ItemInstance, playerUID: number): boolean {
+			const client = Network.getClientForPlayer(playerUID)
 			if (!client)
 				return false
 
-			if (ChiselItem.Base.isHandleChisel(item, this.data.item))
-				if (!Entity.getSneaking(player))
-					if (this.data.gui) {
-						this.prepareContainer(this.data.gui, client, player, item)
-						return true
-					}
+			var container: ItemContainer = this.setupContainer(item, playerUID)
+			var desc = this.description
+			// if (Controller.isHandleChisel(item, desc))
+			if (!Entity.getSneaking(playerUID))
+				if (desc.gui) {
+					container.openFor(client, desc.gui.getGuiID())
+					return true
+				}
 			return false
 		}
+		setupContainer(item: ItemInstance, playerUID: number) {
+			const cUID: string = this.getChiselExtraData(playerUID, item)
+			const container: ItemContainer = ChiselGUI.Data.getContainerByUID(cUID).container
+
+			if (!container.getClientContainerTypeName())
+				this.description.gui.setupServerSide(container)
+
+			return container
+		}
+		getChiselExtraData(player: number, item: ItemInstance): string {
+			if (!item.extra)
+				item.extra = new ItemExtraData()
+
+			let cUID = item.extra.getString("containerUID", 'null')
+			console.debug(`Current cUID: '${cUID}'`)
+
+			if (cUID == 'null') {
+				cUID = ChiselGUI.Data.getContainerByUID().cUID
+				console.warn(`Creating new cUID: '${cUID}'`)
+				item.extra.putString("containerUID", cUID)
+				item.extra.putInt("variationId", -1)
+				item.extra.putInt("variationData", -1)
+				item.extra.putInt("variationSelected", -1)
+				item.extra.putInt("carveMode", 0)
+				Entity.setCarriedItem(player, item.id, item.count, item.data, item.extra)
+			}
+
+			console.info(`Result cUID: ${cUID}`)
+			return cUID
+		}
 	}
-	
+	Data.init()
 }

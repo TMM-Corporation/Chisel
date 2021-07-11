@@ -1,29 +1,26 @@
 namespace ChiselGUI {
 	export namespace Data {
 		interface Structure {
-			nextUniquieID?: number
-			containers?: { [name: string]: ItemContainer }
+			containers?: { [cUID: string]: ItemContainer }
 		}
-		const keyPrefix = 'cUID'
-		export var nextUniqueID = -1
 		export var containers = {}
 
-		Saver.addSavesScope("ChiselGUI.Data",
+		Saver.addSavesScope("chisel.data.gui",
 			function read(data: Structure) {
 				var nUID, savedContainers
-				nextUniqueID = (nUID = data.nextUniquieID) !== null && nUID !== void 0 ? nUID : 1
 				containers = (savedContainers = data.containers) !== null && savedContainers !== void 0 ? savedContainers : {}
-			}, function save() { return { nextUniqueID, containers } }
+				console.json(containers)
+			}, function save() { return { containers } }
 		)
 		/**
 		 * Get container by cUID
 		 * @param cUID container unique id
 		 * @returns ItemContainer
 		 */
-		export function getContainerByUID(cUID: number): ItemContainer {
+		export function getContainerByUID(cUID: string = generateUID()): { cUID: string, container: ItemContainer } {
 			var container = containerExists(cUID, true)
 			bindContainerUID(container, cUID)
-			return container
+			return { cUID, container }
 		}
 		/**
 		 * Check containers with cUID for exists
@@ -31,8 +28,8 @@ namespace ChiselGUI {
 		 * @param createNew create new container when not exists
 		 * @returns ItemContainer
 		 */
-		function containerExists(cUID: number, createNew: boolean): ItemContainer {
-			let exists = containers[`${keyPrefix}${cUID}`]
+		function containerExists(cUID: string, createNew: boolean): ItemContainer {
+			let exists = containers[cUID]
 			let result = exists ? exists : (createNew ? new ItemContainer() : exists)
 			console.info((!exists ? `Created new: ${result}` : `Already Exists: ${exists}`) + `, createNewWhenNotExists: ${createNew}`)
 			return result
@@ -42,8 +39,11 @@ namespace ChiselGUI {
 		 * @param container ItemContainer to set for cUID
 		 * @param cUID container unique id
 		 */
-		function bindContainerUID(container: ItemContainer, cUID: number) {
-			containers[`${keyPrefix}${cUID}`] = container
+		function bindContainerUID(container: ItemContainer, cUID: string) {
+			containers[cUID] = container
+		}
+		export function generateUID() {
+			return randomString(10, "a")
 		}
 	}
 	export class Header {
@@ -216,24 +216,12 @@ namespace ChiselGUI {
 
 	}
 	export namespace ModeButton {
-		type UseMode =
-			/* Chisel a 3x1 column of blocks */
-			'column' |
-			/* Chisel an area of alike blocks, extending 10 blocks in any direction */
-			'contiguous' |
-			/* Chisel an area of alike blocks, extending 10 blocks along the plane of the current side */
-			'contiguous_2d' |
-			/* Chisel a 3x3 square of blocks */
-			'panel' |
-			/* Chisel a 1x3 row of blocks */
-			'row' |
-			/* Chisel a single block */
-			'single'
+
 		export class BasicButton {
 			button: UI.UIButtonElement
 			coverImage: UI.UIImageElement
 			modeName: string = ""
-			constructor(x: number = 0, y: number = 0, mode: UseMode, icon: string) {
+			constructor(x: number = 0, y: number = 0, mode: ChiselModes.UseModeType, icon: string) {
 				this.modeName = mode
 				this.button = {
 					type: 'button', x, y,
