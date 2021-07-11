@@ -1,7 +1,9 @@
 # noEmitOnError
 
-./debug/Dumper.ts
-./polyfill/object-assign.ts
+./header.ts
+
+./api/debug/Dumper.ts
+./api/polyfill/object-assign.ts
 
 ./api/core/other.ts
 ./api/core/console.ts
@@ -9,8 +11,6 @@
 ./api/core/scriptable.ts
 ./api/minecraft/gameSettings.ts
 ./api/minecraft/gui.ts
-
-./header.ts
 
 ./register/resources.ts
 ./api/core/resourceTools.ts
@@ -23,8 +23,9 @@
 ./lib/CTM.ts
 ./lib/WindowShell.ts
 ./lib/ItemName.ts
+
 ./register/sounds.ts
-./register/gui/chisel.ts
+./register/gui/IronChisel.ts
 ./register/items.ts
-./register/tiles.ts
-./Chisel.ts
+./register/tiles/variations/base.ts
+./register/tiles/variations/debug.ts

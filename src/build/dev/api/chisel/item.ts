@@ -16,7 +16,7 @@ namespace ChiselItem {
 	}
 	export interface DefaultData {
 		state?: CurrentState
-		gui?: ChiselGUI.Base
+		gui?: ChiselGUI.Custom
 		item: ItemData
 		group?: {
 			name: string,
@@ -34,7 +34,6 @@ namespace ChiselItem {
 				extra = { id: item.extra.getInt("variationId"), data: item.extra.getInt("variationData") }
 
 			let tileSearch = Carvable.Groups.searchBlock(tile.id, tile.data)
-			console.json(tileSearch)
 
 			//If tile group not exists, nothing to do
 			if (!tileSearch.group) {
@@ -64,7 +63,6 @@ namespace ChiselItem {
 
 			// Searching block group inside chisel
 			let fromItemSearch = Carvable.Groups.searchBlock(extra.id, extra.data)
-			console.json(fromItemSearch)
 			let groups = [fromItemSearch.group, tileSearch.group]
 
 			// If ID in chisel and in tile same
@@ -170,7 +168,7 @@ namespace ChiselItem {
 		setState(state: CurrentState) {
 			this.data.state = state
 		}
-		setWindow(window: ChiselGUI.Base) {
+		setWindow(window: ChiselGUI.Custom) {
 			this.data.gui = window
 		}
 		initCallbacks() {
@@ -197,12 +195,11 @@ namespace ChiselItem {
 		 */
 		//BUG: catch extra data when new item is created, found why new item has old cUID
 		getChiselExtraData(player: number, item: ItemInstance): number {
-			console.json(item.extra)
 			if (!item.extra)
 				item.extra = new ItemExtraData()
 			let cUID = item.extra.getInt("containerUID", -1)
 			console.debug(`Current cUID: ${cUID}`)
-			if (cUID === -1) {
+			if (cUID == -1) {
 				cUID = ChiselGUI.Data.nextUniqueID++
 				console.warn(`Creating new cUID: ${cUID}`)
 				item.extra.putInt("containerUID", cUID)
@@ -214,15 +211,16 @@ namespace ChiselItem {
 			console.info(`Result cUID: ${cUID}`)
 			return cUID
 		}
-		prepareContainer(gui: ChiselGUI.Base, client: NetworkClient, player: number, item: ItemInstance): ItemContainer {
+		prepareContainer(gui: ChiselGUI.Custom, client: NetworkClient, player: number, item: ItemInstance): ItemContainer {
 			var container, cUID
 			cUID = this.getChiselExtraData(player, item)
 			container = ChiselGUI.Data.getContainerByUID(cUID)
 			// var container = new ItemContainer()
 			if (!container.getClientContainerTypeName()) {
-				gui.setupContainer(container)
-				gui.additionalContainerSetup(container)
+				gui.setupServerSide(container)
+				console.warn("Setting up server side ")
 			}
+
 			container.openFor(client, gui.getGuiID())
 			return container
 		}

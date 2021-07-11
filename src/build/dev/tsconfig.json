@@ -16,17 +16,17 @@
 		"webpack"
 	],
 	"include": [
-		"./debug/Dumper.ts",
-		"./polyfill/object-assign.ts",
+		"./header.ts",
+		"./api/debug/Dumper.ts",
+		"./api/polyfill/object-assign.ts",
 		"./api/core/other.ts",
 		"./api/core/console.ts",
 		"./api/core/search.ts",
 		"./api/core/scriptable.ts",
 		"./api/minecraft/gameSettings.ts",
 		"./api/minecraft/gui.ts",
-		"./header.ts",
 		"./register/resources.ts",
-		"api/resourceTools.ts",
+		"./api/core/resourceTools.ts",
 		"./api/icGUI.ts",
 		"./api/chisel/carvable.ts",
 		"./api/chisel/item.ts",
@@ -35,10 +35,10 @@
 		"./lib/WindowShell.ts",
 		"./lib/ItemName.ts",
 		"./register/sounds.ts",
-		"./register/gui/chisel.ts",
+		"./register/gui/IronChisel.ts",
 		"./register/items.ts",
-		"./register/tiles.ts",
-		"./Chisel.ts"
+		"./register/tiles/TileVariation.ts",
+		"./register/tiles/variations/*"
 	],
 	"files": [
 		"D:\\ToxesFoxes\\Storage\\Github\\Modding\\toolchain\\declarations\\android-declarations.d.ts",
