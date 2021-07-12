@@ -128,7 +128,7 @@ namespace ChiselGUI {
 		export function prepareBackground(gui: ChiselGUI.Custom) {
 			gui.addDrawing(GUI.BG.transparent)
 			gui.addDrawing(gui.controls.getControls().drawing)
-			gui.addDrawing({ type: "frame", x: 0, y: gui.topPadding, width: 1000, height: 814, scale: 3, bitmap: "style:frame_background_border", color: Color.rgb(198, 198, 198) },)
+			gui.addDrawing({ type: "frame", x: 0, y: gui.topPadding, width: 1000, height: 814, scale: 3, bitmap: "style:frame_background_border", color: Color.rgb(198, 198, 198) })
 		}
 		export function createGUI(elements: UI.ElementSet, gui: ChiselGUI.Custom): UI.WindowGroup {
 			prepareBackground(gui)
@@ -216,35 +216,31 @@ namespace ChiselGUI {
 
 	}
 	export namespace ModeButton {
-
+		interface ModeDescription {
+			modeName: ChiselModes.UseModeType
+			modeID: ChiselModes.UseMode
+			icon: string
+		}
 		export class BasicButton {
 			button: UI.UIButtonElement
-			coverImage: UI.UIImageElement
+			coverImage: UI.UIImageElement = { type: 'image', x: 0, y: 0, scale: 2.083, bitmap: "null", z: 2 }
 			modeName: string = ""
-			constructor(x: number = 0, y: number = 0, mode: ChiselModes.UseModeType, icon: string) {
-				this.modeName = mode
+			constructor(x: number = 0, y: number = 0, description: ModeDescription) {
+				this.modeName = description.modeName
 				this.button = {
 					type: 'button', x, y,
 					bitmap: 'style:classic_button_up',
 					bitmap2: 'style:classic_button_down',
 					scale: 5, clicker: this.clicker, z: 1
 				}
-				this.coverImage = { type: 'image', x: x + 15, y: y + 15, scale: 2.083, bitmap: icon, z: 2 }
+				this.coverImage = Object.assign({}, this.coverImage, { x: x + 15, y: y + 15, bitmap: description.icon })
 			}
 			get clicker(): UI.UIClickEvent {
 				let this_ = this
 				return {
 					onClick(uiHandler: any, container: ItemContainer, uiElement: UI.UIButtonElement, position: Vector) {
-						// console.info('Start container')
-						// for (let i in container) {
-						// 	console.debug(`${i}, ${container[i]}`)
-						// }
-						console.debug(Dumper.toDTS(uiHandler, "ItemContainerUiHandler"))
-						console.debug(Dumper.toDTS(container, "ItemContainer"))
-						// console.info('Start uiElement')
-						// for (let i in uiElement) {
-						// 	console.debug(`${i}, ${uiElement[i]}`)
-						// }
+						console.genTSDocFor(uiHandler, "ItemContainerUiHandler")
+						console.genTSDocFor(container, "ItemContainer")
 					}
 				}
 			}
@@ -256,32 +252,32 @@ namespace ChiselGUI {
 
 		export class Single extends BasicButton {
 			constructor(x: number, y: number) {
-				super(x, y, 'single', 'modeicons_0')
+				super(x, y, { modeName: 'single', modeID: 0, icon: 'modeicons_0' })
 			}
 		}
 		export class Panel extends BasicButton {
 			constructor(x: number, y: number) {
-				super(x, y, 'panel', 'modeicons_1')
+				super(x, y, { modeName: 'panel', modeID: 1, icon: 'modeicons_1' })
 			}
 		}
 		export class Column extends BasicButton {
 			constructor(x: number, y: number) {
-				super(x, y, 'column', 'modeicons_2')
+				super(x, y, { modeName: 'column', modeID: 2, icon: 'modeicons_2' })
 			}
 		}
 		export class Row extends BasicButton {
 			constructor(x: number, y: number) {
-				super(x, y, 'row', 'modeicons_3')
+				super(x, y, { modeName: 'row', modeID: 3, icon: 'modeicons_3' })
 			}
 		}
 		export class Contiguous_2D extends BasicButton {
 			constructor(x: number, y: number) {
-				super(x, y, 'contiguous_2d', 'modeicons_4')
+				super(x, y, { modeName: 'contiguous_2d', modeID: 4, icon: 'modeicons_4' })
 			}
 		}
 		export class Contiguous extends BasicButton {
 			constructor(x: number, y: number) {
-				super(x, y, 'contiguous', 'modeicons_5')
+				super(x, y, { modeName: 'contiguous', modeID: 5, icon: 'modeicons_5' })
 			}
 		}
 	}
