@@ -2,14 +2,14 @@
 Chisel PE mod by TooManyMods
 
 ### GitHub
-![GitHub repo size](https://img.shields.io/github/repo-size/ToxesFoxes/Chisel?label=Вес%20Репозитория&style=flat-square)
-![GitHub all releases](https://img.shields.io/github/downloads/ToxesFoxes/Chisel/total?label=Загрузок&style=flat-square)
-![GitHub issues](https://img.shields.io/github/issues-raw/ToxesFoxes/Chisel?label=Открытых%20проблем&style=flat-square)
-![GitHub issues](https://img.shields.io/github/issues-closed-raw/ToxesFoxes/Chisel?label=Закрытых%20проблем&style=flat-square)
+![GitHub](https://img.shields.io/github/license/ToxesFoxes/Chisel?label=License&style=flat-square)
+![GitHub repo size](https://img.shields.io/github/repo-size/ToxesFoxes/Chisel?label=Repo%20Size&style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues-raw/ToxesFoxes/Chisel?label=Opened%20issues&style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues-closed-raw/ToxesFoxes/Chisel?label=Closed%20issues&style=flat-square)
 
-![GitHub](https://img.shields.io/github/license/ToxesFoxes/Chisel?label=Лицензия&style=flat-square)
-![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/ToxesFoxes/Chisel?include_prereleases&label=Последняя%20Версия&style=flat-square)
-![GitHub last commit](https://img.shields.io/github/last-commit/ToxesFoxes/Chisel?label=Последнее%20изменение&style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/ToxesFoxes/Chisel?label=Latest%20changes&style=flat-square)
+![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/ToxesFoxes/Chisel?include_prereleases&label=Latest%20Release&style=flat-square)
+![GitHub all releases](https://img.shields.io/github/downloads/ToxesFoxes/Chisel/total?label=Downloads&style=flat-square)
 <!-- ### ICMods
 ![](https://img.shields.io/badge/dynamic/json?color=green&label=Версия&query=%24.version&url=https%3A%2F%2Ficmods.mineprogramming.org%2Fapi%2Fdescription.php%3Fid%3D420?style=for-the-badge) 
 ![](https://img.shields.io/badge/dynamic/json?color=green&label=Понравилось&query=%24.likes&url=https%3A%2F%2Ficmods.mineprogramming.org%2Fapi%2Fdescription.php%3Fid%3D420?style=for-the-badge) 
