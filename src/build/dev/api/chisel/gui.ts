@@ -61,47 +61,93 @@ namespace ChiselGUI {
 		}
 	}
 	export namespace Base {
+		/**
+		 * Setups ItemContainer screen factory for guiID
+		 * @param guiID string name of gui
+		 * @param window Window or WindowGroup to be attached to guiID
+		 */
 		export function setupScreen(guiID: string, window: UI.Window | UI.WindowGroup) {
 			ItemContainer.registerScreenFactory(guiID, (container, name) => {
 				return window
 			})
 		}
-		export function setUpVariationSlots(gui: ChiselGUI.Custom, x: number, y: number, count: number, name?: string) {
+		/**
+		 * Sets up variation slots data
+		 * @param gui Chisel gui instance
+		 * @param x x coord
+		 * @param y y coord
+		 * @param count total slot count
+		 * @param [prefix] slot name prefix
+		 */
+		export function setUpVariationSlots(gui: ChiselGUI.Custom, x: number, y: number, count: number, prefix?: string) {
 			let variationSlots = gui.variationSlots
 			variationSlots.x = x
 			variationSlots.y = y
 			variationSlots.count = count
-			variationSlots.name = name || variationSlots.name
+			variationSlots.prefix = prefix || variationSlots.prefix
 		}
+		/**
+		 * Sets variation [id:data] for current item.
+		 * @param playerUid client uid
+		 * @param id block id of variation
+		 * @param data block data of variation
+		 */
 		export function setVariation(playerUid: number, id: number, data: number) {
 			let item = Entity.getCarriedItem(playerUid)
 			item.extra.putInt("variationId", id)
 			item.extra.putInt("variationData", data)
 			Entity.setCarriedItem(playerUid, item.id, item.count, item.data, item.extra)
 		}
+		/**
+		 * Clears variation slots inside gui container
+		 * @param container ItemContainer
+		 * @param variationSlots varitation slots data of current gui
+		 */
 		export function clearVariationSlots(container: ItemContainer, variationSlots: VariationSlots): void {
 			for (let i = 0; i < variationSlots.count; i++)
-				container.clearSlot(`${variationSlots.name}${i}`)
+				container.clearSlot(`${variationSlots.prefix}${i}`)
 			container.sendChanges()
 		}
+		/**
+		 * Clears preview slot
+		 * @param container ItemContainer
+		 */
 		export function clearPreviewSlot(container: ItemContainer): void {
 			container.clearSlot('slotPreview')
 			container.sendChanges()
 		}
+		/**
+		 * Decreases preview slot item count
+		 * @param container ItemContainer
+		 * @param [amount] amount of item to be decreased
+		 */
 		export function decreasePreviewSlot(container: ItemContainer, amount: number = 1): void {
 			let slot = container.getSlot('slotPreview')
 			container.setSlot('slotPreview', slot.id, slot.count - amount, slot.data, slot.extra)
 			container.sendChanges()
 		}
+		/**
+		 * Updates variation count for variation slots
+		 * @param container ItemContainer
+		 * @param gui Chisel gui instance
+		 * @param count new count of item
+		 * @param [name] skips this variation slot
+		 */
 		export function updateVariationCount(container: ItemContainer, gui: ChiselGUI.Custom, count: number, name?: string) {
 			for (let i = 0, u = 0; i < gui.variationSlots.count; i++) {
-				const elementName = `${gui.variationSlots.name}${i}`
+				const elementName = `${gui.variationSlots.prefix}${i}`
 				if (elementName == name) continue
 				let slot = container.getSlot(elementName)
 				container.setSlot(elementName, slot.id, count, slot.data)
 			}
 			container.sendChanges()
 		}
+		/**
+		 * Fills variation slots with Carvable variations
+		 * @param container ItemContainer
+		 * @param gui Chisel gui instance
+		 * @param item ItemInstance of current block
+		 */
 		export function fillVariationSlots(container: ItemContainer, gui: ChiselGUI.Custom, item: ItemInstance): void {
 			let ids, result = Carvable.Groups.searchBlock(item.id, item.data)
 
@@ -116,7 +162,7 @@ namespace ChiselGUI {
 					if ((item.id == splitted.id && item.data == splitted.data))
 						u += 1
 					else {
-						const elementName = `${gui.variationSlots.name}${i - u}`
+						const elementName = `${gui.variationSlots.prefix}${i - u}`
 						container.setSlot(elementName, splitted.id, 1, splitted.data)
 						// container.setBinding(elementName, "text", `a${item.count}`)
 					}
@@ -125,11 +171,21 @@ namespace ChiselGUI {
 			}
 			container.sendChanges()
 		}
+		/**
+		 * Prepares background with gui controls
+		 * @param gui Chisel gui instance
+		 */
 		export function prepareBackground(gui: ChiselGUI.Custom) {
 			gui.addDrawing(GUI.BG.transparent)
 			gui.addDrawing(gui.controls.getControls().drawing)
 			gui.addDrawing({ type: "frame", x: 0, y: gui.topPadding, width: 1000, height: 814, scale: 3, bitmap: "style:frame_background_border", color: Color.rgb(198, 198, 198) })
 		}
+		/**
+		 * Creates gui for Chisel
+		 * @param elements any UI.Elements
+		 * @param gui Chisel gui instance
+		 * @returns UI.WindowGroup 
+		 */
 		export function createGUI(elements: UI.ElementSet, gui: ChiselGUI.Custom): UI.WindowGroup {
 			prepareBackground(gui)
 			let wh = UI.getScreenHeight(),
@@ -159,17 +215,19 @@ namespace ChiselGUI {
 			return group
 		}
 	}
+	/**
+	 * Variation slots data
+	 */
 	export interface VariationSlots {
 		x: number
 		y: number
 		count: number
-		name?: string
+		prefix?: string
 	}
-
 	export class Custom {
 		group: UI.WindowGroup
 		header: Header
-		variationSlots: VariationSlots = { x: 0, y: 0, count: 0, name: "slotVariation" }
+		variationSlots: VariationSlots = { x: 0, y: 0, count: 0, prefix: "slotVariation" }
 		topPadding: number = 131
 		slotSize: number = 73
 		elements: UI.ElementSet = {}
