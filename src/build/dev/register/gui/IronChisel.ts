@@ -17,7 +17,7 @@ class IronChiselGUI extends ChiselGUI.Custom {
 			currentUID: { type: 'text', x: 900, y: 980, text: "UID: -000000000", font: { size: 20, } }
 		}
 		new GUI.Grid.Element({
-			name: _this.variationSlots.name,
+			name: _this.variationSlots.prefix,
 			horizontal: { count: this.variationSlots.x, offset: 0 },
 			vertical: { count: this.variationSlots.y, offset: 0 },
 			startIndex: 0,
@@ -92,7 +92,7 @@ class IronChiselGUI extends ChiselGUI.Custom {
 	 */
 	setupVariationSlots(container: ItemContainer) {
 		for (let i = 0; i < this.variationSlots.count; i++) {
-			const elementName = `${this.variationSlots.name}${i}`
+			const elementName = `${this.variationSlots.prefix}${i}`
 			this.registerSlotTransferPolicy(elementName, container)
 		}
 	}
