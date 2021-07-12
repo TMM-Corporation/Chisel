@@ -1,4 +1,7 @@
 namespace console {
+	export function genTSDocFor(data: any, name: string) {
+		Logger.Log(`\n${Dumper.toDTS(data, name)}`, 'DOCUMENTATION')
+	}
 	export function debug(message: any, prefix?: string) {
 		Logger.Log(`${prefix ? "[" + prefix + "] " : ""}${message}`, 'DEBUG')
 	}
