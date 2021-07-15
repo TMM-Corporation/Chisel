@@ -16,6 +16,8 @@ import com.zhekasmirnov.apparatus.mcpe.NativeBlockSource;
 import com.zhekasmirnov.innercore.api.mod.adaptedscript.AdaptedScriptAPI.Entity;
 
 import android.support.annotation.Nullable;
+
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3i;
 
@@ -23,7 +25,7 @@ import net.minecraft.util.Direction;
 import net.minecraft.util.Direction.Axis;
 import net.minecraft.util.Direction.AxisDirection;
 
-public final class ChiselMode extends AbstractChiselMode {
+public class ChiselMode extends AbstractChiselMode {
 
     @Override
     public Iterable<BlockPos> getCandidates(long player, BlockPos pos, Direction side)
@@ -152,7 +154,6 @@ public final class ChiselMode extends AbstractChiselMode {
     public static final ChiselMode SINGLE = new ChiselMode("Chisel a single block.")
     {
 
-        @Override
         public Iterable<BlockPos> getCandidates(long player, BlockPos pos, Direction side)
         {
             return Collections.singleton(pos);
@@ -178,7 +179,6 @@ public final class ChiselMode extends AbstractChiselMode {
         private final BlockPos ONE = new BlockPos(1, 1, 1);
         private final BlockPos NEG_ONE = new BlockPos(-1, -1, -1);
 
-        @Override
         public Iterable<BlockPos> getCandidates(long player, BlockPos pos, Direction side)
         {
             if(side.getAxisDirection() == AxisDirection.NEGATIVE)
@@ -195,11 +195,11 @@ public final class ChiselMode extends AbstractChiselMode {
         {
             switch(side.getAxis())
             {
-                case Axis.X: default:
+                case X: default:
                     return new AxisAlignedBB(0, -1, -1, 1, 2, 2);
-                case Axis.Y:
+                case Y:
                     return new AxisAlignedBB(-1, 0, -1, 2, 1, 2);
-                case Axis.Z:
+                case Z:
                     return new AxisAlignedBB(-1, -1, 0, 2, 2, 1);
             }
         }
@@ -215,7 +215,6 @@ public final class ChiselMode extends AbstractChiselMode {
     public static final ChiselMode COLUMN = new ChiselMode("Chisel a 3x1 column of blocks.")
     {
 
-        @Override
         public Iterable<BlockPos> getCandidates(long player, BlockPos pos, Direction side)
         {
             int facing = (int) Math.floor(Entity.getYaw(player) * 4.0F / 360.0F + 0.5D) & 3;
@@ -263,7 +262,6 @@ public final class ChiselMode extends AbstractChiselMode {
     public static final ChiselMode ROW = new ChiselMode("Chisel a 1x3 row of blocks.")
     {
 
-        @Override
         public Iterable<BlockPos> getCandidates(long player, BlockPos pos, Direction side)
         {
             int facing = (int) Math.floor(Entity.getYaw(player) * 4.0F / 360.0F + 0.5D) & 3;
@@ -314,7 +312,6 @@ public final class ChiselMode extends AbstractChiselMode {
     public static final ChiselMode CONTIGUOUS = new ChiselMode("Chisel an area of alike blocks, extending 10 blocks in any direction.")
     {
 
-        @Override
         public Iterable<? extends BlockPos> getCandidates(long player, BlockPos pos, Direction side)
         {
             return () -> getContiguousIterator(pos, NativeBlockSource.getDefaultForActor(player), Direction.values());
@@ -338,7 +335,6 @@ public final class ChiselMode extends AbstractChiselMode {
     public static final ChiselMode CONTIGUOUS_2D = new ChiselMode("Contiguous (2D)", "Chisel an area of alike blocks, extending 10 blocks along the plane of the current side.")
     {
 
-        @Override
         public Iterable<? extends BlockPos> getCandidates(long player, BlockPos pos, Direction side)
         {
             Direction[] neededSides = Arrays.asList(Direction.values())
@@ -352,13 +348,14 @@ public final class ChiselMode extends AbstractChiselMode {
         @Override
         public AxisAlignedBB getBounds(Direction side)
         {
+            int r = CONTIGUOUS_RANGE;
             switch(side.getAxis())
             {
-                case Axis.X: default:
+                case X: default:
                     return new AxisAlignedBB(0, -r - 1, -r - 1, 1, r + 2, r + 2);
-                case Axis.Y:
+                case Y:
                     return new AxisAlignedBB(-r - 1, 0, -r - 1, r + 2, 1, r + 2);
-                case Axis.Z:
+                case Z:
                     return new AxisAlignedBB(-r - 1, -r - 1, 0, r + 2, r + 2, 1);
             }
         }

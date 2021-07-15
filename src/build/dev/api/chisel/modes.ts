@@ -20,6 +20,12 @@ namespace ChiselModes {
 		contiguous,
 		contiguous_2d,
 	}
+	const ChiselMode = WRAP_JAVA('com.toxesfoxes.chisel.ChiselMode')
+	const BlockPos = WRAP_JAVA('net.minecraft.util.math.BlockPos')
+	const Direction = WRAP_JAVA('net.minecraft.util.Direction')
+	console.genTSDocFor(ChiselMode, 'ChiselMode')
+	console.genTSDocFor(BlockPos, 'BlockPos')
+	console.genTSDocFor(Direction, 'Direction')
 	export function carveBlocks(coords: Callback.ItemUseCoordinates, item: ItemInstance, tile: Tile, playerUID: number): boolean {
 		let result = false
 		if (item.extra) {
@@ -47,6 +53,8 @@ namespace ChiselModes {
 		const itemUse = CIC.onUse(playerUID, item)
 
 		if (itemUse.used) {
+			Debug(coords, item, tile, playerUID)
+			
 			bs.setBlock(coords.x, coords.y, coords.z, carveResults.id, carveResults.data)
 			SoundManager.playSoundAtBlock({ x: coords.x, y: coords.y, z: coords.z }, getSoundFromConstName(carveResults.sound), 1, getRandomArbitrary(0.7, 1), 8)
 			return true
@@ -54,6 +62,6 @@ namespace ChiselModes {
 		return false
 	}
 	export function Debug(coords: Callback.ItemUseCoordinates, item: ItemInstance, tile: Tile, playerUID: number) {
-		console.debug(`${JSON.stringify(coords)}, ${tile.id}:${tile.data}, player: ${playerUID} (${Entity.getNameTag(playerUID)})`)
+		console.debug(`[${tile.id}:${tile.data} (${Item.getName(tile.id, tile.data)})], player: ${playerUID} (${Entity.getNameTag(playerUID)}), Coords: (${JSON.stringify(coords)})`)
 	}
 }

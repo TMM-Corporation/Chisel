@@ -11,7 +11,6 @@
 ./api/core/search.ts
 ./api/core/scriptable.ts
 
-./api/minecraft/utils.ts
 ./api/minecraft/gameSettings.ts
 ./api/minecraft/gui.ts
 
@@ -20,7 +19,6 @@
 
 ./api/icGUI.ts
 ./api/chisel/carvable.ts
-./api/chisel/ChiselMode.ts
 ./api/chisel/modes.ts
 ./api/chisel/item.ts
 ./api/chisel/gui.ts
