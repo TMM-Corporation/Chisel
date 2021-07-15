@@ -12,32 +12,6 @@ namespace ChiselModes {
 		'row' |
 		/* Chisel a single block */
 		'single'
-	export const UseCoords = {
-		single: [
-			{ x: 0, y: 0, z: 0 }
-		],
-		row: [
-			{ x: 1, y: 0, z: 0 },
-			{ x: 0, y: 0, z: 0 },
-			{ x: -1, y: 0, z: 0 }
-		],
-		column: [
-			{ x: 0, y: 1, z: 0 },
-			{ x: 0, y: 0, z: 0 },
-			{ x: 0, y: -1, z: 0 }
-		],
-		panel: [
-			{ x: 1, y: 1, z: 0 },
-			{ x: -1, y: 1, z: 0 },
-			{ x: 0, y: 1, z: 0 },
-			{ x: 1, y: 0, z: 0 },
-			{ x: 0, y: 0, z: 0 },
-			{ x: -1, y: 0, z: 0 },
-			{ x: 0, y: -1, z: 0 },
-			{ x: 1, y: -1, z: 0 },
-			{ x: -1, y: -1, z: 0 }
-		]
-	}
 	export enum UseMode {
 		single,
 		row,
@@ -80,6 +54,6 @@ namespace ChiselModes {
 		return false
 	}
 	export function Debug(coords: Callback.ItemUseCoordinates, item: ItemInstance, tile: Tile, playerUID: number) {
-		console.debug(`${JSON.stringify(coords)}, ${tile.id}: ${tile.data}, player: ${playerUID} (${Entity.getNameTag(playerUID)})`)
+		console.debug(`${JSON.stringify(coords)}, ${tile.id}:${tile.data}, player: ${playerUID} (${Entity.getNameTag(playerUID)})`)
 	}
 }
