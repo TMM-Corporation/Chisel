@@ -4,13 +4,17 @@ namespace ChiselGUI {
 			containers?: { [cUID: string]: ItemContainer }
 		}
 		export var containers = {}
-
+		// BUG: data cant's save and read
 		Saver.addSavesScope("chisel.data.gui",
 			function read(data: Structure) {
-				var nUID, savedContainers
-				containers = (savedContainers = data.containers) !== null && savedContainers !== void 0 ? savedContainers : {}
-				console.json(containers)
-			}, function save() { return { containers } }
+				// var savedContainers
+				// containers = (savedContainers = data.containers) !== null && savedContainers !== void 0 ? savedContainers : {}
+				console.json(containers, "DATA READING")
+			}, function save() {
+				console.json(containers, "DATA SAVING")
+				// return { containers }
+				return {}
+			}
 		)
 		/**
 		 * Get container by cUID
