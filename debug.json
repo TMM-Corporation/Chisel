@@ -50,6 +50,10 @@
 		{
 			"source": "src/build/native/*",
 			"type": "native"
+		},
+		{
+			"source": "src/build/java/*",
+			"type": "java"
 		}
 	],
 	"additional": [
