@@ -10,6 +10,7 @@ import java.util.Queue;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+import java.util.stream.StreamSupport;
 
 import com.zhekasmirnov.apparatus.adapter.innercore.game.block.BlockState;
 import com.zhekasmirnov.apparatus.mcpe.NativeBlockSource;
@@ -145,6 +146,11 @@ public class ChiselMode extends AbstractChiselMode {
     {
         return source.filter(p -> world.getBlock(p.getX(), p.getY(), p.getZ()).equals(state))::iterator;
     }
+    private static Iterable<BlockPos> filteredIterable(Iterable<BlockPos> source, NativeBlockSource world, BlockState state)
+    {
+        return () -> StreamSupport.stream(source.spliterator(), false)
+                .filter(p -> world.getBlock(p.getX(), p.getY(), p.getZ()).equals(state)).iterator();
+    }
 
     private static Direction getEntityHorizontalFacing(long entity)
     {
@@ -154,6 +160,7 @@ public class ChiselMode extends AbstractChiselMode {
     public static final ChiselMode SINGLE = new ChiselMode("Chisel a single block.")
     {
 
+        @Override
         public Iterable<BlockPos> getCandidates(long player, BlockPos pos, Direction side)
         {
             return Collections.singleton(pos);
@@ -179,6 +186,7 @@ public class ChiselMode extends AbstractChiselMode {
         private final BlockPos ONE = new BlockPos(1, 1, 1);
         private final BlockPos NEG_ONE = new BlockPos(-1, -1, -1);
 
+        @Override
         public Iterable<BlockPos> getCandidates(long player, BlockPos pos, Direction side)
         {
             if(side.getAxisDirection() == AxisDirection.NEGATIVE)
@@ -215,6 +223,7 @@ public class ChiselMode extends AbstractChiselMode {
     public static final ChiselMode COLUMN = new ChiselMode("Chisel a 3x1 column of blocks.")
     {
 
+        @Override
         public Iterable<BlockPos> getCandidates(long player, BlockPos pos, Direction side)
         {
             int facing = (int) Math.floor(Entity.getYaw(player) * 4.0F / 360.0F + 0.5D) & 3;
@@ -262,6 +271,7 @@ public class ChiselMode extends AbstractChiselMode {
     public static final ChiselMode ROW = new ChiselMode("Chisel a 1x3 row of blocks.")
     {
 
+        @Override
         public Iterable<BlockPos> getCandidates(long player, BlockPos pos, Direction side)
         {
             int facing = (int) Math.floor(Entity.getYaw(player) * 4.0F / 360.0F + 0.5D) & 3;
@@ -312,7 +322,8 @@ public class ChiselMode extends AbstractChiselMode {
     public static final ChiselMode CONTIGUOUS = new ChiselMode("Chisel an area of alike blocks, extending 10 blocks in any direction.")
     {
 
-        public Iterable<? extends BlockPos> getCandidates(long player, BlockPos pos, Direction side)
+        @Override
+        public Iterable<BlockPos> getCandidates(long player, BlockPos pos, Direction side)
         {
             return () -> getContiguousIterator(pos, NativeBlockSource.getDefaultForActor(player), Direction.values());
         }
@@ -335,7 +346,8 @@ public class ChiselMode extends AbstractChiselMode {
     public static final ChiselMode CONTIGUOUS_2D = new ChiselMode("Contiguous (2D)", "Chisel an area of alike blocks, extending 10 blocks along the plane of the current side.")
     {
 
-        public Iterable<? extends BlockPos> getCandidates(long player, BlockPos pos, Direction side)
+        @Override
+        public Iterable<BlockPos> getCandidates(long player, BlockPos pos, Direction side)
         {
             Direction[] neededSides = Arrays.asList(Direction.values())
                                             .stream()
