@@ -15,6 +15,7 @@ import java.util.stream.StreamSupport;
 import com.zhekasmirnov.apparatus.adapter.innercore.game.block.BlockState;
 import com.zhekasmirnov.apparatus.mcpe.NativeBlockSource;
 import com.zhekasmirnov.innercore.api.mod.adaptedscript.AdaptedScriptAPI.Entity;
+import com.zhekasmirnov.innercore.api.NativeAPI;
 
 import android.support.annotation.Nullable;
 
@@ -262,7 +263,7 @@ public class ChiselMode extends AbstractChiselMode {
         public long[] getCacheState(BlockPos origin, Direction side)
         {
             long[] s = super.getCacheState(origin, side);
-            s[s.length] = getEntityHorizontalFacing(Player.get()).ordinal();
+            s[s.length] = getEntityHorizontalFacing(NativeAPI.getPlayer()).ordinal();
             return s;
         }
 
@@ -349,7 +350,7 @@ public class ChiselMode extends AbstractChiselMode {
         @Override
         public Iterable<BlockPos> getCandidates(long player, BlockPos pos, Direction side)
         {
-            Direction[] neededSides = Arrays.asList(Direction.values())
+            Direction[] neededSides = (Direction[])Arrays.asList(Direction.values())
                                             .stream()
                                             .filter(dir -> dir != side && dir != side.getOpposite())
                                             .collect(Collectors.toList())

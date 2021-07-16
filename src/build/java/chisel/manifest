@@ -1,4 +1,4 @@
 {
-    "source-dirs":["src"], "library-dirs":["lib"], "verbose":true, "options":["--info", "--debug", "--scan"],
+    "source-dirs":["src"], "library-dirs":["lib"], "verbose":true, "options":["--stacktrace","--info", "--debug", "--scan"],
     "boot-classes":["com.toxesfoxes.chisel.Chisel"]
 }
